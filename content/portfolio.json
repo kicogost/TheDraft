@@ -1,0 +1,18 @@
+{
+  "title": "I back the people who move before they are asked.",
+  "lead": "The companies I hold a stake in and help build. Short list on purpose: I only put my name on things I actually work on.",
+  "disclosure": "I hold equity in RallyUp and it pays me. Read anything I say about it with that in mind.",
+  "entries": [
+    {
+      "name": "RallyUp",
+      "relationship": "Chief of staff · Investor",
+      "year": "2026",
+      "category": "B2B GTM · LinkedIn content",
+      "description": "Builds LinkedIn audiences for B2B founders and executives, end to end. Every post hand-written in the exec's real voice and engineered to reach the people who buy from them.",
+      "logo": "",
+      "href": "https://rallyup.team",
+      "promo": { "label": "Book an audience-building call", "href": "" }
+    }
+  ],
+  "cta": { "label": "Pitch me on LinkedIn", "href": "" }
+}

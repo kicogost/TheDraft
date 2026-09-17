@@ -1,0 +1,21 @@
+{
+  "title": "About me",
+  "lead": "I'm chief of staff at RallyUp, where I run operations and clients for a LinkedIn content agency closing in on $1M ARR, and I write [The Draft](/#newsletter), a weekly letter on career, marketing and building an income on the internet.",
+  "ladder": [
+    "I grew up in Mallorca and left at seventeen for the [University of York](https://www.york.ac.uk) to read business and management.",
+    "At eighteen I ran my first business, organising and selling event tickets to international students. It made $10,000. I spent it on a watch, which I would like to say taught me something about capital allocation.",
+    "In 2022 I joined [AlphaSights](https://www.alphasights.com) in London and finished ranked first in my cohort, at 117 percent of quota.",
+    "I spent the next two and a half years at [Synpulse](https://www.synpulse.com) doing management consulting. It is the part of the story where I learned how large organisations actually decide things, which turned out to matter more than I expected.",
+    "In 2025 I moved back to Spain to run partnerships at dCycle, a sustainability startup, and built a partner channel past €200,000 in recurring revenue.",
+    "At twenty-three I sent [one cold message](/resources/chief-of-staff-dm) to a founder I had never met. He replied in thirty minutes. I started fractionally, and I am now chief of staff at RallyUp on $100k plus equity.",
+    "RallyUp pivoted on the first of May with no demand at all. By August we had grown revenue thirty-seven times over, held client retention above ninety percent, and shipped more than 700 posts for leadership teams at [PandaDoc, Walnut, Anchor Browser and Andel](https://rallyup.team/case-studies/)."
+  ],
+  "closing": "Today I run RallyUp's operations from Mallorca, write The Draft every week, and train jiu-jitsu three times a week.",
+  "portrait": {
+    "src": "/images/headshot.png",
+    "alt": "Francisco Gost",
+    "caption": "Francisco Gost",
+    "role": "operator · writer"
+  },
+  "cta": { "label": "Read The Draft", "href": "/#newsletter" }
+}

@@ -2,42 +2,119 @@
   "name": "Francisco Gost",
   "fullName": "Francisco Gost Scagliarini",
   "url": "https://franciscogost.com",
-  "tagline": "Operator, writer, and coach.",
-  "oneLiner": "I help founders and operators build a career that compounds.",
-  "heroHeadline": "I build the systems behind the work.",
-  "heroSupport": "Placeholder. One sentence on what Francisco does now, one on who it is for.",
-  "contactEmail": "",
+  "tagline": "Systems beat one-off outputs.",
+  "oneLiner": "I help operators get hired for what they already know.",
+  "hero": {
+    "headline": [
+      "I get overlooked people",
+      "hired"
+    ],
+    "support": "At 23 I sent one cold message and ended up with a $100k+ chief of staff role and equity. Now I teach people the method that got me there.",
+    "primary": {
+      "label": "Book a 1:1",
+      "href": "/call"
+    },
+    "secondary": {
+      "label": "Read The Draft",
+      "href": "/#newsletter"
+    }
+  },
+  "closing": {
+    "question": "Ready to be the obvious hire?",
+    "cta": {
+      "label": "Book a 1:1",
+      "href": "/call"
+    }
+  },
+  "company": {
+    "eyebrow": "My company",
+    "name": "RallyUp",
+    "body": "I'm chief of staff and an investor at RallyUp. We build LinkedIn audiences for B2B founders and executives: every post hand-written in their voice, engineered to reach the people who buy from them. This year we've shipped 700+ posts for leadership teams at PandaDoc, Walnut, Anchor Browser and Andel.",
+    "cta": {
+      "label": "See if your team qualifies",
+      "href": ""
+    },
+    "bookingBase": "",
+    "logos": []
+  },
   "newsletter": {
     "name": "The Draft",
     "label": "Free weekly email",
     "pitch": "A weekly letter where I share my real-time learnings on career, marketing, and building an internet income.",
+    "proof": "",
     "reassurance": "One email a week. Leave whenever you like, no hard feelings.",
     "url": ""
   },
+  "call": {
+    "checkoutUrl": ""
+  },
+  "contactEmail": "",
   "social": {
     "linkedin": "",
-    "x": "",
+    "x": "https://x.com/fran_builds",
     "youtube": "",
     "instagram": ""
   },
   "nav": [
-    { "label": "Manifesto", "href": "/manifesto" },
-    { "label": "Work", "href": "/work" },
-    { "label": "Projects", "href": "/projects" },
-    { "label": "Writing", "href": "/writing" },
-    { "label": "Resources", "href": "/resources" }
+    {
+      "label": "Portfolio",
+      "href": "/portfolio"
+    },
+    {
+      "label": "Resources",
+      "href": "/resources/first-30-days",
+      "children": [
+        {
+          "label": "The first 30 days",
+          "href": "/resources/first-30-days"
+        },
+        {
+          "label": "The chief of staff DM",
+          "href": "/resources/chief-of-staff-dm"
+        }
+      ]
+    },
+    {
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "label": "Newsletter",
+      "href": "/#newsletter"
+    }
   ],
+  "navCta": {
+    "label": "Work with me",
+    "href": "/call"
+  },
   "footer": {
     "explore": [
-      { "label": "Newsletter", "href": "/#newsletter" },
-      { "label": "Manifesto", "href": "/manifesto" },
-      { "label": "Work", "href": "/work" },
-      { "label": "Projects", "href": "/projects" },
-      { "label": "Resources", "href": "/resources" }
+      {
+        "label": "Newsletter",
+        "href": "/#newsletter"
+      },
+      {
+        "label": "Portfolio",
+        "href": "/portfolio"
+      },
+      {
+        "label": "About",
+        "href": "/about"
+      },
+      {
+        "label": "Work with me",
+        "href": "/call"
+      }
     ],
     "legal": [
-      { "label": "Privacy", "href": "/privacy" },
-      { "label": "Terms", "href": "/terms" }
+      {
+        "label": "Privacy",
+        "href": "/privacy"
+      },
+      {
+        "label": "Terms",
+        "href": "/terms"
+      }
     ]
   }
 }

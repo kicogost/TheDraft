@@ -5,14 +5,15 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/Button";
 import { Logo } from "@/components/Logo";
-import type { NavLink } from "@/lib/content";
+import type { NavItem } from "@/lib/content";
 
 type NavProps = {
   name: string;
-  links: NavLink[];
+  links: NavItem[];
+  cta: { label: string; href: string };
 };
 
-export function Nav({ name, links }: NavProps) {
+export function Nav({ name, links, cta }: NavProps) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
@@ -45,20 +46,24 @@ export function Nav({ name, links }: NavProps) {
         </Link>
 
         <div className="hidden items-center gap-6 lg:flex">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              aria-current={pathname === link.href ? "page" : undefined}
-              className={`link-sweep text-sm font-medium transition-colors hover:text-ink ${
-                pathname === link.href ? "text-ink" : "text-ink-soft"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
-          <Button href="/#newsletter" size="md">
-            Read The Draft
+          {links.map((link) =>
+            link.children && link.children.length > 0 ? (
+              <Dropdown key={link.label} item={link} />
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                aria-current={pathname === link.href ? "page" : undefined}
+                className={`link-sweep text-sm font-medium transition-colors hover:text-ink ${
+                  pathname === link.href ? "text-ink" : "text-ink-soft"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ),
+          )}
+          <Button href={cta.href} size="md">
+            {cta.label}
           </Button>
         </div>
 
@@ -94,20 +99,68 @@ export function Nav({ name, links }: NavProps) {
         <div id="mobile-nav" className="border-t border-line bg-paper lg:hidden">
           <div className="mx-auto flex max-w-7xl flex-col gap-1 px-5 py-4 sm:px-8">
             {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="py-2 text-lg text-ink-soft transition-colors hover:text-ink"
-              >
-                {link.label}
-              </Link>
+              <div key={link.label}>
+                <Link
+                  href={link.href}
+                  className="block py-2 text-lg text-ink-soft transition-colors hover:text-ink"
+                >
+                  {link.label}
+                </Link>
+                {link.children?.map((child) => (
+                  <Link
+                    key={child.href}
+                    href={child.href}
+                    className="block py-1.5 pl-4 text-ink-soft transition-colors hover:text-ink"
+                  >
+                    {child.label}
+                  </Link>
+                ))}
+              </div>
             ))}
-            <Button href="/#newsletter" size="md" className="mt-3 w-full">
-              Read The Draft
+            <Button href={cta.href} size="md" className="mt-3 w-full">
+              {cta.label}
             </Button>
           </div>
         </div>
       ) : null}
     </header>
+  );
+}
+
+/**
+ * Hover and focus driven, no JavaScript state. The padded gap under the
+ * trigger keeps the panel reachable as the pointer crosses into it.
+ */
+function Dropdown({ item }: { item: NavItem }) {
+  return (
+    <div className="group relative">
+      <button
+        type="button"
+        className="flex items-center gap-1.5 text-sm font-medium text-ink-soft transition-colors hover:text-ink group-hover:text-ink"
+      >
+        {item.label}
+        <span
+          aria-hidden="true"
+          className="text-[0.65rem] transition-transform group-hover:rotate-180"
+        >
+          &#9660;
+        </span>
+      </button>
+      <div className="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 pt-3 opacity-0 transition-all duration-150 group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
+        <div className="border-2 border-ink bg-paper p-2 shadow-[6px_6px_0_0_var(--color-accent)]">
+          {item.children?.map((child) => (
+            <Link
+              key={child.href}
+              href={child.href}
+              className="group/item block px-3 py-2.5 transition-colors hover:bg-ink"
+            >
+              <span className="text-sm font-medium text-ink-soft group-hover/item:text-paper">
+                {child.label}
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }

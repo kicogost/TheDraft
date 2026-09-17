@@ -1,16 +1,16 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
-import type { NavLink } from "@/lib/content";
+import type { NavItem } from "@/lib/content";
 
 type FooterProps = {
   name: string;
   tagline: string;
-  explore: NavLink[];
-  legal: NavLink[];
-  social: NavLink[];
+  explore: NavItem[];
+  legal: NavItem[];
+  social: NavItem[];
 };
 
-function Column({ title, links }: { title: string; links: NavLink[] }) {
+function Column({ title, links }: { title: string; links: NavItem[] }) {
   if (links.length === 0) return null;
 
   return (

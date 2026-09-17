@@ -59,7 +59,7 @@ export default function RootLayout({
         >
           Skip to content
         </a>
-        <Nav name={site.name} links={site.nav} />
+        <Nav name={site.name} links={site.nav} cta={site.navCta} />
         <main id="main" className="pt-16">
           {children}
         </main>
