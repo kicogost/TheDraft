@@ -130,6 +130,17 @@ Flagged for review. In each case the brief's own tie breaker says to take Jay's 
 | Light only, no dark mode | Stated | Full ink sections on three pages | No conflict. These are dark sections in a light theme, not a dark theme. Recommend we keep them, they carry the rhythm |
 | Resource form label | "Get it free, in your inbox" | Identical to Jay's live line | Rewrite it. The brief quoted him verbatim |
 
+## Decisions locked at phase 1
+
+Francisco reviewed the four open questions and delegated the first two. Recorded here because later phases cite this file.
+
+1. **Square, not pill.** The brand logo is a hard edged square holding a sharp geometric envelope, and the newsletter thumbnail rules a straight accent bar under the wordmark. There is no curve in the brand. So the component language is zero radius throughout, hairline rules for structure, 2px borders for components, and a hard offset shadow in the accent for lift. This overrides the brief's `border-radius: 999px`.
+2. **The palette comes from his own assets.** Accent `#b4552b` and paper `#fdf6ec` are sampled from the logo, ink `#241c16` and body `#4a4239` from the thumbnail. Measured: `#b4552b` on paper is 4.58:1, which scrapes AA, and 4.09:1 on the dim band, which fails. So the exact brand orange is kept for fills, marks and the logo, and `--color-accent-deep: #9e441d` (5.93:1 on paper, 5.31:1 on dim) carries any accent coloured text.
+3. **Flat nav, no dropdown.** There are two resources, and the information architecture already puts five items in the bar. A hover dropdown for two links is not worth the interaction. `Nav` takes a flat list from `content/site.json`, and a dropdown can be added per item when the resource count justifies it.
+4. **The homepage keeps the full ink closing band.** Confirmed. Dark sections in a light theme, not a dark theme.
+
+Also applied, from the conflicts table above: 112px and 80px section spacing, 768px prose, 1280px grids, and a 16px body with a separate 20px lead step.
+
 ## Open questions for Francisco
 
 1. Pills or squares. The brief says pill. Jay's entire component language is square with hard shadows. Either is fine, but it decides the character of the site and it should be decided before phase 1 builds `Button`.
