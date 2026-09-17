@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
 import { Section } from "@/components/Section";
@@ -15,9 +16,9 @@ export const metadata: Metadata = {
 export default function PortfolioPage() {
   const { entries } = portfolio;
   const columns =
-    entries.length >= 3
+    entries.length >= 5
       ? "sm:grid-cols-2 lg:grid-cols-3"
-      : entries.length === 2
+      : entries.length >= 2
         ? "sm:grid-cols-2"
         : "max-w-2xl";
 
@@ -39,8 +40,20 @@ export default function PortfolioPage() {
             return (
               <Card key={entry.name} href={entry.href || undefined}>
                 <div className="flex items-start justify-between gap-4">
-                  <span className="grid h-10 w-10 shrink-0 place-items-center border-2 border-ink font-display text-lg leading-none">
-                    {entry.name.charAt(0)}
+                  <span className="grid h-11 w-11 shrink-0 place-items-center overflow-hidden border-2 border-ink">
+                    {entry.logo ? (
+                      <Image
+                        src={entry.logo}
+                        alt=""
+                        width={44}
+                        height={44}
+                        className="h-full w-full object-cover"
+                      />
+                    ) : (
+                      <span className="font-display text-lg leading-none">
+                        {entry.name.charAt(0)}
+                      </span>
+                    )}
                   </span>
                   <span className="label-micro text-right">
                     <span className="text-accent-deep">

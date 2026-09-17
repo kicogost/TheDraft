@@ -8,19 +8,47 @@
   "formEyebrow": "Get it free, in your inbox",
   "submitLabel": "Send me the DM",
   "blocks": [
-    { "type": "lead", "text": "At 23 I sent one cold message to a founder I had never met. He replied in thirty minutes." },
-    { "type": "p", "text": "Everyone asks what the message said. That is the wrong question." },
-    { "type": "p", "text": "It was not clever writing. It worked because it did the thing it was selling, to the person who would be buying it." },
-    { "type": "p", "text": "Alec had posted about growing his company. I opened by telling him I had found him the same way I would find his future customers, and I said so in the second line. The pitch was not a claim about outreach. It was outreach, arriving in his inbox while he read it." },
-    { "type": "p", "text": "Everything after that was three facts, none of them a job title: a business I had run at eighteen, the outreach I had already done for someone with a large audience, and the honest admission that I had a full time job and spare afternoons. Then a link to my calendar." },
-    { "type": "p", "text": "Doing the work in the message itself does two things:" },
-    { "type": "list", "items": [
-      "It answers the only question that matters, before it is asked. A founder reading a cold pitch wants to know whether you can actually do the thing. Landing in his inbox is the answer.",
-      "It cannot be faked. Anyone can say they are good at outreach. Almost nobody will do the work of finding you, reading you, and writing something you have not already seen twice that week."
-    ] },
-    { "type": "p", "text": "He booked a call for the Wednesday. I started fractionally, on afternoons and weekends around a full time job. That became chief of staff, on $100k plus equity." },
-    { "type": "ask", "text": "Drop your email below and I will send you the message itself, annotated: what I knew about Alec before I wrote it, why each line is there, what he wrote back, and what the first month actually looked like." }
+    {
+      "type": "lead",
+      "text": "At 23 I sent one cold message to a founder I had never met. He replied in thirty minutes."
+    },
+    {
+      "type": "p",
+      "text": "Everyone asks what the message said. That is the wrong question."
+    },
+    {
+      "type": "p",
+      "text": "It was not clever writing. It worked because it did the thing it was selling, to the person who would be buying it."
+    },
+    {
+      "type": "p",
+      "text": "Alec had posted about growing his company. I opened by telling him I had found him the same way I would find his future customers, and I said so in the second line. The pitch was not a claim about outreach. It was outreach, arriving in his inbox while he read it."
+    },
+    {
+      "type": "p",
+      "text": "Everything after that was three facts, none of them a job title: a business I had run at eighteen, the outreach I had already done for someone with a large audience, and the honest admission that I had a full time job and spare afternoons. Then a link to my calendar."
+    },
+    {
+      "type": "p",
+      "text": "Doing the work in the message itself does two things:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "It answers the only question that matters, before it is asked. A founder reading a cold pitch wants to know whether you can actually do the thing. Landing in his inbox is the answer.",
+        "It cannot be faked. Anyone can say they are good at outreach. Almost nobody will do the work of finding you, reading you, and writing something you have not already seen twice that week."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "He booked a call for the Wednesday. I started fractionally, on afternoons and weekends around a full time job. That became chief of staff, on $100k plus equity."
+    },
+    {
+      "type": "ask",
+      "text": "Drop your email below and I will send you the message itself, annotated: what I knew about Alec before I wrote it, why each line is there, what he wrote back, and what the first month actually looked like."
+    }
   ],
   "resourceUrl": "",
-  "automationId": ""
+  "automationId": "",
+  "deliverable": "content/resources/files/the-chief-of-staff-dm.pdf"
 }

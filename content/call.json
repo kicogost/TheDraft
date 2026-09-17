@@ -1,0 +1,40 @@
+{
+  "title": "LinkedIn and career workshop",
+  "lead": "One hour, screen shared, spent on the two things that decide whether you get hired: how you describe yourself, and who sees it.",
+  "detailsLabel": "The session",
+  "outcomes": [
+    "A positioning line that says what you do without sounding like a job advert",
+    "Your headline, about section and featured links rewritten while we talk",
+    "A 90-day plan: what to post, who to message, and what to say to them"
+  ],
+  "processLabel": "How it runs",
+  "process": [
+    { "title": "Book", "body": "Pick a slot and pay. Two minutes, and the card is the only filter." },
+    { "title": "I do the homework", "body": "Before we speak I read your profile, your CV, and real job posts for the role you want." },
+    { "title": "We work", "body": "Sixty minutes on Google Meet, rewriting in real time rather than talking about rewriting." },
+    { "title": "You ship", "body": "You leave with the doc we wrote together and a checklist for the first 30 days." }
+  ],
+  "forYouLabel": "This is for you if",
+  "forYou": [
+    "You are a few years into your career and the next step is not obvious from where you are standing",
+    "You want to move from a big company into a startup, or from doing the work into running it",
+    "You have a LinkedIn profile and never post, or you post and nothing happens",
+    "You would rather send ten precise messages than two hundred applications",
+    "You will do the homework between booking and the call"
+  ],
+  "notForYouLabel": "This is not for you if",
+  "notForYou": [
+    "You want someone to apply to jobs on your behalf",
+    "You want a guaranteed offer. Nobody can promise that and I will not pretend to",
+    "You are a company looking to hire. That is RallyUp, one click away in the nav",
+    "You have not decided you are going to change something yet"
+  ],
+  "faqLabel": "Common questions",
+  "faq": [
+    { "q": "How much is it?", "a": "$100, paid when you book. One hour, on Google Meet." },
+    { "q": "Is this just LinkedIn?", "a": "LinkedIn is where the work ends up, not what the work is. We spend most of the hour on how you describe yourself and who you should be talking to." },
+    { "q": "Will you write my posts for me?", "a": "No. I ghostwrite for executives through RallyUp and that is a different service at a different price. You leave this session able to write your own." },
+    { "q": "What do I need to bring?", "a": "Your CV, your LinkedIn, and a rough idea of the role you want next. If you only have two of the three, book anyway." }
+  ],
+  "ctaLabel": "Book the workshop"
+}

@@ -1,4 +1,5 @@
 import about from "@/content/about.json";
+import call from "@/content/call.json";
 import portfolio from "@/content/portfolio.json";
 import dm from "@/content/resources/chief-of-staff-dm.json";
 import first30 from "@/content/resources/first-30-days.json";
@@ -93,4 +94,8 @@ export function getResource(slug: string): Resource | undefined {
 
 export function getOtherResources(slug: string): Resource[] {
   return RESOURCES.filter((entry) => entry.slug !== slug);
+}
+
+export function getCall() {
+  return call;
 }

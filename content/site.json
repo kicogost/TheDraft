@@ -32,10 +32,23 @@
     "body": "I'm chief of staff and an investor at RallyUp. We build LinkedIn audiences for B2B founders and executives: every post hand-written in their voice, engineered to reach the people who buy from them. This year we've shipped 700+ posts for leadership teams at PandaDoc, Walnut, Anchor Browser and Andel.",
     "cta": {
       "label": "See if your team qualifies",
-      "href": ""
+      "href": "https://cal.com/team/rallyup/audience-building-with-rallyup"
     },
-    "bookingBase": "",
-    "logos": []
+    "bookingBase": "https://cal.com/team/rallyup/audience-building-with-rallyup",
+    "logos": [
+      {
+        "name": "Airwallex",
+        "src": "/images/logos/airwallex.png"
+      },
+      {
+        "name": "PandaDoc",
+        "src": "/images/logos/pandadoc.png"
+      },
+      {
+        "name": "Letter.ai",
+        "src": "/images/logos/letterai.png"
+      }
+    ]
   },
   "newsletter": {
     "name": "The Draft",
@@ -46,11 +59,14 @@
     "url": ""
   },
   "call": {
-    "checkoutUrl": ""
+    "checkoutUrl": "https://cal.com/francisco-gost-scagliarini/linkedin-career-workshop",
+    "price": "$100",
+    "duration": "60 minutes",
+    "platform": "Google Meet"
   },
   "contactEmail": "",
   "social": {
-    "linkedin": "",
+    "linkedin": "https://www.linkedin.com/in/franciscogost/",
     "x": "https://x.com/fran_builds",
     "youtube": "",
     "instagram": ""

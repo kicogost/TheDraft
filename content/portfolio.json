@@ -1,7 +1,7 @@
 {
-  "title": "I back the people who move before they are asked.",
-  "lead": "The companies I hold a stake in and help build. Short list on purpose: I only put my name on things I actually work on.",
-  "disclosure": "I hold equity in RallyUp and it pays me. Read anything I say about it with that in mind.",
+  "title": "I write for people too busy building to be seen.",
+  "lead": "The company I help run, and the teams whose leadership I write for. The posts go out in their voice, never in mine.",
+  "disclosure": "I hold equity in RallyUp and it pays me. The others are clients. Read anything I say about any of them with that in mind.",
   "entries": [
     {
       "name": "RallyUp",
@@ -9,10 +9,37 @@
       "year": "2026",
       "category": "B2B GTM · LinkedIn content",
       "description": "Builds LinkedIn audiences for B2B founders and executives, end to end. Every post hand-written in the exec's real voice and engineered to reach the people who buy from them.",
-      "logo": "",
+      "logo": "/images/logos/rallyup.png",
       "href": "https://rallyup.team",
       "promo": { "label": "Book an audience-building call", "href": "" }
+    },
+    {
+      "name": "Airwallex",
+      "relationship": "Ghostwriter",
+      "year": "2026",
+      "category": "Fintech · Global payments",
+      "description": "Payments and financial infrastructure for companies that operate across borders. Accounts, cards, currency and treasury in one place instead of five.",
+      "logo": "/images/logos/airwallex.png",
+      "href": "https://www.airwallex.com"
+    },
+    {
+      "name": "PandaDoc",
+      "relationship": "Ghostwriter",
+      "year": "2026",
+      "category": "Sales software · Documents",
+      "description": "Document workflow for revenue teams. Proposals, quotes and contracts get built, sent, tracked and signed without anybody leaving the tool.",
+      "logo": "/images/logos/pandadoc.png",
+      "href": "https://www.pandadoc.com"
+    },
+    {
+      "name": "Letter.ai",
+      "relationship": "Ghostwriter",
+      "year": "2026",
+      "category": "AI · Sales enablement",
+      "description": "Turns a company's product and sales knowledge into answers reps can actually use mid-conversation, rather than a wiki nobody opens.",
+      "logo": "/images/logos/letterai.png",
+      "href": "https://www.letter.ai"
     }
   ],
-  "cta": { "label": "Pitch me on LinkedIn", "href": "" }
+  "cta": { "label": "Work with me", "href": "/call" }
 }
