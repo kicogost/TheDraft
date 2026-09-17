@@ -5,6 +5,7 @@ import type { NavItem } from "@/lib/content";
 type FooterProps = {
   name: string;
   tagline: string;
+  email: string;
   explore: NavItem[];
   legal: NavItem[];
   social: NavItem[];
@@ -40,7 +41,7 @@ function Column({ title, links }: { title: string; links: NavItem[] }) {
   );
 }
 
-export function Footer({ name, tagline, explore, legal, social }: FooterProps) {
+export function Footer({ name, tagline, email, explore, legal, social }: FooterProps) {
   return (
     <footer className="bg-ink text-paper">
       <div className="mx-auto max-w-7xl px-5 py-10 sm:px-8">
@@ -50,6 +51,14 @@ export function Footer({ name, tagline, explore, legal, social }: FooterProps) {
               <Logo name={name} tone="paper" size="lg" />
             </Link>
             <p className="mt-4 max-w-xs text-lg italic text-paper/60">{tagline}</p>
+            {email ? (
+              <a
+                href={`mailto:${email}`}
+                className="link-sweep mt-4 inline-block text-paper/80 transition-colors hover:text-paper"
+              >
+                {email}
+              </a>
+            ) : null}
           </div>
 
           <div className="grid grid-cols-2 gap-x-12 gap-y-8 sm:flex sm:gap-10">

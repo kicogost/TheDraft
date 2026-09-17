@@ -66,6 +66,7 @@ export default function RootLayout({
         <Footer
           name={site.name}
           tagline={site.tagline}
+          email={site.contactEmail}
           explore={site.footer.explore}
           legal={site.footer.legal}
           social={getSocialLinks()}
