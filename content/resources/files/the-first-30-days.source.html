@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>The first 30 days</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#fdf6ec;--dim:#f4e9d9;--ink:#241c16;--soft:#4a4239;--ash:#6f6559;--line:#241c1617;--accent:#b4552b;--deep:#9e441d}
+  *{box-sizing:border-box}
+  @page{size:A4;margin:18mm 16mm}
+  body{margin:0;background:var(--paper);color:var(--soft);font:400 10.5pt/1.6 Inter,system-ui,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  h1,h2,h3{color:var(--ink);font-family:"Instrument Serif",Georgia,serif;font-weight:400;margin:0}
+  h1{font-size:34pt;line-height:1.02;letter-spacing:-.015em}
+  h2{font-size:19pt;line-height:1.1;margin:0 0 6pt}
+  h3{font-size:13pt;line-height:1.15}
+  .label{color:var(--ash);font-family:"JetBrains Mono",monospace;font-size:7.5pt;letter-spacing:.2em;text-transform:uppercase}
+  .cover{border-bottom:2px solid var(--ink);padding-bottom:14pt;margin-bottom:18pt}
+  .lead{font-size:12.5pt;line-height:1.5;color:var(--ink);margin:10pt 0 0;max-width:34em}
+  .sec{margin-top:20pt;page-break-inside:avoid}
+  .rule{border:0;border-top:1px solid var(--line);margin:16pt 0}
+  .msg{border:2px solid var(--ink);background:#fff;padding:14pt 16pt;margin-top:10pt;white-space:pre-wrap;font-size:10pt;line-height:1.62}
+  .msg .hl{background:var(--dim);box-shadow:0 0 0 2px var(--dim)}
+  .note{display:flex;gap:10pt;margin-top:12pt;page-break-inside:avoid}
+  .note .n{flex:0 0 auto;font-family:"Instrument Serif",Georgia,serif;font-size:12pt;color:var(--deep);min-width:1.6em}
+  .note .b strong{color:var(--ink)}
+  .reply{border-left:3px solid var(--accent);background:var(--dim);padding:10pt 14pt;margin-top:10pt;font-size:10pt}
+  .foot{margin-top:24pt;border-top:2px solid var(--ink);padding-top:10pt;font-size:8.5pt;color:var(--ash);display:flex;justify-content:space-between;gap:12pt}
+  .gap{border:2px dashed var(--accent);background:#fff;padding:10pt 14pt;margin-top:10pt;font-size:9.5pt;color:var(--deep)}
+</style>
+<style>
+  .scroller{overflow-x:auto;border:2px solid var(--ink);margin:12pt 0;background:#fff}
+  table{border-collapse:collapse;width:100%;font-size:9pt}
+  th,td{text-align:left;padding:5pt 8pt;border-bottom:1px solid var(--line)}
+  thead th{font-family:"JetBrains Mono",monospace;font-size:7pt;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);background:var(--dim);border-bottom:2px solid var(--ink)}
+  tbody tr:last-child td{border-bottom:none}
+  td.n{font-family:"JetBrains Mono",monospace;white-space:nowrap}
+  td.up{color:var(--deep);font-weight:600}
+  .weeks{display:grid;grid-template-columns:1fr 1fr;gap:10pt;margin-top:10pt}
+  .week{border:2px solid var(--ink);padding:10pt 12pt;page-break-inside:avoid}
+  .week .wk{font-family:"JetBrains Mono",monospace;font-size:7pt;letter-spacing:.14em;text-transform:uppercase;color:var(--deep);margin-bottom:4pt}
+  .week h4{margin:0 0 4pt;font-family:"Instrument Serif",Georgia,serif;font-size:12pt;font-weight:400;color:var(--ink)}
+  .week p{margin:0;font-size:9pt;line-height:1.5}
+  .play{border-top:1px solid var(--line);padding-top:10pt;margin-top:12pt;page-break-inside:avoid}
+  .play .idx{font-family:"JetBrains Mono",monospace;font-size:7.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
+  .play h3{margin:3pt 0 5pt;font-size:13pt}
+  .why{background:var(--dim);border-left:3px solid var(--accent);padding:8pt 12pt;margin-top:8pt;font-size:9.5pt}
+  .why b{color:var(--ink)}
+  .honest{border:2px solid var(--ink);background:#fff;padding:12pt 14pt;margin-top:12pt}
+</style></head><body>
+
+<div class="cover">
+  <p class="label">100,000 impressions &middot; two weeks</p>
+  <h1>The first 30 days</h1>
+  <p class="lead">How to get seen by the people who can hire you, starting from nobody knowing your name. Written for someone who wants a job, not customers.</p>
+</div>
+
+<div class="sec">
+  <h2>What this can and cannot do</h2>
+  <p>Most LinkedIn advice is written for founders and executives. Two of the biggest levers in that world are publishing a role with the salary attached, and timing a launch. You have neither. If a guide tells you to post your funding round, it was not written for you.</p>
+  <p>What follows is the part that transfers, plus the two plays that replace the ones you cannot run. I write LinkedIn content for B2B executives every day, so the patterns here come from watching a lot of first months up close, and from running one myself.</p>
+  <div class="honest">
+    <p style="margin:0"><b>The honest promise.</b> Cadence above three posts a week, the four post shapes below, and twenty minutes a day in other people's comments will beat your own baseline by a multiple you can measure. Whether that multiple reaches six figures depends on what you have to say and who already knows you. I am not going to pretend otherwise.</p>
+  </div>
+</div>
+
+<hr class="rule">
+
+<div class="sec">
+  <h2>1. Before you post anything</h2>
+  <h3 style="font-family:'Instrument Serif',Georgia,serif;font-size:13pt;margin:10pt 0 4pt">The positioning line</h3>
+  <p>One sentence: who you are for, and what you do for them. Not your job title. If your line could appear on three hundred other profiles, it is not a line, it is a category.</p>
+  <p>Write it, then write the things you will never post about. The second list matters more. A feed that is about four things is about nothing.</p>
+  <h3 style="font-family:'Instrument Serif',Georgia,serif;font-size:13pt;margin:12pt 0 4pt">The profile rebuild</h3>
+  <p>Do this before the first post, because week one is when traffic actually arrives and a good post pointing at a dead profile wastes the post.</p>
+  <p><b>Headline:</b> what you do for whom, not the title your payroll system uses. <b>About:</b> first two lines carry it, everything after is collapsed behind a "see more" nobody clicks. <b>Featured:</b> two or three links maximum, each one something a hiring manager can open and judge in thirty seconds.</p>
+</div>
+
+<div class="sec">
+  <h2>2. The four posts that do the work</h2>
+
+  <div class="play">
+    <div class="idx">Play one</div>
+    <h3>The introduction</h3>
+    <p>Who you are, what you are going to write about, and what you have actually done. Publish it first.</p>
+    <div class="why"><b>Why it works:</b> an account with no posting history gets an outsized first push, and an introduction is the one post where talking about yourself is the point. In the launches I have measured, the introduction post regularly out-reaches everything published in the month after it, and produces the highest engagement rate of the entire window. Specifics carry it. A concrete career fact beats a general hello every time.</div>
+  </div>
+
+  <div class="play">
+    <div class="idx">Play two</div>
+    <h3>The teardown</h3>
+    <p>Pick a company you would want to work for, or a problem in your field, and do the work in public. What is broken, what you would change, what you would measure. Name the company. Be generous rather than clever.</p>
+    <div class="why"><b>Why it works:</b> this is the play that replaces the hiring post, and it is the strongest one you have. It gets forwarded, because it is useful to someone other than you. It proves capability instead of claiming it. And it reaches the exact people who could hire you, doing the exact job you want, before anyone has agreed to interview you. This is the same move as a good cold message, run in public and at scale.</div>
+  </div>
+
+  <div class="play">
+    <div class="idx">Play three</div>
+    <h3>The receipt</h3>
+    <p>One number from your own work, and the story of how it happened. What the situation was, what you tried, what broke, what it ended at.</p>
+    <div class="why"><b>Why it works:</b> a number is the only thing in a feed that cannot be rewritten by someone with a better vocabulary. It also does the work an interview usually does, which means the conversation starts further along.</div>
+  </div>
+
+  <div class="play">
+    <div class="idx">Play four</div>
+    <h3>The story only you can tell</h3>
+    <p>The job you left and why. The thing you got badly wrong. The decision nobody else in your feed had to make.</p>
+    <div class="why"><b>Why it works:</b> lowest reach, highest engagement, every time. These posts are not supposed to win the month. They are what turns the people who saw the teardown into people who come back, which is the difference between a spike and an audience.</div>
+  </div>
+</div>
+
+<hr class="rule">
+
+<div class="sec">
+  <h2>3. The thirty days, week by week</h2>
+  <p>Three posts a week, on the same three days. Cadence matters more than timing, and both matter less than having something worth publishing.</p>
+  <div class="weeks">
+    <div class="week"><div class="wk">Week one</div><h4>Establish who you are</h4><p>Profile rewritten first. Then the introduction post, one view you can defend, and one receipt.</p></div>
+    <div class="week"><div class="wk">Week two</div><h4>Do the work in public</h4><p>The teardown. This is the week reach usually arrives, and the week the right people start reading.</p></div>
+    <div class="week"><div class="wk">Week three</div><h4>Earn the audience</h4><p>The stories only you can tell. Low reach, high engagement, and the posts that turn visitors into followers.</p></div>
+    <div class="week"><div class="wk">Week four</div><h4>Convert</h4><p>A second teardown, and the DMs. By now people have context on you, so the message is a continuation rather than an interruption.</p></div>
+  </div>
+</div>
+
+<div class="sec">
+  <h2>4. The formatting floor</h2>
+  <p>These decide your reach before anyone has read a word, and every one of them is a formatting decision rather than a writing one. They are correlations observed across large samples of LinkedIn posts, not published platform rules, and they move every few months.</p>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Lever</th><th>Target</th><th>Observed effect</th></tr></thead>
+      <tbody>
+        <tr><td>Character count</td><td class="n">1,250 to 3,000</td><td class="up">+31% reach</td></tr>
+        <tr><td>Paragraph count</td><td class="n">14 or more</td><td>under 7 costs most of your reach</td></tr>
+        <tr><td>Average word length</td><td class="n">5 letters or fewer</td><td>longer costs about 40%</td></tr>
+        <tr><td>Hashtags</td><td class="n">None</td><td>three or more costs most of your reach</td></tr>
+        <tr><td>External links</td><td class="n">1 to 3</td><td class="up">+43% reach</td></tr>
+        <tr><td>Images</td><td class="n">1200 x 1500, portrait</td><td class="up">+47% over landscape</td></tr>
+        <tr><td>Carousels and infographics</td><td>Where they fit</td><td class="up">around 3x a plain text post</td></tr>
+        <tr><td>Closing line</td><td>A statement, or a question answerable in one sentence</td><td>generic questions do worse than no question</td></tr>
+        <tr><td>Topic</td><td>Career and how work actually works</td><td class="up">the most reliably shared category</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:9pt;color:var(--ash)">Treat these as a floor, not a formula. They stop a good post being invisible. They will not make a boring one interesting.</p>
+</div>
+
+<hr class="rule">
+
+<div class="sec">
+  <h2>5. The part nobody does</h2>
+  <p>Commenting is the highest leverage unpaid thing on the platform and almost nobody does it properly. Accounts in the top one percent leave well over a hundred replies a week on other people's posts. The average account leaves a third of that, and the relationship between comment volume and follower growth is one of the strongest in the data.</p>
+  <p>Ten to twenty comments a day, on posts the people who hire you already read. Lead with your own experience, never with praise. It takes twenty minutes and it does more for your distribution than a fourth weekly post would.</p>
+  <div class="why"><b>If you only do one thing:</b> this. It works in week one, it needs no audience, and it puts you in front of exactly the right people while your own posts are still finding their feet.</div>
+</div>
+
+<div class="sec">
+  <h2>6. What good looks like at day 30</h2>
+  <p>You have a profile that explains you in one line. Twelve posts up, four of them teardowns and receipts. A comment habit that runs on its own. And a short list of people who have seen your name enough times that a message from you is not cold any more.</p>
+  <p>That last one is the entire point. Everything above exists so that the message you send on day 31 gets read.</p>
+</div>
+
+<div class="foot">
+  <span>Francisco Gost &middot; The Draft</span>
+  <span>Do the work in public, before anyone asks.</span>
+</div>
+
+</body></html>

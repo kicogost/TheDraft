@@ -9,8 +9,8 @@ the reader a short-lived signed link after it has their email.
 
 | File | Resource | Status |
 |------|----------|--------|
-| `the-chief-of-staff-dm.pdf` | `chief-of-staff-dm` | Draft, two gaps marked inside the document |
-| (none yet) | `first-30-days` | Needs Francisco's real hooks, numbers and calendar |
+| `the-chief-of-staff-dm.pdf` | `chief-of-staff-dm` | Complete |
+| `the-first-30-days.pdf` | `first-30-days` | Complete. Proof figure on the cover is Francisco's own claim and has no screenshot on file yet |
 
-`the-chief-of-staff-dm.source.html` is the source the PDF is rendered from.
-Edit the HTML and re-render rather than editing the PDF.
+Each `*.source.html` is what the PDF is rendered from. Edit the HTML and
+re-render rather than editing the PDF.

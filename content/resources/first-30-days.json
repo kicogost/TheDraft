@@ -2,22 +2,23 @@
   "slug": "first-30-days",
   "template": "contents",
   "title": "The first 30 days.",
-  "description": "The system I used to reach 100,000 impressions on LinkedIn in my first two weeks of posting.",
+  "description": "The system I used to reach 100,000 impressions on LinkedIn in my first two weeks, rebuilt for people who want a job rather than a customer.",
   "kicker": "100k impressions · 2 weeks",
-  "formHeader": "100,000 impressions. Two weeks. From a standing start.",
+  "formHeader": "100,000 impressions. Two weeks. No audience to start with.",
   "formEyebrow": "Get it free, in your inbox",
   "submitLabel": "Send me the system",
   "disclosure": "You will also be signed up for The Draft, my free weekly email on career, marketing and building an income on the internet. Leave whenever you like.",
   "insideLabel": "What's inside",
   "inside": [
-    "The one-page positioning doc: who you are for, what you say, and what you never say",
-    "The profile rebuild you can do in an afternoon: headline, about section, and featured links you can actually track",
-    "The 30-day calendar, with the four post types and the days they run",
-    "Twelve hooks that worked and the two that flopped, with the numbers next to each",
-    "The image rule: what to post alongside the text, and why it moved impressions for us",
-    "The twenty-minute daily engagement routine that does more work than the posts do"
+    "The positioning line: who you are for, what you say, and what you never say again",
+    "The profile rebuild you can finish in an afternoon, headline, about and featured",
+    "The four posts that do the work, and the two that actually get you hired",
+    "The 30-day calendar, week by week, with what to publish and when",
+    "The formatting floor that decides your reach before anyone reads a word",
+    "The twenty-minute daily routine that beats publishing a fourth post"
   ],
   "blocks": [],
   "resourceUrl": "",
-  "automationId": ""
+  "automationId": "",
+  "deliverable": "content/resources/files/the-first-30-days.pdf"
 }
