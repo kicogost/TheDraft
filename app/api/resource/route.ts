@@ -40,9 +40,11 @@ export async function POST(request: Request) {
     email,
     medium: "resource",
     campaign: resource.slug,
-    // The resource automation sends the welcome, so beehiiv's own is suppressed
-    // and nobody gets two emails in the same minute.
-    sendWelcomeEmail: false,
+    // Suppress beehiiv's own welcome only when a resource automation exists to
+    // send one instead. With no automation, suppressing it means the reader
+    // hands over an email and hears nothing, so this has to stay derived
+    // rather than hardcoded.
+    sendWelcomeEmail: !resource.automationId,
   });
 
   if (!result.ok) {

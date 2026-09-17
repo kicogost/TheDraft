@@ -1,6 +1,9 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
 
-const TTL_MS = 30 * 60 * 1000;
+// Seven days. The reader may hand over an email on a phone and come back to
+// the download at a desk days later, so a short window strands them with
+// nothing to show for the address they gave.
+const TTL_MS = 7 * 24 * 60 * 60 * 1000;
 
 function secret(): string {
   return process.env.RESOURCE_SIGNING_SECRET ?? "";
