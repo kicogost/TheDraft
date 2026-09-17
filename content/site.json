@@ -1,0 +1,43 @@
+{
+  "name": "Francisco Gost",
+  "fullName": "Francisco Gost Scagliarini",
+  "url": "https://franciscogost.com",
+  "tagline": "Operator, writer, and coach.",
+  "oneLiner": "I help founders and operators build a career that compounds.",
+  "heroHeadline": "I build the systems behind the work.",
+  "heroSupport": "Placeholder. One sentence on what Francisco does now, one on who it is for.",
+  "contactEmail": "",
+  "newsletter": {
+    "name": "The Draft",
+    "label": "Free weekly email",
+    "pitch": "A weekly letter where I share my real-time learnings on career, marketing, and building an internet income.",
+    "reassurance": "One email a week. Leave whenever you like, no hard feelings.",
+    "url": ""
+  },
+  "social": {
+    "linkedin": "",
+    "x": "",
+    "youtube": "",
+    "instagram": ""
+  },
+  "nav": [
+    { "label": "Manifesto", "href": "/manifesto" },
+    { "label": "Work", "href": "/work" },
+    { "label": "Projects", "href": "/projects" },
+    { "label": "Writing", "href": "/writing" },
+    { "label": "Resources", "href": "/resources" }
+  ],
+  "footer": {
+    "explore": [
+      { "label": "Newsletter", "href": "/#newsletter" },
+      { "label": "Manifesto", "href": "/manifesto" },
+      { "label": "Work", "href": "/work" },
+      { "label": "Projects", "href": "/projects" },
+      { "label": "Resources", "href": "/resources" }
+    ],
+    "legal": [
+      { "label": "Privacy", "href": "/privacy" },
+      { "label": "Terms", "href": "/terms" }
+    ]
+  }
+}
