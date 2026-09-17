@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/Button";
+import { NewsletterForm } from "@/components/NewsletterForm";
 import { Section } from "@/components/Section";
 import { bookingUrl, getSite } from "@/lib/content";
 
@@ -53,12 +54,10 @@ export default function HomePage() {
             <p className="mt-5 max-w-xl">{site.newsletter.pitch}</p>
           </div>
           <div className="self-center">
-            <p className="text-sm text-ash">
-              The signup form arrives with the beehiiv wiring.
-            </p>
-            <p className="mt-3 text-sm text-ash">
-              {site.newsletter.reassurance}
-            </p>
+            <NewsletterForm
+              source="homepage"
+              reassurance={site.newsletter.reassurance}
+            />
           </div>
         </div>
       </Section>

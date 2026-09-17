@@ -8,7 +8,7 @@
     "I spent the next two and a half years at [Synpulse](https://www.synpulse.com) doing management consulting. It is the part of the story where I learned how large organisations actually decide things, which turned out to matter more than I expected.",
     "In 2025 I moved back to Spain to run partnerships at dCycle, a sustainability startup, and built a partner channel past €200,000 in recurring revenue.",
     "At twenty-three I sent [one cold message](/resources/chief-of-staff-dm) to a founder I had never met. He replied in thirty minutes. I started fractionally, and I am now chief of staff at RallyUp on $100k plus equity.",
-    "RallyUp pivoted on the first of May with no demand at all. By August we had grown revenue thirty-seven times over, held client retention above ninety percent, and shipped more than 700 posts for leadership teams at [PandaDoc, Walnut, Anchor Browser and Andel](https://rallyup.team/case-studies/)."
+    "RallyUp pivoted on the first of May with no demand at all. By August we had grown revenue thirty-seven times over, held client retention above ninety percent, and shipped more than 700 posts for leadership teams at [PandaDoc, Letter.ai, Anchor Browser and Andel](https://rallyup.team/case-studies/)."
   ],
   "closing": "Today I run RallyUp's operations from Mallorca, write The Draft every week, and train jiu-jitsu three times a week.",
   "portrait": {
@@ -17,5 +17,8 @@
     "caption": "Francisco Gost",
     "role": "operator · writer"
   },
-  "cta": { "label": "Read The Draft", "href": "/#newsletter" }
+  "cta": {
+    "label": "Read The Draft",
+    "href": "/#newsletter"
+  }
 }

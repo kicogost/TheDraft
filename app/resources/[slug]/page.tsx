@@ -36,6 +36,7 @@ export default async function ResourcePage({ params }: Params) {
       </div>
       <div className="px-6 py-6">
         <ResourceForm
+          slug={resource.slug}
           eyebrow={resource.formEyebrow}
           submitLabel={resource.submitLabel}
           disclosure={resource.disclosure}
