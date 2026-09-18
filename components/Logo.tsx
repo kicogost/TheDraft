@@ -39,7 +39,9 @@ export function Logo({ tone = "accent", size = "sm", name }: LogoProps) {
       <span className={`grid shrink-0 place-items-center ${box} ${tile}`}>
         <LogoMark className={mark} />
       </span>
-      <span className={`font-display leading-none ${word}`}>{name}</span>
+      <span className={`font-display uppercase leading-none tracking-wide ${word}`}>
+        {name}
+      </span>
     </span>
   );
 }

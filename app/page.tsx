@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <>
       <Section width="hero" space="generous" grid="sm">
-        <h1 className="display-1 max-w-3xl">
+        <h1 className="display-1">
           {site.hero.headline.map((line) => (
             <span key={line} className="block">
               {line}
