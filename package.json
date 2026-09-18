@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint . && node scripts/check-copy.mjs",
+    "lint:copy": "node scripts/check-copy.mjs"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "next": "15.5.25",
     "react": "19.2.0",
     "react-dom": "19.2.0"

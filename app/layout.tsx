@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Anton, Inter, JetBrains_Mono } from "next/font/google";
 import { Footer } from "@/components/Footer";
@@ -70,6 +71,7 @@ export default function RootLayout({
           legal={site.footer.legal}
           social={getSocialLinks()}
         />
+        <Analytics />
       </body>
     </html>
   );
