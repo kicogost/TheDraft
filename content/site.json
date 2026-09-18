@@ -6,8 +6,8 @@
   "oneLiner": "I help operators get hired for what they already know.",
   "hero": {
     "headline": [
-      "I get overlooked people",
-      "hired"
+      "I turn overlooked",
+      "people into hires"
     ],
     "support": "At 23 I sent one cold message and ended up with a $100k+ chief of staff role and equity. Now I teach people the method that got me there.",
     "primary": {
@@ -20,7 +20,10 @@
     }
   },
   "closing": {
-    "question": "Ready to be the obvious hire?",
+    "question": [
+      "Ready to be the",
+      "obvious hire?"
+    ],
     "cta": {
       "label": "Book a 1:1",
       "href": "/call"

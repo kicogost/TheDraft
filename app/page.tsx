@@ -63,8 +63,12 @@ export default function HomePage() {
       </Section>
 
       <Section background="ink" space="generous">
-        <h2 className="display-2 max-w-3xl text-paper">
-          {site.closing.question}
+        <h2 className="display-2 text-paper">
+          {site.closing.question.map((line) => (
+            <span key={line} className="block">
+              {line}
+            </span>
+          ))}
         </h2>
         <div className="mt-10">
           <Button
