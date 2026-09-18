@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
   // them out of the serverless bundle and every download 404s in production.
   outputFileTracingIncludes: {
     "/api/download/[slug]": ["./content/resources/files/*.pdf"],
+    // Satori needs the real font files to draw the social cards.
+    "/**/opengraph-image": ["./assets/fonts/*.ttf"],
   },
 };
 

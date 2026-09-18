@@ -135,5 +135,24 @@
         "href": "/terms"
       }
     ]
+  },
+  "og": {
+    "kicker": "Francisco Gost",
+    "headline": "I turn overlooked people into hires",
+    "supporting": "Chief of staff at RallyUp. I write The Draft, a weekly email on careers, marketing and building an income online.",
+    "pages": {
+      "about": {
+        "headline": "About",
+        "supporting": "Chief of staff at RallyUp. From Mallorca to London, and one cold message that changed the job."
+      },
+      "portfolio": {
+        "headline": "Portfolio",
+        "supporting": "The companies I hold a stake in and help build, starting with RallyUp."
+      },
+      "call": {
+        "headline": "Work with me",
+        "supporting": "A one hour LinkedIn and career workshop. Leave with a positioning line, a rewritten profile and a 90-day plan."
+      }
+    }
   }
 }
