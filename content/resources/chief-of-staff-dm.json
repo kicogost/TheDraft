@@ -48,7 +48,7 @@
       "text": "Drop your email below and I will send you the message itself, annotated: what I knew about Alec before I wrote it, why each line is there, what he wrote back, and what the first month actually looked like."
     }
   ],
-  "resourceUrl": "/downloads/the-chief-of-staff-dm.pdf",
+  "resourceUrl": "/api/download/chief-of-staff-dm?k=1fb90e230fb6288e3882d2517b685837",
   "automationId": "aut_6240a1f8-392e-4f3c-a4e5-4b5cb89565f1",
   "deliverable": "content/resources/files/the-chief-of-staff-dm.pdf"
 }

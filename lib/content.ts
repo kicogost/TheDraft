@@ -79,6 +79,8 @@ export type Resource = {
   blocks: ResourceBlock[];
   resourceUrl: string;
   automationId: string;
+  /** Repo-relative path to the gated file, served only by the download route. */
+  deliverable?: string;
 };
 
 /** Newest first, which is the order the nav dropdown reads as a changelog. */
