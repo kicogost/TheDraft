@@ -33,6 +33,9 @@ export async function POST(request: Request) {
   const result = await subscribe({
     email,
     medium: body.source || "homepage",
+    // The "Welcome, homepage signups" automation sends the first email, so
+    // beehiiv's single preset welcome would arrive as a duplicate alongside it.
+    sendWelcomeEmail: false,
   });
 
   if (!result.ok) {

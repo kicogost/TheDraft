@@ -1,16 +1,20 @@
 # Resource deliverables
 
-These are the gated files. They are **not** in `/public`, because anything in
-`/public` is served to anyone who guesses the path, which would defeat the form.
+`*.source.html` is what each PDF is rendered from. Edit the HTML and re-render
+rather than editing the PDF.
 
-When the signup route is wired they move to private Vercel Blob storage and
-`resourceUrl` in each resource JSON points at the blob URL. The API route hands
-the reader a short-lived signed link after it has their email.
+The built PDFs are copied to `public/downloads/`, which is publicly served.
 
-| File | Resource | Status |
-|------|----------|--------|
-| `the-chief-of-staff-dm.pdf` | `chief-of-staff-dm` | Complete |
-| `the-first-30-days.pdf` | `first-30-days` | Complete. Proof figure on the cover is Francisco's own claim and has no screenshot on file yet |
+## Why they are public
 
-Each `*.source.html` is what the PDF is rendered from. Edit the HTML and
-re-render rather than editing the PDF.
+An email link has to work forever. A signed, expiring URL cannot go in an
+automation email that someone opens a week later, so the delivered file needs
+a permanent address.
+
+The gate is therefore the same one every lead magnet uses: you have to know
+the URL, and the only place the URL is published is behind the form. The
+thank-you page still checks a signed token before showing the link, so the
+path is not discoverable by browsing the site.
+
+If these ever need to be genuinely private, move them to Vercel Blob with
+signed URLs and have the automation email link to a redirect route instead.
