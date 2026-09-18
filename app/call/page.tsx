@@ -45,6 +45,14 @@ export default function CallPage() {
             <h1 className="display-1">{call.title}</h1>
             <p className="lead mt-6 max-w-xl">{call.lead}</p>
 
+            <div className="mt-10 max-w-xl">
+              {call.story.map((paragraph) => (
+                <p key={paragraph.slice(0, 32)} className="mt-5">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+
             <p className="label mt-12">{call.detailsLabel}</p>
             <ul className="mt-5 space-y-3">
               {call.outcomes.map((item) => (
