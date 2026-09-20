@@ -1,5 +1,6 @@
 import about from "@/content/about.json";
 import call from "@/content/call.json";
+import legal from "@/content/legal.json";
 import portfolio from "@/content/portfolio.json";
 import dm from "@/content/resources/chief-of-staff-dm.json";
 import first30 from "@/content/resources/first-30-days.json";
@@ -100,4 +101,14 @@ export function getOtherResources(slug: string): Resource[] {
 
 export function getCall() {
   return call;
+}
+
+export type LegalDocument = {
+  title: string;
+  lead: string;
+  sections: { heading: string; body: string[] }[];
+};
+
+export function getLegal(doc: "privacy" | "terms"): LegalDocument & { updated: string } {
+  return { ...legal[doc], updated: legal.updated };
 }

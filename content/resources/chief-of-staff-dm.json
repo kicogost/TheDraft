@@ -1,9 +1,9 @@
 {
   "slug": "chief-of-staff-dm",
   "template": "story",
-  "title": "The chief of staff DM",
+  "title": "The chief of staff DM.",
   "description": "The cold DM that landed me a $100k+ chief of staff role and equity at 23.",
-  "kicker": "The $100k role · age 23",
+  "kicker": "The $100k role · one cold DM",
   "formHeader": "One DM. Chief of staff at 23. $100k plus equity.",
   "formEyebrow": "Get it free, in your inbox",
   "submitLabel": "Send me the DM",
@@ -45,7 +45,7 @@
     },
     {
       "type": "ask",
-      "text": "Drop your email below and I will send you the message itself, annotated: what I knew about Alec before I wrote it, why each line is there, what he wrote back, and what the first month actually looked like."
+      "text": "Put your email in and I will send you the message itself, annotated: what I knew about Alec before I wrote it, why each line is there, what he wrote back, and what the first month actually looked like."
     }
   ],
   "resourceUrl": "/api/download/chief-of-staff-dm?k=1fb90e230fb6288e3882d2517b685837",

@@ -1,0 +1,69 @@
+{
+  "updated": "20 September 2026",
+  "privacy": {
+    "title": "Privacy policy.",
+    "lead": "The short version: the only thing this site collects is an email address you choose to type in, and you can leave whenever you like.",
+    "sections": [
+      {
+        "heading": "What I collect",
+        "body": [
+          "Your email address, and only when you type it into one of the forms on this site. Nothing else. There is no account to create, no password to store, and no cookie banner because there is nothing to consent to.",
+          "The site uses Vercel Analytics to count page views. It does not use cookies and does not identify you."
+        ]
+      },
+      {
+        "heading": "What I do with it",
+        "body": [
+          "Your email goes to beehiiv, the service that sends The Draft. It is used to send you the weekly letter, and to send you whichever free resource you asked for.",
+          "I record which form you came from, so I know which page is doing the work. That is the whole of it.",
+          "I do not sell your email address, rent it, or pass it to anyone else."
+        ]
+      },
+      {
+        "heading": "How to leave",
+        "body": [
+          "There is an unsubscribe link at the bottom of every email I send. One click and you are out, with no follow up asking why.",
+          "If you want your data deleted rather than just unsubscribed, email me and I will do it."
+        ]
+      },
+      {
+        "heading": "Who to ask",
+        "body": [
+          "Anything at all: [fgostscagliarini@gmail.com](mailto:fgostscagliarini@gmail.com). A person reads it."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms of service.",
+    "lead": "Plain terms for a small site. Read them in a minute, because there is not much here.",
+    "sections": [
+      {
+        "heading": "The free things",
+        "body": [
+          "The newsletter and the downloadable resources are free, and they are mine. You are welcome to use what is in them in your own work and your own career. Please do not republish them as your own or sell them.",
+          "They are written from what worked for me. They are not a guarantee that the same thing works for you, and nothing here is legal, financial or career advice you should follow without thinking."
+        ]
+      },
+      {
+        "heading": "The paid hour",
+        "body": [
+          "The one to one workshop is a single session, booked and paid through Cal.com. What you get is described on the [work with me](/call) page, and that description is the agreement.",
+          "If you need to move the session, do it from the link in your booking confirmation. If you turn up and it was not worth your money, say so and I will refund you. I would rather lose the fee than have you tell people it was a waste."
+        ]
+      },
+      {
+        "heading": "What I cannot promise",
+        "body": [
+          "Nobody can promise you a job, an offer, or a number of impressions, and I am not going to be the first to try. What I can promise is that I will have done the preparation before we speak."
+        ]
+      },
+      {
+        "heading": "Changes",
+        "body": [
+          "If these terms change, the date at the top of this page changes with them. Anything already booked runs on the terms that applied when you booked."
+        ]
+      }
+    ]
+  }
+}

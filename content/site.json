@@ -32,7 +32,7 @@
   "company": {
     "eyebrow": "My company",
     "name": "RallyUp",
-    "body": "I'm chief of staff and an investor at RallyUp. We build LinkedIn audiences for B2B founders and executives: every post hand-written in their voice, engineered to reach the people who buy from them. This year we've shipped 700+ posts for leadership teams at PandaDoc, Letter.ai, Anchor Browser and Andel.",
+    "body": "I'm chief of staff and an investor at RallyUp. We build LinkedIn audiences for B2B founders and executives: every post hand-written in their voice, engineered to reach the people who buy from them. In 2026 we've shipped 700+ posts for leadership teams at PandaDoc, Letter.ai, Anchor Browser and Andel.",
     "cta": {
       "label": "See if your team qualifies",
       "href": "https://cal.com/team/rallyup/audience-building-with-rallyup"
@@ -57,7 +57,7 @@
     "name": "The Draft",
     "label": "Free weekly email",
     "pitch": "A weekly letter where I share my real-time learnings on career, marketing, and building an internet income.",
-    "proof": "",
+    "proof": "Last year that thinking took my own LinkedIn to 146,676 impressions, up 1,506% on the prior 365 days.",
     "reassurance": "One email a week. Leave whenever you like, no hard feelings.",
     "url": "https://franciscogost.beehiiv.com"
   },
@@ -81,7 +81,7 @@
     },
     {
       "label": "Resources",
-      "href": "/resources/first-30-days",
+      "href": "/resources",
       "children": [
         {
           "label": "The first 30 days",
@@ -147,7 +147,7 @@
       },
       "portfolio": {
         "headline": "Portfolio",
-        "supporting": "The companies I hold a stake in and help build, starting with RallyUp."
+        "supporting": "The company I help run, and the teams whose leadership I write for. Equity in one, the rest are clients."
       },
       "call": {
         "headline": "Work with me",

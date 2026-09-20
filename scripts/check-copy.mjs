@@ -5,10 +5,15 @@
  * Fails the build on the two house rules that are easy to break by accident and
  * hard to spot in review: em dashes, and the banned marketing words.
  *
- * Scope is the copy and code that ships on the site. content/resources/files is
- * skipped because it holds the lead magnet deliverables: the PDFs themselves,
- * which are binary, and the HTML they were rendered from. Those are designed
- * artefacts rather than site copy, and they are checked by eye when rebuilt.
+ * Scope is every piece of copy that reaches a reader, including the HTML the
+ * lead magnet PDFs are rendered from. That source used to be skipped as a
+ * "designed artefact", which meant the one rule Francisco cares most about was
+ * enforced everywhere except the two documents handed directly to readers. A
+ * banned word survived in a shipped PDF for exactly that reason.
+ *
+ * The PDFs themselves are binary and are not in EXTENSIONS, so they are never
+ * scanned. Fixing the source is only half the job: the PDF has to be rendered
+ * again before the correction reaches anybody.
  */
 
 import { readdirSync, readFileSync, statSync } from "node:fs";
@@ -16,8 +21,8 @@ import { extname, join, relative } from "node:path";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const SCAN = ["content", "app", "components", "lib"];
-const SKIP = new Set(["node_modules", ".next", ".git", "files"]);
-const EXTENSIONS = new Set([".json", ".mdx", ".md", ".ts", ".tsx", ".css"]);
+const SKIP = new Set(["node_modules", ".next", ".git"]);
+const EXTENSIONS = new Set([".json", ".mdx", ".md", ".ts", ".tsx", ".css", ".html"]);
 
 const EM_DASH = "—";
 const BANNED = ["unlock", "empower", "elevate", "solutions", "leverage"];

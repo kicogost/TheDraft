@@ -10,7 +10,7 @@ const portfolio = getPortfolio();
 export const metadata: Metadata = {
   title: "Portfolio",
   description:
-    "The companies Francisco Gost holds a stake in and helps build, starting with RallyUp.",
+    "The company Francisco Gost helps run, and the teams whose leadership he writes for. Equity in one, the rest are clients.",
 };
 
 export default function PortfolioPage() {

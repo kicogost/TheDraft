@@ -48,7 +48,7 @@ You are subscribed. The Draft arrives on the next send.
         <Button href="/#newsletter" variant="outline">
           Back to the newsletter
         </Button>
-        <Button href="/resources/first-30-days" variant="outline">
+        <Button href="/resources" variant="outline">
           See the other resources
         </Button>
       </div>

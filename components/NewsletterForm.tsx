@@ -11,7 +11,7 @@ export function NewsletterForm({ source, reassurance }: NewsletterFormProps) {
       <EmailForm
         endpoint="/api/subscribe"
         payload={{ source }}
-        submitLabel="Subscribe"
+        submitLabel="Send me The Draft"
         layout="inline"
         buttonTone="accent"
       />
