@@ -40,7 +40,7 @@ export default async function ThankYouPage({ searchParams }: Props) {
         </>
       ) : (
         <p className="lead mt-6">
-You are subscribed. The next Draft lands on Monday morning.
+You are subscribed. The next Draft lands on Tuesday morning.
         </p>
       )}
 
