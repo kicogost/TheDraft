@@ -17,7 +17,32 @@
     "The formatting floor that decides your reach before anyone reads a word",
     "The twenty-minute daily routine that beats publishing a fourth post"
   ],
-  "blocks": [],
+  "blocks": [
+    {
+      "type": "lead",
+      "text": "Almost every piece of LinkedIn advice you have read was written for founders. Nobody mentions it, and it is the reason none of it worked for you."
+    },
+    {
+      "type": "p",
+      "text": "Two of the biggest plays in that world are publishing a role with the salary attached, and timing a launch. You have neither. So you read a guide, do what it says, and get nothing, and you assume the problem is you."
+    },
+    {
+      "type": "p",
+      "text": "I wrote this because I had to work out the job seeker version myself, in public, with no audience and a full time job. My own account went from nothing to 146,676 impressions in a year, up 1,506% on the twelve months before it. The first 100,000 of those came in two weeks."
+    },
+    {
+      "type": "p",
+      "text": "What is in here is the part of the founder playbook that transfers, plus the two plays that replace the ones you cannot run. It is six sections and none of them ask you to post more than three times a week."
+    },
+    {
+      "type": "p",
+      "text": "If you only do one thing in it, do section five. Twenty minutes a day in other people's comments. It works in week one, it needs no audience at all, and almost nobody does it properly."
+    },
+    {
+      "type": "ask",
+      "text": "One honest thing before you give me your email. This will not get you a job in thirty days. It gets you findable in thirty days, which is the part you actually control. The rest is timing and other people, and anyone who tells you otherwise is selling you something worse than this."
+    }
+  ],
   "resourceUrl": "/api/download/first-30-days?k=3b16a329e8fb36d0c42020d9b7298a9f",
   "automationId": "aut_abf2811c-cd32-451f-91ca-bd13475aae65",
   "deliverable": "content/resources/files/the-first-30-days.pdf"

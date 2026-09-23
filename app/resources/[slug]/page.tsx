@@ -109,6 +109,9 @@ export default async function ResourcePage({ params }: Params) {
                 </li>
               ))}
             </ol>
+            {resource.blocks.length > 0 ? (
+              <div className="mt-16 max-w-xl">{story}</div>
+            ) : null}
           </div>
         )}
 
