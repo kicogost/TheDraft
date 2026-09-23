@@ -39,12 +39,52 @@ But 4 September closed at 2,427 and 5 September opened at 2,612. The hiring post
 
 ---
 
+## 1b. Correction, 23 September 2026, after reading the DM export
+
+**The hiring post was measuring the wrong audience, and it distorted the baseline above.**
+
+The LinkedIn export was read directly: 222 incoming connection invitations in September, 37 carrying a written note, plus 55 inbound messages from 35 people in the 4 to 15 September window. Note that the post claiming "128 DMs" is roughly 2.3 times what the export contains, though LinkedIn does exclude unaccepted message requests, so both can be partly true.
+
+**Who those people actually were.** Of roughly 70 pieces of evidence, around 60 are experienced freelance writers applying for the RallyUp role. Not career changers. Many are senior: 25 years a journalist, 13 years in PR, a dozen years copywriting, 8 years, 6 years, one currently at Google. Roughly 6 are unrelated sales pitches aimed at him.
+
+**They are his employer's talent pool, not his audience.** They responded to a job advert, so they self-selected on wanting that job. The 132 saves on that post are people bookmarking a vacancy.
+
+### What this does to the numbers
+
+The hiring post contributes 132 of the 227 career saves, 58% of the theme. Excluding it:
+
+| Theme | Impressions | Saves | Saves per 1,000 |
+| --- | --- | --- | --- |
+| Career, excluding the hiring post | 65,378 | 95 | **1.45** |
+| AI and build in public | 30,448 | 11 | 0.36 |
+| Agency and RallyUp | 14,408 | 8 | 0.55 |
+
+**The direction survives, the magnitude was inflated.** Career content is about four times more save-dense than AI content, not seven. The follower spike of 185 in a day was writers chasing a job, which also explains why growth collapsed back to 4.5 a day once the vacancy closed.
+
+### The signal that actually matters
+
+Three invitations, 15 to 17 September, came from the "how I got my job" post and all three asked for the same thing, unprompted:
+
+- "would love to see the full chat if you don't mind sharing"
+- "I'd like to see the message you sent to Alec"
+- "Now I have become a huge fan of sending cold DMs to people"
+
+That post did 6,717 impressions, a tenth of the video DM post, and produced direct, specific demand for **the artifact**. Nobody asked for coaching, a course or a call. They asked to see the message.
+
+This independently confirms the product recommendation in `docs/offer-strategy.md`, arrived at before this data was read.
+
+### Method correction for future runs
+
+Posts that advertise a job, or anything else that selects for a population other than the audience, must be **tagged separately and excluded from theme totals**. Their reach and saves measure recruitment demand, not audience demand. This single post was 26% of all reach and 54% of all saves in the original baseline and it was pointed at the wrong people.
+
+---
+
 ## 2. What the data says
 
 **The audience is people trying to get hired who cannot get noticed.** Every independent signal agrees:
 
 - The two highest-save posts are both about the mechanics of getting a decision maker's attention
-- The job advert pulled 235 connection requests and 128 DMs in a week
+- Three people asked, unprompted, to see the actual cold message he sent
 - The only genuine stranger to sign up for a lead magnet took the cold DM one
 - The strongest inbound message received is an out of work ex-operator asking how to convert replies into offers
 
@@ -52,7 +92,7 @@ But 4 September closed at 2,427 and 5 September opened at 2,612. The hiring post
 
 **Two businesses are being run in one feed.** The 22 September post pitches the agency to founders, then offers a free cold DM guide to career changers in a P.S. The data says the P.S. is the business and the pitch is a tax on reach.
 
-**Reach is not value.** The "guy named Claude" joke did 14,716 impressions and produced 2 saves and 1 follower. The hiring post did fewer impressions and produced 132 saves. Optimising for impressions would have chosen the joke.
+**Reach is not value, and saves are not always the right audience.** The "guy named Claude" joke did 14,716 impressions and produced 2 saves. The hiring post did fewer impressions and produced 132 saves, but section 1b shows those saves came from jobseeking writers rather than his audience. Both metrics need the question "who exactly did this reach" asked of them.
 
 **Do not over-fit to single posts.** The Lara Acosta and Will McTighe posts are near identical copy five days apart: 3,609 impressions versus 39,427. An 11x swing on the same content. Individual posts are a lottery. Only aggregate theme patterns are trustworthy.
 
@@ -62,7 +102,7 @@ But 4 September closed at 2,427 and 5 September opened at 2,612. The hiring post
 
 These need Francisco, or data that does not exist yet.
 
-1. **What is in the 128 DMs.** The highest resolution evidence he owns about what this audience wants, in their own words, and it is unread as a dataset.
+1. **~~What is in the 128 DMs.~~** Answered 23 September, see section 1b. They were freelance writers applying for a job, not the audience.
 2. **What he actually wants to sell.** Data reveals demand. It does not choose an ambition or a price.
 3. **Whether the audience will pay.** Zero sales so far, so willingness to pay is entirely unproven. Saves are intent, not money.
 4. **What happens between the free resource and the $100 hour.** There is currently nothing in between.
@@ -75,7 +115,7 @@ Written as falsifiable statements so the next review can mark each one.
 
 - **H1.** Dropping agency pitches from the personal profile raises average saves per 1,000 impressions. *Status: untested.*
 - **H2.** The audience will pay for something between a free PDF and a $100 call. *Status: untested, no product exists.*
-- **H3.** Career and hiring content outperforms AI content on saves at any audience size. *Status: supported, 2.56 versus 0.36 per 1,000.*
+- **H3.** Career and hiring content outperforms AI content on saves at any audience size. *Status: supported but revised down, 1.45 versus 0.36 per 1,000 once the job advert is excluded.*
 - **H4.** Newsletter signups per post are higher for career content than for any other theme. *Status: untestable until traffic exists.*
 
 ---
