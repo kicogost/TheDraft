@@ -79,6 +79,36 @@ Posts that advertise a job, or anything else that selects for a population other
 
 ---
 
+## 1c. Profile hygiene, 24 September 2026
+
+Filed here as **profile hygiene, not distribution.** There is no evidence LinkedIn uses these fields to rank content, and the widely shared claim about an "inferred credibility scores" file gating reach could not be verified: no such file exists anywhere in the export, across all 79 files. What follows matters because it shapes search, recruiter views and suggested connections, all of which are real.
+
+### What LinkedIn infers about him, from Ad_Targeting.csv
+
+| Field | LinkedIn's inference | Reality |
+| --- | --- | --- |
+| Member Age | 35 to 54 | 24 |
+| Job Function | Administrative | Chief of staff, content and go to market |
+| Job Seniority | Director | Roughly right, wrong shape |
+| Job Titles | Partnerships Specialist, Strategy Consultant, Scout, Associate | All pre-RallyUp |
+| Member Skills | Nephrology, TMJ Treatment, Clinical Study Design, Hands on Healing, Court Cases, IS-IS | Noise. No LinkedIn, copywriting, ghostwriting or career anywhere in the list |
+
+One inference is correct and useful: `Member Traits` includes **"Career Changers"**, which matches the audience the content data points at.
+
+Note that these are LinkedIn's inferred attributes for advertising. His own listed skills section is **not** in the export, so it cannot be checked from here.
+
+### Profile copy, as exported
+
+**Headline:** "Partner & Chief of Staff @ Rallyup · Grow your career + audience on LinkedIn."
+
+**Websites field:** points at `betweenlines.beehiiv.com`, the publication's old name. A dead brand on a live profile.
+
+**About:** opens well, then covers three separate topics, one of which is the day to day of a chief of staff, which serves nobody in the audience. It links to `intake.rallyup.team`, selling the agency from the personal profile. It never names The Draft.
+
+Recommended rewrites are in section 6.
+
+---
+
 ## 2. What the data says
 
 **The audience is people trying to get hired who cannot get noticed.** Every independent signal agrees:
@@ -131,3 +161,45 @@ Written as falsifiable statements so the next review can mark each one.
 7. Update section 1, mark the hypotheses in section 4, and write the new decision.
 
 **Rules for this analysis.** Never rank by impressions alone. Never draw a conclusion from one post. Say plainly when the sample is too small, rather than reporting a percentage of a handful. Percentages of fewer than about 30 events are not findings.
+
+---
+
+## 6. Profile recommendations, 24 September 2026
+
+Ranked by what they cost versus what they change.
+
+### Fix first, thirty seconds each
+
+1. **Websites field** points at `betweenlines.beehiiv.com`, a publication name he no longer uses. Change to `franciscogost.com`.
+2. **"Rallyup" is miscased** in the headline. It is RallyUp.
+3. **"No theory, and guru stuff"** in the About is missing a word. It should read "No theory, no guru stuff."
+4. **"3 years ago"** in the About is a relative date that needs editing every year. Use the year.
+
+### The headline
+
+Current: `Partner & Chief of Staff @ Rallyup · Grow your career + audience on LinkedIn.`
+
+It spends its first half on a job title that means nothing to the audience, and its second half on two promises, one of which ("audience") is aimed at founders, the theme that performs worst on this profile.
+
+Proposed: `I got hired at 23 with one cold DM · Now I show you how`
+
+Or, keeping the role for credibility: `Chief of staff at 23, from one cold DM · I show you how to get hired`
+
+The headline follows him into every comment he leaves and every message he sends, which is the argument his own lead magnet makes in section one. It should carry the claim, not the job title.
+
+### The About
+
+What works and should stay: the opening two lines, which are all that show before "see more". "3 years ago I was an SDR in a job I despised. Today I'm chief of staff at a VC-backed startup, 6 figures, equity and fully remote. How?" That is a real hook with a real loop.
+
+What to change:
+
+- **Cut the third topic.** The day to day of a chief of staff serves nobody in the audience. His own guide says a feed about four things is about nothing.
+- **Cut, or demote, the LinkedIn growth topic.** It is the founder-facing half and it is the weakest performing theme in the feed.
+- **Cut `intake.rallyup.team`.** Selling the agency from the personal profile costs reach and splits the audience. RallyUp has its own channels.
+- **Name The Draft.** The newsletter does not appear once in the About of the person whose main call to action is to subscribe to it.
+- **Pick one number.** "6 figures" and "$100k+" both appear. Use one.
+- **Point the link at the resource, not the root.** `franciscogost.com/resources/chief-of-staff-dm` is the asset a stranger has actually converted on.
+
+### Keep
+
+The position descriptions are the best writing on the profile. "Delegated some research to interns, made pretty slides, spoke with clients in high-rise buildings" does more for his positioning than any headline. Do not tidy them.
