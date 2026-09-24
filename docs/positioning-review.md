@@ -177,6 +177,8 @@ Ranked by what they cost versus what they change.
 
 ### The headline
 
+**Decision, 24 September 2026: Francisco is keeping the current headline.** The analysis below is left in place as the reasoning, not as an outstanding action.
+
 Current: `Partner & Chief of Staff @ Rallyup · Grow your career + audience on LinkedIn.`
 
 It spends its first half on a job title that means nothing to the audience, and its second half on two promises, one of which ("audience") is aimed at founders, the theme that performs worst on this profile.
@@ -203,3 +205,53 @@ What to change:
 ### Keep
 
 The position descriptions are the best writing on the profile. "Delegated some research to interns, made pretty slides, spoke with clients in high-rise buildings" does more for his positioning than any headline. Do not tidy them.
+
+---
+
+## 7. The About section, as rewritten 24 September 2026
+
+Live copy. Update this if it changes on the profile, so there is one source.
+
+```
+In 2023 I was an SDR in a job I despised.
+
+Today I'm chief of staff at a VC-backed startup, on $100k plus equity, fully remote.
+
+How? 👇
+
+Research and cold DMs. That is genuinely it. One message to a founder I had never met, sent at 23. He replied in thirty minutes.
+
+Now I'm sharing the whole playbook, and running it live on my own account.
+
+→ How to use LinkedIn to get hired. The exact cold DMs I've sent, the slightly unhinged things I've done to land jobs, how I talked my way from SDR to chief of staff, and how you get into rooms nobody invited you to.
+
+→ How to actually get seen. The hooks, formats and systems I've used to generate millions of impressions for founders backed by Y Combinator, a16z and Sequoia. I'm running the same thing on my own profile, so you can watch it work, or fail, in public.
+
+No theory. No guru stuff. Just what has actually worked. The cold DMs, the wins, the cringe, all of it.
+
+A few ways in:
+
+→ The Draft, my free weekly letter on career, marketing and building an income on the internet: https://franciscogost.com
+
+→ The cold DM that got me the job, annotated line by line: https://franciscogost.com/resources/chief-of-staff-dm
+
+→ Want to talk cold outreach or a career move? DM me. I reply to every single one.
+```
+
+About 1,300 characters against LinkedIn's 2,600 limit.
+
+### The reasoning
+
+**The first two lines now carry the contrast.** The previous version opened on a greeting, and LinkedIn collapses everything after two or three lines behind a "see more" that nobody clicks. His own lead magnet makes this exact argument in section one, so the profile now follows its own advice. The greeting can go back inline at the cost of pushing the payoff down a line.
+
+**Three topics became two**, both aimed at the same person. The day to day of a chief of staff served nobody in the audience.
+
+**The LinkedIn growth topic was kept but reframed** toward getting seen by people who can hire you, rather than at founders buying a service. Cutting it entirely would have left the headline promising something the About did not deliver. The Y Combinator and a16z proof stays because it is the credential that makes the rest believable.
+
+**The agency link was removed.** Selling RallyUp from the personal profile splits the audience and costs reach.
+
+**The Draft is named.** It previously appeared zero times in the About of the person whose main call to action is to subscribe to it.
+
+**"He replied in thirty minutes" was added.** His strongest single fact, and it was missing.
+
+Fixed in passing: a relative date that ages, a missing word in "No theory, no guru stuff", and two different figures for the same salary.
