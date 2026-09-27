@@ -160,6 +160,10 @@ Written as falsifiable statements so the next review can mark each one.
 6. Pull beehiiv numbers once there are more than about 200 subscribers. Below that, the percentages are noise.
 7. Update section 1, mark the hypotheses in section 4, and write the new decision.
 
+**Maturity window.** A post does not count until it is at least seven days old. The 22 September baseline was pulled the morning one post published and recorded 1,050 impressions against a true figure of 3,735, so 28% of the real number. Posts older than a week were stable, so the baseline holds, but recent posts must be excluded or re-pulled.
+
+**Engagement from the network is not demand from the audience.** The 22 September post drew 24 comments, almost all congratulation, from friends, former colleagues, a RallyUp teammate and other ghostwriters. Not one asked a question. The 16 September post drew fewer comments on similar reach and produced three strangers asking to see the actual cold message. When judging a post, read who commented and whether anybody asked for anything, not just the counts.
+
 **Rules for this analysis.** Never rank by impressions alone. Never draw a conclusion from one post. Say plainly when the sample is too small, rather than reporting a percentage of a handful. Percentages of fewer than about 30 events are not findings.
 
 ---
