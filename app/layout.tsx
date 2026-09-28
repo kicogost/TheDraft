@@ -30,7 +30,7 @@ const site = getSite();
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} · ${site.oneLiner}`,
+    default: `${site.name} · ${site.titleLine}`,
     template: `%s · ${site.name}`,
   },
   description: site.oneLiner,
