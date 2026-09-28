@@ -212,7 +212,7 @@ The position descriptions are the best writing on the profile. "Delegated some r
 
 ---
 
-## 7. The About section, as rewritten 24 September 2026
+## 7. The About section, live as of 28 September 2026
 
 Live copy. Update this if it changes on the profile, so there is one source.
 
@@ -231,7 +231,7 @@ Now I'm sharing the whole playbook, and running it live on my own account.
 
 → How to actually get seen. The hooks, formats and systems I've used to generate millions of impressions for founders backed by Y Combinator, a16z and Sequoia. I'm running the same thing on my own profile, so you can watch it work, or fail, in public.
 
-No theory. No guru stuff. Just what has actually worked. The cold DMs, the wins, the cringe, all of it.
+No guru stuff, just what has actually worked. The cold DMs, the wins, the cringe, all of it.
 
 A few ways in:
 
@@ -259,3 +259,19 @@ About 1,300 characters against LinkedIn's 2,600 limit.
 **"He replied in thirty minutes" was added.** His strongest single fact, and it was missing.
 
 Fixed in passing: a relative date that ages, a missing word in "No theory, no guru stuff", and two different figures for the same salary.
+
+---
+
+## 8. Profile state, 28 September 2026
+
+**Headline, live:** `Partner & Chief of Staff @ Rallyup · I help career changers get hired without applying, using cold messages instead of CVs.`
+
+The offer sentence is in, which is the important part. Two issues remain. It sits behind 36 characters of job title, and LinkedIn truncates headlines under your name in comments, in search results and in the feed, so the offer is what gets cut. And "Rallyup" is still miscased.
+
+Proposed: `I help career changers get hired without applying · Partner & Chief of Staff @ RallyUp`
+
+**Featured section, live:** three links, two of which sell RallyUp to founders, including one labelled "See if you're a fit for our Audience Building Services". A career changer reads a headline about getting hired and then meets an agency qualification form. The cold DM resource, the best converting asset on the site, is not featured at all.
+
+Proposed: The Draft, the cold DM annotated, the first 30 days. Nothing pointing at RallyUp.
+
+**Numbers on the day:** 2,869 followers, 8,092 impressions in seven days, 1,509 profile views, 71 search appearances. Growth since 22 September runs at about 8.8 a day against a 4.5 baseline, on six days of data, which is too short to call a trend.
