@@ -262,16 +262,14 @@ Fixed in passing: a relative date that ages, a missing word in "No theory, no gu
 
 ---
 
-## 8. Profile state, 28 September 2026
+## 8. Profile state, live as of 28 September 2026
 
-**Headline, live:** `Partner & Chief of Staff @ Rallyup · I help career changers get hired without applying, using cold messages instead of CVs.`
+**Headline:** `I help career changers get hired without applying · Partner & Chief of Staff @ Rallyup`
 
-The offer sentence is in, which is the important part. Two issues remain. It sits behind 36 characters of job title, and LinkedIn truncates headlines under your name in comments, in search results and in the feed, so the offer is what gets cut. And "Rallyup" is still miscased.
+The offer leads, so it survives truncation under his name in comments, in search and in the feed. The credential still reads for anyone who sees the full line. One thing outstanding: "Rallyup" should be "RallyUp", which is how the company writes it everywhere else, including his own Positions history and the site.
 
-Proposed: `I help career changers get hired without applying · Partner & Chief of Staff @ RallyUp`
-
-**Featured section, live:** three links, two of which sell RallyUp to founders, including one labelled "See if you're a fit for our Audience Building Services". A career changer reads a headline about getting hired and then meets an agency qualification form. The cold DM resource, the best converting asset on the site, is not featured at all.
-
-Proposed: The Draft, the cold DM annotated, the first 30 days. Nothing pointing at RallyUp.
+**Featured section:** the two RallyUp links are removed and the resources are in. A career changer now lands on a headline about getting hired and meets assets about getting hired, rather than an agency qualification form.
 
 **Numbers on the day:** 2,869 followers, 8,092 impressions in seven days, 1,509 profile views, 71 search appearances. Growth since 22 September runs at about 8.8 a day against a 4.5 baseline, on six days of data, which is too short to call a trend.
+
+**What this closes.** Every surface now carries one offer: the site title, every page description, the footer line, the LinkedIn headline, the About, and the Featured links. The six competing positioning statements recorded on 28 September are down to one. Whether that lifts capture is the thing to measure in the next run, and H1 in section 4 is the hypothesis it tests.
