@@ -4,6 +4,8 @@ A standing, evidence-based answer to two questions Francisco cannot yet answer f
 
 Re-run this monthly. The method is in section 5. Update the baseline below rather than starting a new file, so the trend is visible.
 
+**Next review is due 6 October 2026.** The questions are pre-registered in `docs/review-2026-10-06.md`, written before the results were visible. Read that file first.
+
 ---
 
 ## 1. Baseline, 22 September 2026
