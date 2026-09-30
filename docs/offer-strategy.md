@@ -75,3 +75,31 @@ Running the file and the review together is roughly **$13,000 to $16,000 in year
 - The 0.35% capture assumption drives every revenue figure. If the real rate is 0.15%, halve everything.
 - Willingness to pay is entirely unproven. Saves are intent, not money. The pre-sale is the first real test, and it is designed to cost a weekend rather than a month if the answer is no.
 - Refund rate on this specific niche is an estimate from general low-ticket norms.
+
+---
+
+## 8. What the first inbound said, 30 September 2026
+
+Six real inbound conversations, the first the newsletter and the 29 September post produced. Six people is a signal to test, not a conclusion. The raw messages are in `private/`, gitignored, because they are other people's private correspondence. What follows is the de-identified read.
+
+**Three of the six asked for a review of their own specific thing.** Not a course, not a framework, not general advice. The exact artifact they were about to send: a pitch deck, a positioning approach, a connection note. Unprompted, in one week, for a product that does not exist yet.
+
+That is the $75 async review in section 1, requested by name, three times.
+
+**He has already delivered it three times, free.** Full teardowns, sent in minutes. That is excellent research and a fine thing to be doing at this size. It stops being fine once the replies become a queue rather than a pleasure, and that is the moment to charge.
+
+**The audience is a moment, not a demographic.** The six span a student to a senior chief of staff, across job seeking, industry switching and freelance client pitching. Career stage does not unite them. What unites them is that each was about to send a message to a stranger and was not sure it was any good.
+
+Two of the six were freelancers pitching clients rather than people seeking jobs, which the current offer sentence excludes. **Do not reposition on six people**, and the sentence was only settled on 28 September. Watch whether the freelancer share holds as volume grows, and revisit at the next review.
+
+**The blocker is fear, not ignorance.** They are not missing information. They are missing confidence that this particular message is good enough to send. A review sells precisely that, which is why it is what they keep asking for.
+
+**One concrete product gap surfaced.** The cold DM framework is longer than LinkedIn's 300 character connection note limit, and neither resource explains what goes in the note. The answer, that empty connection requests get roughly 70% acceptance and the long message follows once accepted, appears nowhere in either PDF and is not obvious. The whole framework fails without it.
+
+That is a missing section in the $39 file at minimum.
+
+### What this changes
+
+Nothing in the ranking. It sharpens it. The review moves from "best evidenced on reasoning" to "requested three times by real people", and the file gains a section it was missing.
+
+High ticket still has no evidence behind it. One of the six asked an open ended positioning question, which is a call rather than a product. Nothing here supports naming a high ticket price.
