@@ -103,3 +103,17 @@ That is a missing section in the $39 file at minimum.
 Nothing in the ranking. It sharpens it. The review moves from "best evidenced on reasoning" to "requested three times by real people", and the file gains a section it was missing.
 
 High ticket still has no evidence behind it. One of the six asked an open ended positioning question, which is a call rather than a product. Nothing here supports naming a high ticket price.
+
+### The comments on the same post, read 30 September
+
+Twelve commenters. **Six asked explicitly for the message.** The comment CTA, used in place of a link, did what it was designed to do: no reach penalty, and people asking by name.
+
+**The audience composition flipped in one week.** The 22 September post drew his own colleague, someone from his former employer, and friends offering congratulation, with no questions. This post drew a third degree connection with an Open To Work badge, a senior healthcare operations leader, who found him through cold reach and asked for the resource. That is the first confirmed sighting of the intended customer arriving from a stranger's feed.
+
+**Of the twelve, seven are plausible customers, and four of those seven are freelancers pitching clients** rather than people seeking jobs. Combined with the DMs, the split across both datasets is roughly even. Two independent sources now say the same thing.
+
+The unifying job is not "get hired". It is **get a reply from someone who can give you money**, whether that is a salary or a contract. The message structure is identical.
+
+**The recommendation is still not to widen the offer**, for two reasons. Several of those freelancer profiles carry engagement optimised headlines, and commenting widely is how service providers farm reach, so some of that interest may be visibility seeking rather than demand. And "get hired" is the more defensible position: the freelancer and ghostwriter market is crowded, it overlaps his employer's market, and widening costs him the one thing competitors cannot copy, which is that he did this twelve months ago and can prove it.
+
+Revisit at the next review with more volume.
