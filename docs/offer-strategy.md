@@ -117,3 +117,31 @@ The unifying job is not "get hired". It is **get a reply from someone who can gi
 **The recommendation is still not to widen the offer**, for two reasons. Several of those freelancer profiles carry engagement optimised headlines, and commenting widely is how service providers farm reach, so some of that interest may be visibility seeking rather than demand. And "get hired" is the more defensible position: the freelancer and ghostwriter market is crowded, it overlaps his employer's market, and widening costs him the one thing competitors cannot copy, which is that he did this twelve months ago and can prove it.
 
 Revisit at the next review with more volume.
+
+---
+
+## 9. The question behind the question, 1 October 2026
+
+A correction to section 8, after a fourth conversation.
+
+Section 8 concluded that the product was the $75 async message review, because three people had asked for one. That read the request too literally.
+
+Watch what actually happened over the following day. The student who sent a draft took the rewrite, landed a reply from a company within hours, and then asked a different question. Not "is my message good". **"What should I build for this specific company so they cannot ignore me?"**
+
+She then answered it herself, correctly, without being told: she dropped a website audit she had built because it was corrective, and pivoted to a growth campaign because it was additive. An audit tells someone what is wrong with something they made. A campaign shows them money they are not collecting.
+
+All four conversations this week are versions of the same underlying question, and it is not about wording.
+
+### Why this matters commercially
+
+**"Review my message" is a $75 service with an obvious ceiling.** It takes fifteen minutes, it competes with every resume reviewer, and the buyer only needs it once.
+
+**"Tell me what to build for this company" is a different product.** It requires reading a business, finding the lever, and judging scope against a clock. It is worth more, it recurs every time the buyer targets a new company, and answering it well requires having sat on the hiring side, which almost nobody selling outreach advice has done.
+
+It is also the thing that produced an actual outcome this week. The message got a reply. The question about what to build is what turns the reply into an offer, which is the gap the whole positioning is built on.
+
+### What this does not change yet
+
+Four conversations, one of them with someone who was unusually quick. **Do not rebuild the ladder on this.** The $39 file and the $75 review both still stand, and both are still unvalidated by anyone paying.
+
+**The test:** whether the next few people ask about the message or about what to build. Log it either way. If it holds, the mid ticket product is not a review, and the price is not $75.
