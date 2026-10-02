@@ -145,3 +145,45 @@ It is also the thing that produced an actual outcome this week. The message got 
 Four conversations, one of them with someone who was unusually quick. **Do not rebuild the ladder on this.** The $39 file and the $75 review both still stand, and both are still unvalidated by anyone paying.
 
 **The test:** whether the next few people ask about the message or about what to build. Log it either way. If it holds, the mid ticket product is not a review, and the price is not $75.
+
+---
+
+## 10. Correcting section 9, 2 October 2026
+
+Section 9 built the thesis around one person, the student who asked "what should I build for this company". She is the exception, not the pattern. She is unusually quick. Counted across all nine inbound conversations, the plurality are two steps behind her.
+
+| What they asked | Count |
+| --- | --- |
+| **"Where do I start?"** | **4** |
+| "Look at my specific thing" | 3 |
+| No ask | 2 |
+
+**The direction matters more than the count. All three of the newest inbounds are "where do I start"**, and all three arrived from the 29 September post, which reached a colder and wider audience than anything before it.
+
+That is the dynamic worth planning around: **as reach grows, inbound gets earlier stage.** The first conversations came from people who had already read his work. Strangers arrive further back, and there will be more strangers every week.
+
+### What this changes
+
+The gap is at the **top** of the funnel, not the middle. The cold DM resource answers "what do I say", and most people arriving are not there yet. They do not know who to message or what they are changing to.
+
+### The decision: the 90 day system is free, permanently
+
+Not "free for now". Four reasons:
+
+1. **Its job is to capture the email**, not to make money. A paid front door produces a few sales and no list.
+2. **The arithmetic.** At 45 subscribers, a paid course sells to one or two. A free guide answering the question four of nine inbounds asked could add hundreds, and those hundreds are who the paid rungs are sold to.
+3. **The audience is frequently out of work.** One is job hunting "with little to no success", another had just left his job. Charging someone who lost their income to learn how to replace it contradicts a brand whose own guide says "this will not get you a job in thirty days".
+4. **Zero sales at any price so far.** Testing willingness to pay at the coldest point in the funnel, with the least trust, is the hardest possible place to run that experiment.
+
+**Do not plan to make it paid later.** Switching a free asset to paid punishes the people who found him first, and a free front door feeding a paid second step is a better business than a paid front door with nothing behind it.
+
+### The resulting ladder
+
+| Stage | The question | The answer | Price |
+| --- | --- | --- | --- |
+| 1 | Where do I start? | The 90 day system | **Free.** Replaces the retired 30 days as the front door |
+| 2 | What do I say? | The annotated messages | $39 |
+| 2 | Is mine any good? | The review | $75 |
+| 3 | What do I build for this company? | Best evidenced by the student, still unpriced | TBD |
+
+Every rung answers a question somebody actually asked, in their own words, within one week.
