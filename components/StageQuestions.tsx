@@ -101,7 +101,7 @@ export function StageQuestions({ question }: { question: StageQuestion }) {
           <textarea
             id="tried"
             name="tried"
-            rows={4}
+            rows={5}
             maxLength={2000}
             value={tried}
             onChange={(event) => setTried(event.target.value)}

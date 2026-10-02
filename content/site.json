@@ -183,9 +183,9 @@
         "label": "I am not job hunting, I am here for something else"
       }
     ],
-    "triedLabel": "What have you tried so far that has not worked?",
-    "triedHint": "Optional, and the more honest the better.",
-    "triedPlaceholder": "Whatever you have actually been doing, and where it falls over.",
+    "triedLabel": "What have you tried that has not worked?",
+    "triedHint": "The more you tell me, the more useful I can be. I read every one of these myself. Optional, but it is the answer that helps most.",
+    "triedPlaceholder": "For example: applied to about 40 roles in two months, two replies, both rejections. No idea whether it is the CV or the roles I am picking.",
     "submitLabel": "Send me the scorer",
     "doneHeading": "Here it is.",
     "doneBody": "Thank you, genuinely. That shapes what I write next.",
