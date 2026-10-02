@@ -1,4 +1,4 @@
-import { getResource, getResources } from "@/lib/content";
+import { getAllResources, getResource } from "@/lib/content";
 import { OG_CONTENT_TYPE, OG_SIZE, resourceCard } from "@/lib/og";
 
 export const alt = "A free resource from Francisco Gost";
@@ -6,7 +6,7 @@ export const size = OG_SIZE;
 export const contentType = OG_CONTENT_TYPE;
 
 export function generateStaticParams() {
-  return getResources().map((resource) => ({ slug: resource.slug }));
+  return getAllResources().map((resource) => ({ slug: resource.slug }));
 }
 
 export default async function Image({ params }: { params: Promise<{ slug: string }> }) {

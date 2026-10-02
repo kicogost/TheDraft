@@ -3,12 +3,12 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ResourceForm } from "@/components/ResourceForm";
 import { Section } from "@/components/Section";
-import { getOtherResources, getResource, getResources } from "@/lib/content";
+import { getAllResources, getOtherResources, getResource } from "@/lib/content";
 
 type Params = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
-  return getResources().map((entry) => ({ slug: entry.slug }));
+  return getAllResources().map((entry) => ({ slug: entry.slug }));
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {

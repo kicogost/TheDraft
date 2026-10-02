@@ -85,10 +85,6 @@
       "href": "/resources",
       "children": [
         {
-          "label": "The first 30 days",
-          "href": "/resources/first-30-days"
-        },
-        {
           "label": "The chief of staff DM",
           "href": "/resources/chief-of-staff-dm"
         }

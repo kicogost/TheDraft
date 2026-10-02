@@ -78,6 +78,8 @@ export type Resource = {
   insideLabel?: string;
   inside?: string[];
   blocks: ResourceBlock[];
+  /** Retired resources stay reachable by URL but are no longer promoted. */
+  retired?: boolean;
   resourceUrl: string;
   automationId: string;
   /** Repo-relative path to the gated file, served only by the download route. */
@@ -87,7 +89,17 @@ export type Resource = {
 /** Newest first, which is the order the nav dropdown reads as a changelog. */
 const RESOURCES: Resource[] = [first30, dm];
 
+/**
+ * Live resources only. A retired resource keeps its page and its download
+ * route so that links in emails already sent still work, but it disappears
+ * from the nav, the index, the sitemap and the "more resources" list.
+ */
 export function getResources(): Resource[] {
+  return RESOURCES.filter((entry) => !entry.retired);
+}
+
+/** Includes retired resources. Used where a page must still render. */
+export function getAllResources(): Resource[] {
   return RESOURCES;
 }
 
@@ -96,7 +108,7 @@ export function getResource(slug: string): Resource | undefined {
 }
 
 export function getOtherResources(slug: string): Resource[] {
-  return RESOURCES.filter((entry) => entry.slug !== slug);
+  return getResources().filter((entry) => entry.slug !== slug);
 }
 
 export function getCall() {

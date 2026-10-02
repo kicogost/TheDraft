@@ -1,5 +1,6 @@
 {
   "slug": "first-30-days",
+  "retired": true,
   "template": "contents",
   "title": "The first 30 days.",
   "description": "The system I used to reach 100,000 impressions on LinkedIn in my first two weeks, rebuilt for people who want a job rather than a customer.",
