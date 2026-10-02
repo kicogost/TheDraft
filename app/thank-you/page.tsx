@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Button } from "@/components/Button";
 import { Section } from "@/components/Section";
-import { getOtherResources, getResource } from "@/lib/content";
+import { StageQuestions } from "@/components/StageQuestions";
+import { getOtherResources, getResource, getStageQuestion } from "@/lib/content";
 import { verifyResource } from "@/lib/signing";
 
 export const metadata: Metadata = {
@@ -46,6 +47,8 @@ export default async function ThankYouPage({ searchParams }: Props) {
 You are subscribed. The next Draft lands on Tuesday morning.
         </p>
       )}
+
+      <StageQuestions question={getStageQuestion()} />
 
       <div className="mt-12 flex flex-wrap gap-6">
         <Button href="/#newsletter" variant="outline">

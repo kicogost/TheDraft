@@ -153,20 +153,42 @@
     }
   },
   "stageQuestion": {
-    "label": "Where are you right now?",
+    "heading": "One thing, if you have thirty seconds.",
+    "intro": "I am writing a series on landing a job in 90 days. I would rather write it for where you actually are than where I am guessing you are.",
+    "trade": "Answer these two and I will give you the message scorer: it runs any cold message through the seven checks I use before I send one.",
+    "label": "Which of these sounds most like you right now?",
     "options": [
       {
+        "value": "No direction",
+        "label": "I am not sure what I want to do next"
+      },
+      {
+        "value": "Applying only",
+        "label": "I know what I want, but I am only applying and it is not working"
+      },
+      {
         "value": "Not started",
-        "label": "I have not started reaching out yet"
+        "label": "I know I should message people directly, but I have not done it"
       },
       {
         "value": "No replies",
-        "label": "I am sending messages and getting no replies"
+        "label": "I am messaging people and getting no replies"
       },
       {
         "value": "No offers",
         "label": "I get replies, but nothing turns into an offer"
+      },
+      {
+        "value": "Not job hunting",
+        "label": "I am not job hunting, I am here for something else"
       }
-    ]
+    ],
+    "triedLabel": "What have you tried so far that has not worked?",
+    "triedHint": "Optional, and the more honest the better.",
+    "triedPlaceholder": "Whatever you have actually been doing, and where it falls over.",
+    "submitLabel": "Send me the scorer",
+    "doneHeading": "Here it is.",
+    "doneBody": "Thank you, genuinely. That shapes what I write next.",
+    "doneCta": "Open the message scorer"
   }
 }

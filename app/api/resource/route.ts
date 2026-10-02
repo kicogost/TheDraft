@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { setSignupCookie } from "@/lib/signup-cookie";
 import { startJourney, subscribe } from "@/lib/beehiiv";
 import { getResource, validStage } from "@/lib/content";
 import { allow, clientIp } from "@/lib/rate-limit";
@@ -63,8 +64,11 @@ export async function POST(request: Request) {
   }
 
   const token = signResource(resource.slug);
-  return NextResponse.json({
-    ok: true,
-    redirect: `/thank-you?resource=${resource.slug}&t=${token}`,
-  });
+  return setSignupCookie(
+    NextResponse.json({
+      ok: true,
+      redirect: `/thank-you?resource=${resource.slug}&t=${token}`,
+    }),
+    email,
+  );
 }

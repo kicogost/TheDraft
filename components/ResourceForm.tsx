@@ -1,5 +1,4 @@
 import { EmailForm } from "@/components/EmailForm";
-import { getStageQuestion } from "@/lib/content";
 
 type ResourceFormProps = {
   slug: string;
@@ -24,7 +23,6 @@ export function ResourceForm({
           endpoint="/api/resource"
           payload={{ slug }}
           submitLabel={submitLabel}
-          stage={getStageQuestion()}
         />
       </div>
       {disclosure ? <p className="mt-3 text-sm text-ash">{disclosure}</p> : null}

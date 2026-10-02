@@ -4,6 +4,7 @@ import legal from "@/content/legal.json";
 import portfolio from "@/content/portfolio.json";
 import dm from "@/content/resources/chief-of-staff-dm.json";
 import first30 from "@/content/resources/first-30-days.json";
+import scorer from "@/content/scorer.json";
 import site from "@/content/site.json";
 
 export type NavItem = {
@@ -126,8 +127,9 @@ export function getLegal(doc: "privacy" | "terms"): LegalDocument & { updated: s
 }
 
 export type StageOption = { value: string; label: string };
+export type StageQuestion = typeof site.stageQuestion;
 
-export function getStageQuestion(): { label: string; options: StageOption[] } {
+export function getStageQuestion(): StageQuestion {
   return site.stageQuestion;
 }
 
@@ -138,4 +140,10 @@ export function getStageQuestion(): { label: string; options: StageOption[] } {
 export function validStage(value: unknown): string | undefined {
   if (typeof value !== "string") return undefined;
   return site.stageQuestion.options.some((o) => o.value === value) ? value : undefined;
+}
+
+export type Scorer = typeof scorer;
+
+export function getScorer(): Scorer {
+  return scorer;
 }

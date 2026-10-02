@@ -47,3 +47,35 @@ export function verifyDownloadKey(slug: string, key: string): boolean {
   if (!secret() || !key) return false;
   return safeEqual(key, downloadKey(slug));
 }
+
+/**
+ * Carries the verified email from the signup request to the follow up
+ * questions on the thank you page. It travels in an httpOnly cookie rather
+ * than the URL, so it never reaches browser history, the referrer header or
+ * analytics. Short lived, because its only job is to survive one redirect.
+ */
+const SIGNUP_TTL_MS = 60 * 60 * 1000;
+
+export function signSignup(email: string): string {
+  const expires = Date.now() + SIGNUP_TTL_MS;
+  return `${email}.${expires}.${digest(`signup.${email}.${expires}`)}`;
+}
+
+export function verifySignup(raw: string | undefined): string | undefined {
+  if (!secret() || !raw) return undefined;
+  // Cookies are percent encoded on write, so an address arrives as
+  // name%40host. Decoding before splitting is what makes the digest match.
+  let token: string;
+  try {
+    token = decodeURIComponent(raw);
+  } catch {
+    return undefined;
+  }
+  const parts = token.split(".");
+  const mac = parts.pop();
+  const expiresRaw = parts.pop();
+  const email = parts.join(".");
+  const expires = Number(expiresRaw);
+  if (!email || !mac || !Number.isFinite(expires) || Date.now() > expires) return undefined;
+  return safeEqual(mac, digest(`signup.${email}.${expires}`)) ? email : undefined;
+}

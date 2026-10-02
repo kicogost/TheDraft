@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { setSignupCookie } from "@/lib/signup-cookie";
 import { subscribe } from "@/lib/beehiiv";
 import { validStage } from "@/lib/content";
 import { allow, clientIp } from "@/lib/rate-limit";
@@ -47,5 +48,5 @@ export async function POST(request: Request) {
     );
   }
 
-  return NextResponse.json({ ok: true });
+  return setSignupCookie(NextResponse.json({ ok: true, redirect: "/thank-you" }), email);
 }
