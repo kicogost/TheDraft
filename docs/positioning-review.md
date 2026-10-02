@@ -275,3 +275,57 @@ The offer leads, so it survives truncation under his name in comments, in search
 **Numbers on the day:** 2,869 followers, 8,092 impressions in seven days, 1,509 profile views, 71 search appearances. Growth since 22 September runs at about 8.8 a day against a 4.5 baseline, on six days of data, which is too short to call a trend.
 
 **What this closes.** Every surface now carries one offer: the site title, every page description, the footer line, the LinkedIn headline, the About, and the Featured links. The six competing positioning statements recorded on 28 September are down to one. Whether that lifts capture is the thing to measure in the next run, and H1 in section 4 is the hypothesis it tests.
+
+---
+
+## 9. Creator-market fit, 2 October 2026
+
+Drawn entirely from data already in this file and in `docs/offer-strategy.md`. Nothing here is introspection.
+
+### The function
+
+Across 37 posts, the role he keeps playing regardless of topic is not teaching, curating or entertaining. **He publishes the primary source.**
+
+Every post that worked contains an actual artifact: the cold message itself, the screenshot of the reply, the 128 DMs he received from the hiring side, the revenue chart. Every post that died was commentary with no artifact attached: the Opus release, AI doomsday, "ghostwriting is dead".
+
+| | Example | Saves per 1,000 |
+| --- | --- | --- |
+| Contains an artifact | the 29 September cold DM post | **9.73** |
+| Commentary only | AI doomsday, 378 impressions | about 0 |
+
+The function is **showing the working**. Not advice about the thing, the thing itself, annotated.
+
+### The market signals
+
+All of them point at one object.
+
+- 50 saves on the post about the message, the highest density recorded
+- 6 of 12 commenters asked for it by name
+- 36 of 45 subscribers took the cold DM resource rather than the 30 days one
+- Four people in one week asked him to look at their own specific draft
+
+Nobody has asked for a course, a framework or an opinion.
+
+### The spikes to ignore
+
+**The hiring job advert.** 23,163 impressions, 132 saves, and the wrong audience entirely, per section 1b. **The "guy named Claude" joke.** 14,716 impressions, 2 saves. Neither is a pattern, and optimising for impressions would have chosen both.
+
+### The problem this exposes
+
+The third CMF test is whether the value can be delivered consistently. **He has one cold message.** It has already been used in a PDF, a LinkedIn post, a newsletter issue, a four email sequence and a lead magnet. It is his best asset and it does not renew.
+
+The question is therefore not what to make next. It is **where the next artifact comes from.**
+
+Three supplies already exist and are being treated as admin rather than inventory:
+
+1. **Other people's messages.** Four drafts in the first week. Anonymised and with permission, each is a publishable artifact that is not about him, and it is a supply that renews weekly.
+2. **The 128 DMs** received from the hiring side. A corpus nobody else has.
+3. **His own ongoing outreach.** Every video DM is a new primary source.
+
+### What this unlocks
+
+**The review service is not only a product, it is the content supply chain.** Each review produces an artifact, the artifact produces reach, the reach produces more requests for reviews. That loop answers the supply problem, the content problem and the product question in section 9 of the offer strategy at the same time.
+
+### The thesis in one line
+
+He publishes the actual artifact, annotated, for people who are about to send one themselves. **Today the artifact is always his. The business starts when it is usually theirs.**
