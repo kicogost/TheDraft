@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Button } from "@/components/Button";
 import { Section } from "@/components/Section";
-import { getResource } from "@/lib/content";
+import { getOtherResources, getResource } from "@/lib/content";
 import { verifyResource } from "@/lib/signing";
 
 export const metadata: Metadata = {
@@ -17,6 +17,9 @@ export default async function ThankYouPage({ searchParams }: Props) {
   const { resource: slug, t } = await searchParams;
   const resource = slug ? getResource(slug) : undefined;
   const verified = resource && t ? verifyResource(resource.slug, t) : false;
+  // Only offer the index when there is actually something else on it. With one
+  // live resource, "see the other resources" leads to the thing they just got.
+  const others = resource ? getOtherResources(resource.slug).length : 0;
 
   return (
     <Section width="prose" space="generous" grid="sm">
@@ -48,9 +51,15 @@ You are subscribed. The next Draft lands on Tuesday morning.
         <Button href="/#newsletter" variant="outline">
           Back to the newsletter
         </Button>
-        <Button href="/resources" variant="outline">
-          See the other resources
-        </Button>
+        {others > 0 ? (
+          <Button href="/resources" variant="outline">
+            {others === 1 ? "See the other resource" : "See the other resources"}
+          </Button>
+        ) : (
+          <Button href="/call" variant="outline">
+            Work with me
+          </Button>
+        )}
       </div>
     </Section>
   );
