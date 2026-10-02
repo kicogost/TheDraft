@@ -7,6 +7,8 @@ type SubscribeInput = {
   medium: string;
   campaign?: string;
   sendWelcomeEmail?: boolean;
+  /** Publication level custom fields, e.g. the stage question on the forms. */
+  customFields?: Record<string, string>;
 };
 
 export type SubscribeResult =
@@ -63,6 +65,13 @@ export async function subscribe(
       utm_source: "website",
       utm_medium: input.medium,
       ...(input.campaign ? { utm_campaign: input.campaign } : {}),
+      ...(input.customFields && Object.keys(input.customFields).length
+        ? {
+            custom_fields: Object.entries(input.customFields).map(
+              ([name, value]) => ({ name, value }),
+            ),
+          }
+        : {}),
     });
 
     if (!response.ok) {

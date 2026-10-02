@@ -151,5 +151,22 @@
         "supporting": "A one hour LinkedIn and career workshop. Leave with a positioning line, a rewritten profile and a 90-day plan."
       }
     }
+  },
+  "stageQuestion": {
+    "label": "Where are you right now?",
+    "options": [
+      {
+        "value": "Not started",
+        "label": "I have not started reaching out yet"
+      },
+      {
+        "value": "No replies",
+        "label": "I am sending messages and getting no replies"
+      },
+      {
+        "value": "No offers",
+        "label": "I get replies, but nothing turns into an offer"
+      }
+    ]
   }
 }

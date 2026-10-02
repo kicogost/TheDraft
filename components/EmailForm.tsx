@@ -3,10 +3,18 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
+export type StageOption = { value: string; label: string };
+
 type EmailFormProps = {
   endpoint: "/api/subscribe" | "/api/resource";
   payload: Record<string, string>;
   submitLabel: string;
+  /**
+   * The segmentation question. Asked at the moment of highest intent, which is
+   * the only place a complete answer set is possible. Omit it to render the
+   * plain email form.
+   */
+  stage?: { label: string; options: StageOption[] };
   /** Inline puts the field and button on one row from sm up. */
   layout?: "inline" | "stacked";
   buttonTone?: "accent" | "ink";
@@ -18,10 +26,12 @@ export function EmailForm({
   submitLabel,
   layout = "stacked",
   buttonTone = "ink",
+  stage,
 }: EmailFormProps) {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
+  const [stageValue, setStageValue] = useState("");
   const [state, setState] = useState<"idle" | "sending" | "done" | "error">("idle");
   const [message, setMessage] = useState("");
 
@@ -35,7 +45,7 @@ export function EmailForm({
       const response = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...payload, email, company }),
+        body: JSON.stringify({ ...payload, email, company, stage: stageValue }),
       });
       const data = await response.json();
 
@@ -71,6 +81,29 @@ export function EmailForm({
 
   return (
     <form onSubmit={onSubmit} noValidate>
+      {stage ? (
+        <fieldset className="mb-5">
+          <legend className="label mb-3">{stage.label}</legend>
+          <div className="space-y-2">
+            {stage.options.map((option) => (
+              <label
+                key={option.value}
+                className="flex cursor-pointer items-start gap-3 text-ink-soft transition-colors hover:text-ink"
+              >
+                <input
+                  type="radio"
+                  name={`stage-${endpoint}`}
+                  value={option.value}
+                  checked={stageValue === option.value}
+                  onChange={(event) => setStageValue(event.target.value)}
+                  className="mt-1.5 h-3.5 w-3.5 shrink-0 accent-[var(--color-accent)]"
+                />
+                <span>{option.label}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+      ) : null}
       <div className={layout === "inline" ? "flex flex-col gap-3 sm:flex-row" : ""}>
         <label htmlFor={`email-${endpoint}`} className="sr-only">
           Email address

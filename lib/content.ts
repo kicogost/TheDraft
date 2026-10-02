@@ -124,3 +124,18 @@ export type LegalDocument = {
 export function getLegal(doc: "privacy" | "terms"): LegalDocument & { updated: string } {
   return { ...legal[doc], updated: legal.updated };
 }
+
+export type StageOption = { value: string; label: string };
+
+export function getStageQuestion(): { label: string; options: StageOption[] } {
+  return site.stageQuestion;
+}
+
+/**
+ * Never trust the posted value. Only a value declared in content/site.json is
+ * stored, so a tampered form cannot write arbitrary data onto a subscriber.
+ */
+export function validStage(value: unknown): string | undefined {
+  if (typeof value !== "string") return undefined;
+  return site.stageQuestion.options.some((o) => o.value === value) ? value : undefined;
+}

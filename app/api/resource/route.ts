@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { startJourney, subscribe } from "@/lib/beehiiv";
-import { getResource } from "@/lib/content";
+import { getResource, validStage } from "@/lib/content";
 import { allow, clientIp } from "@/lib/rate-limit";
 import { signResource } from "@/lib/signing";
 
@@ -14,7 +14,7 @@ export async function POST(request: Request) {
     );
   }
 
-  let body: { email?: string; slug?: string; company?: string };
+  let body: { email?: string; slug?: string; company?: string; stage?: string };
   try {
     body = await request.json();
   } catch {
@@ -31,6 +31,7 @@ export async function POST(request: Request) {
     );
   }
 
+  const stage = validStage(body.stage);
   const resource = getResource(body.slug ?? "");
   if (!resource) {
     return NextResponse.json({ ok: false, error: "Unknown resource." }, { status: 404 });
@@ -45,6 +46,7 @@ export async function POST(request: Request) {
     // hands over an email and hears nothing, so this has to stay derived
     // rather than hardcoded.
     sendWelcomeEmail: !resource.automationId,
+    ...(stage ? { customFields: { stage } } : {}),
   });
 
   if (!result.ok) {
