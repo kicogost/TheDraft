@@ -153,9 +153,9 @@
     }
   },
   "stageQuestion": {
-    "heading": "One thing, if you have thirty seconds.",
-    "intro": "I am writing a series on landing a job in 90 days. I would rather write it for where you actually are than where I am guessing you are.",
-    "trade": "Answer these two and I will give you the message scorer: it runs any cold message through the seven checks I use before I send one.",
+    "heading": "Want one written for you?",
+    "intro": "Tell me the company you are going after and the person you are writing to, and I will give you the tool that writes the message. It uses the exact framework that got me a $100k chief of staff role from one cold DM, and it shows you why every line is there.",
+    "trade": "Two questions first, so I know who I am building for. Thirty seconds.",
     "label": "Which of these sounds most like you right now?",
     "options": [
       {
@@ -186,9 +186,14 @@
     "triedLabel": "What have you tried that has not worked?",
     "triedHint": "The more you tell me, the more useful I can be. I read every one of these myself. Optional, but it is the answer that helps most.",
     "triedPlaceholder": "For example: applied to about 40 roles in two months, two replies, both rejections. No idea whether it is the CV or the roles I am picking.",
-    "submitLabel": "Send me the scorer",
+    "submitLabel": "Give me the builder",
     "doneHeading": "Here it is.",
     "doneBody": "Thank you, genuinely. That shapes what I write next.",
-    "doneCta": "Open the message scorer"
+    "doneCta": "Open the message builder"
+  },
+  "thankYou": {
+    "resourceLine": "Your copy is ready below, and a link is on its way by email too.",
+    "resourceLineUnverified": "It is on its way to your inbox now.",
+    "newsletterLine": "You are subscribed. The next Draft lands on Tuesday morning."
   }
 }

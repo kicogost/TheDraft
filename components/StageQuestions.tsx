@@ -53,7 +53,7 @@ export function StageQuestions({ question }: { question: StageQuestion }) {
         <h2 className="display-2">{question.doneHeading}</h2>
         <p className="mt-5 max-w-xl text-ink-soft">{question.doneBody}</p>
         <div className="mt-8">
-          <Button href="/scorer" size="lg" arrow>
+          <Button href="/message-builder" size="lg" arrow>
             {question.doneCta}
           </Button>
         </div>
@@ -62,10 +62,10 @@ export function StageQuestions({ question }: { question: StageQuestion }) {
   }
 
   return (
-    <div className="mt-16 border-t-2 border-ink pt-10">
-      <h2 className="text-xl font-medium">{question.heading}</h2>
-      <p className="mt-4 max-w-xl text-ink-soft">{question.intro}</p>
-      <p className="mt-3 max-w-xl text-ink-soft">{question.trade}</p>
+    <div className="mt-14 border-t-2 border-ink pt-12">
+      <h2 className="display-2">{question.heading}</h2>
+      <p className="lead mt-5 max-w-xl">{question.intro}</p>
+      <p className="mt-4 max-w-xl text-ink-soft">{question.trade}</p>
 
       <form onSubmit={onSubmit} className="mt-8 max-w-xl" noValidate>
         <fieldset>

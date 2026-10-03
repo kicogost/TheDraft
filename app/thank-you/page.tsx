@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import { Button } from "@/components/Button";
 import { Section } from "@/components/Section";
 import { StageQuestions } from "@/components/StageQuestions";
-import { getOtherResources, getResource, getStageQuestion } from "@/lib/content";
+import {
+  getOtherResources,
+  getResource,
+  getStageQuestion,
+  getThankYou,
+} from "@/lib/content";
 import { verifyResource } from "@/lib/signing";
 
 export const metadata: Metadata = {
@@ -18,24 +23,30 @@ export default async function ThankYouPage({ searchParams }: Props) {
   const { resource: slug, t } = await searchParams;
   const resource = slug ? getResource(slug) : undefined;
   const verified = resource && t ? verifyResource(resource.slug, t) : false;
+  const copy = getThankYou();
   // Only offer the index when there is actually something else on it. With one
   // live resource, "see the other resources" leads to the thing they just got.
   const others = resource ? getOtherResources(resource.slug).length : 0;
 
   return (
     <Section width="prose" space="generous" grid="sm">
-      <h1 className="display-1">Check your inbox.</h1>
+      {/*
+        The confirmation is deliberately quiet. They already know it worked,
+        they pressed the button a second ago. The offer below is the thing
+        they have not seen yet, so that takes the display weight instead.
+      */}
+      <p className="label text-ash">Confirmed</p>
 
       {resource ? (
         <>
-          <p className="lead mt-6">
+          <p className="mt-3 text-lg text-ink">
             {verified && resource.resourceUrl
-              ? "Your copy is ready below, and a link is on its way by email too."
-              : "It is on its way to your inbox now."}
+              ? copy.resourceLine
+              : copy.resourceLineUnverified}
           </p>
 
           {verified && resource.resourceUrl ? (
-            <div className="mt-10">
+            <div className="mt-6">
               <Button href={resource.resourceUrl} size="lg" arrow>
                 Download {resource.title.replace(/\.$/, "")}
               </Button>
@@ -43,9 +54,7 @@ export default async function ThankYouPage({ searchParams }: Props) {
           ) : null}
         </>
       ) : (
-        <p className="lead mt-6">
-You are subscribed. The next Draft lands on Tuesday morning.
-        </p>
+        <p className="mt-3 text-lg text-ink">{copy.newsletterLine}</p>
       )}
 
       <StageQuestions question={getStageQuestion()} />
