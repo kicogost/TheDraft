@@ -40,6 +40,33 @@ export default function Page() {
           />
         </div>
       </div>
+
+      {/*
+        Proof that the thing exists and arrives. Linked out to beehiiv rather
+        than mirrored here, so there is one copy of each issue and no archive
+        to keep in sync. Both of these were email only until the web channel
+        was added, which is why there was nothing to link to before.
+      */}
+      <div className="mt-20 border-t-2 border-ink pt-10">
+        <p className="label">{copy.issuesLabel}</p>
+        <p className="mt-4 max-w-xl text-ink-soft">{copy.issuesNote}</p>
+
+        <ul className="mt-8 grid gap-4">
+          {copy.issues.map((issue) => (
+            <li key={issue.href}>
+              <a
+                href={issue.href}
+                className="group flex flex-col gap-2 border-2 border-ink p-6 transition-all duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_0_var(--color-accent)]"
+              >
+                <span className="label text-ash">{issue.date}</span>
+                <span className="font-display text-2xl leading-tight">{issue.title}</span>
+                <span className="text-ink-soft">{issue.blurb}</span>
+                <span className="label mt-2 text-accent-deep">Read it &rarr;</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </Section>
   );
 }

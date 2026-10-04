@@ -6,5 +6,21 @@
   "formHeading": "Start with the one that worked.",
   "formLead": "Subscribe and the first thing in your inbox is the cold message that got me a $100k chief of staff role, annotated line by line, with what the founder wrote back thirty minutes later.",
   "submitLabel": "Subscribe free",
-  "disclosure": "One letter a week. Leave whenever you like, no hard feelings."
+  "disclosure": "One letter a week. Leave whenever you like, no hard feelings.",
+  "issuesLabel": "Recent issues",
+  "issuesNote": "Every issue is readable in full without subscribing. The letter is the same thing, it just arrives on a Tuesday.",
+  "issues": [
+    {
+      "title": "I posted my highlight reel. Here is the rest.",
+      "date": "29 September 2026",
+      "blurb": "What three years actually looked like, including the parts that do not fit in a LinkedIn post.",
+      "href": "https://franciscogost.beehiiv.com/p/i-posted-my-highlight-reel-here-is-the-rest"
+    },
+    {
+      "title": "The month nobody writes about",
+      "date": "22 September 2026",
+      "blurb": "What changes between a founder replying and a founder paying you.",
+      "href": "https://franciscogost.beehiiv.com/p/the-month-nobody-writes-about"
+    }
+  ]
 }
