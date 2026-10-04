@@ -9,6 +9,14 @@ const nextConfig: NextConfig = {
     // Satori needs the real font files to draw the social cards.
     "/**/opengraph-image": ["./assets/fonts/*.ttf"],
   },
+  async redirects() {
+    return [
+      // /portfolio was retired once the site narrowed to getting hired. It had
+      // been linked from the nav and sitemap, so anything already indexed or
+      // bookmarked lands on the homepage instead of a 404.
+      { source: "/portfolio", destination: "/", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

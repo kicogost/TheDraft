@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/Button";
-import { NewsletterForm } from "@/components/NewsletterForm";
+import { ResourceForm } from "@/components/ResourceForm";
 import { Section } from "@/components/Section";
 import { bookingUrl, getSite } from "@/lib/content";
 
@@ -33,6 +33,39 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/*
+        This block asks for an email and gives back a thing, not a
+        subscription. The newsletter still arrives, disclosed under the form,
+        because nobody trades an address for "a newsletter": 39 of the first
+        53 signups came through the gated resource and 5 through this block
+        when it was a plain signup. The anchor stays #newsletter, since seven
+        links across the site and the content files point at it.
+      */}
+      <Section id="newsletter" background="dim" rules="both" grid="sm">
+        <div className="grid gap-10 lg:grid-cols-[1fr_32rem] lg:gap-16">
+          <div>
+            <p className="label">{site.newsletter.label}</p>
+            <h2 className="display-2 mt-4">{site.newsletter.heading}</h2>
+            <p className="mt-5 max-w-xl">{site.newsletter.pitch}</p>
+            <p className="mt-4 max-w-xl text-ink-soft">{site.newsletter.ask}</p>
+          </div>
+          <div className="self-center">
+            <ResourceForm
+              slug={site.newsletter.offerSlug}
+              source="homepage"
+              submitLabel={site.newsletter.submitLabel}
+              disclosure={site.newsletter.reassurance}
+            />
+          </div>
+        </div>
+      </Section>
+
+      {/*
+        RallyUp sits below the offer, not above it. "Chief of staff at RallyUp"
+        is proof and belongs near the top, but this block is a pitch for a
+        different business to a different buyer, and in slot two it stood
+        between every visitor and the thing they came for.
+      */}
       <Section background="paper" rules="both" grid="sm" space="tight">
         <p className="label">{site.company.eyebrow}</p>
         <h2 className="display-2 mt-4">{site.company.name}.</h2>
@@ -44,22 +77,6 @@ export default function HomePage() {
             </Button>
           </div>
         ) : null}
-      </Section>
-
-      <Section id="newsletter" background="dim" rules="both" grid="sm">
-        <div className="grid gap-10 lg:grid-cols-[1fr_32rem] lg:gap-16">
-          <div>
-            <p className="label">{site.newsletter.label}</p>
-            <h2 className="display-2 mt-4">{site.newsletter.name}.</h2>
-            <p className="mt-5 max-w-xl">{site.newsletter.pitch}</p>
-          </div>
-          <div className="self-center">
-            <NewsletterForm
-              source="homepage"
-              reassurance={site.newsletter.reassurance}
-            />
-          </div>
-        </div>
       </Section>
 
       <Section background="ink" space="generous">

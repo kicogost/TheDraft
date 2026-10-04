@@ -7,6 +7,15 @@ import { signResource } from "@/lib/signing";
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
+/**
+ * Where the form was. Held to an allowlist so a caller cannot write arbitrary
+ * text into the beehiiv utm_medium field, and so the homepage offer stays
+ * separable from the resource pages in acquisition reporting. Anything
+ * unrecognised falls back to "resource", which is what every form sent before
+ * this existed.
+ */
+const SOURCES = new Set(["resource", "homepage"]);
+
 export async function POST(request: Request) {
   if (!allow(clientIp(request))) {
     return NextResponse.json(
@@ -15,7 +24,13 @@ export async function POST(request: Request) {
     );
   }
 
-  let body: { email?: string; slug?: string; company?: string; stage?: string };
+  let body: {
+    email?: string;
+    slug?: string;
+    company?: string;
+    stage?: string;
+    source?: string;
+  };
   try {
     body = await request.json();
   } catch {
@@ -38,9 +53,11 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "Unknown resource." }, { status: 404 });
   }
 
+  const medium = SOURCES.has(body.source ?? "") ? body.source! : "resource";
+
   const result = await subscribe({
     email,
-    medium: "resource",
+    medium,
     campaign: resource.slug,
     // Suppress beehiiv's own welcome only when a resource automation exists to
     // send one instead. With no automation, suppressing it means the reader

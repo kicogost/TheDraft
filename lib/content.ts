@@ -1,7 +1,6 @@
 import about from "@/content/about.json";
 import call from "@/content/call.json";
 import legal from "@/content/legal.json";
-import portfolio from "@/content/portfolio.json";
 import dm from "@/content/resources/chief-of-staff-dm.json";
 import first30 from "@/content/resources/first-30-days.json";
 import builder from "@/content/builder.json";
@@ -15,7 +14,6 @@ export type NavItem = {
 
 export type Site = typeof site;
 export type About = typeof about;
-export type Portfolio = typeof portfolio;
 
 export function getSite(): Site {
   return site;
@@ -23,10 +21,6 @@ export function getSite(): Site {
 
 export function getAbout(): About {
   return about;
-}
-
-export function getPortfolio(): Portfolio {
-  return portfolio;
 }
 
 /**
