@@ -24,13 +24,6 @@ export default function HomePage() {
             </span>
           ))}
         </h1>
-        <ul className="mt-7 space-y-1.5">
-          {site.hero.credentials.map((line) => (
-            <li key={line} className="label text-ash">
-              {line}
-            </li>
-          ))}
-        </ul>
         <p className="lead mt-7 max-w-xl">{site.hero.support}</p>
         {/*
           One action above the fold. The $100 call keeps its place in the nav
