@@ -46,7 +46,7 @@ export default function Page() {
           first.
         </p>
         <Link
-          href="/#newsletter"
+          href="/newsletter"
           className="label mt-6 inline-block text-accent-deep underline underline-offset-4 transition-colors hover:text-ink"
         >
           Read what it is about →

@@ -14,7 +14,7 @@ const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
  * unrecognised falls back to "resource", which is what every form sent before
  * this existed.
  */
-const SOURCES = new Set(["resource", "homepage", "hero"]);
+const SOURCES = new Set(["resource", "homepage", "hero", "newsletter"]);
 
 export async function POST(request: Request) {
   if (!allow(clientIp(request))) {

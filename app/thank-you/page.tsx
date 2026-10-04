@@ -60,7 +60,7 @@ export default async function ThankYouPage({ searchParams }: Props) {
       <StageQuestions question={getStageQuestion()} />
 
       <div className="mt-12 flex flex-wrap gap-6">
-        <Button href="/#newsletter" variant="outline">
+        <Button href="/newsletter" variant="outline">
           Back to the newsletter
         </Button>
         {others > 0 ? (

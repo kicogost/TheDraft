@@ -1,6 +1,7 @@
 import about from "@/content/about.json";
 import call from "@/content/call.json";
 import legal from "@/content/legal.json";
+import newsletterPage from "@/content/newsletter.json";
 import dm from "@/content/resources/chief-of-staff-dm.json";
 import first30 from "@/content/resources/first-30-days.json";
 import builder from "@/content/builder.json";
@@ -21,6 +22,12 @@ export function getSite(): Site {
 
 export function getAbout(): About {
   return about;
+}
+
+export type NewsletterPage = typeof newsletterPage;
+
+export function getNewsletterPage(): NewsletterPage {
+  return newsletterPage;
 }
 
 /**
