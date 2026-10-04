@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Button } from "@/components/Button";
 import { ResourceForm } from "@/components/ResourceForm";
 import { Section } from "@/components/Section";
@@ -11,7 +10,13 @@ export default function HomePage() {
 
   return (
     <>
-      <Section width="hero" space="generous" grid="sm">
+      {/*
+        The hero carries id="newsletter" because the block that used to hold
+        it is gone. Seven links across the nav, footer, thank you page,
+        resources page and about copy point at that anchor, and they are all
+        labelled "newsletter", so they should land where you can sign up.
+      */}
+      <Section id="newsletter" width="hero" space="generous" grid="sm">
         <h1 className="display-1">
           {site.hero.headline.map((line) => (
             <span key={line} className="block">
@@ -41,41 +46,6 @@ export default function HomePage() {
             submitLabel={site.hero.submitLabel}
             disclosure={site.hero.disclosure}
           />
-        </div>
-        <div className="mt-7">
-          <Link
-            href={`${site.hero.secondary.href}?from=hero`}
-            className="link-sweep font-semibold text-ink transition-colors hover:text-accent-deep"
-          >
-            {site.hero.secondary.label}
-          </Link>
-        </div>
-      </Section>
-
-      {/*
-        This block asks for an email and gives back a thing, not a
-        subscription. The newsletter still arrives, disclosed under the form,
-        because nobody trades an address for "a newsletter": 39 of the first
-        53 signups came through the gated resource and 5 through this block
-        when it was a plain signup. The anchor stays #newsletter, since seven
-        links across the site and the content files point at it.
-      */}
-      <Section id="newsletter" background="dim" rules="both" grid="sm">
-        <div className="grid gap-10 lg:grid-cols-[1fr_32rem] lg:gap-16">
-          <div>
-            <p className="label">{site.newsletter.label}</p>
-            <h2 className="display-2 mt-4">{site.newsletter.heading}</h2>
-            <p className="mt-5 max-w-xl">{site.newsletter.pitch}</p>
-            <p className="mt-4 max-w-xl text-ink-soft">{site.newsletter.ask}</p>
-          </div>
-          <div className="self-center">
-            <ResourceForm
-              slug={site.newsletter.offerSlug}
-              source="homepage"
-              submitLabel={site.newsletter.submitLabel}
-              disclosure={site.newsletter.reassurance}
-            />
-          </div>
         </div>
       </Section>
 

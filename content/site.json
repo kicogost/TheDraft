@@ -12,16 +12,12 @@
     ],
     "credentials": [
       "Chief of staff at a VC-backed startup",
-      "Ghostwriter for Airwallex, PandaDoc and Letter.ai",
+      "Worked with Airwallex, PandaDoc and more VC-backed startups",
       "Hired at 23 with no application and no CV"
     ],
     "support": "At 23 I sent one cold message and ended up with a $100k+ chief of staff role and equity. I will send you that message, annotated, with what he wrote back.",
     "submitLabel": "Send me the DM",
-    "disclosure": "You will also get The Draft, one letter a week on how people get hired without applying. Leave whenever you like.",
-    "secondary": {
-      "label": "Work with me",
-      "href": "/call"
-    }
+    "disclosure": "You will also get The Draft, one letter a week on how people get hired without applying. Leave whenever you like."
   },
   "closing": {
     "question": [
@@ -60,12 +56,6 @@
   "newsletter": {
     "name": "The Draft",
     "offerSlug": "chief-of-staff-dm",
-    "label": "Free, in your inbox",
-    "heading": "The DM that got me hired.",
-    "pitch": "At 23 I sent one cold message to a founder I had never met. He replied in thirty minutes. Now I am his chief of staff on $100k plus equity.",
-    "ask": "I will send you the message itself, annotated. Why each line is there, and what he wrote back.",
-    "submitLabel": "Send me the DM",
-    "reassurance": "You will also get The Draft, one letter a week on how people get hired without applying. Leave whenever you like.",
     "url": "https://franciscogost.beehiiv.com"
   },
   "call": {
@@ -102,7 +92,7 @@
     }
   ],
   "navCta": {
-    "label": "Work with me",
+    "label": "Work 1:1 with me",
     "href": "/call"
   },
   "footer": {
