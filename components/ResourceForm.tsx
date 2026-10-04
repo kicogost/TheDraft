@@ -13,6 +13,9 @@ type ResourceFormProps = {
    * acquisition reporting. Must match the allowlist in /api/resource.
    */
   source?: string;
+  /** Inline puts the field and button on one row, for the hero where the
+   * form is the only action and has the width for it. */
+  layout?: "inline" | "stacked";
 };
 
 export function ResourceForm({
@@ -21,6 +24,7 @@ export function ResourceForm({
   submitLabel,
   disclosure,
   source,
+  layout,
 }: ResourceFormProps) {
   return (
     <div>
@@ -34,6 +38,7 @@ export function ResourceForm({
           endpoint="/api/resource"
           payload={{ slug, ...(source ? { source } : {}) }}
           submitLabel={submitLabel}
+          layout={layout}
         />
       </div>
       {disclosure ? <p className="mt-3 text-sm text-ash">{disclosure}</p> : null}

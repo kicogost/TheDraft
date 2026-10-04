@@ -10,14 +10,17 @@
       "I turn overlooked",
       "people into hires"
     ],
-    "support": "At 23 I sent one cold message and ended up with a $100k+ chief of staff role and equity. No application, no CV. I show you how that message was built.",
-    "primary": {
-      "label": "Book a 1:1",
-      "href": "/call"
-    },
+    "credentials": [
+      "Chief of staff at a VC-backed startup",
+      "Ghostwriter for Airwallex, PandaDoc and Letter.ai",
+      "Hired at 23 with no application and no CV"
+    ],
+    "support": "At 23 I sent one cold message and ended up with a $100k+ chief of staff role and equity. I will send you that message, annotated, with what he wrote back.",
+    "submitLabel": "Send me the DM",
+    "disclosure": "You will also get The Draft, one letter a week on how people get hired without applying. Leave whenever you like.",
     "secondary": {
-      "label": "Read The Draft",
-      "href": "/#newsletter"
+      "label": "Work with me",
+      "href": "/call"
     }
   },
   "closing": {

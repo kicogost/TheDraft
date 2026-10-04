@@ -19,13 +19,32 @@ export default function HomePage() {
             </span>
           ))}
         </h1>
-        <p className="lead mt-6 max-w-xl">{site.hero.support}</p>
-        <div className="mt-10 flex flex-wrap items-center gap-6">
-          <Button href={`${site.hero.primary.href}?from=hero`} size="lg" arrow>
-            {site.hero.primary.label}
-          </Button>
+        <ul className="mt-7 space-y-1.5">
+          {site.hero.credentials.map((line) => (
+            <li key={line} className="label text-ash">
+              {line}
+            </li>
+          ))}
+        </ul>
+        <p className="lead mt-7 max-w-xl">{site.hero.support}</p>
+        {/*
+          One action above the fold. The $100 call keeps its place in the nav
+          and the closing band, but asking a visitor who landed ten seconds ago
+          to book a paid call competes with the free thing that actually
+          converts, and splitting the hero across both wins neither.
+        */}
+        <div className="mt-8 max-w-xl">
+          <ResourceForm
+            slug={site.newsletter.offerSlug}
+            source="hero"
+            layout="inline"
+            submitLabel={site.hero.submitLabel}
+            disclosure={site.hero.disclosure}
+          />
+        </div>
+        <div className="mt-7">
           <Link
-            href={site.hero.secondary.href}
+            href={`${site.hero.secondary.href}?from=hero`}
             className="link-sweep font-semibold text-ink transition-colors hover:text-accent-deep"
           >
             {site.hero.secondary.label}
