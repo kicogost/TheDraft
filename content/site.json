@@ -68,6 +68,10 @@
   },
   "nav": [
     {
+      "label": "Manifesto",
+      "href": "/manifesto"
+    },
+    {
       "label": "Resources",
       "href": "/resources",
       "children": [
@@ -92,6 +96,10 @@
   },
   "footer": {
     "explore": [
+      {
+        "label": "Manifesto",
+        "href": "/manifesto"
+      },
       {
         "label": "Newsletter",
         "href": "/newsletter"
@@ -132,6 +140,10 @@
       "newsletter": {
         "headline": "The Draft",
         "supporting": "A weekly letter on getting hired without applying. The message that got a reply, and the one that went nowhere."
+      },
+      "manifesto": {
+        "headline": "The Application Loop",
+        "supporting": "Five steps almost every job seeker runs, and what it looks like from the side of the desk that reads them."
       }
     }
   },
