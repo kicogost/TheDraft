@@ -38,7 +38,7 @@ New template. Different format. A fourth font. You give up a weekend improving t
 
 **5. You send more.**
 
-Volume becomes the plan. More applications, the same silence, and still no way to tell whether it is the CV, the roles you are picking, or something nobody has told you. Then you open the job board again on Monday.
+Volume becomes the plan. One reader told me he sent more than 500 applications in a year out of work, got five interviews out of it, and no offers. Then you open the job board again on Monday, because what else is there.
 
 **What it looks like from the other side.**
 
@@ -61,7 +61,15 @@ Everything I write is about the way out: you build something for one company, an
 
 The copy above uses 158 because it is the most recent. If that is wrong, it is wrong in four places, not one.
 
-**Step 5 is the weakest line** because it carries no number. A real figure from a real reader would fix it. There are 158 messages to pull one from, and `content/site.json` has a placeholder reading "applied to about 40 roles in two months, two replies, both rejections" which was written as an example, not a reader's answer, so it was deliberately left out.
+**Step 5 now carries a real number**, from the onboarding question, 8 October 2026. It replaced a line that had none. Verbatim:
+
+> Applied to probably more than 500 jobs during my unemployment year. Got maybe 5-7 interviews only. No offers. I am so lost in this point I don't even know what to do next.
+>
+> **Confidential Reader**, stage: No direction
+
+Anonymised per the house rule: no name, nothing identifying, captioned Confidential Reader. The copy above paraphrases rather than quotes, so the exact words are not published anywhere. If you want the quote itself on the page, use the block above as written and nothing more.
+
+Worth knowing where it came from. "No direction" was not a selectable option in beehiiv until 5 October, and this reader is the first person to pick it. The answer arrived through the `/newsletter` page the day after this section was drafted, which is as close to a clean confirmation of the thesis as this will get.
 
 ## Before publishing
 
