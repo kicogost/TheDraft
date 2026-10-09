@@ -143,6 +143,18 @@ export function validStage(value: unknown): string | undefined {
   return site.stageQuestion.options.some((o) => o.value === value) ? value : undefined;
 }
 
+/**
+ * Whether they currently have income. The stage question cannot tell a
+ * consultant quietly looking from someone a year out of work, and that
+ * difference is what any price depends on.
+ */
+export function validSituation(value: unknown): string | undefined {
+  if (typeof value !== "string") return undefined;
+  return site.stageQuestion.situationOptions.some((o) => o.value === value)
+    ? value
+    : undefined;
+}
+
 export type Builder = typeof builder;
 
 export function getBuilder(): Builder {

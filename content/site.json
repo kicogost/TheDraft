@@ -166,6 +166,21 @@
         "label": "I am not job hunting, I am here for something else"
       }
     ],
+    "situationLabel": "And are you working right now?",
+    "situationOptions": [
+      {
+        "value": "Employed, want to move",
+        "label": "Yes, and I want to move"
+      },
+      {
+        "value": "Not working",
+        "label": "No, I am looking full time"
+      },
+      {
+        "value": "Studying",
+        "label": "Still studying"
+      }
+    ],
     "triedLabel": "What have you tried that has not worked?",
     "triedHint": "The more you tell me, the more useful I can be. I read every one of these myself. Optional, but it is the answer that helps most.",
     "triedPlaceholder": "For example: applied to about 40 roles in two months, two replies, both rejections. No idea whether it is the CV or the roles I am picking.",
