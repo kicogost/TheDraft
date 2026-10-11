@@ -47,6 +47,8 @@ But 4 September closed at 2,427 and 5 September opened at 2,612. The hiring post
 
 The LinkedIn export was read directly: 222 incoming connection invitations in September, 37 carrying a written note, plus 55 inbound messages from 35 people in the 4 to 15 September window. Note that the post claiming "128 DMs" is roughly 2.3 times what the export contains, though LinkedIn does exclude unaccepted message requests, so both can be partly true.
 
+**Resolved 11 October 2026.** Francisco counted the DMs directly in the LinkedIn interface. The real figure is over 100, and he kept a screenshot as the artifact. The export undercounts because it omits unaccepted message requests, exactly as the caveat above allowed. Use over 100 and show the screenshot. Do not re-derive this figure from the export.
+
 **Who those people actually were.** Of roughly 70 pieces of evidence, around 60 are experienced freelance writers applying for the RallyUp role. Not career changers. Many are senior: 25 years a journalist, 13 years in PR, a dozen years copywriting, 8 years, 6 years, one currently at Google. Roughly 6 are unrelated sales pitches aimed at him.
 
 **They are his employer's talent pool, not his audience.** They responded to a job advert, so they self-selected on wanting that job. The 132 saves on that post are people bookmarking a vacancy.
