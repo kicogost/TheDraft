@@ -68,8 +68,8 @@ export default async function ThankYouPage({ searchParams }: Props) {
             {others === 1 ? "See the other resource" : "See the other resources"}
           </Button>
         ) : (
-          <Button href="/call" variant="outline">
-            Work with me
+          <Button href="/about" variant="outline">
+            About me
           </Button>
         )}
       </div>

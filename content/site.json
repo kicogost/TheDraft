@@ -20,8 +20,8 @@
       "obvious hire?"
     ],
     "cta": {
-      "label": "Book a 1:1",
-      "href": "/call"
+      "label": "Get the message",
+      "href": "/resources/chief-of-staff-dm"
     }
   },
   "company": {
@@ -53,12 +53,6 @@
     "offerSlug": "chief-of-staff-dm",
     "url": "https://franciscogost.beehiiv.com"
   },
-  "call": {
-    "checkoutUrl": "https://cal.com/francisco-gost-scagliarini/linkedin-career-workshop",
-    "price": "$100",
-    "duration": "60 minutes",
-    "platform": "Google Meet"
-  },
   "contactEmail": "fgostscagliarini@gmail.com",
   "social": {
     "linkedin": "https://www.linkedin.com/in/franciscogost/",
@@ -87,8 +81,8 @@
     }
   ],
   "navCta": {
-    "label": "Work 1:1 with me",
-    "href": "/call"
+    "label": "Get the DM",
+    "href": "/resources/chief-of-staff-dm"
   },
   "footer": {
     "explore": [
@@ -101,8 +95,8 @@
         "href": "/about"
       },
       {
-        "label": "Work with me",
-        "href": "/call"
+        "label": "Resources",
+        "href": "/resources"
       }
     ],
     "legal": [
@@ -124,10 +118,6 @@
       "about": {
         "headline": "About",
         "supporting": "Chief of staff at RallyUp. From Mallorca to London, and one cold message that changed the job."
-      },
-      "call": {
-        "headline": "Work with me",
-        "supporting": "A one hour LinkedIn and career workshop. Leave with a positioning line, a rewritten profile and a 90-day plan."
       },
       "newsletter": {
         "headline": "The Draft",

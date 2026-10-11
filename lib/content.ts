@@ -1,5 +1,4 @@
 import about from "@/content/about.json";
-import call from "@/content/call.json";
 import legal from "@/content/legal.json";
 import newsletterPage from "@/content/newsletter.json";
 import dm from "@/content/resources/chief-of-staff-dm.json";
@@ -111,10 +110,6 @@ export function getResource(slug: string): Resource | undefined {
 
 export function getOtherResources(slug: string): Resource[] {
   return getResources().filter((entry) => entry.slug !== slug);
-}
-
-export function getCall() {
-  return call;
 }
 
 export type LegalDocument = {
