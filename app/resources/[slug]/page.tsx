@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ResourceForm } from "@/components/ResourceForm";
 import { Section } from "@/components/Section";
-import { getAllResources, getOtherResources, getResource } from "@/lib/content";
+import { getAllResources, getOtherResources, getResource, getSite } from "@/lib/content";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -29,7 +29,25 @@ export default async function ResourcePage({ params }: Params) {
   const others = getOtherResources(slug);
   const isStory = resource.template === "story";
 
-  const form = (
+  /*
+    A retired resource keeps its page and its download, so links already sent
+    out still work, but it must stop taking new signups. Left live it enrols
+    people into a sequence for something that is no longer published.
+  */
+  const retired = "retired" in resource && resource.retired === true;
+
+  const form = retired ? (
+    <div className="border-2 border-line bg-paper-dim px-6 py-6">
+      <p className="label text-ash">No longer available</p>
+      <p className="mt-3 text-ink-soft">{getSite().retiredNote}</p>
+      <Link
+        href="/resources/chief-of-staff-dm"
+        className="label mt-5 inline-block text-accent-deep underline underline-offset-4 transition-colors hover:text-ink"
+      >
+        Get that one instead &rarr;
+      </Link>
+    </div>
+  ) : (
     <div className="border-2 border-ink bg-paper shadow-[10px_10px_0_0_var(--color-accent)]">
       <div className="bg-ink px-6 py-5">
         <p className="display-3 text-paper">{resource.formHeader}</p>

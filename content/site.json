@@ -193,5 +193,6 @@
     "resourceLine": "Your copy is ready below, and a link is on its way by email too.",
     "resourceLineUnverified": "It is on its way to your inbox now.",
     "newsletterLine": "You are subscribed. The next Draft lands on Tuesday morning."
-  }
+  },
+  "retiredNote": "This one is retired and no longer sent. If you already have the download link it still works. The current resource is the chief of staff DM."
 }
