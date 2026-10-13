@@ -192,24 +192,30 @@ Every rung answers a question somebody actually asked, in their own words, withi
 
 ## 11. The tenth inbound, 13 October 2026
 
-A first degree connection sent a DM saying they want more than the newsletter gives them. No product named, no specific problem stated.
+A first degree connection opened by saying she wanted more than the newsletter gives her. The follow up showed her to be something quite different from what her profile said.
 
-**They are not a job seeker.** Their headline sells customer onboarding, retention and CS ops to Series A to C founders, with outcome metrics attached. This is the freelancer segment section 8 flagged and told itself to watch.
+**The first read was wrong, and how it was wrong is the finding.**
 
-**It does not fit section 10's table.** Those three categories were "where do I start" (4), "look at my specific thing" (3) and "no ask" (2). This is a fourth kind: wants more than free, has not said what. Intent without an object, which is a weaker signal than any of the nine before it, because nothing was asked for and nothing was priced.
+Her headline sells customer onboarding, retention and CS ops to Series A to C founders, with outcome metrics attached. Read cold that is a freelancer, and it was logged as one here. She is not. She is employed, wants out badly, has not started outreach at all, and has been editing her profile instead, because she is afraid an unfinished one will cost her the people she contacts. She sent one message last week and it did not land.
 
-**Treat it as possible outbound, not only inbound.** A chief of staff at a funded startup sits squarely inside that person's own target market, and section 8 already noted that engagement optimised headlines in this niche can mean visibility seeking rather than demand. The reply was written to resolve the ambiguity rather than assume past it.
+In the stage question she is **Not started**. In the situation question she is **Employed, want to move**. She is not an exception to the offer sentence. She is the centre of it.
+
+### What this does to the freelancer count
+
+Section 8 read roughly half the inbound as freelancers pitching clients rather than people seeking jobs, inferred from their headlines, and said to watch whether that share held.
+
+**That inference is less safe than it looked.** A consultant style headline does not mean a consultant. Someone trying to leave a job builds a positioning headline because every piece of career advice tells them to, and it then reads as a service provider to anyone scanning. Section 8 allowed for one direction of this error, that engagement optimised headlines can mean visibility seeking rather than real demand. This is the opposite direction, and nobody was watching for it.
+
+**Do not revise the split on one case.** Do treat the headline derived freelancer count in section 8 as an upper bound rather than a measurement, and ask people directly instead of reading it off a profile.
+
+### What she actually asked for
+
+Whether her profile would work if he were a recruiter, and whether she is doing too much.
+
+That is a request to review her specific thing, asked by name, which is the fourth time. It is also the clearest statement so far of what the real blocker is, and it is not a lack of information. She knows what to do. She is improving the one artifact she controls instead of starting, which is step four of the application loop with a LinkedIn profile standing in for a CV.
 
 ### What was sent back
 
-No pitch, because there is nothing to sell. The $100 hour was retired on 11 October after 38 sends, one click and no bookings, and nothing has replaced it yet.
+The free teardown, plus the blunt version: the profile is not what is stopping her, and it is pointed at the wrong reader anyway, because it is written to sell consulting to founders rather than to get hired by one.
 
-The reply asked what they are actually trying to get done, named the guess drawn from their profile so they could correct it, and offered the free teardown. That keeps the pre-registered gate intact: section 8 records the teardown as the right thing at this size until the replies become a queue rather than a pleasure.
-
-It also demonstrates the method inside the reply, by doing the reading before the ask.
-
-### What this does not change
-
-**The offer sentence stays.** Section 8's reasoning holds: "get hired" is the more defensible position, the freelancer market is crowded and overlaps his employer's, and widening costs the one thing competitors cannot copy, which is that he did this twelve months ago and can prove it. One vague DM is not volume.
-
-**What to watch:** whether the reply comes back about getting clients or about getting hired. If it is clients, that is another signal pointing at "get a reply from someone who can give you money" as the real underlying job. That belongs in the 50 answer review in `docs/audience-answers.md`, not in a decision taken this week.
+No pitch. Nothing exists to sell, since the $100 hour was retired on 11 October.
