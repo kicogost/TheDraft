@@ -4,6 +4,8 @@ Every piece of copy for Francisco Gost runs through this: newsletter issues, aut
 
 Read this before writing a word. The house rules in section 5 are absolute and fail CI.
 
+Read `docs/voice-edits-log.md` as well. This file holds the rules he decided. That one holds the rules his edits reveal, and it is updated every time he changes a draft.
+
 ## 1. The method, after Sam Parr
 
 Sam Parr built The Hustle to 1.5 million readers on a small number of habits. They are not tricks, they are constraints that force the writing to earn attention.
