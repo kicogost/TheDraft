@@ -187,3 +187,29 @@ Not "free for now". Four reasons:
 | 3 | What do I build for this company? | Best evidenced by the student, still unpriced | TBD |
 
 Every rung answers a question somebody actually asked, in their own words, within one week.
+
+---
+
+## 11. The tenth inbound, 13 October 2026
+
+A first degree connection sent a DM saying they want more than the newsletter gives them. No product named, no specific problem stated.
+
+**They are not a job seeker.** Their headline sells customer onboarding, retention and CS ops to Series A to C founders, with outcome metrics attached. This is the freelancer segment section 8 flagged and told itself to watch.
+
+**It does not fit section 10's table.** Those three categories were "where do I start" (4), "look at my specific thing" (3) and "no ask" (2). This is a fourth kind: wants more than free, has not said what. Intent without an object, which is a weaker signal than any of the nine before it, because nothing was asked for and nothing was priced.
+
+**Treat it as possible outbound, not only inbound.** A chief of staff at a funded startup sits squarely inside that person's own target market, and section 8 already noted that engagement optimised headlines in this niche can mean visibility seeking rather than demand. The reply was written to resolve the ambiguity rather than assume past it.
+
+### What was sent back
+
+No pitch, because there is nothing to sell. The $100 hour was retired on 11 October after 38 sends, one click and no bookings, and nothing has replaced it yet.
+
+The reply asked what they are actually trying to get done, named the guess drawn from their profile so they could correct it, and offered the free teardown. That keeps the pre-registered gate intact: section 8 records the teardown as the right thing at this size until the replies become a queue rather than a pleasure.
+
+It also demonstrates the method inside the reply, by doing the reading before the ask.
+
+### What this does not change
+
+**The offer sentence stays.** Section 8's reasoning holds: "get hired" is the more defensible position, the freelancer market is crowded and overlaps his employer's, and widening costs the one thing competitors cannot copy, which is that he did this twelve months ago and can prove it. One vague DM is not volume.
+
+**What to watch:** whether the reply comes back about getting clients or about getting hired. If it is clients, that is another signal pointing at "get a reply from someone who can give you money" as the real underlying job. That belongs in the 50 answer review in `docs/audience-answers.md`, not in a decision taken this week.
