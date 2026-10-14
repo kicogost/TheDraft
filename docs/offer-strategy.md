@@ -219,3 +219,44 @@ That is a request to review her specific thing, asked by name, which is the four
 The free teardown, plus the blunt version: the profile is not what is stopping her, and it is pointed at the wrong reader anyway, because it is written to sell consulting to founders rather than to get hired by one.
 
 No pitch. Nothing exists to sell, since the $100 hour was retired on 11 October.
+
+---
+
+## 12. Effortful asks return nothing, 14 October 2026
+
+Every reply ask that requires the reader to do something first has returned zero. Every ask that costs them nothing has worked.
+
+| Ask | Cost to the reader | Result |
+| --- | --- | --- |
+| "Reply with Got it", welcome email 1 | two words | **3 of 24** |
+| Stage question on `/thank-you` | two clicks on a form | **7 answers** |
+| "Send me your draft", DM sequence email 2 | write a cold message, then expose it | **0 of 51** |
+| "Tell me which company you picked", 13 October issue | do the exercise, then report back | **0 of 61** |
+
+### The mechanism
+
+Both failures share a shape. **They ask people who have not started to report on having started.**
+
+That excludes most of the list by construction. Two of five stage answers are "Not started". The tenth inbound in section 11 said it in plain words: she had not begun outreach because she was still perfecting her profile. She is the modal reader, and neither ask was answerable by her.
+
+The ask was gated behind homework the audience has not done, which is the exact problem the newsletter exists to solve.
+
+### What this is not
+
+**It is not evidence the audience will not engage.** The same week the issue returned zero replies, one reader sent three unprompted paragraphs about wanting to leave her job, and section 8 records three people asking for a review by name. The engagement is real. It happens in LinkedIn DMs, where they start the conversation, not in email where he does.
+
+**It is not a conclusion from the zero.** Sixty-one people at a 2% reply rate predicts one reply. Zero and one are the same number at this size. What carries signal is the contrast: 0 from 112 effortful asks against 3 from 24 effortless ones.
+
+### The decision
+
+**Polls from the next issue.** `poll_a907f529-b169-4c4f-b0a0-f74a1f045cdf` carries the six stage options verbatim from `stageQuestion.options` in `content/site.json`, so poll votes and `/thank-you` form answers count together.
+
+Live results are off on purpose. Showing the running breakdown would anchor later voters, and the breakdown is the entire point.
+
+This also unblocks the 50 answer trigger in `docs/audience-answers.md`, which has collected seven in a month because the question only fires for new subscribers on `/thank-you`. One poll reaches all 62 at once.
+
+**Keep a reply ask, but make it answerable by someone who has done nothing.** The next issue asks which company they would pick if they had to pick today, and says explicitly that guessing is fine.
+
+### What to watch
+
+Whether poll completion beats 12%, the rate the two word ask achieved. If a one click poll cannot clear that, the problem is attention rather than friction, and that is a different fix.
