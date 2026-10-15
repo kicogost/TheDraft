@@ -2,32 +2,32 @@
   "name": "Francisco Gost",
   "fullName": "Francisco Gost Scagliarini",
   "url": "https://franciscogost.com",
-  "tagline": "I did this twelve months ago, not twenty years ago.",
-  "oneLiner": "I help career changers get hired without applying.",
-  "titleLine": "Get hired without applying",
+  "tagline": "Most LinkedIn advice comes from someone who has grown one account.",
+  "oneLiner": "I run LinkedIn for B2B founders, and I show you how it works.",
+  "titleLine": "What actually works on LinkedIn",
   "hero": {
     "headline": [
-      "I turn overlooked",
-      "people into hires"
+      "I run LinkedIn",
+      "for B2B founders"
     ],
-    "support": "At 23 I sent one cold message and ended up with a $100k+ chief of staff role and equity. I will send you that message, annotated, with what he wrote back.",
-    "submitLabel": "Send me the DM",
-    "disclosure": "You will also get The Draft, one letter a week on how people get hired without applying. Leave whenever you like."
+    "support": "7.9 million impressions and more than 13,000 new followers in 2026, across 21 accounts. I pull apart what worked and what died, and send it to you every Tuesday.",
+    "submitLabel": "Send me the teardown",
+    "disclosure": "You will also get The Draft, one letter a week on LinkedIn and copywriting. Leave whenever you like."
   },
   "closing": {
     "question": [
-      "Ready to be the",
-      "obvious hire?"
+      "Ready to write",
+      "posts that work?"
     ],
     "cta": {
-      "label": "Get the message",
-      "href": "/resources/chief-of-staff-dm"
+      "label": "Get the teardown",
+      "href": "/resources/750-post-teardown"
     }
   },
   "company": {
     "eyebrow": "My company",
     "name": "RallyUp",
-    "body": "I'm chief of staff and an investor at RallyUp. We build LinkedIn audiences for B2B founders and executives: every post hand-written in their voice, engineered to reach the people who buy from them. In 2026 we've shipped 700+ posts for leadership teams at PandaDoc, Letter.ai, Anchor Browser and Andel.",
+    "body": "I'm partner and chief of staff at RallyUp. We build LinkedIn audiences for B2B founders and executives: every post hand-written in their voice, engineered to reach the people who buy from them. In 2026 we've shipped more than 750 posts for leadership teams at PandaDoc, Letter.ai, Anchor Browser and Andel.",
     "cta": {
       "label": "See if your team qualifies",
       "href": "https://cal.com/team/rallyup/audience-building-with-rallyup"
@@ -50,7 +50,7 @@
   },
   "newsletter": {
     "name": "The Draft",
-    "offerSlug": "chief-of-staff-dm",
+    "offerSlug": "750-post-teardown",
     "url": "https://franciscogost.beehiiv.com"
   },
   "contactEmail": "fgostscagliarini@gmail.com",
@@ -65,6 +65,10 @@
       "label": "Resources",
       "href": "/resources",
       "children": [
+        {
+          "label": "The 750 post teardown",
+          "href": "/resources/750-post-teardown"
+        },
         {
           "label": "The chief of staff DM",
           "href": "/resources/chief-of-staff-dm"
@@ -81,8 +85,8 @@
     }
   ],
   "navCta": {
-    "label": "Get the DM",
-    "href": "/resources/chief-of-staff-dm"
+    "label": "Get the teardown",
+    "href": "/resources/750-post-teardown"
   },
   "footer": {
     "explore": [
@@ -112,77 +116,81 @@
   },
   "og": {
     "kicker": "Francisco Gost",
-    "headline": "I turn overlooked people into hires",
-    "supporting": "Chief of staff at RallyUp. I write The Draft, a weekly email on getting hired without applying.",
+    "headline": "I run LinkedIn for B2B founders",
+    "supporting": "Partner at RallyUp. I write The Draft, a weekly email on LinkedIn and copywriting.",
     "pages": {
       "about": {
         "headline": "About",
-        "supporting": "Chief of staff at RallyUp. From Mallorca to London, and one cold message that changed the job."
+        "supporting": "Partner at RallyUp. From Mallorca to London, and one cold message that changed the job."
       },
       "newsletter": {
         "headline": "The Draft",
-        "supporting": "A weekly letter on getting hired without applying. The message that got a reply, and the one that went nowhere."
+        "supporting": "A weekly letter on LinkedIn and copywriting. The post that worked, the one that died, and the numbers behind both."
       }
     }
   },
   "stageQuestion": {
-    "heading": "Want one written for you?",
-    "intro": "Tell me the company you are going after and the person you are writing to, and I will give you the tool that writes the message. It uses the exact framework that got me a $100k chief of staff role from one cold DM, and it shows you why every line is there.",
-    "trade": "Two questions first, so I know who I am building for. Thirty seconds.",
+    "heading": "Want the teardown?",
+    "intro": "Ten of the best performing posts from the 21 B2B accounts I run, pulled apart line by line, with the real impressions, saves and follower numbers attached. Plus the ones that died.",
+    "trade": "Two questions first, so I know who I am writing for. Thirty seconds.",
     "label": "Which of these sounds most like you right now?",
     "options": [
       {
-        "value": "No direction",
-        "label": "I am not sure what I want to do next"
+        "value": "Not posting",
+        "label": "I do not post, and I do not know where to start"
       },
       {
-        "value": "Applying only",
-        "label": "I know what I want, but I am only applying and it is not working"
+        "value": "No traction",
+        "label": "I post sometimes and nothing happens"
       },
       {
-        "value": "Not started",
-        "label": "I know I should message people directly, but I have not done it"
+        "value": "Views no inbound",
+        "label": "I get views, but nobody ever messages me"
       },
       {
-        "value": "No replies",
-        "label": "I am messaging people and getting no replies"
+        "value": "Wrong inbound",
+        "label": "I get messages, but from the wrong people"
       },
       {
-        "value": "No offers",
-        "label": "I get replies, but nothing turns into an offer"
+        "value": "Company account",
+        "label": "I write for a company, not for myself"
       },
       {
-        "value": "Not job hunting",
-        "label": "I am not job hunting, I am here for something else"
+        "value": "Something else",
+        "label": "I am here for something else"
       }
     ],
-    "situationLabel": "And are you working right now?",
+    "situationLabel": "And what are you doing it for?",
     "situationOptions": [
       {
-        "value": "Employed, want to move",
-        "label": "Yes, and I want to move"
+        "value": "Clients",
+        "label": "Finding clients or customers"
       },
       {
-        "value": "Not working",
-        "label": "No, I am looking full time"
+        "value": "Hired",
+        "label": "Getting hired or headhunted"
       },
       {
-        "value": "Studying",
-        "label": "Still studying"
+        "value": "Company brand",
+        "label": "Building a company's brand"
+      },
+      {
+        "value": "Other",
+        "label": "Something else"
       }
     ],
     "triedLabel": "What have you tried that has not worked?",
     "triedHint": "The more you tell me, the more useful I can be. I read every one of these myself. Optional, but it is the answer that helps most.",
-    "triedPlaceholder": "For example: applied to about 40 roles in two months, two replies, both rejections. No idea whether it is the CV or the roles I am picking.",
-    "submitLabel": "Give me the builder",
+    "triedPlaceholder": "For example: posted twice a week for three months, about 400 views a post, not one inbound message. No idea if it is the topic or the writing.",
+    "submitLabel": "Give me the teardown",
     "doneHeading": "Here it is.",
     "doneBody": "Thank you, genuinely. That shapes what I write next.",
-    "doneCta": "Open the message builder"
+    "doneCta": "Open the teardown"
   },
   "thankYou": {
     "resourceLine": "Your copy is ready below, and a link is on its way by email too.",
     "resourceLineUnverified": "It is on its way to your inbox now.",
     "newsletterLine": "You are subscribed. The next Draft lands on Tuesday morning."
   },
-  "retiredNote": "This one is retired and no longer sent. If you already have the download link it still works. The current resource is the chief of staff DM."
+  "retiredNote": "This one is retired and no longer sent. If you already have the download link it still works. The current resource is the 750 post teardown."
 }

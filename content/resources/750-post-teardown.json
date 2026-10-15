@@ -1,0 +1,53 @@
+{
+  "slug": "750-post-teardown",
+  "template": "story",
+  "title": "The 750 post teardown.",
+  "description": "Ten of the best performing posts from the 21 B2B accounts I run, pulled apart with the real numbers.",
+  "kicker": "750 posts · 7.9M impressions",
+  "formHeader": "750 posts. 7.9 million impressions. Here is what actually worked.",
+  "formEyebrow": "Get it free, in your inbox",
+  "submitLabel": "Send me the teardown",
+  "disclosure": "You will also get The Draft, one letter a week on LinkedIn and copywriting. Leave whenever you like.",
+  "blocks": [
+    {
+      "type": "lead",
+      "text": "This year I have shipped more than 750 posts for founders and executives at Airwallex, Letter.ai, Anchor Browser and Andel. Most did fine. A few did numbers I could not have predicted. Some died."
+    },
+    {
+      "type": "p",
+      "text": "Almost everything written about LinkedIn comes from one person who grew one account. That is a sample size of one, which is why the advice contradicts itself so often. Post long. Post short. Hooks are everything. Hooks are dead."
+    },
+    {
+      "type": "p",
+      "text": "I get a different view. Twenty-one accounts, different industries, different audiences, the same person writing. When something works across three of them it is a pattern. When it works on one it is a personality."
+    },
+    {
+      "type": "p",
+      "text": "So I pulled the numbers. Impressions, saves, follower gain and profile views on every post, then lined up the ten that worked hardest against the ones that went nowhere."
+    },
+    {
+      "type": "p",
+      "text": "The thing that surprised me most is that likes tell you almost nothing. The posts that built audiences and the posts that collected applause were rarely the same posts, and the gap between them is measurable."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Ten posts that worked, with their real impressions, saves and follower numbers attached",
+        "The hook structures that repeat across accounts, and the ones that only ever worked once",
+        "Why saves per thousand impressions is the number to watch, and what the ratio actually predicts",
+        "Four posts that died, and the specific reason each one did",
+        "What this cannot tell you, stated plainly"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "The honest limit: this is one agency's data from one year, and every account in it belongs to a B2B company. If you sell to consumers, treat the patterns as a starting hypothesis rather than a rule. I have said so inside the document too."
+    },
+    {
+      "type": "ask",
+      "text": "Drop your email below and I will send it over."
+    }
+  ],
+  "resourceUrl": "",
+  "automationId": ""
+}
