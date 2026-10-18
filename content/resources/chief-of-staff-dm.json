@@ -1,16 +1,16 @@
 {
   "slug": "chief-of-staff-dm",
   "template": "story",
-  "title": "The chief of staff DM.",
-  "description": "The cold DM that landed me a $100k+ chief of staff role and equity at 23.",
-  "kicker": "The $100k role · one cold DM",
-  "formHeader": "One DM. Chief of staff at 23. $100k plus equity.",
+  "title": "From DM to revenue.",
+  "description": "The cold DM that turned a stranger into a six figure yes, annotated line by line.",
+  "kicker": "One DM · a $100k yes",
+  "formHeader": "One DM to a stranger. A six figure yes, thirty minutes later.",
   "formEyebrow": "Get it free, in your inbox",
   "submitLabel": "Send me the DM",
   "blocks": [
     {
       "type": "lead",
-      "text": "At 23 I sent one cold message to a founder I had never met. He replied in thirty minutes."
+      "text": "I sent one cold message to a founder I had never met. He replied in thirty minutes, and that message is the reason I am his business partner today."
     },
     {
       "type": "p",
@@ -41,14 +41,15 @@
     },
     {
       "type": "p",
-      "text": "He booked a call for the Wednesday. What turned a few afternoons into a full time role was the month after: I shipped things before he asked for them, and built what was missing instead of waiting to be told. Grind beats talent, every time."
+      "text": "The same structure is what turns a cold DM into a customer, a partnership, or an investor call. The ask changes. The move does not. You do a piece of the work before anyone agrees to pay you for it, and you put that work inside the message."
     },
     {
       "type": "ask",
-      "text": "Put your email in and I will send you the message itself, annotated: what I knew about Alec before I wrote it, why each line is there, what he wrote back, and what the first month actually looked like."
+      "text": "Put your email in and I will send you the message itself, annotated: what I knew about him before I wrote a word, why every line is there, what he wrote back, and the structure you can run against anyone you need a yes from."
     }
   ],
   "resourceUrl": "/api/download/chief-of-staff-dm?k=1fb90e230fb6288e3882d2517b685837",
   "automationId": "aut_6240a1f8-392e-4f3c-a4e5-4b5cb89565f1",
-  "deliverable": "content/resources/files/the-chief-of-staff-dm.pdf"
+  "deliverable": "content/resources/files/the-chief-of-staff-dm.pdf",
+  "disclosure": "You will also get The Draft, one letter a week on B2B social and content strategy. Leave whenever you like."
 }
