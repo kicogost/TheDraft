@@ -160,22 +160,30 @@
         "label": "I am here for something else"
       }
     ],
-    "situationLabel": "And what are you doing it for?",
-    "situationOptions": [
+    "roleLabel": "And which of these is closest to your job?",
+    "roleOptions": [
       {
-        "value": "Clients",
-        "label": "Finding clients or customers"
+        "value": "Founder or CEO",
+        "label": "Founder or CEO"
       },
       {
-        "value": "Hired",
-        "label": "Getting hired or headhunted"
+        "value": "Head of marketing, VP or CMO",
+        "label": "Head of marketing, VP or CMO"
       },
       {
-        "value": "Company brand",
-        "label": "Building a company's brand"
+        "value": "Marketing manager or specialist",
+        "label": "Marketing manager or specialist"
       },
       {
-        "value": "Other",
+        "value": "Sales, GTM or partnerships",
+        "label": "Sales, GTM or partnerships"
+      },
+      {
+        "value": "Agency owner, freelancer or consultant",
+        "label": "Agency owner, freelancer or consultant"
+      },
+      {
+        "value": "Something else",
         "label": "Something else"
       }
     ],

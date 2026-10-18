@@ -140,13 +140,13 @@ export function validStage(value: unknown): string | undefined {
 }
 
 /**
- * Whether they currently have income. The stage question cannot tell a
- * consultant quietly looking from someone a year out of work, and that
- * difference is what any price depends on.
+ * Role and seniority, captured at signup. This is the field a sponsor buys
+ * against, and it is a custom field rather than a poll so it can be segmented
+ * and queried later.
  */
-export function validSituation(value: unknown): string | undefined {
+export function validRole(value: unknown): string | undefined {
   if (typeof value !== "string") return undefined;
-  return site.stageQuestion.situationOptions.some((o) => o.value === value)
+  return site.stageQuestion.roleOptions.some((o) => o.value === value)
     ? value
     : undefined;
 }

@@ -11,7 +11,7 @@ import type { StageQuestion } from "@/lib/content";
  */
 export function StageQuestions({ question }: { question: StageQuestion }) {
   const [stage, setStage] = useState("");
-  const [situation, setSituation] = useState("");
+  const [role, setRole] = useState("");
   const [tried, setTried] = useState("");
   const [state, setState] = useState<"idle" | "sending" | "done" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -20,7 +20,7 @@ export function StageQuestions({ question }: { question: StageQuestion }) {
     event.preventDefault();
     if (state === "sending") return;
 
-    if (!stage || !situation) {
+    if (!stage || !role) {
       setState("error");
       setMessage("Pick one from each, it is two clicks.");
       return;
@@ -33,7 +33,7 @@ export function StageQuestions({ question }: { question: StageQuestion }) {
       const response = await fetch("/api/stage", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ stage, situation, tried }),
+        body: JSON.stringify({ stage, role, tried }),
       });
       const data = await response.json();
       if (!response.ok || !data.ok) {
@@ -95,20 +95,20 @@ export function StageQuestions({ question }: { question: StageQuestion }) {
         </fieldset>
 
         <fieldset className="mt-8">
-          <legend className="label mb-3">{question.situationLabel}</legend>
+          <legend className="label mb-3">{question.roleLabel}</legend>
           <div className="space-y-2">
-            {question.situationOptions.map((option) => (
+            {question.roleOptions.map((option) => (
               <label
                 key={option.value}
                 className="flex cursor-pointer items-start gap-3 text-ink-soft transition-colors hover:text-ink"
               >
                 <input
                   type="radio"
-                  name="situation"
+                  name="role"
                   value={option.value}
-                  checked={situation === option.value}
+                  checked={role === option.value}
                   onChange={(event) => {
-                    setSituation(event.target.value);
+                    setRole(event.target.value);
                     if (state === "error") setState("idle");
                   }}
                   className="mt-1.5 h-3.5 w-3.5 shrink-0 accent-[var(--color-accent)]"

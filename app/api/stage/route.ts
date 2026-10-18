@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { subscribe } from "@/lib/beehiiv";
-import { validSituation, validStage } from "@/lib/content";
+import { validRole, validStage } from "@/lib/content";
 import { allow, clientIp } from "@/lib/rate-limit";
 import { verifySignup } from "@/lib/signing";
 import { SIGNUP_COOKIE } from "@/lib/signup-cookie";
@@ -37,7 +37,7 @@ export async function POST(request: Request) {
     );
   }
 
-  let body: { stage?: string; situation?: string; tried?: string };
+  let body: { stage?: string; role?: string; tried?: string };
   try {
     body = await request.json();
   } catch {
@@ -49,8 +49,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "Pick one of the options." }, { status: 400 });
   }
 
-  const situation = validSituation(body.situation);
-  if (!situation) {
+  const role = validRole(body.role);
+  if (!role) {
     return NextResponse.json(
       { ok: false, error: "Pick one of the options." },
       { status: 400 },
@@ -66,7 +66,7 @@ export async function POST(request: Request) {
     email,
     medium: "thank-you",
     sendWelcomeEmail: false,
-    customFields: { stage, situation, ...(tried ? { tried } : {}) },
+    customFields: { stage, role, ...(tried ? { tried } : {}) },
   });
 
   if (!result.ok) {
