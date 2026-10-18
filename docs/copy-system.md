@@ -61,6 +61,22 @@ Use real numbers. Never invent one. These are verified.
 | Clients | Writes for Airwallex, PandaDoc, Letter.ai. |
 | Origin | Mallorca to London. Ran a business at 18. |
 
+**The LinkedIn numbers, verified from Ordinal on 18 October 2026.** Scoped to each account's connection date, so no pre-RallyUp backfill is counted.
+
+| Fact | Detail |
+| --- | --- |
+| Accounts run | 21 across 14 companies |
+| Impressions 2026, all accounts | 7,928,530. Say "the accounts we run", never "I have driven" |
+| Impressions, client accounts only | 3,194,649. This is the safe personal claim |
+| Followers gained | 13,692 across the 12 largest accounts |
+| Posts | More than 750 in 2026 |
+| Andel launch, 25 June | 181,619 impressions, 64,122 video views, 137 hours watch time |
+| LetsGo launch, 18 August | 38,291 impressions, 554 link clicks, 343 comments, waitlist full in under 24 hours |
+| LetsGo, qualified signups | 1,000+, scored on role, age and company against ICP |
+| The counter-example | A motivational post at 72,031 impressions produced 7 followers and no signups |
+| Best intro post | A VC's first ever post: 50,127 impressions, 218 followers, 1,899 profile views |
+| Named clients, permission granted | Airwallex, Letter AI, Anchor Browser, Andel, PandaDoc, Lightbank |
+
 **Never state his age in the present tense** in anything evergreen. Automation emails and templates run for years. Write "at 23 I sent one cold message", which stays true, not "I am 23", which went stale in twelve months.
 
 ## 4. Formats

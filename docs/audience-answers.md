@@ -1,5 +1,7 @@
 # Onboarding answers: what the list says about itself
 
+> **SUPERSEDED, 18 October 2026.** This document analyses a job-seeking business. The newsletter repositioned to B2B social and content strategy on 15 October. Read `docs/positioning.md` for the current position. Kept because the reasoning and the measured data are still sound, and several findings carried over intact.
+
 The question on `/thank-you` writes two custom fields on the beehiiv subscriber record: `stage`, a six-option list, and `tried`, free text. This file tracks what comes back and when it becomes worth acting on.
 
 ## How to read them

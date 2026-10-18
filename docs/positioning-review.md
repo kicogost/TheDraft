@@ -1,5 +1,7 @@
 # Positioning review
 
+> **SUPERSEDED, 18 October 2026.** This document analyses a job-seeking business. The newsletter repositioned to B2B social and content strategy on 15 October. Read `docs/positioning.md` for the current position. Kept because the reasoning and the measured data are still sound, and several findings carried over intact.
+
 A standing, evidence-based answer to two questions Francisco cannot yet answer from instinct: **who is the audience**, and **what should be sold to them**.
 
 Re-run this monthly. The method is in section 5. Update the baseline below rather than starting a new file, so the trend is visible.

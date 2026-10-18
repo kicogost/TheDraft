@@ -1,5 +1,7 @@
 # Offer strategy
 
+> **SUPERSEDED, 18 October 2026.** This document analyses a job-seeking business. The newsletter repositioned to B2B social and content strategy on 15 October. Read `docs/positioning.md` for the current position. Kept because the reasoning and the measured data are still sound, and several findings carried over intact.
+
 What to sell, at what price, and in what order. Researched 22 September 2026 against real market prices and Francisco's own numbers. Companion to `docs/positioning-review.md`, which establishes who the audience is.
 
 ## The decision
