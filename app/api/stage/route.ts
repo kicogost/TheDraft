@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
 import { subscribe } from "@/lib/beehiiv";
-import { validRole, validStage } from "@/lib/content";
+import { validRole } from "@/lib/content";
 import { allow, clientIp } from "@/lib/rate-limit";
 import { verifySignup } from "@/lib/signing";
 import { SIGNUP_COOKIE } from "@/lib/signup-cookie";
 
 const TRIED_LIMIT = 2000;
+const COMPANY_LIMIT = 120;
 
 /**
  * Records the follow up answers from the thank you page against the subscriber
@@ -37,25 +38,24 @@ export async function POST(request: Request) {
     );
   }
 
-  let body: { stage?: string; role?: string; tried?: string };
+  let body: { role?: string; companyName?: string; tried?: string };
   try {
     body = await request.json();
   } catch {
     return NextResponse.json({ ok: false, error: "Bad request." }, { status: 400 });
   }
 
-  const stage = validStage(body.stage);
-  if (!stage) {
-    return NextResponse.json({ ok: false, error: "Pick one of the options." }, { status: 400 });
-  }
-
   const role = validRole(body.role);
   if (!role) {
     return NextResponse.json(
-      { ok: false, error: "Pick one of the options." },
+      { ok: false, error: "Pick the closest one." },
       { status: 400 },
     );
   }
+
+  // Posted as companyName, never company: `company` is the honeypot on the
+  // signup form, where a filled value means bot.
+  const company = (body.companyName ?? "").trim().slice(0, COMPANY_LIMIT);
 
   const tried = (body.tried ?? "").trim().slice(0, TRIED_LIMIT);
 
@@ -66,12 +66,12 @@ export async function POST(request: Request) {
     email,
     medium: "thank-you",
     sendWelcomeEmail: false,
-    customFields: { stage, role, ...(tried ? { tried } : {}) },
+    customFields: { role, ...(company ? { company } : {}), ...(tried ? { tried } : {}) },
   });
 
   if (!result.ok) {
     return NextResponse.json(
-      { ok: false, error: "Something went wrong on our end. The scorer is below anyway." },
+      { ok: false, error: "Something went wrong on our end. Try again in a moment." },
       { status: 502 },
     );
   }

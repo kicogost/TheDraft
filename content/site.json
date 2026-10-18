@@ -132,35 +132,8 @@
   "stageQuestion": {
     "heading": "Want the teardown?",
     "intro": "Ten of the best performing posts from the 21 B2B accounts I run, pulled apart line by line, with the real impressions, saves and follower numbers attached. Plus the ones that died.",
-    "trade": "Two questions first, so I know who I am writing for. Thirty seconds.",
-    "label": "Which of these sounds most like you right now?",
-    "options": [
-      {
-        "value": "Not posting",
-        "label": "I do not post, and I do not know where to start"
-      },
-      {
-        "value": "No traction",
-        "label": "I post sometimes and nothing happens"
-      },
-      {
-        "value": "Views no inbound",
-        "label": "I get views, but nobody ever messages me"
-      },
-      {
-        "value": "Wrong inbound",
-        "label": "I get messages, but from the wrong people"
-      },
-      {
-        "value": "Company account",
-        "label": "I write for a company, not for myself"
-      },
-      {
-        "value": "Something else",
-        "label": "I am here for something else"
-      }
-    ],
-    "roleLabel": "And which of these is closest to your job?",
+    "trade": "One question first, so I know who I am writing for. It is a single click.",
+    "roleLabel": "Which of these is closest to your job?",
     "roleOptions": [
       {
         "value": "Founder or CEO",
@@ -187,8 +160,11 @@
         "label": "Something else"
       }
     ],
+    "companyLabel": "Where do you work?",
+    "companyHint": "Optional. The company name on its own is plenty.",
+    "companyPlaceholder": "For example: Airwallex",
     "triedLabel": "What have you tried that has not worked?",
-    "triedHint": "The more you tell me, the more useful I can be. I read every one of these myself. Optional, but it is the answer that helps most.",
+    "triedHint": "Optional, and it is the answer that helps most. I read every one of these myself.",
     "triedPlaceholder": "For example: posted twice a week for three months, about 400 views a post, not one inbound message. No idea if it is the topic or the writing.",
     "submitLabel": "Give me the teardown",
     "doneHeading": "Here it is.",

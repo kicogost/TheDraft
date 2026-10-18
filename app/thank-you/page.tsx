@@ -45,19 +45,23 @@ export default async function ThankYouPage({ searchParams }: Props) {
               : copy.resourceLineUnverified}
           </p>
 
-          {verified && resource.resourceUrl ? (
-            <div className="mt-6">
-              <Button href={resource.resourceUrl} size="lg" arrow>
-                Download {resource.title.replace(/\.$/, "")}
-              </Button>
-            </div>
-          ) : null}
+
         </>
       ) : (
         <p className="mt-3 text-lg text-ink">{copy.newsletterLine}</p>
       )}
 
-      <StageQuestions question={getStageQuestion()} />
+      <StageQuestions
+        question={getStageQuestion()}
+        download={
+          resource && verified && resource.resourceUrl
+            ? {
+                href: resource.resourceUrl,
+                label: `Download ${resource.title.replace(/\.$/, "")}`,
+              }
+            : undefined
+        }
+      />
 
       <div className="mt-12 flex flex-wrap gap-6">
         <Button href="/newsletter" variant="outline">

@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { setSignupCookie } from "@/lib/signup-cookie";
 import { startJourney, subscribe } from "@/lib/beehiiv";
-import { getResource, validStage } from "@/lib/content";
+import { getResource } from "@/lib/content";
 import { allow, clientIp } from "@/lib/rate-limit";
 import { signResource } from "@/lib/signing";
 
@@ -47,7 +47,6 @@ export async function POST(request: Request) {
     );
   }
 
-  const stage = validStage(body.stage);
   const resource = getResource(body.slug ?? "");
   if (!resource) {
     return NextResponse.json({ ok: false, error: "Unknown resource." }, { status: 404 });
@@ -64,7 +63,6 @@ export async function POST(request: Request) {
     // hands over an email and hears nothing, so this has to stay derived
     // rather than hardcoded.
     sendWelcomeEmail: !resource.automationId,
-    ...(stage ? { customFields: { stage } } : {}),
   });
 
   if (!result.ok) {

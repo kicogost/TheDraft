@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import { setSignupCookie } from "@/lib/signup-cookie";
 import { subscribe } from "@/lib/beehiiv";
-import { validStage } from "@/lib/content";
 import { allow, clientIp } from "@/lib/rate-limit";
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -38,7 +37,6 @@ export async function POST(request: Request) {
     // The "Welcome, homepage signups" automation sends the first email, so
     // beehiiv's single preset welcome would arrive as a duplicate alongside it.
     sendWelcomeEmail: false,
-    ...(validStage(body.stage) ? { customFields: { stage: validStage(body.stage)! } } : {}),
   });
 
   if (!result.ok) {
