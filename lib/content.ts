@@ -4,7 +4,6 @@ import newsletterPage from "@/content/newsletter.json";
 import teardown from "@/content/resources/750-post-teardown.json";
 import dm from "@/content/resources/chief-of-staff-dm.json";
 import first30 from "@/content/resources/first-30-days.json";
-import builder from "@/content/builder.json";
 import site from "@/content/site.json";
 
 export type NavItem = {
@@ -139,12 +138,6 @@ export function validRole(value: unknown): string | undefined {
   return site.stageQuestion.roleOptions.some((o) => o.value === value)
     ? value
     : undefined;
-}
-
-export type Builder = typeof builder;
-
-export function getBuilder(): Builder {
-  return builder;
 }
 
 export function getThankYou() {
