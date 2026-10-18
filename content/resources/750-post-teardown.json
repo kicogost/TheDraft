@@ -49,5 +49,6 @@
     }
   ],
   "resourceUrl": "",
-  "automationId": ""
+  "automationId": "",
+  "retired": true
 }
