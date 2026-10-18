@@ -2,22 +2,22 @@
   "name": "Francisco Gost",
   "fullName": "Francisco Gost Scagliarini",
   "url": "https://franciscogost.com",
-  "tagline": "Most LinkedIn advice comes from someone who has grown one account.",
-  "oneLiner": "I run LinkedIn for B2B founders, and I show you how it works.",
-  "titleLine": "What actually works on LinkedIn",
+  "tagline": "Most people writing about social have grown one account. Mine comes from 21.",
+  "oneLiner": "Your guide to B2B social and content strategy.",
+  "titleLine": "B2B social and content strategy",
   "hero": {
     "headline": [
-      "I run LinkedIn",
-      "for B2B founders"
+      "Most social advice",
+      "comes from one account"
     ],
-    "support": "7.9 million impressions and more than 13,000 new followers in 2026, across 21 accounts. I pull apart what worked and what died, and send it to you every Tuesday.",
+    "support": "Mine comes from 21. I write content for B2B founders and executives at Airwallex, Letter AI, Anchor Browser and Andel. More than 750 posts a year, and the numbers either way.",
     "submitLabel": "Send me the teardown",
     "disclosure": "You will also get The Draft, one letter a week on LinkedIn and copywriting. Leave whenever you like."
   },
   "closing": {
     "question": [
-      "Ready to write",
-      "posts that work?"
+      "Ready to make",
+      "content that works?"
     ],
     "cta": {
       "label": "Get the teardown",
@@ -116,8 +116,8 @@
   },
   "og": {
     "kicker": "Francisco Gost",
-    "headline": "I run LinkedIn for B2B founders",
-    "supporting": "Partner at RallyUp. I write The Draft, a weekly email on LinkedIn and copywriting.",
+    "headline": "Most social advice comes from one account",
+    "supporting": "The Draft, a weekly letter on B2B social and content strategy. Written from 750+ posts a year for B2B founders.",
     "pages": {
       "about": {
         "headline": "About",
@@ -125,7 +125,7 @@
       },
       "newsletter": {
         "headline": "The Draft",
-        "supporting": "A weekly letter on LinkedIn and copywriting. The post that worked, the one that died, and the numbers behind both."
+        "supporting": "A weekly letter on B2B social and content strategy. The play that worked, the one that flopped, and the numbers behind both."
       }
     }
   },
