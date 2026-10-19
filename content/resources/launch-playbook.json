@@ -1,33 +1,33 @@
 {
   "slug": "launch-playbook",
   "template": "story",
-  "title": "The launch playbook.",
-  "description": "How two B2B companies launched on LinkedIn, the real numbers, and the five days of work before either post existed.",
-  "kicker": "181,619 impressions · a waitlist in 24 hours",
-  "formHeader": "Two B2B launches. One playbook. Both sets of numbers.",
+  "title": "The viral LinkedIn launch playbook.",
+  "description": "This playbook has generated over 1M LinkedIn impressions and multiple $100,000s in tracked MRR for B2B companies.",
+  "kicker": "",
+  "formHeader": "Over 1M impressions. Multiple $100,000s in tracked MRR.",
   "formEyebrow": "Get it free, in your inbox",
   "submitLabel": "Send me the playbook",
   "disclosure": "You will also get The Draft, one letter a week on B2B social and content strategy. Leave whenever you like.",
   "blocks": [
     {
       "type": "lead",
-      "text": "In June a client launched to 181,619 impressions and 137 hours of video watch time. In August another filled his waitlist in under 24 hours. Same playbook, and most of it ran in the five days before either post existed."
+      "text": "In June a client launched to 181,619 impressions and 137 hours of video watch time. In August another filled his waitlist inside 24 hours. Same playbook both times, and most of it ran in the five days before either post went up."
     },
     {
       "type": "p",
-      "text": "Almost everyone treats the post as the launch. The post is about a fifth of it."
+      "text": "Almost everyone treats the post as the launch. It's about a fifth of it, and it's the fifth that happens last."
     },
     {
       "type": "p",
-      "text": "The part that decides the outcome is unglamorous. A list of fifty people who would genuinely be pleased for you, messaged personally four days out, each one followed by a calendar invite for launch hour. The ask is always the same three words: like, comment, save. Save is the one people skip and the strongest of the three."
+      "text": "The part that decides the outcome is unglamorous. You build a list of fifty people who'd be genuinely pleased for you, message every one of them personally four days out, and follow each message with a calendar invite for launch hour. The ask is the same three words every time: like, comment, save. Save is the one people skip and it's the strongest of the three."
     },
     {
       "type": "p",
-      "text": "Then there is the mechanic that surprised me. The August launch asked for two actions rather than one: comment below, and fill in the form. 554 people clicked the link. 343 commented. Those are two separate funnels, and most of the qualified signups never touched the link at all. A post that only says \"sign up here\" gets the 554 and nothing else."
+      "text": "Then there's the mechanic that surprised me. The August launch asked for two actions instead of one: comment below, and fill in the form. 554 people clicked the link and 343 commented, which are two separate funnels, and most of the qualified signups never touched the link at all. A post carrying only the link gets the 554 and nothing underneath it."
     },
     {
       "type": "p",
-      "text": "Everything in the document has a number against it, including the parts that went badly. Three weeks after his launch the same founder posted something motivational. It did 72,031 impressions, nearly double the launch, and produced seven followers and no signups."
+      "text": "Everything in the document has a number against it, including the parts that went badly. Three weeks after his launch the same founder posted something motivational; it did 72,031 impressions, nearly double the launch, and produced seven followers and no signups."
     },
     {
       "type": "list",
@@ -42,13 +42,14 @@
     },
     {
       "type": "p",
-      "text": "The honest limit, stated inside the document too: this is two launches, not a law. Both B2B, both founder led, both with an existing network willing to spend four days asking people personally. Skip that part and you get the reach your account already had."
+      "text": "The honest limit, which is stated inside the document too: this is two launches, not a law. Both B2B, both founder led, both with a network the founder was willing to spend four days working through. Skip that part and you'll get roughly the reach your account already had."
     },
     {
       "type": "ask",
-      "text": "Drop your email below. I will send it the moment it is finished, and The Draft lands every Tuesday in the meantime."
+      "text": "Drop your email below and I'll send it over."
     }
   ],
-  "resourceUrl": "",
-  "automationId": ""
+  "resourceUrl": "/api/download/launch-playbook?k=e015b875380e9417d3611e88d6bf1e4a",
+  "automationId": "",
+  "deliverable": "content/resources/files/the-launch-playbook.pdf"
 }

@@ -77,10 +77,15 @@ for (const target of SCAN) {
 
 /**
  * The social card sets a resource title in Anton at 92px once it passes 18
- * characters. Past 25 it wraps to a third line the card cannot fit, so the cap
- * is enforced here rather than discovered on LinkedIn.
+ * characters, and fits roughly 25 characters per line.
+ *
+ * The cap used to be 25, on the assumption that anything longer wrapped to an
+ * unfittable third line. That was wrong: rendered at 34 characters the card
+ * produces two comfortable lines and fills the space better than a short title
+ * does. Two lines is about 50 characters, so the real ceiling is there. This
+ * sits below it with room to spare, because a third line genuinely does break.
  */
-const RESOURCE_TITLE_LIMIT = 25;
+const RESOURCE_TITLE_LIMIT = 45;
 const resourceDir = join(ROOT, "content", "resources");
 
 try {
