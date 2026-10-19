@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Button } from "@/components/Button";
 import { Section } from "@/components/Section";
-import { getAbout } from "@/lib/content";
+import { getAbout, getSite } from "@/lib/content";
 import { RichText } from "@/lib/richtext";
 
 const about = getAbout();
+const site = getSite();
 
 export const metadata: Metadata = {
   title: "About",
-  description:
-    "Francisco Gost is chief of staff at RallyUp. From Mallorca to London to one cold message that changed the job.",
+  description: site.seo.about,
 };
 
 export default function AboutPage() {

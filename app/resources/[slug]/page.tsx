@@ -15,9 +15,13 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params;
   const resource = getResource(slug);
   if (!resource) return {};
+  // A retired resource keeps its page so links already sent still work, but it
+  // sells a positioning we have moved on from, so it stays out of the index.
+  const retired = "retired" in resource && resource.retired === true;
   return {
     title: resource.title.replace(/\.$/, ""),
     description: resource.description,
+    ...(retired ? { robots: { index: false, follow: false } } : {}),
   };
 }
 

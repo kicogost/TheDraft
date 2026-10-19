@@ -7,8 +7,7 @@ const site = getSite();
 
 export const metadata: Metadata = {
   title: "Resources",
-  description:
-    "Free guides from Francisco Gost on getting hired: the cold DM that got him the job, and how to get seen on LinkedIn by the people who can hire you.",
+  description: site.seo.resources,
 };
 
 export default function Page() {
@@ -31,7 +30,7 @@ export default function Page() {
           >
             <div>
               <p className="label text-accent-deep">{resource.kicker}</p>
-              <p className="mt-4 font-display text-2xl leading-tight">{resource.title}</p>
+              <h2 className="mt-4 font-display text-2xl leading-tight">{resource.title}</h2>
               <p className="mt-3 text-ink-soft">{resource.description}</p>
             </div>
             <span className="label">Get it free →</span>

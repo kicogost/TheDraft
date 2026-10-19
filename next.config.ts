@@ -15,6 +15,27 @@ const nextConfig: NextConfig = {
       // been linked from the nav and sitemap, so anything already indexed or
       // bookmarked lands on the homepage instead of a 404.
       { source: "/portfolio", destination: "/", permanent: true },
+      // /call sold a paid workshop and /message-builder was a tool, both
+      // retired. The beehiiv site and older emails still point at them, so
+      // they land somewhere useful instead of on a 404.
+      { source: "/call", destination: "/resources/launch-playbook", permanent: true },
+      {
+        source: "/message-builder",
+        destination: "/resources/chief-of-staff-dm",
+        permanent: true,
+      },
+    ];
+  },
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+        ],
+      },
     ];
   },
 };

@@ -6,7 +6,7 @@ import { allow, clientIp } from "@/lib/rate-limit";
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 export async function POST(request: Request) {
-  if (!allow(clientIp(request))) {
+  if (!allow(clientIp(request), "subscribe")) {
     return NextResponse.json(
       { ok: false, error: "Too many attempts. Try again in a minute." },
       { status: 429 },

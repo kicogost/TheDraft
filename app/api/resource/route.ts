@@ -17,7 +17,7 @@ const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const SOURCES = new Set(["resource", "homepage", "hero", "newsletter"]);
 
 export async function POST(request: Request) {
-  if (!allow(clientIp(request))) {
+  if (!allow(clientIp(request), "resource")) {
     return NextResponse.json(
       { ok: false, error: "Too many attempts. Try again in a minute." },
       { status: 429 },

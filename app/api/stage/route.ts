@@ -15,7 +15,7 @@ const COMPANY_LIMIT = 120;
  * somebody else's record.
  */
 export async function POST(request: Request) {
-  if (!allow(clientIp(request))) {
+  if (!allow(clientIp(request), "stage")) {
     return NextResponse.json(
       { ok: false, error: "Too many attempts. Try again in a minute." },
       { status: 429 },

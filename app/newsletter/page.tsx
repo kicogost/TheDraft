@@ -8,8 +8,7 @@ const copy = getNewsletterPage();
 
 export const metadata: Metadata = {
   title: "The Draft",
-  description:
-    "A weekly letter on getting hired without applying. The message that got a reply, the thing someone built that got them an interview, and the attempt that went nowhere.",
+  description: site.seo.newsletter,
 };
 
 /**

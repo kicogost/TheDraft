@@ -10,7 +10,7 @@
       "B2B content that",
       "generates revenue"
     ],
-    "support": "I've generated over 7 million impressions on LinkedIn this year, and $100,000s in tracked MRR from launches. The viral launch playbook I used is below, and it's yours free.",
+    "support": "At RallyUp we've generated over 35 million impressions for B2B leadership teams this year, and $100,000s in tracked MRR from launches. The playbook behind those launches is below, and it's yours free.",
     "submitLabel": "Send me the playbook",
     "disclosure": "You'll also get The Draft, one letter a week on B2B social and content strategy. Leave whenever you like."
   },
@@ -27,7 +27,7 @@
   "company": {
     "eyebrow": "My company",
     "name": "RallyUp",
-    "body": "I'm partner and chief of staff at RallyUp. We build LinkedIn audiences for B2B founders and executives: every post hand-written in their voice, engineered to reach the people who buy from them. In 2026 we've generated over 35 million impressions and created more than 750 posts for leadership teams at Airwallex, PandaDoc, Letter.ai, Anchor Browser and 50+ other B2B tech brands.",
+    "body": "I'm partner and chief of staff at RallyUp. We build LinkedIn audiences for B2B founders and executives: every post hand-written in their voice, engineered to reach the people who buy from them. In 2026 we've generated over 35 million impressions and created more than 750 posts for leadership teams at Airwallex, PandaDoc, Letter AI, Anchor Browser and 50+ other B2B tech brands.",
     "cta": {
       "label": "See if your team qualifies",
       "href": "https://cal.com/team/rallyup/audience-building-with-rallyup"
@@ -43,7 +43,7 @@
         "src": "/images/logos/pandadoc.png"
       },
       {
-        "name": "Letter.ai",
+        "name": "Letter AI",
         "src": "/images/logos/letterai.png"
       }
     ]
@@ -116,12 +116,12 @@
   },
   "og": {
     "kicker": "Francisco Gost",
-    "headline": "Most social advice comes from one account",
+    "headline": "Social advice from 21 accounts, not one",
     "supporting": "The Draft, a weekly letter on B2B social and content playbooks that generate revenue. Written from 750+ posts a year for B2B founders.",
     "pages": {
       "about": {
         "headline": "About",
-        "supporting": "Partner at RallyUp. From Mallorca to London, and one cold message that changed the job."
+        "supporting": "Partner at RallyUp. From Mallorca to London, and the one cold message that started it."
       },
       "newsletter": {
         "headline": "The Draft",
@@ -174,5 +174,10 @@
     "resourceLineUnverified": "It is on its way to your inbox now.",
     "newsletterLine": "You're subscribed. The next Draft lands on Tuesday morning."
   },
-  "retiredNote": "This one is retired and no longer sent. If you already have the download link it still works. The current resource is the launch playbook."
+  "retiredNote": "This one is retired and no longer sent. If you already have the download link it still works. The current resource is the launch playbook.",
+  "seo": {
+    "newsletter": "A weekly letter on B2B social and content strategy. The post that worked, the one that died, and the numbers behind both.",
+    "resources": "Free playbooks on B2B social and content strategy: the viral LinkedIn launch playbook, and the cold DM that turned a stranger into a six figure yes.",
+    "about": "Francisco Gost is partner at RallyUp, writing LinkedIn for B2B founders and executives. From Mallorca to London, and the cold message that started it."
+  }
 }
