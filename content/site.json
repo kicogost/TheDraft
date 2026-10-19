@@ -63,17 +63,7 @@
   "nav": [
     {
       "label": "Resources",
-      "href": "/resources",
-      "children": [
-        {
-          "label": "The viral LinkedIn launch playbook",
-          "href": "/resources/launch-playbook"
-        },
-        {
-          "label": "From DM to revenue",
-          "href": "/resources/chief-of-staff-dm"
-        }
-      ]
+      "href": "/resources"
     },
     {
       "label": "About",

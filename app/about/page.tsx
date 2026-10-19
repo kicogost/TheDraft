@@ -23,10 +23,21 @@ export default function AboutPage() {
           <p className="lead text-ink">
             <RichText>{about.lead}</RichText>
           </p>
-          {about.ladder.map((paragraph) => (
-            <p key={paragraph.slice(0, 40)} className="mt-6">
-              <RichText>{paragraph}</RichText>
-            </p>
+          {/*
+            The story is in three acts so the page has a heading structure to
+            scan and to read aloud. It was one unbroken run of paragraphs under
+            a single h1, which is hard to skim and gives a screen reader
+            nothing to jump between.
+          */}
+          {about.ladder.map((act) => (
+            <section key={act.heading}>
+              <h2 className="label mt-12 text-accent-deep">{act.heading}</h2>
+              {act.items.map((paragraph) => (
+                <p key={paragraph.slice(0, 40)} className="mt-6">
+                  <RichText>{paragraph}</RichText>
+                </p>
+              ))}
+            </section>
           ))}
           <p className="mt-6">{about.closing}</p>
         </div>
