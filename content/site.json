@@ -2,9 +2,9 @@
   "name": "Francisco Gost",
   "fullName": "Francisco Gost Scagliarini",
   "url": "https://franciscogost.com",
-  "tagline": "Most people writing about social have grown one account. Mine comes from 21.",
-  "oneLiner": "Your guide to B2B social and content strategy.",
-  "titleLine": "B2B social and content strategy",
+  "tagline": "B2B social and content playbooks that generate revenue.",
+  "oneLiner": "B2B social and content playbooks that generate revenue.",
+  "titleLine": "B2B social and content playbooks",
   "hero": {
     "headline": [
       "B2B tech content playbooks",
@@ -118,7 +118,7 @@
   "og": {
     "kicker": "Francisco Gost",
     "headline": "Most social advice comes from one account",
-    "supporting": "The Draft, a weekly letter on B2B social and content strategy. Written from 750+ posts a year for B2B founders.",
+    "supporting": "The Draft, a weekly letter on B2B social and content playbooks that generate revenue. Written from 750+ posts a year for B2B founders.",
     "pages": {
       "about": {
         "headline": "About",
@@ -126,7 +126,7 @@
       },
       "newsletter": {
         "headline": "The Draft",
-        "supporting": "A weekly letter on B2B social and content strategy. The play that worked, the one that flopped, and the numbers behind both."
+        "supporting": "A weekly letter on B2B social and content playbooks that generate revenue. The play that worked, the one that flopped, and the numbers behind both."
       }
     }
   },
