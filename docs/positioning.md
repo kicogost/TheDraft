@@ -50,6 +50,17 @@ All verified from Ordinal, scoped to each account's connection date so no pre-Ra
 
 **Never say "I have driven 7.9M impressions."** That total includes a colleague's account and his own. "The accounts we run" is true, "I" is not. The clean personal number is 3.2M.
 
+### Two impression figures, on purpose
+
+Settled 19 October 2026. They measure different things and both are live, so do not "fix" one to match the other.
+
+| Where | Figure | Scope |
+| --- | --- | --- |
+| franciscogost.com hero and about | 35 million | RallyUp across 50+ B2B tech brands, attributed as "At RallyUp we've generated" |
+| The Draft, beehiiv home | 7.9M+ | The 21 accounts Francisco writes, which is the set the 750 posts belong to |
+
+Pairing 35 million with "750 posts a year" would be wrong, because 750 posts is the smaller set. That is why the newsletter carries the smaller number.
+
 ---
 
 ## The differentiation
