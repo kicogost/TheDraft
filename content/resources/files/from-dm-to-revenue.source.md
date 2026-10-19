@@ -8,13 +8,11 @@ By Francisco Gost · The Draft · franciscogost.com
 
 ## Why this exists
 
-I sent one cold message to a founder I had never met. He replied in thirty minutes.
+I sent one cold message to a founder I'd never met. He replied in thirty minutes, and that message is the reason I'm his business partner today.
 
-That message is the reason I am his business partner today.
+People ask me what it said, which is the wrong question, and answering it honestly is about the only useful thing I can do with it. The words aren't transferable. The structure underneath them is, and it's the same structure whether the yes you need is a customer, an investor or a job.
 
-People ask me what it said. That is the wrong question, and answering it honestly is the only useful thing I can do with it. The words are not transferable. The structure is.
-
-What follows is the message, exactly as I sent it, typos left in, with every line explained. Then the four moves underneath it, and how to run them when the yes you need is a customer, an investor or a hire rather than a job.
+So here's the message, exactly as I sent it, typos left in, with every line explained.
 
 ---
 
@@ -26,7 +24,7 @@ What follows is the message, exactly as I sent it, typos left in, with every lin
 | His entire reply | *"Great work. Booked for Wednesday."* |
 | What it became | A few afternoons a week, then chief of staff, then a partnership |
 
-One message. No application, no introduction, no warm referral.
+One message. No application, no introduction, nobody vouching for me.
 
 ---
 
@@ -54,148 +52,128 @@ Sent 27 October 2025, 5:28pm. Nothing retouched.
 >
 > If you want an outreach hacker who actually talks and sells like a human (not a robot), I'm your guy.
 >
-> Let's speak, you can set up a call here - [calendar link]
->
 > Big hug from Spain,
 > Francisco
 
+*There was a calendar link in the real thing, between the last two lines. I've taken it out because it's long dead.*
+
 ---
 
-### Annotation
+## The annotation
 
-**It opens with three emojis and no explanation.**
+**Three emojis, never explained.**
 
-A pirate flag, a sun, a racing car. I never explain them, not then and not since. In an inbox of grey paragraphs it is a pattern interrupt, and it signals a person rather than a sequence before a single word is read.
+A pirate flag, a sun, a racing car. I didn't explain them then and I'm not going to now. In an inbox of grey paragraphs it's a pattern interrupt, and it tells him a person wrote this before he's read a single word.
 
 **The first line names his post and labels me in the same breath.**
 
 *"Saw your post and just had to reach out, as the outreach hacker I am."*
 
-He knows why I am writing before he knows who I am. The self-label is not vanity, it is the claim the very next line exists to prove.
+He knows why I'm writing before he knows who I am. That self-label isn't vanity either; it's the claim the next line exists to prove.
 
-**The second paragraph is the entire message.**
+**The second paragraph is the whole message.**
 
 *"How did he find about me?, you're asking yourself. Well, easy. The same way I will find about your future clients to get you to +$100k per month."*
 
-It asks the question he is already asking, then answers it with a demonstration instead of a promise. **It is outreach, arriving in his inbox while he reads about outreach.** He does not have to take my word for anything. The evidence is the thing he is holding.
+It asks the question he's already asking, then answers it by doing the thing instead of promising it. The sentence is outreach, landing in his inbox while he reads about outreach, so he doesn't have to take my word for any of it. The evidence is the thing he's holding.
 
-If you take one thing from this document, take this one. Everything else is packaging.
+If you take one idea out of this document, take that one. The rest is packaging.
 
-**And there is a typo in it.** "Find about me", twice, in the best sentence in the message. He replied in thirty minutes anyway. The people who never send are usually the ones still polishing.
+**There's a typo in it.** "Find about me", twice, in the best sentence I wrote. He replied in thirty minutes anyway, and I think about that whenever somebody tells me they're still polishing.
 
 **Then three facts, in a deliberate order.**
 
-1. A business at 18, $10k, and *"money I dropped stupidly on a watch"*. Self-deprecating, and it dates the ambition.
-2. Outreach for a named person with 85k+ followers, *"multiple $100k months by selling in the DMs"*. A name and two numbers. This is the only one that matters commercially.
-3. The current role, and the limit: afternoons and weekends.
+The first is self-deprecating: a business at 18, ten grand, *"money I dropped stupidly on a watch."* It dates the ambition and it makes me sound like a person rather than a CV.
 
-Note that number three **is** a job title, which is the opposite of what most advice tells you. It works because of what sits next to it.
+The second is the only one that matters commercially, and it carries a name and two numbers: outreach for Farhoon Asim, 85k+ followers, multiple $100k months. Specific enough to check.
+
+The third is my job title, which most advice would tell you to lead with and I buried. It's there for one reason, which is the clause at the end of it.
 
 **The weakness is on purpose.**
 
-*"have some extra time on afternoons and weekends"* tells him exactly what he is not getting. Someone selling a perfect picture is selling. Someone volunteering the awkward part is reporting, and the other two facts become believable because of it.
-
-**One action, already decided.**
-
-A calendar link. Not "let me know if you'd like to chat", which hands the work back to the person you are asking for a favour.
+*"have some extra time on afternoons and weekends"* tells him exactly what he isn't getting. Anyone selling a perfect picture is selling; volunteering the awkward bit is what makes the other two facts land. He knew before he replied that I had a day job.
 
 **"Big hug from Spain."**
 
-Nobody writes that in a cold B2B message. That is exactly why it is there. It is the line that makes the whole thing read as a human who could not be bothered to sound like LinkedIn.
+Nobody writes that in a cold B2B message, and that's precisely why it's there. It's the line that makes the whole thing read like somebody who couldn't be bothered to sound like LinkedIn.
 
 ---
 
 ## The four moves
 
-Strip the story out and this is what is left. It works the same whether you want a job, a customer, an investment or a hire.
+Strip the story out and this is what's left. It works the same whether you want a customer, an investment, a partnership or a job.
 
 ### 1. Open on their trigger
 
-Something that happened to them recently. A post, a raise, a launch, a hire, a change on their pricing page.
+Something that happened to them recently: a post, a raise, a launch, a hire, a change on their pricing page. The trigger is what makes a message timely rather than random, and timing is most of why cold outreach fails.
 
-The trigger is what makes the message timely rather than random, and timing is most of why cold messages fail.
-
-**Spend an evening reading them first.** I read his last twenty posts before I wrote a word. Not to flatter him. To learn how he talks, which words he reaches for, how long his sentences run. Then I wrote to him in his own language.
+Spend an evening reading them first. I went through Alec's last twenty posts before I wrote a word, not to flatter him but to learn how he talks, which words he reaches for, how long his sentences run. Then I wrote to him in his own language.
 
 ### 2. Do the work inside the message
 
-This is the move. Everything else is packaging.
-
-Whatever you are selling, put a piece of it in the message, already done, unasked.
+This is the move. Whatever you're selling, put a piece of it in the message, already done, unasked.
 
 | If you want | Put this in the message |
 | --- | --- |
-| A customer | The analysis of their problem they have not done, or the thing you would fix first and why |
-| An investor | The market read they have not seen, or what you learned that contradicts the consensus |
-| A partnership | The specific overlap, with the first three accounts you would work together |
-| A job | The piece of the role, done. A teardown, a plan, a rewrite |
-| A hire | What you can see about their work from outside, and what you would build with them |
+| A customer | The analysis of their problem they haven't done, or the thing you'd fix first and why |
+| An investor | The market read they haven't seen, or what you learned that contradicts the consensus |
+| A partnership | The specific overlap, with the first three accounts you'd work together |
+| A job | A piece of the role, done. A teardown, a plan, a rewrite |
+| A hire | What you can see about their work from outside, and what you'd build with them |
 
-**Anyone can say they are good at something. Almost nobody will spend an afternoon proving it before being asked.** That asymmetry is the entire opportunity, and it is getting bigger as it gets easier to generate plausible words.
+Anyone can say they're good at something. Almost nobody will spend an afternoon proving it before being asked, and that asymmetry is the whole opportunity. It's widening, too, as it gets easier to generate plausible words and harder to tell who meant them.
 
 ### 3. Three facts, no adjectives
 
-Pick three things that actually happened, each answering a question they would have.
+Pick three things that actually happened, each one answering a question they'd have. Put a number, a name or a date in each. If a sentence would survive someone else swapping their own details into it, delete it; that's the test, and "passionate" and "results-driven" both fail it.
 
-A number, a name or a date in each one. If a sentence could survive someone swapping in their own details, delete it.
-
-Include one that is inconvenient to you. It is what makes the other two believable.
+Include one that's inconvenient to you. It's what makes the other two believable.
 
 ### 4. One action, and make it easy
 
-A calendar link. A yes or no question. One thing.
-
-"Let me know if you'd like to chat" is not an action, it is homework.
+A calendar link. A yes or no question. One thing. "Let me know if you'd like to chat" isn't an action, it's homework you've handed to the person you're asking for a favour.
 
 ---
 
-## What to do when they reply
+## When they reply
 
-The reply is not the win. It is a foot in a door.
+A reply isn't the win, it's a foot in a door, and I've watched a lot of people get that far and then wait to be told what to do next. That's where it dies.
 
-I have seen a lot of people get the reply and then wait to be told what to do next. That is where it dies.
-
-**Ship something before anyone asks you to.** In the first month I noticed what was missing and built it. Nobody scoped that work. Nobody approved it. It just started existing.
-
-That is the difference between someone a company is paying and someone they would struggle to operate without. The first waits for a brief. The second sees the gap and closes it.
-
-Same in sales. The prospect who replies is not a customer. The one you send something useful to, twice, before they have signed anything, often is.
+In my first month I shipped things before anyone asked for them. Nobody scoped that work and nobody approved it; it just started existing. That's the difference between somebody a company is paying and somebody they'd struggle to operate without, and the same thing is true in sales. A prospect who replies isn't a customer. The one you send something useful to, twice, before they've signed anything, often becomes one.
 
 ---
 
-## How to send fifty of these without becoming a spammer
+## You can't send fifty of these
 
-You cannot. That is the point, and it is why this works.
+Each one takes an evening: reading them, finding the trigger, doing a real piece of the work. Three a week is a serious outbound practice in this format, and three good ones will beat two hundred templated ones by a margin that isn't close.
 
-Each one takes an evening. Reading them, finding the trigger, doing a real piece of the work. **Three a week is a serious outbound practice in this format**, and three good ones beat two hundred templated ones by a margin that is not close.
-
-I have read the other side of this. When we posted one role, hundreds of people came at it. We interviewed four. The rest were not worse at the job. They had all done the same quick thing, which is the one thing that guarantees nobody can tell you apart.
+I've seen the other side of it. When we posted one role, hundreds of people came at it and we interviewed four. The rest weren't worse at the job. They'd all done the same quick thing, which is the one guaranteed way to make sure nobody can tell you apart.
 
 ---
 
-## What this cannot do for you
+## What this can't do for you
 
-**It is one message.** One founder, one moment, one industry, and he happened to be looking. I cannot tell you the hit rate because I was not running a test, I was trying to change my life. Anyone quoting you a conversion rate on cold DMs is estimating.
+**It's one message.** One founder, one moment, one industry, and he happened to be looking. I can't give you a hit rate because I wasn't running a test, I was trying to change my life. Anyone quoting you a conversion rate on cold DMs is guessing.
 
-**It does not scale and it is not supposed to.** If you need a hundred conversations next week, this is the wrong tool. Use it when one specific yes would change something.
+**It doesn't scale, and it isn't meant to.** If you need a hundred conversations next week, use something else. This is for when one specific yes would change something.
 
-**Doing the work unasked costs real hours.** Some of them will be wasted on people who never reply. That is the price, and it is why so few people pay it, and why it still works.
+**Doing the work unasked costs real hours**, and some of them go to people who never reply. That's the price, it's why almost nobody pays it, and it's why the thing still works.
 
-**It will not rescue a bad fit.** The message got me a meeting with someone whose problem I could genuinely help with. No structure fixes being wrong for the thing.
+**It won't rescue a bad fit.** That message got me in front of someone whose problem I could genuinely help with. No structure fixes being wrong for the thing.
 
 ---
 
 ## The one page version
 
-1. Pick one person. Not a list.
-2. Read everything they have published recently. An evening.
-3. Find the trigger. Something that happened to them this month.
+1. Pick one person, not a list.
+2. Read everything they've published recently. Give it an evening.
+3. Find the trigger: something that happened to them this month.
 4. Do a piece of the work they need, unasked.
-5. Open on their trigger, not your name.
-6. Put the work in the second paragraph, so the claim proves itself.
-7. Three facts, each with a number, name or date. One of them inconvenient.
+5. Open on their trigger rather than your name.
+6. Put the work in the second paragraph so the claim proves itself.
+7. Three facts, each with a number, a name or a date. One of them inconvenient.
 8. One action. A link, not a request to reply.
-9. Send it before it is polished.
+9. Send it before it's polished.
 10. If they reply, ship something else before they ask.
 
 ---

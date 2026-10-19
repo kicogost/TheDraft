@@ -12,7 +12,7 @@
     ],
     "support": "Mine comes from 21. I write content for B2B founders and executives at Airwallex, Letter AI, Anchor Browser and Andel. More than 750 posts a year, and the numbers either way.",
     "submitLabel": "Send me the playbook",
-    "disclosure": "You will also get The Draft, one letter a week on LinkedIn and copywriting. Leave whenever you like."
+    "disclosure": "You'll also get The Draft, one letter a week on B2B social and content strategy. Leave whenever you like."
   },
   "closing": {
     "question": [
@@ -132,7 +132,7 @@
   "stageQuestion": {
     "heading": "Want the playbook?",
     "intro": "Two B2B launches, the real numbers from both, and the five days of outreach that ran before either post existed. Including the post that did 72,031 impressions and produced nothing.",
-    "trade": "One question first, so I know who I am writing for. It is a single click.",
+    "trade": "One question first, so I know who I'm writing for. It's a single click.",
     "roleLabel": "Which of these is closest to your job?",
     "roleOptions": [
       {
@@ -164,7 +164,7 @@
     "companyHint": "Optional. The company name on its own is plenty.",
     "companyPlaceholder": "For example: Airwallex",
     "triedLabel": "What have you tried that has not worked?",
-    "triedHint": "Optional, and it is the answer that helps most. I read every one of these myself.",
+    "triedHint": "Optional, and it's the answer that helps most. I read every one of these myself.",
     "triedPlaceholder": "For example: posted twice a week for three months, about 400 views a post, not one inbound message. No idea if it is the topic or the writing.",
     "submitLabel": "Give me the playbook",
     "doneHeading": "Here it is.",
@@ -172,9 +172,9 @@
     "doneCta": "Open the playbook"
   },
   "thankYou": {
-    "resourceLine": "Answer one question below and your copy is ready straight away. A link is on its way by email either way.",
+    "resourceLine": "Answer one question below and your copy's ready straight away. A link is on its way by email either way.",
     "resourceLineUnverified": "It is on its way to your inbox now.",
-    "newsletterLine": "You are subscribed. The next Draft lands on Tuesday morning."
+    "newsletterLine": "You're subscribed. The next Draft lands on Tuesday morning."
   },
   "retiredNote": "This one is retired and no longer sent. If you already have the download link it still works. The current resource is the launch playbook."
 }
