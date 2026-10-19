@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Button } from "@/components/Button";
-import { Section } from "@/components/Section";
 import { StageQuestions } from "@/components/StageQuestions";
 import {
   getOtherResources,
@@ -28,41 +27,38 @@ export default async function ThankYouPage({ searchParams }: Props) {
   // live resource, "see the other resources" leads to the thing they just got.
   const others = resource ? getOtherResources(resource.slug).length : 0;
 
+  const confirmLine = resource
+    ? verified && resource.resourceUrl
+      ? copy.resourceLine
+      : copy.resourceLineUnverified
+    : copy.newsletterLine;
+
+  // "Send me the playbook" becomes "Download the playbook", so the button names
+  // the thing without the title's full stop and capital landing mid sentence.
+  // The words still come from the resource file, where Francisco edits them.
+  const downloadLabel = resource?.submitLabel.startsWith("Send me ")
+    ? resource.submitLabel.replace("Send me ", "Download ")
+    : "Download it";
+
+  /*
+    The whole page is the question flow. They already know the signup worked,
+    they pressed the button a second ago, so the confirmation is reduced to a
+    label and the screen is given to the one thing they have not seen yet.
+    Everything below appears once they are through it.
+  */
   return (
-    <Section width="prose" space="generous" grid="sm">
-      {/*
-        The confirmation is deliberately quiet. They already know it worked,
-        they pressed the button a second ago. The offer below is the thing
-        they have not seen yet, so that takes the display weight instead.
-      */}
-      <p className="label text-ash">Confirmed</p>
-
-      {resource ? (
-        <>
-          <p className="mt-3 text-lg text-ink">
-            {verified && resource.resourceUrl
-              ? copy.resourceLine
-              : copy.resourceLineUnverified}
-          </p>
-
-
-        </>
-      ) : (
-        <p className="mt-3 text-lg text-ink">{copy.newsletterLine}</p>
-      )}
-
-      <StageQuestions
-        question={getStageQuestion()}
-        download={
-          resource && verified && resource.resourceUrl
-            ? {
-                href: resource.resourceUrl,
-                label: `Download ${resource.title.replace(/\.$/, "")}`,
-              }
-            : undefined
-        }
-      />
-
+    <StageQuestions
+      question={getStageQuestion()}
+      confirmLine={confirmLine}
+      download={
+        resource && verified && resource.resourceUrl
+          ? {
+              href: resource.resourceUrl,
+              label: downloadLabel,
+            }
+          : undefined
+      }
+    >
       <div className="mt-12 flex flex-wrap gap-6">
         <Button href="/newsletter" variant="outline">
           Back to the newsletter
@@ -77,6 +73,6 @@ export default async function ThankYouPage({ searchParams }: Props) {
           </Button>
         )}
       </div>
-    </Section>
+    </StageQuestions>
   );
 }

@@ -131,8 +131,7 @@
   },
   "stageQuestion": {
     "heading": "Want the playbook?",
-    "intro": "Two B2B launches with every number attached, and the five days of outreach that ran before either post went up. Including the post that did 72,031 impressions and produced nothing.",
-    "trade": "One question first, so I know who I'm writing for. It's a single click.",
+    "trade": "One question first, so I know who it's for.",
     "roleLabel": "Which of these is closest to your job?",
     "roleOptions": [
       {
@@ -168,11 +167,10 @@
     "triedPlaceholder": "For example: posted twice a week for three months, about 400 views a post, not one inbound message. No idea if it is the topic or the writing.",
     "submitLabel": "Give me the playbook",
     "doneHeading": "Here it is.",
-    "doneBody": "Thank you, genuinely. That shapes what I write next.",
-    "doneCta": "Open the playbook"
+    "doneBody": "Thank you, genuinely. That shapes what I write next."
   },
   "thankYou": {
-    "resourceLine": "Answer one question below and your copy's ready straight away. A link is on its way by email either way.",
+    "resourceLine": "Your copy is one question away, and a link is on its way by email either way.",
     "resourceLineUnverified": "It is on its way to your inbox now.",
     "newsletterLine": "You're subscribed. The next Draft lands on Tuesday morning."
   },

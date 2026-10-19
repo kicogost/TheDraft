@@ -1,42 +1,59 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import type { ReactNode } from "react";
 import { Button } from "@/components/Button";
+import { Section } from "@/components/Section";
 import type { StageQuestion } from "@/lib/content";
 
 type Download = { href: string; label: string };
 
+const STEPS = 3;
+
 /**
- * Asked on the thank you page, and the download is held behind it. The file
- * still arrives by email either way, so this gates the instant copy rather
- * than the thing itself, and nobody who declines goes away empty handed.
+ * One question per screen, asked on the thank you page, with the download held
+ * behind it. The file arrives by email either way, so this gates the instant
+ * copy rather than the thing itself, and nobody who declines goes away empty
+ * handed.
  *
- * The employer field is posted as `companyName`, not `company`. `company` is
- * the honeypot on the signup form and a filled one there means bot.
+ * Only the role is required, and it advances on tap with no confirm button.
+ * The other two can be skipped, because a short form answered beats a long one
+ * abandoned, and the role is the only answer a sponsor ever asks about.
+ *
+ * The employer field posts as `companyName`, not `company`. `company` is the
+ * honeypot on the signup form, where a filled value means bot.
  */
 export function StageQuestions({
   question,
+  confirmLine,
   download,
+  children,
 }: {
   question: StageQuestion;
+  confirmLine: string;
   download?: Download;
+  children?: ReactNode;
 }) {
+  const [step, setStep] = useState(0);
   const [role, setRole] = useState("");
   const [companyName, setCompanyName] = useState("");
   const [tried, setTried] = useState("");
   const [state, setState] = useState<"idle" | "sending" | "done" | "error">("idle");
   const [message, setMessage] = useState("");
+  const advance = useRef<ReturnType<typeof setTimeout>>(undefined);
 
-  async function onSubmit(event: React.FormEvent) {
-    event.preventDefault();
+  useEffect(() => () => clearTimeout(advance.current), []);
+
+  // The chosen option stays lit for a beat before the screen changes, so the
+  // tap is acknowledged rather than swallowed.
+  function pickRole(value: string) {
+    setRole(value);
+    clearTimeout(advance.current);
+    advance.current = setTimeout(() => setStep(1), 220);
+  }
+
+  async function submit(finalTried: string) {
     if (state === "sending") return;
-
-    if (!role) {
-      setState("error");
-      setMessage("Pick the closest one. It is a single click.");
-      return;
-    }
-
     setState("sending");
     setMessage("");
 
@@ -44,7 +61,7 @@ export function StageQuestions({
       const response = await fetch("/api/stage", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ role, companyName, tried }),
+        body: JSON.stringify({ role, companyName, tried: finalTried }),
       });
       const data = await response.json();
       if (!response.ok || !data.ok) {
@@ -59,108 +76,228 @@ export function StageQuestions({
     }
   }
 
-  if (state === "done") {
+  const heading = "font-display uppercase leading-[1.08] tracking-[0.01em] text-ink";
+
+  /*
+    Both endings release the download. A failed write is my problem, not
+    theirs, and the file is already in their inbox, so holding it back would
+    punish them for an outage.
+  */
+  if (state === "done" || state === "error") {
     return (
-      <div className="mt-16 border-t-2 border-ink pt-10">
-        <h2 className="display-2">{question.doneHeading}</h2>
-        <p className="mt-5 max-w-xl text-ink-soft">{question.doneBody}</p>
+      <Section width="prose" space="generous" grid="sm">
+        <p className="label text-ash">Confirmed</p>
+        <h1 className="display-2 mt-4">{question.doneHeading}</h1>
+        <p className="lead mt-5">
+          {state === "error"
+            ? "Your answer did not reach me, but nothing else is affected."
+            : question.doneBody}
+        </p>
         {download ? (
-          <div className="mt-8">
-            <Button href={download.href} size="lg" arrow>
+          <div className="mt-9">
+            <Button href={download.href} size="lg" variant="accent" arrow>
               {download.label}
             </Button>
           </div>
-        ) : null}
-      </div>
+        ) : (
+          <p className="mt-5 text-ink">{confirmLine}</p>
+        )}
+        {children}
+      </Section>
     );
   }
 
   return (
-    <div className="mt-14 border-t-2 border-ink pt-12">
-      <h2 className="display-2">{question.heading}</h2>
-      <p className="lead mt-5 max-w-xl">{question.intro}</p>
-      <p className="mt-4 max-w-xl text-ink-soft">{question.trade}</p>
+    <div className="flex min-h-[calc(100svh-4rem)] flex-col px-5 pb-8 pt-7 sm:px-8 sm:pb-14 sm:pt-12">
+      <div className="mx-auto flex w-full max-w-xl flex-1 flex-col">
+        <header>
+          <p className="label text-ash">Confirmed</p>
+          <h1 className={`mt-3 text-[clamp(1.75rem,5vw,2.5rem)] ${heading}`}>
+            {question.heading}
+          </h1>
+          {step === 0 ? (
+            <p className="mt-3 text-ink-soft">{question.trade}</p>
+          ) : null}
 
-      <form onSubmit={onSubmit} className="mt-8 max-w-xl" noValidate>
-        <fieldset>
-          <legend className="label mb-3">{question.roleLabel}</legend>
-          <div className="space-y-2">
-            {question.roleOptions.map((option) => (
-              <label
-                key={option.value}
-                className="flex cursor-pointer items-start gap-3 text-ink-soft transition-colors hover:text-ink"
-              >
-                <input
-                  type="radio"
-                  name="role"
-                  value={option.value}
-                  checked={role === option.value}
-                  onChange={(event) => {
-                    setRole(event.target.value);
-                    if (state === "error") setState("idle");
-                  }}
-                  className="mt-1.5 h-3.5 w-3.5 shrink-0 accent-[var(--color-accent)]"
+          <div className="mt-6 flex items-center gap-4">
+            <div className="flex flex-1 gap-1.5" aria-hidden="true">
+              {Array.from({ length: STEPS }, (_, i) => (
+                <span
+                  key={i}
+                  className={`h-1 flex-1 transition-colors duration-300 ${
+                    i <= step ? "bg-accent" : "bg-line"
+                  }`}
                 />
-                <span>{option.label}</span>
-              </label>
-            ))}
+              ))}
+            </div>
+            <p className="label-micro shrink-0" aria-live="polite">
+              {step + 1} of {STEPS}
+            </p>
           </div>
-        </fieldset>
+        </header>
 
-        <div className="mt-8">
-          <label htmlFor="companyName" className="label">
-            {question.companyLabel}
-          </label>
-          <p className="mt-2 text-sm text-ash">{question.companyHint}</p>
-          <input
-            id="companyName"
-            name="companyName"
-            type="text"
-            maxLength={120}
-            value={companyName}
-            onChange={(event) => setCompanyName(event.target.value)}
-            placeholder={question.companyPlaceholder}
-            className="mt-3 w-full border-2 border-ink bg-paper px-4 py-3.5 text-ink outline-none placeholder:text-ash focus:ring-2 focus:ring-accent"
-          />
+        {/*
+          The question sits in the space between the header and the actions and
+          is centred in it, so a six option list and a one line label both look
+          deliberate rather than stranded at the top.
+        */}
+        <div key={step} className="step-in flex flex-1 flex-col justify-center py-7">
+          {step === 0 ? (
+            <fieldset>
+              <legend className={`text-[clamp(1.25rem,3vw,1.75rem)] ${heading}`}>
+                {question.roleLabel}
+              </legend>
+              <div className="mt-5 grid gap-2">
+                {question.roleOptions.map((option) => (
+                  <button
+                    key={option.value}
+                    type="button"
+                    aria-pressed={role === option.value}
+                    onClick={() => pickRole(option.value)}
+                    className={`min-h-12 w-full border-2 px-5 py-3 text-left text-base transition-colors duration-150 sm:min-h-14 sm:py-3.5 ${
+                      role === option.value
+                        ? "border-accent bg-accent text-paper"
+                        : "border-line bg-paper text-ink hover:border-ink"
+                    }`}
+                  >
+                    {option.label}
+                  </button>
+                ))}
+              </div>
+            </fieldset>
+          ) : null}
+
+          {step === 1 ? (
+            <div>
+              <label
+                htmlFor="companyName"
+                className={`block text-[clamp(1.25rem,3vw,1.75rem)] ${heading}`}
+              >
+                {question.companyLabel}
+              </label>
+              <p className="mt-3 text-ink-soft">{question.companyHint}</p>
+              <input
+                id="companyName"
+                name="companyName"
+                type="text"
+                autoFocus
+                autoComplete="organization"
+                maxLength={120}
+                value={companyName}
+                onChange={(event) => setCompanyName(event.target.value)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter") {
+                    event.preventDefault();
+                    setStep(2);
+                  }
+                }}
+                placeholder={question.companyPlaceholder}
+                className="mt-6 min-h-14 w-full border-2 border-ink bg-paper px-4 py-3.5 text-base text-ink outline-none placeholder:text-ash focus:border-accent"
+              />
+            </div>
+          ) : null}
+
+          {step === 2 ? (
+            <div>
+              <label
+                htmlFor="tried"
+                className={`block text-[clamp(1.25rem,3vw,1.75rem)] ${heading}`}
+              >
+                {question.triedLabel}
+              </label>
+              <p className="mt-3 text-ink-soft">{question.triedHint}</p>
+              <textarea
+                id="tried"
+                name="tried"
+                rows={4}
+                autoFocus
+                maxLength={2000}
+                value={tried}
+                onChange={(event) => setTried(event.target.value)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" && (event.metaKey || event.ctrlKey)) {
+                    event.preventDefault();
+                    submit(tried);
+                  }
+                }}
+                placeholder={question.triedPlaceholder}
+                className="mt-6 w-full resize-none border-2 border-ink bg-paper px-4 py-3.5 text-base text-ink outline-none placeholder:text-ash focus:border-accent"
+              />
+            </div>
+          ) : null}
         </div>
 
-        <div className="mt-8">
-          <label htmlFor="tried" className="label">
-            {question.triedLabel}
-          </label>
-          <p className="mt-2 text-sm text-ash">{question.triedHint}</p>
-          <textarea
-            id="tried"
-            name="tried"
-            rows={5}
-            maxLength={2000}
-            value={tried}
-            onChange={(event) => setTried(event.target.value)}
-            placeholder={question.triedPlaceholder}
-            className="mt-3 w-full border-2 border-ink bg-paper px-4 py-3.5 text-ink outline-none placeholder:text-ash focus:ring-2 focus:ring-accent"
-          />
+        {/*
+          The actions are pinned to the bottom of the screen rather than sat
+          under the question, so the thumb finds them in the same place on
+          every step and nothing jumps between screens.
+        */}
+        <div className="mt-auto">
+          {message ? (
+            <p role="alert" className="mb-4 text-sm text-accent-deep">
+              {message}
+            </p>
+          ) : null}
+
+          <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+            {step === 0 ? (
+              <p className="text-sm text-ash">Pick one to carry on.</p>
+            ) : (
+              <button
+                type="button"
+                disabled={state === "sending"}
+                onClick={() => (step === 1 ? setStep(2) : submit(tried))}
+                className="group inline-flex min-h-14 w-full items-center justify-center gap-2.5 border-2 border-ink bg-ink px-7 py-3.5 font-semibold text-paper transition-transform duration-150 hover:-translate-y-0.5 disabled:translate-y-0 disabled:opacity-60 sm:w-auto"
+              >
+                {step === 1
+                  ? "Continue"
+                  : state === "sending"
+                    ? "Sending"
+                    : question.submitLabel}
+                <span
+                  aria-hidden="true"
+                  className="transition-transform duration-150 group-hover:translate-x-1"
+                >
+                  &rarr;
+                </span>
+              </button>
+            )}
+
+            {step > 0 ? (
+              <div className="flex items-center gap-5">
+                <button
+                  type="button"
+                  disabled={state === "sending"}
+                  onClick={() => setStep(step - 1)}
+                  className="text-sm text-ash underline underline-offset-4 transition-colors hover:text-ink disabled:opacity-60"
+                >
+                  Back
+                </button>
+                <button
+                  type="button"
+                  disabled={state === "sending"}
+                  onClick={() => {
+                    // Skip discards what was typed. Continue is the button
+                    // that keeps it, so the two have to mean different things.
+                    if (step === 1) {
+                      setCompanyName("");
+                      setStep(2);
+                    } else {
+                      setTried("");
+                      submit("");
+                    }
+                  }}
+                  className="text-sm text-ash underline underline-offset-4 transition-colors hover:text-ink disabled:opacity-60"
+                >
+                  Skip
+                </button>
+              </div>
+            ) : null}
+          </div>
+
+          <p className="mt-5 text-sm text-ash">{confirmLine}</p>
         </div>
-
-        <button
-          type="submit"
-          disabled={state === "sending"}
-          className="group mt-6 flex w-full items-center justify-center gap-2.5 border-2 border-accent bg-accent px-6 py-3.5 font-semibold text-paper transition-transform duration-150 hover:-translate-y-0.5 hover:bg-accent-deep disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
-        >
-          {state === "sending" ? "Sending" : question.submitLabel}
-          <span
-            aria-hidden="true"
-            className="transition-transform duration-150 group-hover:translate-x-1"
-          >
-            &rarr;
-          </span>
-        </button>
-
-        {state === "error" ? (
-          <p role="alert" className="mt-3 text-sm text-accent-deep">
-            {message}
-          </p>
-        ) : null}
-      </form>
+      </div>
     </div>
   );
 }
