@@ -32,41 +32,76 @@ One message. No application, no introduction, no warm referral.
 
 ## The message
 
-> **[INSERT: the message exactly as sent, typos included]**
+Sent 27 October 2025, 5:28pm. Nothing retouched.
+
+> 🏴‍☠️
+> ☀️
+> 🏎️
+>
+> Hey Alec,
+>
+> Saw your post and just had to reach out, as the outreach hacker I am.
+>
+> "How did he find about me?", you're asking yourself. Well, easy. The same way I will find about your future clients to get you to +$100k per month.
+>
+> Now that I have your attention, I'm Francisco, 3 things about me:
+>
+> 1. Moved to the UK for University at 17, started my first business at 18, made $10k organising and selling event tickets to international students (money I dropped stupidly on a watch).
+>
+> 2. I ran LinkedIn outreach for Farhoon Asim, yeah, the 85k+ LinkedIn follower guy, pulling in multiple $100k months by selling in the DMs.
+>
+> 3. Now working as a Partnerships Manager at a high-growth SaaS in Spain, have some extra time on afternoons and weekends, and would love to help you sell more RallyUp to teams!
+>
+> If you want an outreach hacker who actually talks and sells like a human (not a robot), I'm your guy.
+>
+> Let's speak, you can set up a call here - [calendar link]
+>
+> Big hug from Spain,
+> Francisco
+
+---
 
 ### Annotation
 
-**The opening line names his trigger, not me.**
+**It opens with three emojis and no explanation.**
 
-He had posted that week about growing the company. I opened on that, and on what it told me about where the business could go next. He knows why I am writing before he knows who I am.
+A pirate flag, a sun, a racing car. I never explain them, not then and not since. In an inbox of grey paragraphs it is a pattern interrupt, and it signals a person rather than a sequence before a single word is read.
 
-Most cold messages open with the sender. Name, role, admiration. All three are things the reader has to get through before anything of value arrives.
+**The first line names his post and labels me in the same breath.**
 
-**The second paragraph does the work instead of describing it.**
+*"Saw your post and just had to reach out, as the outreach hacker I am."*
 
-I told him I had found him the same way I would find his future customers.
+He knows why I am writing before he knows who I am. The self-label is not vanity, it is the claim the very next line exists to prove.
 
-That sentence is not a claim about outreach. **It is outreach, arriving in his inbox while he reads the claim.** He does not have to believe me. The evidence is the thing he is holding.
+**The second paragraph is the entire message.**
 
-This is the whole document in one line. Everything else is detail.
+*"How did he find about me?, you're asking yourself. Well, easy. The same way I will find about your future clients to get you to +$100k per month."*
 
-**Then three facts, none of them a job title.**
+It asks the question he is already asking, then answers it with a demonstration instead of a promise. **It is outreach, arriving in his inbox while he reads about outreach.** He does not have to take my word for anything. The evidence is the thing he is holding.
 
-A business I ran at eighteen. Outreach I had already done for someone with a large audience. And the honest admission that I had a full time job and only spare afternoons.
+If you take one thing from this document, take this one. Everything else is packaging.
 
-Three concrete things that happened, chosen because each one answered a question he would have asked. Not adjectives. Not "passionate" or "results-driven", which cost nothing to type and therefore prove nothing.
+**And there is a typo in it.** "Find about me", twice, in the best sentence in the message. He replied in thirty minutes anyway. The people who never send are usually the ones still polishing.
 
-**The last one is a weakness, on purpose.**
+**Then three facts, in a deliberate order.**
 
-Saying I had a full time job and limited hours made the rest credible. Someone selling you a perfect picture is selling. Someone telling you the awkward bit is reporting.
+1. A business at 18, $10k, and *"money I dropped stupidly on a watch"*. Self-deprecating, and it dates the ambition.
+2. Outreach for a named person with 85k+ followers, *"multiple $100k months by selling in the DMs"*. A name and two numbers. This is the only one that matters commercially.
+3. The current role, and the limit: afternoons and weekends.
 
-**Then a link to my calendar.**
+Note that number three **is** a job title, which is the opposite of what most advice tells you. It works because of what sits next to it.
 
-One action. Not "let me know if you'd like to chat", which puts the work back on him.
+**The weakness is on purpose.**
 
-**And a typo in the best sentence.**
+*"have some extra time on afternoons and weekends"* tells him exactly what he is not getting. Someone selling a perfect picture is selling. Someone volunteering the awkward part is reporting, and the other two facts become believable because of it.
 
-Still there. He replied in thirty minutes anyway. The people who never send are usually the ones still polishing.
+**One action, already decided.**
+
+A calendar link. Not "let me know if you'd like to chat", which hands the work back to the person you are asking for a favour.
+
+**"Big hug from Spain."**
+
+Nobody writes that in a cold B2B message. That is exactly why it is there. It is the line that makes the whole thing read as a human who could not be bothered to sound like LinkedIn.
 
 ---
 
