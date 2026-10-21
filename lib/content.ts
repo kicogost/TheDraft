@@ -2,6 +2,7 @@ import about from "@/content/about.json";
 import legal from "@/content/legal.json";
 import newsletterPage from "@/content/newsletter.json";
 import teardown from "@/content/resources/750-post-teardown.json";
+import swipe from "@/content/resources/executive-swipe-file.json";
 import playbook from "@/content/resources/launch-playbook.json";
 import dm from "@/content/resources/chief-of-staff-dm.json";
 import first30 from "@/content/resources/first-30-days.json";
@@ -89,7 +90,7 @@ export type Resource = {
 };
 
 /** Newest first, which is the order the nav dropdown reads as a changelog. */
-const RESOURCES: Resource[] = [first30, teardown, playbook, dm];
+const RESOURCES: Resource[] = [first30, teardown, swipe, playbook, dm];
 
 /**
  * Live resources only. A retired resource keeps its page and its download

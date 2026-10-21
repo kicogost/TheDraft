@@ -1,0 +1,55 @@
+{
+  "slug": "executive-swipe-file",
+  "template": "story",
+  "title": "The executive swipe file.",
+  "description": "25 of the best performing posts we published for B2B founders and executives this year, with the real numbers attached and the pattern underneath each one.",
+  "kicker": "25 posts · 24 accounts",
+  "formHeader": "25 posts. 24 accounts. 9.6M impressions.",
+  "formEyebrow": "Get it free, in your inbox",
+  "submitLabel": "Send me the swipe file",
+  "disclosure": "You will also get The Draft, one letter a week on B2B social and content strategy. Leave whenever you like.",
+  "blocks": [
+    {
+      "type": "lead",
+      "text": "Two posts went out on the same account one day apart. The first was a hiring post and did 15,376 impressions. The second went viral and did 178,179. The hiring post won on followers, saves, comments, sends and profile views."
+    },
+    {
+      "type": "p",
+      "text": "That pair is why this document exists. Reach is the cheapest thing on a post to count, so it's the thing everyone counts, and it's the reason a lot of executives are grading their content on the one number that tells them least."
+    },
+    {
+      "type": "p",
+      "text": "I'm a partner at RallyUp, where we write LinkedIn for B2B founders and executives. This year we've driven 9.6 million impressions across 24 accounts at 16 companies, from more than 750 posts. This is the part of that work worth stealing."
+    },
+    {
+      "type": "p",
+      "text": "Every post in it is real and every number comes from the account's own analytics. The accounts are anonymised, because the posts belong to the people who published them. What I kept is the shape: the angle, why it worked, and the thing you can lift without copying anyone's words."
+    },
+    {
+      "type": "list",
+      "items": [
+        "The intro post that did 1,899 profile views, and why it only works once",
+        "A launch that bought 137 hours of attention and fifteen clicks",
+        "The two-funnel launch: 554 link clicks and 343 comments from one post",
+        "A hiring post with 37 saves and 14 sends, and the filter hidden in the ask",
+        "The quarterly self-review that saved at 2.27 per thousand, the highest in the file",
+        "Two posts that reached enormous numbers of people and returned nothing"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "There's a three bucket model running underneath all of it. Top of funnel, middle, bottom, roughly 70 / 20 / 10, and each one graded on a different number. Grade all three on impressions and you'll kill the two that are working."
+    },
+    {
+      "type": "p",
+      "text": "The honest limit is in the document too. These are 25 posts from 24 accounts, not a law, and none of these patterns manufacture a point of view. They move numbers on accounts that already have something to say."
+    },
+    {
+      "type": "ask",
+      "text": "Drop your email below and I'll send it over."
+    }
+  ],
+  "resourceUrl": "/api/download/executive-swipe-file?k=920aca595f7e9d770bd3016c2c50c68d",
+  "automationId": "aut_c7598d02-f9e3-4ef9-b314-b5609bf30ba1",
+  "deliverable": "content/resources/files/the-executive-swipe-file.pdf"
+}

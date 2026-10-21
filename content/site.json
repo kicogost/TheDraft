@@ -63,7 +63,17 @@
   "nav": [
     {
       "label": "Resources",
-      "href": "/resources"
+      "href": "/resources",
+      "children": [
+        {
+          "label": "The executive swipe file",
+          "href": "/resources/executive-swipe-file"
+        },
+        {
+          "label": "The viral LinkedIn launch playbook",
+          "href": "/resources/launch-playbook"
+        }
+      ]
     },
     {
       "label": "About",
