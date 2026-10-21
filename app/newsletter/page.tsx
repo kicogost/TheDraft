@@ -22,23 +22,27 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <Section width="article" space="generous" grid="sm">
+      {/*
+        One unit, then the field. The page used to introduce itself twice,
+        with a second heading and paragraph between the lead and the form,
+        which put the email input 875px down on a phone. Credibility sits
+        under the form now, where it reassures instead of delaying.
+      */}
       <p className="label">{copy.label}</p>
       <h1 className="display-1 mt-4">{copy.title}</h1>
       <p className="lead mt-6 max-w-xl">{copy.lead}</p>
-      <p className="mt-6 max-w-xl text-ink-soft">{copy.proof}</p>
+      <p className="mt-5 max-w-xl text-ink">{copy.offer}</p>
 
-      <div className="mt-14 border-t-2 border-ink pt-12">
-        <h2 className="display-2">{copy.formHeading}</h2>
-        <p className="mt-5 max-w-xl text-ink-soft">{copy.formLead}</p>
-        <div className="mt-8 max-w-xl">
-          <ResourceForm
-            slug={site.newsletter.offerSlug}
-            source="newsletter"
-            submitLabel={copy.submitLabel}
-            disclosure={copy.disclosure}
-          />
-        </div>
+      <div className="mt-8 max-w-xl">
+        <ResourceForm
+          slug={site.newsletter.offerSlug}
+          source="newsletter"
+          submitLabel={copy.submitLabel}
+          disclosure={copy.disclosure}
+        />
       </div>
+
+      <p className="mt-12 max-w-xl border-t-2 border-ink pt-8 text-ink-soft">{copy.proof}</p>
 
       {/*
         Proof that the thing exists and arrives. Linked out to beehiiv rather
