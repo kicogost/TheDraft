@@ -6,13 +6,13 @@
   "offer": "Subscribe and get The Viral LinkedIn Launch Playbook that generated +1m impressions",
   "readersLine": "Read by the founders, employees, and investors at the top startups and funds.",
   "logos": [
-    { "name": "Airwallex", "src": "/images/logos/airwallex.png" },
-    { "name": "Lightbank", "src": "/images/logos/lightbank.png" },
-    { "name": "RallyUp", "src": "/images/logos/rallyup.png" },
-    { "name": "Letter AI", "src": "/images/logos/letterai.png" },
-    { "name": "LetsGo", "src": "/images/logos/letsgo.svg" },
-    { "name": "Anchor Browser", "src": "/images/logos/anchorbrowser.png" },
-    { "name": "Andel", "src": "/images/logos/andel.png" },
-    { "name": "Walnut", "src": "/images/logos/walnut.png" }
+    { "name": "Airwallex", "src": "/images/wordmarks/airwallex.svg", "width": 175, "height": 24 },
+    { "name": "Lightbank", "src": "/images/wordmarks/lightbank.png", "width": 97, "height": 40 },
+    { "name": "RallyUp", "src": "/images/wordmarks/rallyup.png", "width": 160, "height": 30 },
+    { "name": "Letter AI", "src": "/images/wordmarks/letterai.svg", "width": 101, "height": 28 },
+    { "name": "LetsGo", "src": "/images/wordmarks/letsgo.png", "width": 129, "height": 30 },
+    { "name": "Anchor Browser", "src": "/images/wordmarks/anchorbrowser.svg", "width": 125, "height": 28 },
+    { "name": "Andel", "src": "/images/wordmarks/andel.svg", "width": 122, "height": 26 },
+    { "name": "Walnut", "src": "/images/wordmarks/walnut.svg", "width": 150, "height": 26 }
   ]
 }
