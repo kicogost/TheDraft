@@ -1,8 +1,18 @@
 {
   "title": "The Draft",
-  "lead": "One thing that actually worked in B2B content, every Tuesday, with the numbers behind it.",
-  "byline": "Written by Francisco Gost, partner at RallyUp",
+  "lead": "B2B content insights, stories, and vibes sent to your inbox every Tuesday.",
+  "byline": "Written by Francisco Gost // founder @thedraft & partner @rallyup 🐝",
   "submitLabel": "Subscribe free",
   "offer": "Subscribe and the viral LinkedIn launch playbook arrives first, free.",
-  "badge": "Tested on 750+ B2B posts a year"
+  "readersLine": "Read by the founders, employees, and investors at the top startups and funds.",
+  "logos": [
+    { "name": "Airwallex", "src": "/images/logos/airwallex.png" },
+    { "name": "Lightbank", "src": "/images/logos/lightbank.png" },
+    { "name": "RallyUp", "src": "/images/logos/rallyup.png" },
+    { "name": "Letter AI", "src": "/images/logos/letterai.png" },
+    { "name": "LetsGo", "src": "/images/logos/letsgo.svg" },
+    { "name": "Anchor Browser", "src": "/images/logos/anchorbrowser.png" },
+    { "name": "Andel", "src": "/images/logos/andel.png" },
+    { "name": "Walnut", "src": "/images/logos/walnut.png" }
+  ]
 }

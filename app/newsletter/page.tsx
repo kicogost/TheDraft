@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { LogoMark } from "@/components/Logo";
 import { ResourceForm } from "@/components/ResourceForm";
 import { getNewsletterPage, getSite } from "@/lib/content";
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 /**
  * The link in a LinkedIn bio or at the end of a post. Someone arriving here
  * already decided to look, so the page is one screen with one field: the
- * masthead, one line on what it is, the form, one line of proof. Nothing to
+ * masthead, one line on what it is, the form, then who reads it. Nothing to
  * scroll past and nothing to read before the input.
  *
  * The form is the same ResourceForm as before, so the signup still goes
@@ -48,9 +49,26 @@ export default function Page() {
 
         <p className="mt-4 text-sm">{copy.offer}</p>
 
-        <p className="mt-6 border-2 border-ink bg-paper px-3 py-1.5 font-mono text-xs text-ink">
-          {copy.badge}
-        </p>
+        {/*
+          Square app icons, not wordmarks, so each sits as a tile with its
+          name beside it, as on the homepage. The name carries the meaning,
+          which is why the image itself is decorative.
+        */}
+        <p className="mt-14 font-mono text-sm">{copy.readersLine}</p>
+        <ul className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-4">
+          {copy.logos.map((logo) => (
+            <li key={logo.name} className="flex items-center gap-2">
+              <Image
+                src={logo.src}
+                alt=""
+                width={32}
+                height={32}
+                className="h-8 w-8 rounded-md border border-ink/20"
+              />
+              <span className="text-sm font-semibold">{logo.name}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

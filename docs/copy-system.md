@@ -75,7 +75,7 @@ Use real numbers. Never invent one. These are verified.
 | LetsGo, qualified signups | 1,000+, scored on role, age and company against ICP |
 | The counter-example | A motivational post at 72,031 impressions produced 7 followers and no signups |
 | Best intro post | A VC's first ever post: 50,127 impressions, 218 followers, 1,899 profile views |
-| Named clients, permission granted | Airwallex, Letter AI, Anchor Browser, Andel, PandaDoc, Lightbank |
+| Named clients, permission granted | Airwallex, Letter AI, Anchor Browser, Andel, PandaDoc, Lightbank, LetsGo, Walnut |
 
 **Never state his age in the present tense** in anything evergreen. Automation emails and templates run for years. Write "at 23 I sent one cold message", which stays true, not "I am 23", which went stale in twelve months.
 
