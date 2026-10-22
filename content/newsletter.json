@@ -1,31 +1,8 @@
 {
-  "label": "Free, every Tuesday",
-  "title": "The Draft.",
-  "lead": "One thing that actually worked, every Tuesday, with the numbers behind it. Including the ones that flopped.",
-  "offer": "Subscribe and the viral LinkedIn launch playbook arrives first, free.",
+  "title": "The Draft",
+  "lead": "One thing that actually worked in B2B content, every Tuesday, with the numbers behind it.",
+  "byline": "Written by Francisco Gost, partner at RallyUp",
   "submitLabel": "Subscribe free",
-  "disclosure": "One letter a week. Leave whenever you like, no hard feelings.",
-  "proof": "Everything here is tested first across the 24 B2B executive accounts I write, more than 750 posts a year. You get the numbers either way, including when they are bad.",
-  "issuesLabel": "Recent issues",
-  "issuesNote": "Open any of them. If you like how they read, the next one lands on Tuesday morning.",
-  "issues": [
-    {
-      "title": "You are not losing to better people",
-      "date": "13 October 2026",
-      "blurb": "I posted one role and read every application. 222 people, four interviews, and the loop that made everyone look the same.",
-      "href": "https://franciscogost.beehiiv.com/p/you-are-not-losing-to-better-people"
-    },
-    {
-      "title": "I posted my highlight reel. Here is the rest.",
-      "date": "29 September 2026",
-      "blurb": "What three years actually looked like, including the parts that do not fit in a LinkedIn post.",
-      "href": "https://franciscogost.beehiiv.com/p/i-posted-my-highlight-reel-here-is-the-rest"
-    },
-    {
-      "title": "The month nobody writes about",
-      "date": "22 September 2026",
-      "blurb": "What changes between a founder replying and a founder paying you.",
-      "href": "https://franciscogost.beehiiv.com/p/the-month-nobody-writes-about"
-    }
-  ]
+  "offer": "Subscribe and the viral LinkedIn launch playbook arrives first, free.",
+  "badge": "Tested on 750+ B2B posts a year"
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import { LogoMark } from "@/components/Logo";
 import { ResourceForm } from "@/components/ResourceForm";
-import { Section } from "@/components/Section";
 import { getNewsletterPage, getSite } from "@/lib/content";
 
 const site = getSite();
@@ -12,64 +12,46 @@ export const metadata: Metadata = {
 };
 
 /**
- * The homepage sells the DM and happens to carry the newsletter. This page is
- * the other way round, because it exists to be a destination: the link in a
- * LinkedIn bio, at the end of a post, or in a reply to someone who asked what
- * the newsletter is. The form still hands over the DM, since nobody trades an
- * address for "a newsletter", but here that is the thing which arrives first
- * rather than the thing being sold.
+ * The link in a LinkedIn bio or at the end of a post. Someone arriving here
+ * already decided to look, so the page is one screen with one field: the
+ * masthead, one line on what it is, the form, one line of proof. Nothing to
+ * scroll past and nothing to read before the input.
+ *
+ * The form is the same ResourceForm as before, so the signup still goes
+ * through /api/resource, the playbook still arrives first and /thank-you
+ * still runs the stage question.
  */
 export default function Page() {
   return (
-    <Section width="article" space="generous" grid="sm">
-      {/*
-        One unit, then the field. The page used to introduce itself twice,
-        with a second heading and paragraph between the lead and the form,
-        which put the email input 875px down on a phone. Credibility sits
-        under the form now, where it reassures instead of delaying.
-      */}
-      <p className="label">{copy.label}</p>
-      <h1 className="display-1 mt-4">{copy.title}</h1>
-      <p className="lead mt-6 max-w-xl">{copy.lead}</p>
-      <p className="mt-5 max-w-xl text-ink">{copy.offer}</p>
+    <section className="grid min-h-[calc(100svh-4rem)] place-items-center bg-accent px-5 py-16 text-paper sm:px-8">
+      <div className="flex w-full max-w-2xl flex-col items-center text-center">
+        <h1 className="flex items-center gap-4 border-2 border-ink bg-paper px-6 py-5 shadow-[8px_8px_0_0_var(--color-ink)] sm:gap-5 sm:px-9 sm:py-6">
+          <span className="grid h-14 w-14 shrink-0 place-items-center bg-accent text-paper sm:h-20 sm:w-20">
+            <LogoMark className="w-8 sm:w-11" />
+          </span>
+          <span className="font-display text-5xl uppercase leading-none tracking-wide text-ink sm:text-7xl">
+            {copy.title}
+          </span>
+        </h1>
 
-      <div className="mt-8 max-w-xl">
-        <ResourceForm
-          slug={site.newsletter.offerSlug}
-          source="newsletter"
-          submitLabel={copy.submitLabel}
-          disclosure={copy.disclosure}
-        />
+        <p className="mt-10 font-mono text-lg leading-relaxed sm:text-xl">{copy.lead}</p>
+        <p className="mt-3 font-mono text-sm opacity-90">{copy.byline}</p>
+
+        <div className="mt-10 w-full border-2 border-ink bg-paper p-2 text-left">
+          <ResourceForm
+            slug={site.newsletter.offerSlug}
+            source="newsletter"
+            submitLabel={copy.submitLabel}
+            layout="inline"
+          />
+        </div>
+
+        <p className="mt-4 text-sm">{copy.offer}</p>
+
+        <p className="mt-6 border-2 border-ink bg-paper px-3 py-1.5 font-mono text-xs text-ink">
+          {copy.badge}
+        </p>
       </div>
-
-      <p className="mt-12 max-w-xl border-t-2 border-ink pt-8 text-ink-soft">{copy.proof}</p>
-
-      {/*
-        Proof that the thing exists and arrives. Linked out to beehiiv rather
-        than mirrored here, so there is one copy of each issue and no archive
-        to keep in sync. Both of these were email only until the web channel
-        was added, which is why there was nothing to link to before.
-      */}
-      <div className="mt-20 border-t-2 border-ink pt-10">
-        <p className="label">{copy.issuesLabel}</p>
-        <p className="mt-4 max-w-xl text-ink-soft">{copy.issuesNote}</p>
-
-        <ul className="mt-8 grid gap-4">
-          {copy.issues.map((issue) => (
-            <li key={issue.href}>
-              <a
-                href={issue.href}
-                className="group flex flex-col gap-2 border-2 border-ink p-6 transition-all duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_0_var(--color-accent)]"
-              >
-                <span className="label text-ash">{issue.date}</span>
-                <span className="font-display text-2xl leading-tight">{issue.title}</span>
-                <span className="text-ink-soft">{issue.blurb}</span>
-                <span className="label mt-2 text-accent-deep">Read it &rarr;</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </Section>
+    </section>
   );
 }
