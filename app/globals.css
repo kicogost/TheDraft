@@ -197,22 +197,16 @@
 
   /* Client logo carousel on /newsletter. See components/LogoTicker.tsx. */
   .logo-ticker {
-    display: grid;
-    gap: 2.5rem;
     mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
   }
 
   .logo-ticker-track {
-    animation: logo-ticker 20s linear infinite;
+    animation: logo-ticker 50s linear infinite;
     display: flex;
     flex-shrink: 0;
     gap: 80px;
     padding-right: 80px;
     will-change: transform;
-  }
-
-  .logo-ticker-reverse {
-    animation-direction: reverse;
   }
 
   .logo-ticker-track:hover {

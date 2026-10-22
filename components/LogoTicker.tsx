@@ -7,18 +7,17 @@ type LogoTickerProps = {
 };
 
 /**
- * Two rows of client marks sliding in opposite directions, measured off the
- * Big Desk Energy landing page: 20s linear loop, 80px gaps, pause on hover.
- * Each half of a track repeats the set twice so a 2,500px screen never sees
- * the end of it, and the -50% keyframe lands exactly on the second half.
+ * One row of client icons sliding left, after the Big Desk Energy landing
+ * page: linear loop, 80px gaps, pause on hover. Icons only, no names, so the
+ * row reads as a strip of marks. The track repeats the set six times and the
+ * -50% keyframe lands exactly on the fourth copy, which keeps a 2,560px
+ * screen covered at every point in the loop.
  *
  * Pure CSS, so it costs nothing to hydrate. The moving copies are hidden from
  * screen readers and the names are listed once for them instead. Under
  * prefers-reduced-motion the global rule in globals.css stops the animation.
  */
 export function LogoTicker({ logos }: LogoTickerProps) {
-  const rows = [logos, [...logos].reverse()];
-
   return (
     <div className="logo-ticker">
       <ul className="sr-only">
@@ -26,26 +25,22 @@ export function LogoTicker({ logos }: LogoTickerProps) {
           <li key={logo.name}>{logo.name}</li>
         ))}
       </ul>
-      {rows.map((row, index) => (
-        <div key={index} aria-hidden="true" className="flex w-full overflow-hidden">
-          <div className={`logo-ticker-track ${index === 1 ? "logo-ticker-reverse" : ""}`}>
-            {[...row, ...row, ...row, ...row].map((logo, i) => (
-              <span key={`${logo.name}-${i}`} className="flex shrink-0 items-center gap-3">
-                <Image
-                  src={logo.src}
-                  alt=""
-                  width={28}
-                  height={28}
-                  className="h-7 w-7 rounded-md"
-                />
-                <span className="whitespace-nowrap text-lg font-semibold text-paper">
-                  {logo.name}
-                </span>
-              </span>
+      <div aria-hidden="true" className="flex w-full overflow-hidden">
+        <div className="logo-ticker-track">
+          {Array.from({ length: 6 }, () => logos)
+            .flat()
+            .map((logo, i) => (
+              <Image
+                key={`${logo.name}-${i}`}
+                src={logo.src}
+                alt=""
+                width={64}
+                height={64}
+                className="h-14 w-14 shrink-0 rounded-xl ring-1 ring-paper/20 sm:h-16 sm:w-16"
+              />
             ))}
-          </div>
         </div>
-      ))}
+      </div>
     </div>
   );
 }
