@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { LogoMark } from "@/components/Logo";
 import { LogoTicker } from "@/components/LogoTicker";
 import { ResourceForm } from "@/components/ResourceForm";
+import { getSubscriberCount } from "@/lib/beehiiv";
 import { getNewsletterPage, getSite } from "@/lib/content";
 
 const site = getSite();
@@ -25,7 +26,13 @@ export const metadata: Metadata = {
  * through /api/resource, the playbook still arrives first and /thank-you
  * still runs the stage question.
  */
-export default function Page() {
+export default async function Page() {
+  // Live from beehiiv, refreshed weekly (see getSubscriberCount).
+  const count = await getSubscriberCount();
+  const readersLine = count
+    ? copy.readersLine.replace("{count}", count.toLocaleString("en-US"))
+    : copy.readersLineNoCount;
+
   return (
     // Fills the screen below the nav so the footer starts under the fold.
     // The orange hero takes the spare height and centres its content in it.
@@ -41,10 +48,10 @@ export default function Page() {
             </span>
           </h1>
 
-          <p className="mt-8 font-mono text-sm">{copy.byline}</p>
-          <p className="mt-2 font-mono text-base leading-snug sm:text-lg">{copy.lead}</p>
+          <p className="mt-10 font-mono text-sm">{copy.byline}</p>
+          <p className="mt-4 font-mono text-base leading-snug sm:text-lg">{copy.lead}</p>
 
-          <div className="mt-8 w-full max-w-xl border-2 border-ink bg-paper p-1.5 text-left">
+          <div className="mt-12 w-full max-w-xl border-2 border-ink bg-paper p-1.5 text-left">
             <ResourceForm
               slug={site.newsletter.offerSlug}
               source="newsletter"
@@ -53,14 +60,12 @@ export default function Page() {
             />
           </div>
 
-          <p className="mt-4 font-mono text-xs sm:text-sm">{copy.offer}</p>
+          <p className="mt-6 font-mono text-xs sm:text-sm">{copy.offer}</p>
         </div>
       </section>
 
       <section className="border-b border-paper/15 bg-ink py-12 text-center text-paper sm:py-14">
-        <p className="px-5 font-mono text-base font-medium sm:px-8 sm:text-lg">
-          {copy.readersLine}
-        </p>
+        <p className="px-5 font-mono text-lg font-medium sm:px-8 sm:text-xl">{readersLine}</p>
         <div className="mt-10 sm:mt-12">
           <LogoTicker logos={copy.logos} />
         </div>

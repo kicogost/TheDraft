@@ -183,3 +183,32 @@ export async function listPosts(): Promise<Post[]> {
     return [];
   }
 }
+
+/**
+ * Active subscribers, for the "Read by N founders" line. Cached for a week,
+ * so the number on the site moves weekly without a deploy. Returns null when
+ * beehiiv is off or unreachable, and the line drops the number.
+ */
+export async function getSubscriberCount(): Promise<number | null> {
+  const { key, publication, enabled } = config();
+  if (!enabled || !key || !publication) return null;
+
+  try {
+    const response = await fetch(`${API}/publications/${publication}?expand[]=stats`, {
+      headers: { Authorization: `Bearer ${key}` },
+      next: { revalidate: 60 * 60 * 24 * 7 },
+      signal: AbortSignal.timeout(TIMEOUT_MS),
+    });
+    if (!response.ok) {
+      console.warn("beehiiv rejected a stats request", response.status);
+      return null;
+    }
+    const { data } = (await response.json()) as {
+      data: { stats?: { active_subscriptions?: number } };
+    };
+    return data.stats?.active_subscriptions ?? null;
+  } catch (error) {
+    console.warn("beehiiv stats call failed", error);
+    return null;
+  }
+}

@@ -1,23 +1,24 @@
 {
   "title": "The Draft",
-  "lead": "B2B content insights, stories, and vibes sent to your inbox every Tuesday.",
+  "lead": "How top 1% startups crush organic marketing. Sent to your inbox every Tuesday.",
   "byline": "Written by Francisco Gost // founder @ the draft ✍️ & partner @ rallyup 📣",
-  "submitLabel": "Subscribe free",
+  "submitLabel": "Sign me up",
   "offer": "Subscribe and get The Viral LinkedIn Launch Playbook that generated +1m impressions",
-  "readersLine": "Read by the founders, employees, and investors at the top startups and funds.",
+  "readersLine": "Read by {count} founders and teams at",
   "shareCard": {
     "tagline": "How top 1% startups crush organic marketing.",
     "highlight": "1%",
     "readersLine": "Read by founders and teams at"
   },
   "logos": [
-    { "name": "Airwallex", "src": "/images/wordmarks/airwallex.svg", "width": 175, "height": 24 },
-    { "name": "Lightbank", "src": "/images/wordmarks/lightbank.png", "width": 97, "height": 40 },
-    { "name": "RallyUp", "src": "/images/wordmarks/rallyup.png", "width": 160, "height": 30 },
-    { "name": "Letter AI", "src": "/images/wordmarks/letterai.svg", "width": 101, "height": 28 },
-    { "name": "LetsGo", "src": "/images/wordmarks/letsgo.png", "width": 129, "height": 30 },
-    { "name": "Anchor Browser", "src": "/images/wordmarks/anchorbrowser.svg", "width": 125, "height": 28 },
-    { "name": "Andel", "src": "/images/wordmarks/andel.svg", "width": 122, "height": 26 },
-    { "name": "Walnut", "src": "/images/wordmarks/walnut.svg", "width": 150, "height": 26 }
-  ]
+    { "name": "Airwallex", "icon": "/images/icons/airwallex.png", "src": "/images/wordmarks/airwallex.svg", "width": 175, "height": 24 },
+    { "name": "Lightbank", "icon": "/images/icons/lightbank.png", "src": "/images/wordmarks/lightbank.png", "width": 97, "height": 40 },
+    { "name": "RallyUp", "icon": "/images/icons/rallyup.svg", "src": "/images/wordmarks/rallyup.png", "width": 160, "height": 30 },
+    { "name": "Letter AI", "icon": "/images/icons/letterai-tile.png", "src": "/images/wordmarks/letterai.svg", "width": 101, "height": 28 },
+    { "name": "LetsGo", "icon": "/images/icons/letsgo.png", "src": "/images/wordmarks/letsgo.png", "width": 129, "height": 30 },
+    { "name": "Anchor Browser", "icon": "/images/icons/anchorbrowser.png", "src": "/images/wordmarks/anchorbrowser.svg", "width": 125, "height": 28 },
+    { "name": "Andel", "icon": "/images/icons/andel.png", "src": "/images/wordmarks/andel.svg", "width": 122, "height": 26 },
+    { "name": "Walnut", "icon": "/images/icons/walnut.png", "src": "/images/wordmarks/walnut.svg", "width": 150, "height": 26 }
+  ],
+  "readersLineNoCount": "Read by founders and teams at"
 }

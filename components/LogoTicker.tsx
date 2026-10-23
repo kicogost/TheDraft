@@ -1,17 +1,15 @@
 import Image from "next/image";
 
-type Logo = { name: string; src: string; width: number; height: number };
+type Logo = { name: string; icon: string };
 
 type LogoTickerProps = {
   logos: Logo[];
 };
 
 /**
- * One row of client wordmarks sliding left, after the Big Desk Energy landing
- * page: linear loop, 80px gaps, pause on hover, every mark flattened to white
- * so a set of mismatched brand colours reads as one strip. Width and height
- * per logo come from content/newsletter.json, because wordmarks differ in
- * shape and a single height makes the squat ones look tiny.
+ * One row of client logos sliding left: each one the brand's own colour icon
+ * with its name beside it in paper, after the Fired to Acquired landing page.
+ * Linear loop, pause on hover.
  *
  * The track repeats the set four times and the -50% keyframe lands exactly
  * on the third copy, which keeps a 2,560px screen covered at every point in
@@ -32,15 +30,18 @@ export function LogoTicker({ logos }: LogoTickerProps) {
           {Array.from({ length: 4 }, () => logos)
             .flat()
             .map((logo, i) => (
-              <Image
-                key={`${logo.name}-${i}`}
-                src={logo.src}
-                alt=""
-                width={logo.width}
-                height={logo.height}
-                className="shrink-0 brightness-0 invert"
-                style={{ width: logo.width, height: logo.height }}
-              />
+              <span key={`${logo.name}-${i}`} className="flex shrink-0 items-center gap-3">
+                <Image
+                  src={logo.icon}
+                  alt=""
+                  width={44}
+                  height={44}
+                  className="h-10 w-10 rounded-[22%] ring-1 ring-paper/15 sm:h-11 sm:w-11"
+                />
+                <span className="whitespace-nowrap text-2xl font-semibold tracking-tight text-paper sm:text-3xl">
+                  {logo.name}
+                </span>
+              </span>
             ))}
         </div>
       </div>
