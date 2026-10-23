@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
     "/api/download/[slug]": ["./content/resources/files/*.pdf"],
     // Satori needs the real font files to draw the social cards.
     "/**/opengraph-image": ["./assets/fonts/*.ttf"],
+    "/email/issue": ["./assets/fonts/*.ttf"],
   },
   async redirects() {
     return [

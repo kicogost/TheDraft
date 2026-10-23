@@ -25,7 +25,7 @@ function font(name: string) {
   return readFileSync(join(ROOT, "assets", "fonts", name));
 }
 
-function Masthead({ size }: { size: number }) {
+export function Masthead({ size }: { size: number }) {
   const tile = Math.round(size * 1.15);
   return (
     <div
