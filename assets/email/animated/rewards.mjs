@@ -25,9 +25,9 @@ const html = (c) => `<html><head><style>
 @font-face{font-family:Mono;src:url(${font("JetBrainsMono-Regular.ttf")})}
 *{margin:0;box-sizing:border-box}
 #c{position:relative;overflow:hidden;width:600px;height:450px;background:${c.bg};display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px}
-.badge{font-family:Mono;font-size:20px;letter-spacing:3px;color:${PAPER};background:${c.badgeBg};padding:8px 16px;animation:pulse ${PERIOD}s ease-in-out infinite}
+.badge{font-family:Mono;font-size:28px;letter-spacing:4px;color:${PAPER};background:${c.badgeBg};padding:10px 22px;animation:pulse ${PERIOD}s ease-in-out infinite}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
-.title{font-family:Anton;font-size:50px;line-height:1.02;color:${c.fg};text-align:center}
+.title{font-family:Anton;font-size:76px;line-height:1.02;color:${c.fg};text-align:center}
 .sweep{position:absolute;top:-50%;left:-60%;width:30%;height:200%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);transform:rotate(20deg);animation:sweep ${PERIOD}s ease-in-out infinite}
 @keyframes sweep{0%{left:-60%}60%,100%{left:130%}}
 </style></head><body><div id="c"><div class="badge">${c.badge}</div><div class="title">${c.title}</div><div class="sweep"></div></div></body></html>`;
