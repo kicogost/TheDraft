@@ -1,5 +1,6 @@
 // Animated referral reward cards for the beehiiv referral block.
-// beehiiv crops reward images to a near-square tile and zooms in, so every
+// beehiiv crops reward images to a tile of about 5:4 and zooms in, so the card is
+// 600x480 to fill it (shorter leaves its checkerboard placeholder showing) and every
 // element sits in the centre ~55% of the frame. A light sweep crosses the
 // card and the badge pulses, so the block feels alive in the inbox.
 //
@@ -24,7 +25,7 @@ const html = (c) => `<html><head><style>
 @font-face{font-family:Anton;src:url(${font("Anton-Regular.ttf")})}
 @font-face{font-family:Mono;src:url(${font("JetBrainsMono-Regular.ttf")})}
 *{margin:0;box-sizing:border-box}
-#c{position:relative;overflow:hidden;width:600px;height:450px;background:${c.bg};display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px}
+#c{position:relative;overflow:hidden;width:600px;height:480px;background:${c.bg};display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px}
 .badge{font-family:Mono;font-size:28px;letter-spacing:4px;color:${PAPER};background:${c.badgeBg};padding:10px 22px;animation:pulse ${PERIOD}s ease-in-out infinite}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
 .title{font-family:Anton;font-size:76px;line-height:1.02;color:${c.fg};text-align:center}
@@ -33,7 +34,7 @@ const html = (c) => `<html><head><style>
 </style></head><body><div id="c"><div class="badge">${c.badge}</div><div class="title">${c.title}</div><div class="sweep"></div></div></body></html>`;
 
 const b = await chromium.launch({ executablePath: chromePath });
-const p = await b.newPage({ viewport: { width: 600, height: 450 } });
+const p = await b.newPage({ viewport: { width: 600, height: 480 } });
 for (const c of CARDS) {
   const dir = path.join(outDir, `reward-${c.name}`);
   fs.mkdirSync(dir, { recursive: true });
