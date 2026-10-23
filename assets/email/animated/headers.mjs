@@ -55,9 +55,8 @@ const SECTIONS = [
   ["01", "The play", "The main piece. Steal it.", "the-play"],
   ["02", "Banger vs flop", "The best and worst post of the week.", "banger-vs-flop"],
   ["03", "Steal this", "Copy it, paste it, ship it.", "steal-this"],
-  ["04", "In the wild", "B2B brands doing organic right.", "in-the-wild"],
-  ["05", "The scoreboard", "Building in public, real numbers.", "the-scoreboard"],
-  ["06", "Off the clock", "The bit that isn't about work.", "off-the-clock"],
+  ["04", "The scoreboard", "Building in public, real numbers.", "the-scoreboard"],
+  ["05", "Off the clock", "The bit that isn't about work.", "off-the-clock"],
 ];
 
 const PERIOD = 1.6; // seconds per loop
@@ -99,7 +98,7 @@ const html = ([n, title, sub, icon]) => `<html><head><style>${css}</style></head
 const b = await chromium.launch({ executablePath: chromePath });
 const p = await b.newPage({ viewport: { width: 1200, height: 220 } });
 for (const s of SECTIONS) {
-  const dir = path.join(outDir, s[3]);
+  const dir = path.join(outDir, `${s[0]}-${s[3]}`);
   fs.mkdirSync(dir, { recursive: true });
   await p.setContent(html(s));
   await p.waitForTimeout(400);

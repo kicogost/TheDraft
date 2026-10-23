@@ -37,11 +37,19 @@ If a connector is not authorised or returns nothing, say so in the sheet. Never 
 
 ## What you hand back
 
-A markdown fact sheet with one heading per section of the format, in order: Sponsor, Cold open, The play, Banger vs flop, Steal this, In the wild, The scoreboard, Off the clock. Under each, bullet the facts you found. **Every fact carries its source**: the Slack channel and date, the email subject and date, the Ordinal account and post date, or the beehiiv metric and period. Leave a section's bullets empty rather than guessing, and say what Francisco needs to supply.
+A markdown fact sheet with one heading per section of the format, in order: Sponsor, Cold open, The play, Banger vs flop, Steal this, The scoreboard, Off the clock. Under each, bullet the facts you found. **Every fact carries its source**: the Slack channel and date, the email subject and date, the Ordinal account and post date, or the beehiiv metric and period. Leave a section's bullets empty rather than guessing, and say what Francisco needs to supply.
 
 Then add two short lists:
 - **Strongest candidates for The play this week**, at most three, each one line with why it would make a good main piece.
 - **Open questions for Francisco**: numbers you could not confirm, permissions you need, anything ambiguous.
+
+## Scoreboard numbers, computed not copied
+
+For every "+X this week" in The scoreboard, compute it from the source and show the working:
+- LinkedIn followers: `ordinal_get_analytics` type=followers for Francisco's profile over the window; report the first reading, the last reading and the difference.
+- RallyUp MRR change: add up the Closed Won lines ("Active MRR ($X/mo)" or "new Closed Won: Company ($X/mo)") and subtract churn in #claude-updates for the window; list each deal. Client names stay internal.
+- Draft readers: leave to the drafting session, which reads beehiiv directly.
+If a number in a draft disagrees with these, flag it in Open questions.
 
 ## Rules
 

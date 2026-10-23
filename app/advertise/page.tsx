@@ -30,7 +30,7 @@ export default function Page() {
         </div>
 
         <p className="label mt-20">{copy.statsLabel}</p>
-        <dl className="mt-6 grid gap-4 sm:grid-cols-3">
+        <dl className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {copy.stats.map((stat) => (
             <div key={stat.label} className="flex flex-col-reverse gap-2 border-2 border-ink bg-paper p-6">
               <dt className="text-ink-soft">{stat.label}</dt>

@@ -3,9 +3,22 @@
   "lead": "Put your brand in front of B2B founders, marketers and execs who care about growing through organic content.",
   "statsLabel": "The numbers",
   "stats": [
-    { "value": "59%", "label": "Newsletter open rate, last 3 months" },
-    { "value": "13.5%", "label": "Newsletter click rate, last 3 months" },
-    { "value": "3,000+", "label": "LinkedIn followers" }
+    {
+      "value": "21.3M+",
+      "label": "Impressions generated for B2B founders and execs"
+    },
+    {
+      "value": "59%",
+      "label": "Newsletter open rate, last 3 months"
+    },
+    {
+      "value": "13.5%",
+      "label": "Newsletter click rate, last 3 months"
+    },
+    {
+      "value": "3,000+",
+      "label": "LinkedIn followers"
+    }
   ],
   "placementsLabel": "Ways to work together",
   "placements": [
