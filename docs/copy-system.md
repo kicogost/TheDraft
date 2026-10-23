@@ -109,6 +109,8 @@ About 900 to 1,100 words, skimmable, the same order every week:
 | 7 | Off the clock | Mallorca, jiu-jitsu, a song of the week. The bit readers mention when they reply. |
 | 8 | Sign-off | One click poll (🔥 / 👍 / 😴), the reply ask, then "Stay awesome," and "Francisco". |
 
+**Design, every issue.** The issue opens with its own title image, built from the URL `https://franciscogost.com/email/issue?title=<subject>&date=<28 October 2026>` (upload it to beehiiv with save_image, and set it as the post thumbnail too). Each section is one bordered card with its animated header on top; the GIFs live in `public/email/sec-*-anim.gif` and are regenerated with `assets/email/animated/headers.mjs` then `frames-to-gif.py`. Turn off the beehiiv title and subtitle in the email header, since the title image carries them.
+
 **The play rotates through four types** so the main piece never repeats its shape: a launch breakdown, a teardown of a public B2B brand's LinkedIn, an experiment run across several accounts, and a founder story.
 
 **Client data rules.** Banger vs flop and The play run on client numbers. Name only the clients cleared in the proof bank. Everyone else is anonymised by stage and sector, for example "a Series A fintech founder, 38,291 impressions", and screenshots have names and faces blurred. RallyUp's own numbers are his to share; a client's invoice, contract value or name next to a payment never is.
