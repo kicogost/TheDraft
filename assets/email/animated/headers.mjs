@@ -43,6 +43,11 @@ const ICONS = {
     <rect class="bar b1" x="16" y="20" width="18" height="70" fill="${INK}"/>
     <rect class="bar b2" x="41" y="20" width="18" height="70" fill="${ACCENT}"/>
     <rect class="bar b3" x="66" y="20" width="18" height="70" fill="${INK}"/></svg>`,
+  // Gift box bounces and its lid pops.
+  "share": `<svg viewBox="0 0 100 100" width="96" height="96"><g class="gift">
+    <rect x="18" y="44" width="64" height="46" fill="${ACCENT}"/><rect x="45" y="44" width="10" height="46" fill="${INK}"/>
+    <g class="lid"><rect x="12" y="30" width="76" height="16" fill="${INK}"/><rect x="45" y="30" width="10" height="16" fill="${ACCENT}"/>
+    <path d="M50 30 C40 14 26 18 32 28 Z M50 30 C60 14 74 18 68 28 Z" fill="none" stroke="${ACCENT}" stroke-width="5"/></g></g></svg>`,
   // Clock hand spins.
   "off-the-clock": `<svg viewBox="0 0 100 100" width="96" height="96">
     <circle cx="50" cy="50" r="40" fill="${PAPER}" stroke="${INK}" stroke-width="7"/>
@@ -57,6 +62,7 @@ const SECTIONS = [
   ["03", "Steal this", "Copy it, paste it, ship it.", "steal-this"],
   ["04", "The scoreboard", "Building in public, real numbers.", "the-scoreboard"],
   ["05", "Off the clock", "The bit that isn't about work.", "off-the-clock"],
+  ["06", "Share The Draft", "Bring a friend, unlock rewards.", "share"],
 ];
 
 const PERIOD = 1.6; // seconds per loop
@@ -83,6 +89,10 @@ svg *{transform-box:fill-box}
 .b1{animation-delay:0s}.b2{animation-delay:-.2s}.b3{animation-delay:-.4s}
 @keyframes grow{0%{transform:scaleY(.2)}60%,100%{transform:scaleY(1)}}
 .b1{transform:scaleY(.55)}.b3{transform:scaleY(.8)}
+.gift{transform-origin:50% 100%;animation:hop ${PERIOD}s ease-in-out infinite}
+@keyframes hop{0%,60%,100%{transform:translateY(0)}70%{transform:translateY(-8px)}80%{transform:translateY(0)}}
+.lid{transform-origin:20% 100%;animation:pop ${PERIOD}s ease-in-out infinite}
+@keyframes pop{0%,60%,100%{transform:rotate(0)}72%{transform:translateY(-10px) rotate(-14deg)}85%{transform:rotate(0)}}
 .hand{transform-origin:0% 50%;animation:spin ${PERIOD}s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 `;
