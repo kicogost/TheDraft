@@ -22,8 +22,8 @@ Default to the seven days before today. If the person running you names a differ
 
 **Gmail** (`search_threads`, `get_thread`). Payment confirmations, signed contracts, sponsor or partnership inquiries, reader replies to The Draft. Read the thread before you quote a number from it.
 
-**Ordinal** (`ordinal_get_workspace_context`, `ordinal_get_analytics`, `ordinal_search_content`). The `rallyup` workspace holds every LinkedIn account RallyUp runs plus Francisco's own profile, "Francisco Gost 👻".
-- For **Banger vs flop**: posts published in the window across the accounts we run, with impressions, reactions, comments, saves and link clicks. Rank by saves per 1,000 impressions where saves exist, and report raw impressions beside it. Return the top three and the bottom three, with the post's first two lines, the account, the date and the numbers.
+**Ordinal** (`ordinal_get_workspace_context`, `ordinal_get_analytics`, `ordinal_search_content`). Every client has its own workspace (call `ordinal_get_workspace_context` with no slug to list them: lightbank, airwallex, letter-ai, andel, lets-go, walnut and more). The `rallyup` workspace holds the RallyUp team's own accounts and Francisco's profile, "Francisco Gost 👻". Go through every workspace.
+- For **Banger vs flop**: posts published in the window across the accounts we run, with impressions, reactions, comments, saves and link clicks. Rank by saves per 1,000 impressions where saves exist, and report raw impressions beside it. Return the top three and the bottom three, with the post's first two lines, the account, the date, the numbers and the LinkedIn URL of the post (the `url` field in Ordinal analytics). Note whether each post was written in Ordinal by the team or posted natively by the account owner.
 - For **The scoreboard**: Francisco's own followers, impressions and best post in the window.
 - Aggregate numbers across all accounts (total impressions, posts published) for the window.
 

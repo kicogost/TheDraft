@@ -102,7 +102,7 @@ About 900 to 1,100 words, skimmable, the same order every week:
 | 0 | Sponsor | One slot near the top, written in his voice. Until a sponsor buys it, it promotes one of his own resources. |
 | 1 | Cold open | Two to four lines, personal and a little funny. Where he is writing from, what happened this week. |
 | 2 | The play | The main piece. One tactic, story or launch from the accounts we run: the story, then the numbers, then the play the reader can steal. |
-| 3 | Banger vs flop | The best and worst post of the week across the accounts we run, with impressions, one screenshot each, and why one worked and the other did not. Ranked on saves per 1,000 impressions where possible, not raw reach. |
+| 3 | Banger vs flop | The best and worst post of the week from the accounts we write for at RallyUp, and the section says so. Big save count, impressions, the first line, why one worked and the other did not, and a link to each post on LinkedIn (skip the link when the account is anonymised). Ranked on saves per 1,000 impressions where possible, not raw reach. |
 | 4 | Steal this | One hook, template or line the reader can copy and use today. |
 | 5 | In the wild | Three posts or campaigns from other B2B brands doing organic well, one line each on why it works. |
 | 6 | The scoreboard | Building in public with RallyUp's real numbers: revenue milestones, MRR and ARR, clients, team, plus The Draft's subscriber count and what he tested on his own LinkedIn. |
