@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { setSignupCookie } from "@/lib/signup-cookie";
 import { subscribe } from "@/lib/beehiiv";
 import { allow, clientIp } from "@/lib/rate-limit";
+import { cleanPath, cleanUtm } from "@/lib/utm";
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -13,7 +14,16 @@ export async function POST(request: Request) {
     );
   }
 
-  let body: { email?: string; source?: string; company?: string; stage?: string };
+  let body: {
+    email?: string;
+    source?: string;
+    company?: string;
+    stage?: string;
+    utm_source?: string;
+    utm_medium?: string;
+    utm_campaign?: string;
+    path?: string;
+  };
   try {
     body = await request.json();
   } catch {
@@ -34,6 +44,8 @@ export async function POST(request: Request) {
   const result = await subscribe({
     email,
     medium: body.source || "homepage",
+    utm: cleanUtm(body),
+    path: cleanPath(body.path),
     // The "Welcome, homepage signups" automation sends the first email, so
     // beehiiv's single preset welcome would arrive as a duplicate alongside it.
     sendWelcomeEmail: false,

@@ -4,6 +4,7 @@ import { startJourney, subscribe } from "@/lib/beehiiv";
 import { getResource } from "@/lib/content";
 import { allow, clientIp } from "@/lib/rate-limit";
 import { signResource } from "@/lib/signing";
+import { cleanPath, cleanUtm } from "@/lib/utm";
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -30,6 +31,10 @@ export async function POST(request: Request) {
     company?: string;
     stage?: string;
     source?: string;
+    utm_source?: string;
+    utm_medium?: string;
+    utm_campaign?: string;
+    path?: string;
   };
   try {
     body = await request.json();
@@ -58,6 +63,8 @@ export async function POST(request: Request) {
     email,
     medium,
     campaign: resource.slug,
+    utm: cleanUtm(body),
+    path: cleanPath(body.path),
     // Suppress beehiiv's own welcome only when a resource automation exists to
     // send one instead. With no automation, suppressing it means the reader
     // hands over an email and hears nothing, so this has to stay derived

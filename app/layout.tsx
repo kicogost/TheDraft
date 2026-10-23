@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Anton, Inter, JetBrains_Mono } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
+import { UtmCapture } from "@/components/UtmCapture";
 import { getSite, getSocialLinks } from "@/lib/content";
 import "./globals.css";
 
@@ -71,6 +72,7 @@ export default function RootLayout({
           legal={site.footer.legal}
           social={getSocialLinks()}
         />
+        <UtmCapture />
         <Analytics />
       </body>
     </html>

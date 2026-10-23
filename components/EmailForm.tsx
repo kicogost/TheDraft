@@ -1,7 +1,8 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { readUtm } from "@/lib/utm-client";
 
 export type StageOption = { value: string; label: string };
 
@@ -39,6 +40,11 @@ export function EmailForm({
   const [state, setState] = useState<"idle" | "sending" | "done" | "error">("idle");
   const [message, setMessage] = useState("");
 
+  const utm = useRef<Record<string, string>>({});
+  useEffect(() => {
+    utm.current = readUtm();
+  }, []);
+
   const inline = layout === "inline" && !stage;
 
   async function onSubmit(event: React.FormEvent) {
@@ -58,7 +64,14 @@ export function EmailForm({
       const response = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...payload, email, company, stage: stageValue }),
+        body: JSON.stringify({
+          ...payload,
+          ...utm.current,
+          path: window.location.pathname,
+          email,
+          company,
+          stage: stageValue,
+        }),
       });
       const data = await response.json();
 

@@ -1,5 +1,8 @@
+import type { Utm } from "./utm";
+
 const API = "https://api.beehiiv.com/v2";
 const TIMEOUT_MS = 8000;
+const SITE = "https://franciscogost.com";
 
 type SubscribeInput = {
   email: string;
@@ -9,6 +12,14 @@ type SubscribeInput = {
   sendWelcomeEmail?: boolean;
   /** Publication level custom fields, e.g. the stage question on the forms. */
   customFields?: Record<string, string>;
+  /**
+   * Tags from the link the visitor arrived on. When present they replace the
+   * site defaults, so a signup from the Instagram bio reads as instagram / bio
+   * in beehiiv rather than website / newsletter.
+   */
+  utm?: Utm;
+  /** The page the form sat on. Keeps the location once utm has replaced it. */
+  path?: string;
 };
 
 export type SubscribeResult =
@@ -62,9 +73,12 @@ export async function subscribe(
       email: input.email,
       reactivate_existing: true,
       send_welcome_email: input.sendWelcomeEmail ?? true,
-      utm_source: "website",
-      utm_medium: input.medium,
-      ...(input.campaign ? { utm_campaign: input.campaign } : {}),
+      utm_source: input.utm?.source ?? "website",
+      utm_medium: input.utm?.medium ?? input.medium,
+      ...(input.utm?.campaign || input.campaign
+        ? { utm_campaign: input.utm?.campaign ?? input.campaign }
+        : {}),
+      ...(input.path ? { referring_site: `${SITE}${input.path}` } : {}),
       ...(input.customFields && Object.keys(input.customFields).length
         ? {
             custom_fields: Object.entries(input.customFields).map(
