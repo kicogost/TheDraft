@@ -2,52 +2,9 @@
   "name": "Francisco Gost",
   "fullName": "Francisco Gost Scagliarini",
   "url": "https://franciscogost.com",
-  "tagline": "B2B social and content playbooks that generate revenue.",
-  "oneLiner": "B2B social and content playbooks that generate revenue.",
-  "titleLine": "B2B social and content playbooks",
-  "hero": {
-    "headline": [
-      "B2B content that",
-      "generates revenue"
-    ],
-    "support": "At RallyUp we've generated over 35 million impressions for B2B leadership teams this year, and $100,000s in tracked MRR from launches. The playbook behind those launches is below, and it's yours free.",
-    "submitLabel": "Send me the playbook",
-    "disclosure": "You'll also get The Draft, one letter a week on B2B social and content strategy. Leave whenever you like."
-  },
-  "closing": {
-    "question": [
-      "Ready to make",
-      "content that works?"
-    ],
-    "cta": {
-      "label": "Get the playbook",
-      "href": "/resources/launch-playbook"
-    }
-  },
-  "company": {
-    "eyebrow": "My company",
-    "name": "RallyUp",
-    "body": "I'm partner and chief of staff at RallyUp. We build LinkedIn audiences for B2B founders and executives: every post hand-written in their voice, engineered to reach the people who buy from them. In 2026 we've generated over 35 million impressions and created more than 750 posts for leadership teams at Airwallex, PandaDoc, Letter AI, Anchor Browser and 50+ other B2B tech brands.",
-    "cta": {
-      "label": "See if your team qualifies",
-      "href": "https://cal.com/team/rallyup/audience-building-with-rallyup"
-    },
-    "bookingBase": "https://cal.com/team/rallyup/audience-building-with-rallyup",
-    "logos": [
-      {
-        "name": "Airwallex",
-        "src": "/images/logos/airwallex.png"
-      },
-      {
-        "name": "PandaDoc",
-        "src": "/images/logos/pandadoc.png"
-      },
-      {
-        "name": "Letter AI",
-        "src": "/images/logos/letterai.png"
-      }
-    ]
-  },
+  "tagline": "How top 1% startups crush organic marketing.",
+  "oneLiner": "How top 1% startups crush organic marketing. The Draft, a free weekly letter by Francisco Gost.",
+  "titleLine": "The Draft",
   "newsletter": {
     "name": "The Draft",
     "offerSlug": "launch-playbook",
@@ -76,31 +33,39 @@
       ]
     },
     {
-      "label": "About",
-      "href": "/about"
+      "label": "Content",
+      "href": "/content"
     },
     {
-      "label": "Newsletter",
-      "href": "/newsletter"
+      "label": "Advertise",
+      "href": "/advertise"
     }
   ],
   "navCta": {
-    "label": "Get the playbook",
-    "href": "/resources/launch-playbook"
+    "label": "Subscribe",
+    "href": "/"
   },
   "footer": {
     "explore": [
       {
         "label": "Newsletter",
-        "href": "/newsletter"
+        "href": "/"
       },
       {
-        "label": "About",
-        "href": "/about"
+        "label": "Content",
+        "href": "/content"
       },
       {
         "label": "Resources",
         "href": "/resources"
+      },
+      {
+        "label": "Advertise",
+        "href": "/advertise"
+      },
+      {
+        "label": "About",
+        "href": "/about"
       }
     ],
     "legal": [
@@ -176,8 +141,10 @@
   },
   "retiredNote": "This one is retired and no longer sent. If you already have the download link it still works. The current resource is the launch playbook.",
   "seo": {
-    "newsletter": "A weekly letter on B2B social and content strategy. The post that worked, the one that died, and the numbers behind both.",
-    "resources": "Free playbooks on B2B social and content strategy: the viral LinkedIn launch playbook, and the cold DM that turned a stranger into a six figure yes.",
-    "about": "Francisco Gost is partner at RallyUp, writing LinkedIn for B2B founders and executives. From Mallorca to London, and the cold message that started it."
+    "newsletter": "How top 1% startups crush organic marketing. The Draft, a free weekly letter by Francisco Gost.",
+    "resources": "Free playbooks on organic marketing for B2B startups, including the viral LinkedIn launch playbook and the executive swipe file.",
+    "about": "Francisco Gost is partner at RallyUp, writing LinkedIn for B2B founders and executives. From Mallorca to London, and the cold message that started it.",
+    "content": "Every issue of The Draft on how top 1% startups crush organic marketing.",
+    "advertise": "Sponsor The Draft or a LinkedIn post and reach B2B founders, marketers and execs who care about organic growth."
   }
 }

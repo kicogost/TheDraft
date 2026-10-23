@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // The newsletter became the homepage. Links in bios, posts and the
+      // LinkedIn featured section still point at /newsletter, and Next keeps
+      // the query string on a redirect, so their utm tags survive the hop.
+      { source: "/newsletter", destination: "/", permanent: true },
       // /portfolio was retired once the site narrowed to getting hired. It had
       // been linked from the nav and sitemap, so anything already indexed or
       // bookmarked lands on the homepage instead of a 404.

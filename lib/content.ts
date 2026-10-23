@@ -1,5 +1,7 @@
 import about from "@/content/about.json";
 import legal from "@/content/legal.json";
+import advertisePage from "@/content/advertise.json";
+import contentPage from "@/content/content.json";
 import newsletterPage from "@/content/newsletter.json";
 import teardown from "@/content/resources/750-post-teardown.json";
 import swipe from "@/content/resources/executive-swipe-file.json";
@@ -27,6 +29,14 @@ export function getAbout(): About {
 
 export type NewsletterPage = typeof newsletterPage;
 
+export function getContentPage() {
+  return contentPage;
+}
+
+export function getAdvertisePage() {
+  return advertisePage;
+}
+
 export function getNewsletterPage(): NewsletterPage {
   return newsletterPage;
 }
@@ -48,19 +58,6 @@ export function getSocialLinks(): NavItem[] {
     .filter(([, href]) => href.length > 0)
     .map(([key, href]) => ({ label: labels[key] ?? key, href }));
 }
-
-/**
- * The RallyUp booking link carries a per placement utm_content so the two
- * surfaces that point at it can be told apart in Cal.com.
- */
-export function bookingUrl(placement: string): string {
-  const base = site.company.bookingBase;
-  if (!base) return "";
-  const url = new URL(base);
-  url.searchParams.set("utm_content", placement);
-  return url.toString();
-}
-
 
 export type ResourceBlock = {
   type: string;

@@ -5,7 +5,7 @@ import { getNewsletterPage } from "@/lib/content";
 import { OG_SIZE } from "@/lib/og";
 
 /**
- * Share card for /newsletter, built to look like the page it links to:
+ * Share card for the homepage newsletter, built to look like the page it links to:
  * orange field, The Draft masthead, the tagline, and the ink band of client
  * logos. Separate from lib/og.tsx because that spec leaves images out.
  *

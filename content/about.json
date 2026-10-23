@@ -1,6 +1,6 @@
 {
   "title": "About me",
-  "lead": "I'm partner and chief of staff at RallyUp, a VC-backed LinkedIn content agency I helped take from $0 to $1M+ ARR. I run ops and clients there, and I write [The Draft](/newsletter), a weekly letter on B2B social and content playbooks that generate revenue.",
+  "lead": "I'm partner and chief of staff at RallyUp, a VC-backed LinkedIn content agency I helped take from $0 to $1M+ ARR. I run ops and clients there, and I write [The Draft](/), a weekly letter on B2B social and content playbooks that generate revenue.",
   "ladder": [
     {
       "heading": "Before this",
@@ -35,6 +35,6 @@
   },
   "cta": {
     "label": "Read The Draft",
-    "href": "/newsletter"
+    "href": "/"
   }
 }

@@ -195,7 +195,7 @@
     transform-origin: 0;
   }
 
-  /* Client logo carousel on /newsletter. See components/LogoTicker.tsx. */
+  /* Client logo carousel on the homepage and /advertise. See components/LogoTicker.tsx. */
   .logo-ticker {
     mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
   }

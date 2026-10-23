@@ -125,3 +125,61 @@ export async function startJourney(
     return false;
   }
 }
+
+export type Post = {
+  title: string;
+  subtitle: string;
+  url: string;
+  thumbnail: string;
+  /** Unix seconds. */
+  publishedAt: number;
+};
+
+/**
+ * Published web posts, newest first. Cached for an hour by Next, so a new
+ * issue reaches /content within the hour without a deploy. Returns an empty
+ * list when beehiiv is off or unreachable, and the page shows its empty state.
+ */
+export async function listPosts(): Promise<Post[]> {
+  const { key, publication, enabled } = config();
+  if (!enabled || !key || !publication) return [];
+
+  const params = new URLSearchParams({
+    status: "confirmed",
+    platform: "all",
+    order_by: "publish_date",
+    direction: "desc",
+    limit: "50",
+  });
+
+  try {
+    const response = await fetch(`${API}/publications/${publication}/posts?${params}`, {
+      headers: { Authorization: `Bearer ${key}` },
+      next: { revalidate: 3600 },
+      signal: AbortSignal.timeout(TIMEOUT_MS),
+    });
+    if (!response.ok) {
+      console.warn("beehiiv rejected a posts request", response.status);
+      return [];
+    }
+    const { data } = (await response.json()) as {
+      data: {
+        title: string;
+        subtitle?: string;
+        web_url: string;
+        thumbnail_url?: string;
+        publish_date: number;
+      }[];
+    };
+    return data.map((post) => ({
+      title: post.title.trim(),
+      subtitle: post.subtitle?.trim() ?? "",
+      url: post.web_url,
+      thumbnail: post.thumbnail_url ?? "",
+      publishedAt: post.publish_date,
+    }));
+  } catch (error) {
+    console.warn("beehiiv posts call failed", error);
+    return [];
+  }
+}

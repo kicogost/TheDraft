@@ -60,7 +60,7 @@ export default async function ThankYouPage({ searchParams }: Props) {
       }
     >
       <div className="mt-12 flex flex-wrap gap-6">
-        <Button href="/newsletter" variant="outline">
+        <Button href="/" variant="outline">
           Back to the newsletter
         </Button>
         {others > 0 ? (

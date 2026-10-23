@@ -1,0 +1,27 @@
+{
+  "title": "Advertise.",
+  "lead": "Put your brand in front of B2B founders, marketers and execs who care about growing through organic content.",
+  "statsLabel": "The numbers",
+  "stats": [
+    { "value": "59%", "label": "Newsletter open rate, last 3 months" },
+    { "value": "13.5%", "label": "Newsletter click rate, last 3 months" },
+    { "value": "3,000+", "label": "LinkedIn followers" }
+  ],
+  "placementsLabel": "Ways to work together",
+  "placements": [
+    {
+      "name": "Sponsor The Draft",
+      "text": "One sponsor per issue, placed near the top and written in my voice. Goes out every Tuesday."
+    },
+    {
+      "name": "A LinkedIn post",
+      "text": "A dedicated post on my LinkedIn about a product I would actually use, written for B2B founders and execs."
+    }
+  ],
+  "logosLabel": "Brands I've worked with",
+  "ratesNote": "Early sponsor rates while the list grows. Email me and I'll send current numbers and open dates.",
+  "cta": {
+    "label": "Email me about sponsoring",
+    "href": "mailto:fgostscagliarini@gmail.com?subject=Sponsoring%20The%20Draft"
+  }
+}
