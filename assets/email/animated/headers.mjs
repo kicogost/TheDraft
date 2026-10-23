@@ -11,7 +11,8 @@ import path from "node:path";
 
 const [outDir, chromePath] = process.argv.slice(2);
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "../../..");
-const font = (f) => `file://${root}/assets/fonts/${f}`;
+// Inlined as data URLs: a page loaded with setContent cannot read file:// fonts.
+const font = (f) => `data:font/ttf;base64,${fs.readFileSync(`${root}/assets/fonts/${f}`).toString("base64")}`;
 
 const ACCENT = "#b4552b", INK = "#241c16", PAPER = "#fdf6ec";
 

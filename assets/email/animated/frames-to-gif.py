@@ -15,6 +15,6 @@ for d in sorted(glob.glob(os.path.join(src, "*"))):
     small = [f.resize((w // 2, h // 2), Image.LANCZOS) for f in frames]
     pal = small[0].quantize(colors=48, method=Image.Quantize.MEDIANCUT)
     q = [f.quantize(palette=pal, dither=Image.Dither.NONE) for f in small]
-    path = os.path.join(out, f"sec-{os.path.basename(d)}.gif")
+    path = os.path.join(out, f"sec-{os.path.basename(d)}-anim.gif")
     q[0].save(path, save_all=True, append_images=q[1:], duration=100, loop=0, optimize=True, disposal=1)
     print(path, os.path.getsize(path))
