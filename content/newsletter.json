@@ -5,6 +5,11 @@
   "submitLabel": "Subscribe free",
   "offer": "Subscribe and get The Viral LinkedIn Launch Playbook that generated +1m impressions",
   "readersLine": "Read by the founders, employees, and investors at the top startups and funds.",
+  "shareCard": {
+    "tagline": "How top 1% startups crush organic marketing.",
+    "highlight": "1%",
+    "readersLine": "Read by founders and teams at"
+  },
   "logos": [
     { "name": "Airwallex", "src": "/images/wordmarks/airwallex.svg", "width": 175, "height": 24 },
     { "name": "Lightbank", "src": "/images/wordmarks/lightbank.png", "width": 97, "height": 40 },
