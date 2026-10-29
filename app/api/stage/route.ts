@@ -5,7 +5,6 @@ import { allow, clientIp } from "@/lib/rate-limit";
 import { verifySignup } from "@/lib/signing";
 import { SIGNUP_COOKIE } from "@/lib/signup-cookie";
 
-const TRIED_LIMIT = 2000;
 const COMPANY_LIMIT = 120;
 
 /**
@@ -38,7 +37,7 @@ export async function POST(request: Request) {
     );
   }
 
-  let body: { role?: string; companyName?: string; tried?: string };
+  let body: { role?: string; companyName?: string };
   try {
     body = await request.json();
   } catch {
@@ -56,8 +55,12 @@ export async function POST(request: Request) {
   // Posted as companyName, never company: `company` is the honeypot on the
   // signup form, where a filled value means bot.
   const company = (body.companyName ?? "").trim().slice(0, COMPANY_LIMIT);
-
-  const tried = (body.tried ?? "").trim().slice(0, TRIED_LIMIT);
+  if (!company) {
+    return NextResponse.json(
+      { ok: false, error: "Add a company name to carry on." },
+      { status: 400 },
+    );
+  }
 
   // Re-posting the same email updates the record rather than creating a second
   // one, so the answers land on the subscriber created moments earlier. The
@@ -66,7 +69,7 @@ export async function POST(request: Request) {
     email,
     medium: "thank-you",
     sendWelcomeEmail: false,
-    customFields: { role, ...(company ? { company } : {}), ...(tried ? { tried } : {}) },
+    customFields: { role, company },
   });
 
   if (!result.ok) {

@@ -8,7 +8,7 @@ import type { StageQuestion } from "@/lib/content";
 
 type Download = { href: string; label: string };
 
-const STEPS = 3;
+const STEPS = 2;
 
 /**
  * One question per screen, asked on the thank you page, with the download held
@@ -16,9 +16,8 @@ const STEPS = 3;
  * copy rather than the thing itself, and nobody who declines goes away empty
  * handed.
  *
- * Only the role is required, and it advances on tap with no confirm button.
- * The other two can be skipped, because a short form answered beats a long one
- * abandoned, and the role is the only answer a sponsor ever asks about.
+ * Both answers are required. The role advances on tap with no confirm
+ * button, and the company submits the form, so it stays two short screens.
  *
  * The employer field posts as `companyName`, not `company`. `company` is the
  * honeypot on the signup form, where a filled value means bot.
@@ -37,7 +36,6 @@ export function StageQuestions({
   const [step, setStep] = useState(0);
   const [role, setRole] = useState("");
   const [companyName, setCompanyName] = useState("");
-  const [tried, setTried] = useState("");
   const [state, setState] = useState<"idle" | "sending" | "done" | "error">("idle");
   const [message, setMessage] = useState("");
   const advance = useRef<ReturnType<typeof setTimeout>>(undefined);
@@ -52,8 +50,12 @@ export function StageQuestions({
     advance.current = setTimeout(() => setStep(1), 220);
   }
 
-  async function submit(finalTried: string) {
+  async function submit() {
     if (state === "sending") return;
+    if (!companyName.trim()) {
+      setMessage("Add a company name to carry on.");
+      return;
+    }
     setState("sending");
     setMessage("");
 
@@ -61,7 +63,7 @@ export function StageQuestions({
       const response = await fetch("/api/stage", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ role, companyName, tried: finalTried }),
+        body: JSON.stringify({ role, companyName }),
       });
       const data = await response.json();
       if (!response.ok || !data.ok) {
@@ -182,46 +184,21 @@ export function StageQuestions({
                 type="text"
                 autoFocus
                 autoComplete="organization"
+                required
                 maxLength={120}
                 value={companyName}
-                onChange={(event) => setCompanyName(event.target.value)}
+                onChange={(event) => {
+                  setCompanyName(event.target.value);
+                  setMessage("");
+                }}
                 onKeyDown={(event) => {
                   if (event.key === "Enter") {
                     event.preventDefault();
-                    setStep(2);
+                    submit();
                   }
                 }}
                 placeholder={question.companyPlaceholder}
                 className="mt-6 min-h-14 w-full border-2 border-ink bg-paper px-4 py-3.5 text-base text-ink outline-none placeholder:text-ash focus:border-accent"
-              />
-            </div>
-          ) : null}
-
-          {step === 2 ? (
-            <div>
-              <label
-                htmlFor="tried"
-                className={`block text-[clamp(1.25rem,3vw,1.75rem)] ${heading}`}
-              >
-                {question.triedLabel}
-              </label>
-              <p className="mt-3 text-ink-soft">{question.triedHint}</p>
-              <textarea
-                id="tried"
-                name="tried"
-                rows={4}
-                autoFocus
-                maxLength={2000}
-                value={tried}
-                onChange={(event) => setTried(event.target.value)}
-                onKeyDown={(event) => {
-                  if (event.key === "Enter" && (event.metaKey || event.ctrlKey)) {
-                    event.preventDefault();
-                    submit(tried);
-                  }
-                }}
-                placeholder={question.triedPlaceholder}
-                className="mt-6 w-full resize-none border-2 border-ink bg-paper px-4 py-3.5 text-base text-ink outline-none placeholder:text-ash focus:border-accent"
               />
             </div>
           ) : null}
@@ -246,14 +223,10 @@ export function StageQuestions({
               <button
                 type="button"
                 disabled={state === "sending"}
-                onClick={() => (step === 1 ? setStep(2) : submit(tried))}
+                onClick={submit}
                 className="group inline-flex min-h-14 w-full items-center justify-center gap-2.5 border-2 border-ink bg-ink px-7 py-3.5 font-semibold text-paper transition-transform duration-150 hover:-translate-y-0.5 disabled:translate-y-0 disabled:opacity-60 sm:w-auto"
               >
-                {step === 1
-                  ? "Continue"
-                  : state === "sending"
-                    ? "Sending"
-                    : question.submitLabel}
+                {state === "sending" ? "Sending" : question.submitLabel}
                 <span
                   aria-hidden="true"
                   className="transition-transform duration-150 group-hover:translate-x-1"
@@ -264,34 +237,14 @@ export function StageQuestions({
             )}
 
             {step > 0 ? (
-              <div className="flex items-center gap-5">
-                <button
-                  type="button"
-                  disabled={state === "sending"}
-                  onClick={() => setStep(step - 1)}
-                  className="text-sm text-ash underline underline-offset-4 transition-colors hover:text-ink disabled:opacity-60"
-                >
-                  Back
-                </button>
-                <button
-                  type="button"
-                  disabled={state === "sending"}
-                  onClick={() => {
-                    // Skip discards what was typed. Continue is the button
-                    // that keeps it, so the two have to mean different things.
-                    if (step === 1) {
-                      setCompanyName("");
-                      setStep(2);
-                    } else {
-                      setTried("");
-                      submit("");
-                    }
-                  }}
-                  className="text-sm text-ash underline underline-offset-4 transition-colors hover:text-ink disabled:opacity-60"
-                >
-                  Skip
-                </button>
-              </div>
+              <button
+                type="button"
+                disabled={state === "sending"}
+                onClick={() => setStep(step - 1)}
+                className="text-sm text-ash underline underline-offset-4 transition-colors hover:text-ink disabled:opacity-60"
+              >
+                Back
+              </button>
             ) : null}
           </div>
 

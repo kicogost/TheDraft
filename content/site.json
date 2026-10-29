@@ -96,7 +96,7 @@
   },
   "stageQuestion": {
     "heading": "Want the playbook?",
-    "trade": "One question first, so I know who it's for.",
+    "trade": "Two quick questions first, so I know who it's for.",
     "roleLabel": "Which of these is closest to your job?",
     "roleOptions": [
       {
@@ -125,17 +125,14 @@
       }
     ],
     "companyLabel": "Where do you work?",
-    "companyHint": "Optional. The company name on its own is plenty.",
+    "companyHint": "The company name on its own is plenty. If you work for yourself, put your own business.",
     "companyPlaceholder": "For example: Airwallex",
-    "triedLabel": "What have you tried that has not worked?",
-    "triedHint": "Optional, and it's the answer that helps most. I read every one of these myself.",
-    "triedPlaceholder": "For example: posted twice a week for three months, about 400 views a post, not one inbound message. No idea if it is the topic or the writing.",
     "submitLabel": "Give me the playbook",
     "doneHeading": "Here it is.",
     "doneBody": "Thank you, genuinely. That shapes what I write next."
   },
   "thankYou": {
-    "resourceLine": "Your copy is one question away, and a link is on its way by email either way.",
+    "resourceLine": "Your copy is two quick questions away, and a link is on its way by email either way.",
     "resourceLineUnverified": "It is on its way to your inbox now.",
     "newsletterLine": "You're subscribed. The next Draft lands on Tuesday morning."
   },
