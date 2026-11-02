@@ -24,6 +24,10 @@
       "href": "/resources",
       "children": [
         {
+          "label": "The story interview",
+          "href": "/resources/story-interview"
+        },
+        {
           "label": "The executive swipe file",
           "href": "/resources/executive-swipe-file"
         },

@@ -1,0 +1,50 @@
+{
+  "slug": "story-interview",
+  "template": "story",
+  "title": "The story interview.",
+  "description": "The interview we run with every founder and executive we write for, as one Claude prompt. Fifteen minutes of questions, then your story bank and five scored LinkedIn drafts.",
+  "kicker": "15 minutes · 5 drafts",
+  "formHeader": "15 minutes. 5 drafts. Built on 750+ posts.",
+  "formEyebrow": "Get it free, in your inbox",
+  "submitLabel": "Send me the story interview",
+  "disclosure": "You will also get The Draft, one letter a week on how top 1% startups crush organic marketing. Leave whenever you like.",
+  "blocks": [
+    {
+      "type": "lead",
+      "text": "Every account we run starts with an interview, not a brief. Fifteen minutes of questions that pull out the things that actually happened to someone, because those are the only posts nobody else can write."
+    },
+    {
+      "type": "p",
+      "text": "I'm a partner at RallyUp, where we write LinkedIn for B2B founders and executives. We've published more than 750 posts this year, and the accounts we run have generated 21.3M+ impressions. All of it came out of that first conversation."
+    },
+    {
+      "type": "p",
+      "text": "This is the interview, written as one prompt you paste into Claude. It asks the questions we ask, files your answers the way we file them, then writes five drafts and scores each one against the checks we run before anything reaches a client."
+    },
+    {
+      "type": "list",
+      "items": [
+        "The full prompt, ready to copy into Claude",
+        "Your story bank: every moment it pulls out of you, filed by post type",
+        "Five drafts: a launch, a hiring post, a newsjack, your intro story and a teach",
+        "A real post for each type from the accounts we run, numbers attached",
+        "The scorecard every draft has to pass, and what each line means"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Run it once and you have a week of posts. Keep the story bank and you have next month's too."
+    },
+    {
+      "type": "p",
+      "text": "The honest limit is in there as well. It's only as good as your answers, and it can't invent a point of view you don't have. Give it the number, the name and what was said, and it gives you posts that sound like you."
+    },
+    {
+      "type": "ask",
+      "text": "Drop your email below and I'll send it over."
+    }
+  ],
+  "resourceUrl": "/api/download/story-interview?k=93a9770ebfec8032730efe9ea3c66929",
+  "automationId": "aut_c5f3028a-bfbb-4fb0-9096-ead6d063a143",
+  "deliverable": "content/resources/files/the-story-interview.pdf"
+}

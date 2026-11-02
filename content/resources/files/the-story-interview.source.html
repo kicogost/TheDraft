@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>The story interview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#fdf6ec;--dim:#f4e9d9;--ink:#241c16;--soft:#4a4239;--ash:#6f6559;--line:#241c1617;--accent:#b4552b;--deep:#9e441d}
+  *{box-sizing:border-box}
+  /* Vertical margin on the page box, zero horizontal. Chrome only applies
+     body padding-top to the first page, so the top inset has to come from
+     the page box or text lands on the sheet edge after every natural break.
+     Zero horizontal keeps the paper colour bleeding to the left and right. */
+  @page{size:A4;margin:15mm 0}
+  html{background:var(--paper)}
+  body{margin:0;padding:0 16mm;background:var(--paper);color:var(--soft);font:400 10.5pt/1.6 Inter,system-ui,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  h1,h2{color:var(--ink);font-family:Anton,"Arial Narrow",Impact,sans-serif;font-weight:400;margin:0;text-transform:uppercase;letter-spacing:.005em}
+  h3,h4{color:var(--ink);font-family:Inter,system-ui,sans-serif;font-weight:700;margin:0}
+  h1{font-size:40pt;line-height:.98}
+  h2{font-size:21pt;line-height:1;margin:0 0 7pt}
+  h3{font-size:12.5pt;line-height:1.25;letter-spacing:-.005em}
+  p{margin:0 0 7pt}
+  .label{color:var(--ash);font-family:"JetBrains Mono",monospace;font-size:7.5pt;letter-spacing:.2em;text-transform:uppercase}
+  .cover{border-bottom:2px solid var(--ink);padding-bottom:14pt;margin-bottom:18pt}
+  .lead{font-size:12.5pt;line-height:1.5;color:var(--ink);margin:10pt 0 0;max-width:34em}
+  .sec{margin-top:20pt;page-break-inside:avoid}
+  .rule{border:0;border-top:1px solid var(--line);margin:16pt 0}
+  .honest{border:2px solid var(--ink);background:#fff;padding:12pt 14pt;margin-top:12pt}
+  .foot{margin-top:24pt;border-top:2px solid var(--ink);padding-top:10pt;font-size:8.5pt;color:var(--ash);display:flex;justify-content:space-between;gap:12pt}
+  table{border-collapse:collapse;width:100%;font-size:9pt;margin:10pt 0}
+  th,td{text-align:left;padding:5pt 8pt;border-bottom:1px solid var(--line)}
+  thead th{font-family:"JetBrains Mono",monospace;font-size:7pt;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);background:var(--dim);border-bottom:2px solid var(--ink)}
+  tbody tr:last-child td{border-bottom:none}
+  td.n{font-family:"JetBrains Mono",monospace;white-space:nowrap}
+  td.up{color:var(--deep);font-weight:600}
+  .play{border-top:1px solid var(--line);padding-top:11pt;margin-top:13pt;page-break-inside:avoid}
+  .play .idx{font-family:"JetBrains Mono",monospace;font-size:7.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
+  .play h3{margin:3pt 0 6pt;font-size:13pt}
+  .stats{display:flex;flex-wrap:wrap;gap:0;border:2px solid var(--ink);background:#fff;margin:8pt 0 9pt}
+  .stat{flex:1 1 auto;min-width:5.6em;padding:7pt 9pt;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:none}
+  .stat .v{font-family:"JetBrains Mono",monospace;font-size:11pt;color:var(--ink);font-weight:600;line-height:1.2}
+  .stat .k{font-family:"JetBrains Mono",monospace;font-size:6.5pt;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);margin-top:2pt}
+  .why{background:var(--dim);border-left:3px solid var(--accent);padding:8pt 12pt;margin-top:8pt;font-size:9.5pt}
+  .why b{color:var(--ink)}
+  .steal{border-left:3px solid var(--ink);padding:8pt 12pt;margin-top:7pt;font-size:9.5pt}
+  .steal b{color:var(--ink)}
+  .bucket{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:6.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--paper);background:var(--ink);padding:2pt 5pt;margin-left:5pt;vertical-align:2pt}
+  .bucket.tof{background:var(--accent)}
+  .bucket.mof{background:var(--soft)}
+  .pagebreak{page-break-before:always;height:0}
+  ol{margin:0 0 7pt;padding-left:16pt}
+  li{margin:0 0 4pt}
+  .prompt{border:2px solid var(--ink);background:#fff;padding:12pt 14pt;font-family:"JetBrains Mono",monospace;font-size:8pt;line-height:1.55;color:var(--ink)}
+  .prompt p{margin:0 0 7pt}
+  .prompt p:last-child{margin:0}
+  .prompt b{font-weight:600;letter-spacing:.06em}
+</style></head><body>
+
+<div class="cover">
+  <p class="label">15 minutes &middot; 5 drafts &middot; built on 750+ posts</p>
+  <h1>The story interview</h1>
+  <p class="lead">One prompt that turns Claude into the interviewer we use with every founder and executive we write for. Fifteen minutes of questions, then your story bank and a week of LinkedIn drafts, one for each of the five post types that did the most for our accounts this year.</p>
+</div>
+
+<div class="sec">
+  <h2>What this is</h2>
+  <p>I'm a partner at RallyUp, where we write LinkedIn for B2B founders and executives. We've published <b>more than 750 posts in 2026</b>, and the accounts we run have generated <b>21.3M+ impressions</b>.</p>
+  <p>Every one of those accounts started the same way: an interview. Not a brief, not a list of topics. A conversation that pulls out the things that actually happened to you, because those are the only posts nobody else can write.</p>
+  <p>This is that interview, written as a prompt you can run yourself. It carries the questions we ask, the way we file your stories, the five post types we lean on, and the checks every draft has to pass before it reaches a client.</p>
+  <div class="honest">
+    <p style="margin:0"><b>The honest promise.</b> It gets the stories out of you and drafts them well. It can't invent a point of view you don't have, and the drafts are a strong first version, not a finished one. Read each one aloud before you post it, and change anything you wouldn't say.</p>
+  </div>
+</div>
+
+<div class="sec">
+  <h2>How to run it</h2>
+  <ol>
+    <li><b>Open a new chat in Claude.</b> It's written for Claude and works on the free plan. Other assistants will run it, less faithfully.</li>
+    <li><b>Optional, but worth it:</b> paste three to five of your past posts and your LinkedIn About above the prompt. It learns how you sound from them and skips the questions they already answer.</li>
+    <li><b>Copy the prompt on the next page,</b> paste it in, and send.</li>
+    <li><b>Answer one question at a time.</b> Talk, don't type: dictation or voice notes give it far better material. Give it the specifics: the number, the name, what was said.</li>
+    <li><b>About 15 minutes later</b> you get your story bank, five drafts and a scorecard under each one.</li>
+    <li><b>Edit, then post one a day</b> for a week. Keep the story bank. It's next month's content.</li>
+  </ol>
+</div>
+
+<div class="sec" style="page-break-before:always;page-break-inside:auto">
+  <h2>The prompt</h2>
+  <p class="label" style="margin-bottom:6pt">Copy everything inside the box</p>
+  <div class="prompt">
+<p>You are interviewing me so you can write my LinkedIn posts. Interview me for about 15 minutes, build a bank of my real stories, then write five posts in my voice, one for each post type below, and score each one before you show it to me.</p>
+
+<p><b>HOW TO INTERVIEW ME</b></p>
+<p>- Ask one question at a time. Never stack two.<br>
+- When a question is open, offer 3 to 5 options and always end with "or something else". Then follow up to make my pick specific to me.<br>
+- When I give a short answer, ask for the example: what happened, when, who was there, what was said, the number.<br>
+- When I give a long answer, pull the single most interesting thread. Don't summarise it all back.<br>
+- Don't ask what I've already answered. Don't praise my answers. "Got it" is enough.<br>
+- If I've pasted past posts or my LinkedIn About above this prompt, read them first, learn how I write, and skip what they already answer.<br>
+- If I seem rushed, tell me we're nearly done and move to the close.</p>
+
+<p><b>THE INTERVIEW, IN ORDER</b></p>
+<p>1. Who I am (2 to 3 min). My role, a normal week, how I got here, the part of the job I could talk about for hours.<br>
+2. My ground (3 to 4 min). The 2 or 3 topics where people would think "this person actually knows". For each one: a lived example, and the one thing most people get wrong about it.<br>
+3. Moments (4 to 5 min). The most important part. Collect at least 8 specific moments, with at least one for each post type: something I launched, shipped or announced; a hire I made or am making and what I look for; a piece of news in my industry this month that I have a view on; how I got here, including one detail that surprises people; a method, checklist or template I use that people ask me about. For every moment get: when, where, what happened, the number or the quote, and what changed afterwards.<br>
+4. How I sound (2 min). Offer: the Educator, the Practitioner, the Bold Voice, the Builder, the Connector, or a mix. Then ask what my posts must never feel like: salesy, generic motivation, corporate, too jokey, preachy, like everyone else in my industry.<br>
+5. What it's for (1 min). Ask me to rank: customers or leads, reputation, hiring, company visibility, network, giving back. If customers, ask exactly who.<br>
+6. Off limits (1 min). Topics to avoid, and any company rules about what I can say in public.<br>
+7. Close. Play back in two or three sentences who I am, my ground, how I sound and my number one goal. Fix anything I correct.</p>
+
+<p><b>WHAT YOU HAND BACK</b></p>
+<p>Part 1, my story bank. Each moment as a short entry: When. What happened (2 to 4 sentences, real details only). What changed. Details worth keeping (exact numbers, names, quotes). Which post type it fits. Safe to post: yes, with edits, or ask someone first.</p>
+<p>Part 2, five drafts, one per type:<br>
+1. The launch. Something I shipped, opened or announced. Lead with the moment or the number, show what changed for the people it's for, and give one clear ask.<br>
+2. The hiring post. A role I'm hiring for, or how I hire. Say what the job really involves and who it isn't for, and put a filter in the ask that takes effort.<br>
+3. The newsjack. This month's news in my field. The number goes in the first line, then turn to what only an insider would notice: who pays, who carries the risk, what changes next.<br>
+4. The personal intro story. How I got here. Open inside one specific moment, give one turning point, and end with what I do now and who I do it for.<br>
+5. The teach. A method, checklist or template I actually use, laid out so people save it. Numbered steps, each with a real example.</p>
+
+<p><b>RULES FOR EVERY DRAFT</b></p>
+<p>- Build each draft on one moment from the bank. Never invent a detail, number, date, name or quote. If something is missing, write [ASK: what you need] instead.<br>
+- The first two lines must earn the "see more". Drop the reader into a moment or a specific claim. Don't announce the topic.<br>
+- First person, plain language, my words from the interview. Keep my rough edges. Don't make me sound more polished than I am.<br>
+- 750 to 2,700 characters. Short paragraphs, varied sentence length, written for a phone.<br>
+- Never open with my company or product name, and never turn the post into a pitch.<br>
+- Cut adverbs, throat-clearing ("Here's the thing"), "Not X. Y." contrasts, "Let that sink in", bumper-sticker lines, meta-commentary, em dashes, and any run of short sentences with the same pattern.<br>
+- The authorship test: could anyone else in my industry have posted this? If yes, rewrite it around something only I could say.</p>
+
+<p><b>SCORE EVERY DRAFT BEFORE I SEE IT</b></p>
+<p>Score 0 to 10 on six things: sounds like me, hook, rhythm, directness (every sentence earns its place), no AI tells, specificity. A draft passes at 48 out of 60 with nothing under 6, and only if it also clears five gates: off-limits respected, no stacked short sentences, length in range, doesn't lead with a pitch, passes the authorship test. Rewrite anything that fails before you show it. Under each draft, give the score in one line and the single change that would improve it most.</p>
+
+<p>Start now with your first question. Keep it warm and short.</p>
+  </div>
+</div>
+
+<div class="sec" style="page-break-before:always;page-break-inside:auto">
+  <h2>The five post types</h2>
+  <p>These are the five shapes that did the most for the accounts we run this year. One real post for each, with the numbers from the account's own analytics. Accounts are anonymised, because the posts belong to the people who published them.</p>
+
+  <div class="play">
+    <p class="idx">01 &middot; The launch</p>
+    <h3>A startup launch that asked for two things</h3>
+    <div class="stats">
+      <div class="stat"><div class="v">38,291</div><div class="k">Impressions</div></div>
+      <div class="stat"><div class="v">554</div><div class="k">Link clicks</div></div>
+      <div class="stat"><div class="v">343</div><div class="k">Comments</div></div>
+      <div class="stat"><div class="v">&lt;24h</div><div class="k">Waitlist full</div></div>
+    </div>
+    <div class="why"><b>Why it worked:</b> one post, two actions. Comment below, and sign up on the site. They're separate funnels, and most of the qualified signups never touched the link.</div>
+  </div>
+
+  <div class="play">
+    <p class="idx">02 &middot; The hiring post</p>
+    <h3>Our own founding hire</h3>
+    <div class="stats">
+      <div class="stat"><div class="v">20,369</div><div class="k">Impressions</div></div>
+      <div class="stat"><div class="v">82</div><div class="k">Saves</div></div>
+      <div class="stat"><div class="v">55</div><div class="k">Link clicks</div></div>
+      <div class="stat"><div class="v">21</div><div class="k">Followers</div></div>
+    </div>
+    <div class="why"><b>Why it worked:</b> it said early on who the job was not for, and asked people to tag someone who fit. 82 saves and 55 clicks, on a post type most accounts treat as an admin notice.</div>
+  </div>
+
+  <div class="play">
+    <p class="idx">03 &middot; The newsjack</p>
+    <h3>A finance exec, the day after the news</h3>
+    <div class="stats">
+      <div class="stat"><div class="v">17,729</div><div class="k">Impressions</div></div>
+      <div class="stat"><div class="v">37</div><div class="k">Saves</div></div>
+      <div class="stat"><div class="v">42</div><div class="k">Followers</div></div>
+    </div>
+    <div class="why"><b>Why it worked:</b> the number went in the first line, then it turned to what only an insider could explain: how the risk was split. Everyone had the headline. LinkedIn News picked it up the next day.</div>
+  </div>
+
+  <div class="play">
+    <p class="idx">04 &middot; The personal intro story</p>
+    <h3>A VC's first ever post</h3>
+    <div class="stats">
+      <div class="stat"><div class="v">50,127</div><div class="k">Impressions</div></div>
+      <div class="stat"><div class="v">218</div><div class="k">Followers</div></div>
+      <div class="stat"><div class="v">1,899</div><div class="k">Profile views</div></div>
+    </div>
+    <div class="why"><b>Why it worked:</b> the intro post is the one people click through to your profile from. It only happens once, so it has to say what you'll write about next.</div>
+  </div>
+
+  <div class="play">
+    <p class="idx">05 &middot; The teach</p>
+    <h3>A VC's founder update template</h3>
+    <div class="stats">
+      <div class="stat"><div class="v">81,260</div><div class="k">Impressions</div></div>
+      <div class="stat"><div class="v">462</div><div class="k">Saves</div></div>
+      <div class="stat"><div class="v">164</div><div class="k">Followers</div></div>
+      <div class="stat"><div class="v">579</div><div class="k">Profile views</div></div>
+    </div>
+    <div class="why"><b>Why it worked:</b> it answered a question founders were already asking, as a template. 5.7 saves for every 1,000 people who saw it.</div>
+  </div>
+</div>
+
+<div class="sec">
+  <h2>What the scorecard means</h2>
+  <p>Every draft we write is scored before a client sees it. The prompt runs a short version of the same rubric, so you can read the line under each draft.</p>
+  <table>
+    <thead><tr><th>Check</th><th>What it asks</th></tr></thead>
+    <tbody>
+      <tr><td><b>Sounds like me</b></td><td>Would someone who knows you believe you wrote it?</td></tr>
+      <tr><td><b>Hook</b></td><td>Do the first two lines drop the reader into a moment or a claim, or just name a topic?</td></tr>
+      <tr><td><b>Rhythm</b></td><td>Do sentence and paragraph lengths vary, or does it read like a metronome?</td></tr>
+      <tr><td><b>Directness</b></td><td>Could you cut a sentence without losing anything? Then it shouldn't be there.</td></tr>
+      <tr><td><b>No AI tells</b></td><td>Adverbs, throat-clearing, "Not X. Y.", bumper-sticker endings.</td></tr>
+      <tr><td><b>Specificity</b></td><td>A real number, name, date or quote, from your life.</td></tr>
+      <tr><td><b>Authorship</b></td><td>Could anyone else in your industry have posted it? If yes, it fails, whatever the score.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="sec">
+  <h2>Honest limits</h2>
+  <div class="honest">
+    <p><b>It's only as good as your answers.</b> "We grew a lot" gives it nothing. "We went from 4 to 31 customers in a quarter" gives it a post.</p>
+    <p><b>The examples are from our accounts, not a law.</b> B2B, founder and executive led, mostly tech and finance, all on LinkedIn. If you sell to consumers, treat the post types as a starting point.</p>
+    <p><b>Check every fact before you post.</b> The prompt tells Claude never to invent details, and to leave [ASK] markers where something is missing. Read for them.</p>
+    <p style="margin:0"><b>These are reach and engagement numbers, not attribution.</b> I can show you saves and profile views. I can't draw a clean line from a save to a signed contract, and nobody honestly can.</p>
+  </div>
+</div>
+
+<div class="foot">
+  <span><b>Francisco Gost</b> writes The Draft, a weekly letter on how top 1% startups crush organic marketing, at franciscogost.com</span>
+  <span>Partner at RallyUp. 21.3M+ impressions generated for B2B founders and execs.</span>
+</div>
+
+</body></html>
