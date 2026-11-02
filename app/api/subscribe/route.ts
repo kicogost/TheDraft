@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { setSignupCookie } from "@/lib/signup-cookie";
-import { subscribe } from "@/lib/beehiiv";
+import { startJourney, subscribe } from "@/lib/beehiiv";
+import { getSite } from "@/lib/content";
 import { allow, clientIp } from "@/lib/rate-limit";
 import { cleanPath, cleanUtm } from "@/lib/utm";
 
@@ -46,7 +47,7 @@ export async function POST(request: Request) {
     medium: body.source || "homepage",
     utm: cleanUtm(body),
     path: cleanPath(body.path),
-    // The "Welcome, homepage signups" automation sends the first email, so
+    // The "Welcome, website signups" automation sends the welcome, so
     // beehiiv's single preset welcome would arrive as a duplicate alongside it.
     sendWelcomeEmail: false,
   });
@@ -57,6 +58,10 @@ export async function POST(request: Request) {
       { status: 502 },
     );
   }
+
+  // That automation has an API trigger rather than a signup trigger, so it
+  // only ever fires for signups made here.
+  await startJourney(getSite().newsletter.welcomeAutomationId, email);
 
   return setSignupCookie(NextResponse.json({ ok: true, redirect: "/thank-you" }), email);
 }

@@ -79,13 +79,14 @@ export async function subscribe(
         ? { utm_campaign: input.utm?.campaign ?? input.campaign }
         : {}),
       ...(input.path ? { referring_site: `${SITE}${input.path}` } : {}),
-      ...(input.customFields && Object.keys(input.customFields).length
-        ? {
-            custom_fields: Object.entries(input.customFields).map(
-              ([name, value]) => ({ name, value }),
-            ),
-          }
-        : {}),
+      // signup_channel marks every signup made on this site. The beehiiv
+      // automation for Instagram and other signups exits anyone carrying it,
+      // since utm tags alone cannot tell an Instagram bio visitor who signed
+      // up here from a ManyChat signup.
+      custom_fields: Object.entries({
+        ...input.customFields,
+        signup_channel: "website",
+      }).map(([name, value]) => ({ name, value })),
     });
 
     if (!response.ok) {
