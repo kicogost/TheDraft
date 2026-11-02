@@ -9,6 +9,9 @@ import playbook from "@/content/resources/launch-playbook.json";
 import dm from "@/content/resources/chief-of-staff-dm.json";
 import first30 from "@/content/resources/first-30-days.json";
 import storyInterview from "@/content/resources/story-interview.json";
+import million from "@/content/resources/million-arr-channels.json";
+import growth from "@/content/resources/growth-videos.json";
+import startupJobs from "@/content/resources/startup-jobs.json";
 import site from "@/content/site.json";
 
 export type NavItem = {
@@ -88,7 +91,7 @@ export type Resource = {
 };
 
 /** Newest first, which is the order the nav dropdown reads as a changelog. */
-const RESOURCES: Resource[] = [storyInterview, first30, teardown, swipe, playbook, dm];
+const RESOURCES: Resource[] = [million, growth, startupJobs, storyInterview, first30, teardown, swipe, playbook, dm];
 
 /**
  * Live resources only. A retired resource keeps its page and its download

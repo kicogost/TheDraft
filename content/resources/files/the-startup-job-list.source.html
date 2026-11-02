@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>The startup job list</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#fdf6ec;--dim:#f4e9d9;--ink:#241c16;--soft:#4a4239;--ash:#6f6559;--line:#241c1617;--accent:#b4552b;--deep:#9e441d}
+  *{box-sizing:border-box}
+  /* Vertical margin on the page box, zero horizontal. Chrome only applies
+     body padding-top to the first page, so the top inset has to come from
+     the page box or text lands on the sheet edge after every natural break.
+     Zero horizontal keeps the paper colour bleeding to the left and right. */
+  @page{size:A4;margin:15mm 0}
+  html{background:var(--paper)}
+  body{margin:0;padding:0 16mm;background:var(--paper);color:var(--soft);font:400 10.5pt/1.6 Inter,system-ui,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  h1,h2{color:var(--ink);font-family:Anton,"Arial Narrow",Impact,sans-serif;font-weight:400;margin:0;text-transform:uppercase;letter-spacing:.005em}
+  h3,h4{color:var(--ink);font-family:Inter,system-ui,sans-serif;font-weight:700;margin:0}
+  h1{font-size:40pt;line-height:.98}
+  h2{font-size:21pt;line-height:1;margin:0 0 7pt}
+  h3{font-size:12.5pt;line-height:1.25;letter-spacing:-.005em}
+  p{margin:0 0 7pt}
+  .label{color:var(--ash);font-family:"JetBrains Mono",monospace;font-size:7.5pt;letter-spacing:.2em;text-transform:uppercase}
+  .cover{border-bottom:2px solid var(--ink);padding-bottom:14pt;margin-bottom:18pt}
+  .lead{font-size:12.5pt;line-height:1.5;color:var(--ink);margin:10pt 0 0;max-width:34em}
+  .sec{margin-top:20pt;page-break-inside:avoid}
+  .rule{border:0;border-top:1px solid var(--line);margin:16pt 0}
+  .honest{border:2px solid var(--ink);background:#fff;padding:12pt 14pt;margin-top:12pt}
+  .foot{margin-top:24pt;border-top:2px solid var(--ink);padding-top:10pt;font-size:8.5pt;color:var(--ash);display:flex;justify-content:space-between;gap:12pt}
+  table{border-collapse:collapse;width:100%;font-size:9pt;margin:10pt 0}
+  th,td{text-align:left;padding:5pt 8pt;border-bottom:1px solid var(--line)}
+  thead th{font-family:"JetBrains Mono",monospace;font-size:7pt;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);background:var(--dim);border-bottom:2px solid var(--ink)}
+  tbody tr:last-child td{border-bottom:none}
+  td.n{font-family:"JetBrains Mono",monospace;white-space:nowrap}
+  td.up{color:var(--deep);font-weight:600}
+  .play{border-top:1px solid var(--line);padding-top:11pt;margin-top:13pt;page-break-inside:avoid}
+  .play .idx{font-family:"JetBrains Mono",monospace;font-size:7.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
+  .play h3{margin:3pt 0 6pt;font-size:13pt}
+  .stats{display:flex;flex-wrap:wrap;gap:0;border:2px solid var(--ink);background:#fff;margin:8pt 0 9pt}
+  .stat{flex:1 1 auto;min-width:5.6em;padding:7pt 9pt;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:none}
+  .stat .v{font-family:"JetBrains Mono",monospace;font-size:11pt;color:var(--ink);font-weight:600;line-height:1.2}
+  .stat .k{font-family:"JetBrains Mono",monospace;font-size:6.5pt;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);margin-top:2pt}
+  .why{background:var(--dim);border-left:3px solid var(--accent);padding:8pt 12pt;margin-top:8pt;font-size:9.5pt}
+  .why b{color:var(--ink)}
+  .steal{border-left:3px solid var(--ink);padding:8pt 12pt;margin-top:7pt;font-size:9.5pt}
+  .steal b{color:var(--ink)}
+  .bucket{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:6.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--paper);background:var(--ink);padding:2pt 5pt;margin-left:5pt;vertical-align:2pt}
+  .bucket.tof{background:var(--accent)}
+  .bucket.mof{background:var(--soft)}
+  .pagebreak{page-break-before:always;height:0}
+  ol{margin:0 0 7pt;padding-left:16pt}
+  li{margin:0 0 4pt}
+  .meta{font-family:"JetBrains Mono",monospace;font-size:7pt;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);margin:0 0 6pt}
+  a.go{display:block;margin-top:6pt;font-family:"JetBrains Mono",monospace;font-size:8pt;color:var(--deep);font-weight:600;text-decoration:underline;word-break:break-all}
+</style></head><body>
+
+<div class="cover">
+  <p class="label">10 job sites &middot; all startup-friendly</p>
+  <h1>The startup job list</h1>
+  <p class="lead">Ten places to find startup jobs that beat scrolling LinkedIn, with the link to each and what it's best for.</p>
+</div>
+
+<div class="sec">
+  <h2>What this is</h2>
+  <p>I got my job at a startup without applying anywhere. I sent the founder one cold message. But you still need to know which companies are hiring, and these are the places I'd look. Every link was checked on 2 November 2026.</p>
+  <div class="honest">
+    <p style="margin:0"><b>The honest promise.</b> A job board gets you into the queue. To skip it, find the role here, then message the person who runs the team directly, with a small piece of the work already done.</p>
+  </div>
+</div>
+
+<div class="sec" style="page-break-inside:auto">
+  <h2>The ten</h2>
+  <div class="play">
+    <p class="idx">01</p>
+    <h3>Wellfound</h3>
+    <p class="meta">Startup-only</p>
+    <p>Built for startups, with salary and equity shown up front on most roles. Its Curated programme asks candidates to reply to companies within a week.</p>
+    
+    <a class="go" href="https://wellfound.com/jobs">Open &rarr; https://wellfound.com/jobs</a>
+  </div>
+  <div class="play">
+    <p class="idx">02</p>
+    <h3>Y Combinator&#x27;s Work at a Startup</h3>
+    <p class="meta">YC companies</p>
+    <p>Every job at a Y Combinator company in one place. If you want to work at a YC startup, start here.</p>
+    
+    <a class="go" href="https://www.workatastartup.com/jobs">Open &rarr; https://www.workatastartup.com/jobs</a>
+  </div>
+  <div class="play">
+    <p class="idx">03</p>
+    <h3>Welcome to the Jungle (formerly Otta)</h3>
+    <p class="meta">Curated tech roles</p>
+    <p>Welcome to the Jungle bought Otta in 2024 and rebranded it. It narrows things down to roles that match you, so you&#x27;re not scrolling through hundreds.</p>
+    
+    <a class="go" href="https://app.welcometothejungle.com">Open &rarr; https://app.welcometothejungle.com</a>
+  </div>
+  <div class="play">
+    <p class="idx">04</p>
+    <h3>Underdog.io</h3>
+    <p class="meta">Startups apply to you</p>
+    <p>One application and you&#x27;re done. Companies reach out to you, with direct intros to founders and hiring managers.</p>
+    
+    <a class="go" href="https://underdog.io">Open &rarr; https://underdog.io</a>
+  </div>
+  <div class="play">
+    <p class="idx">05</p>
+    <h3>Built In</h3>
+    <p class="meta">Company culture</p>
+    <p>Shows what it&#x27;s like to work somewhere before you apply: culture, benefits and photos. It lists some large companies too, so filter by size.</p>
+    
+    <a class="go" href="https://builtin.com/jobs">Open &rarr; https://builtin.com/jobs</a>
+  </div>
+  <div class="play">
+    <p class="idx">06</p>
+    <h3>startup.jobs</h3>
+    <p class="meta">Startup-only</p>
+    <p>A free job board for tech startup roles, updated daily.</p>
+    
+    <a class="go" href="https://startup.jobs">Open &rarr; https://startup.jobs</a>
+  </div>
+  <div class="play">
+    <p class="idx">07</p>
+    <h3>Hacker News: Who is hiring?</h3>
+    <p class="meta">Monthly thread</p>
+    <p>On the first weekday of every month, hundreds of companies post jobs in one thread. Each month&#x27;s thread has a new link, so start from this page and open the latest.</p>
+    
+    <a class="go" href="https://news.ycombinator.com/submitted?id=whoishiring">Open &rarr; https://news.ycombinator.com/submitted?id=whoishiring</a>
+  </div>
+  <div class="play">
+    <p class="idx">08</p>
+    <h3>VC job boards</h3>
+    <p class="meta">Portfolio companies</p>
+    <p>Big VC firms list every open role across the companies they&#x27;ve invested in. Three of the largest:</p>
+    
+    <a class="go" href="https://jobs.generalcatalyst.com/jobs">General Catalyst &rarr; https://jobs.generalcatalyst.com/jobs</a>
+      <a class="go" href="https://jobs.a16z.com/jobs">a16z &rarr; https://jobs.a16z.com/jobs</a><br>
+    <a class="go" href="https://jobs.sequoiacap.com/jobs">Sequoia &rarr; https://jobs.sequoiacap.com/jobs</a>
+  </div>
+  <div class="play">
+    <p class="idx">09</p>
+    <h3>We Work Remotely</h3>
+    <p class="meta">Remote</p>
+    <p>Remote jobs only, running since 2011.</p>
+    
+    <a class="go" href="https://weworkremotely.com">Open &rarr; https://weworkremotely.com</a>
+  </div>
+  <div class="play">
+    <p class="idx">10</p>
+    <h3>Lenny&#x27;s Jobs</h3>
+    <p class="meta">Vetted roles</p>
+    <p>From Lenny&#x27;s Newsletter. Lenny says every company is vetted and ghost jobs and staffing-agency posts are filtered out.</p>
+    
+    <a class="go" href="https://www.lennysjobs.com">Open &rarr; https://www.lennysjobs.com</a>
+  </div>
+</div>
+
+<div class="sec">
+  <h2>How to use the list</h2>
+  <ol>
+    <li>Pick three companies you'd love to work at from these boards.</li>
+    <li>Find who runs the team and read their last 20 posts.</li>
+    <li>Message them directly, open with something they wrote, and send a small piece of the job done before they ask.</li>
+  </ol>
+</div>
+
+<div class="foot">
+  <span><b>Francisco Gost</b> writes The Draft, a weekly letter on how top 1% startups crush organic marketing, at franciscogost.com</span>
+  <span>Partner at RallyUp. 21.3M+ impressions generated for B2B founders and execs.</span>
+</div>
+</body></html>

@@ -1,0 +1,43 @@
+{
+  "slug": "growth-videos",
+  "template": "story",
+  "title": "The growth video list.",
+  "description": "The five videos that teach marketing and distribution better than most paid courses, plus three bonus videos, with what each one covers and why to watch it.",
+  "kicker": "5 videos · 3 bonus",
+  "formHeader": "8 videos. About 9 hours. All free.",
+  "formEyebrow": "Get it free, in your inbox",
+  "submitLabel": "Send me the video list",
+  "disclosure": "You will also get The Draft, one letter a week on how top 1% startups crush organic marketing. Leave whenever you like.",
+  "blocks": [
+    {
+      "type": "lead",
+      "text": "Marketing and distribution is the most valuable skill you can build in 2026, and the best material on it is free. It's just buried under a thousand worse videos."
+    },
+    {
+      "type": "p",
+      "text": "I'm a partner at RallyUp, where we write LinkedIn for B2B founders and executives. These are the videos I send founders who ask how to get better at marketing."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Alex Hormozi on the only four ways to get customers",
+        "Facebook's former VP of Growth on retention before acquisition",
+        "A YC partner on getting your first customers by hand",
+        "Rory Sutherland on why people actually buy",
+        "April Dunford's five steps to positioning",
+        "Three bonus videos on founder-led sales, marketing teams and modern GTM"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Every link and running time was checked by hand. Watch one, try one thing from it that week, then start the next."
+    },
+    {
+      "type": "ask",
+      "text": "Drop your email below and I'll send it over."
+    }
+  ],
+  "resourceUrl": "/api/download/growth-videos?k=7a9913a346506700097104670e755fc0",
+  "automationId": "aut_e7532599-d4ef-4e58-ba2f-2783756aec5c",
+  "deliverable": "content/resources/files/the-growth-video-list.pdf"
+}

@@ -1,0 +1,42 @@
+{
+  "slug": "million-arr-channels",
+  "template": "story",
+  "title": "The $1M ARR channel map.",
+  "description": "Every channel B2B startups use to get from zero to $1M ARR, with how fast each one moves, what it costs, and three things to do this week to start it.",
+  "kicker": "15 channels · how to start each",
+  "formHeader": "15 channels. Three first steps for each.",
+  "formEyebrow": "Get it free, in your inbox",
+  "submitLabel": "Send me the channel map",
+  "disclosure": "You will also get The Draft, one letter a week on how top 1% startups crush organic marketing. Leave whenever you like.",
+  "blocks": [
+    {
+      "type": "lead",
+      "text": "Nobody gets to $1M ARR on fifteen channels. You get there on two or three, done properly for a long time. The hard part is picking them."
+    },
+    {
+      "type": "p",
+      "text": "I'm a partner at RallyUp. We pivoted to an agency on 1 May 2026 on about $1,000 a month, and by late October we were at $835K ARR. This is the map I wish we'd had on day one."
+    },
+    {
+      "type": "list",
+      "items": [
+        "All 15 channels, from programmatic SEO to warm intros",
+        "How fast each one moves and what it really costs",
+        "Three things to do this week to start each one",
+        "The mistake that kills each channel",
+        "How to pick your two, and how long to give them"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "The honest limit is in there too. The speed and cost labels are rules of thumb from running these for founders, not benchmarks. Use the map to choose, then judge every channel on customers, never on views."
+    },
+    {
+      "type": "ask",
+      "text": "Drop your email below and I'll send it over."
+    }
+  ],
+  "resourceUrl": "/api/download/million-arr-channels?k=0545a34093f762f6644315e5eeb6e22a",
+  "automationId": "aut_621bc91c-8ef8-4eed-a3f7-d8f2fa0d8546",
+  "deliverable": "content/resources/files/the-million-arr-channel-map.pdf"
+}

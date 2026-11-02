@@ -1,0 +1,41 @@
+{
+  "slug": "startup-jobs",
+  "template": "story",
+  "title": "The startup job list.",
+  "description": "Ten places to find startup jobs that beat scrolling LinkedIn, with the link to each and what it's best for.",
+  "kicker": "10 job sites",
+  "formHeader": "10 places to find startup jobs.",
+  "formEyebrow": "Get it free, in your inbox",
+  "submitLabel": "Send me the job list",
+  "disclosure": "You will also get The Draft, one letter a week on how top 1% startups crush organic marketing. Leave whenever you like.",
+  "blocks": [
+    {
+      "type": "lead",
+      "text": "I got my job at a startup without applying anywhere. But you still need to know which companies are hiring."
+    },
+    {
+      "type": "p",
+      "text": "These are the ten places I'd look: boards built only for startups, the YC and VC portfolio boards, and the monthly Hacker News thread hundreds of companies post in."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Ten job sites, each with its link and what it's best for",
+        "The VC boards that list every role across their portfolios",
+        "The monthly thread most people don't know exists",
+        "How to use the list to skip the queue"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "The honest limit: a job board gets you into the queue. The list ends with how to get out of it."
+    },
+    {
+      "type": "ask",
+      "text": "Drop your email below and I'll send it over."
+    }
+  ],
+  "resourceUrl": "/api/download/startup-jobs?k=372c11daed000b77cce7be603514a7f2",
+  "automationId": "aut_31169839-48fc-4bbb-baad-2871904f6800",
+  "deliverable": "content/resources/files/the-startup-job-list.pdf"
+}
