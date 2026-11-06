@@ -197,16 +197,23 @@
 
   /* Client logo carousel on the homepage and /advertise. See components/LogoTicker.tsx. */
   .logo-ticker {
-    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(90deg, transparent 0, #000 110px, #000 calc(100% - 110px), transparent 100%);
   }
 
   .logo-ticker-track {
     animation: logo-ticker 70s linear infinite;
     display: flex;
     flex-shrink: 0;
-    gap: 64px;
-    padding-right: 64px;
+    gap: 34px;
+    padding-right: 34px;
     will-change: transform;
+  }
+
+  @media (min-width: 621px) {
+    .logo-ticker-track {
+      gap: 56px;
+      padding-right: 56px;
+    }
   }
 
   .logo-ticker-track:hover {

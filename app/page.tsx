@@ -64,9 +64,11 @@ export default async function Page() {
         </div>
       </section>
 
-      <section className="border-b border-paper/15 bg-ink py-12 text-center text-paper sm:py-14">
-        <p className="px-5 font-mono text-lg font-medium sm:px-8 sm:text-xl">{readersLine}</p>
-        <div className="mt-10 sm:mt-12">
+      <section className="border-b border-paper/15 bg-ink pt-12 pb-16 text-center text-paper sm:pt-[52px] sm:pb-[76px]">
+        <h2 className="px-6 font-sans text-[clamp(25px,3.6vw,40px)] leading-[1.25] font-extrabold tracking-[-0.035em] text-paper normal-case">
+          {readersLine}
+        </h2>
+        <div className="mt-[38px]">
           <LogoTicker logos={copy.logos} />
         </div>
       </section>

@@ -8,7 +8,9 @@ type LogoTickerProps = {
 
 /**
  * One row of client logos sliding left: each one the brand's own colour icon
- * with its name beside it in paper, after the Fired to Acquired landing page.
+ * on a white tile with its name beside it in paper, matching the Fired to
+ * Acquired landing page. The tile evens out icons that mix transparent and
+ * solid backgrounds.
  * Linear loop, pause on hover.
  *
  * The track repeats the set four times and the -50% keyframe lands exactly
@@ -30,15 +32,15 @@ export function LogoTicker({ logos }: LogoTickerProps) {
           {Array.from({ length: 4 }, () => logos)
             .flat()
             .map((logo, i) => (
-              <span key={`${logo.name}-${i}`} className="flex shrink-0 items-center gap-3">
+              <span key={`${logo.name}-${i}`} className="flex shrink-0 items-center gap-[13px]">
                 <Image
                   src={logo.icon}
                   alt=""
-                  width={44}
-                  height={44}
-                  className="h-10 w-10 rounded-[22%] ring-1 ring-paper/15 sm:h-11 sm:w-11"
+                  width={38}
+                  height={38}
+                  className="h-6 w-6 rounded-[9px] bg-white object-contain p-1 sm:h-[38px] sm:w-[38px]"
                 />
-                <span className="whitespace-nowrap text-2xl font-semibold tracking-tight text-paper sm:text-3xl">
+                <span className="whitespace-nowrap text-lg font-bold tracking-[-0.03em] text-paper/90 sm:text-[30px]">
                   {logo.name}
                 </span>
               </span>
