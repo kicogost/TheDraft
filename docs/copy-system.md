@@ -97,7 +97,7 @@ Use real numbers. Never invent one. These are verified.
 
 Decided 23 October 2026, modelled on the fixed skeleton of Tyler Denk's Big Desk Energy: the same sections every week, different stories inside them. The positioning is "How top 1% startups crush organic marketing". The edge every section draws on is the inside view: the LinkedIn accounts RallyUp runs for B2B founders and execs, with real numbers from Ordinal, and RallyUp itself, which Francisco helps run like a cofounder.
 
-About 900 to 1,100 words, skimmable, the same order every week. "In the wild" was dropped on 23 October 2026: Banger vs flop already does that job with our own accounts' numbers, which nobody else has.
+About 800 to 1,000 words, skimmable, the same order every week. "In the wild" was dropped on 23 October 2026. "Banger vs flop" was dropped on 8 November 2026 at Francisco's request: do not bring it back, and do not rebuild it inside another section.
 
 The order:
 
@@ -106,17 +106,16 @@ The order:
 | 0 | Sponsor | Only when a real sponsor has bought it, placed with beehiiv's sponsorship block near the top. No house ads in the slot (decided 23 October 2026): an empty slot is better than giving away a referral reward. |
 | 1 | Cold open | Two to four lines, personal and a little funny. Where he is writing from, what happened this week. |
 | 2 | The play | The main piece. One tactic, story or launch from the accounts we run: the story, then the numbers, then the play the reader can steal. |
-| 3 | Banger vs flop | The best and worst post of the week from the accounts we write for at RallyUp, and the section says so. Big save count, impressions, the first line, why one worked and the other did not, and a link to each post on LinkedIn (skip the link when the account is anonymised). Ranked on saves per 1,000 impressions where possible, not raw reach. |
-| 4 | Steal this | One hook, template or line the reader can copy and use today. |
-| 5 | The scoreboard | Building in public with RallyUp's real numbers: revenue milestones, MRR and ARR, clients, team, plus The Draft's subscriber count and what he tested on his own LinkedIn. |
-| 6 | Off the clock | Mallorca, jiu-jitsu, a song of the week. The bit readers mention when they reply. |
-| 7 | Sign-off | One click poll (🔥 / 👍 / 😴), the reply ask, then "Stay awesome," and "Francisco". |
+| 3 | Steal this | One hook, template or line the reader can copy and use today. |
+| 4 | The scoreboard | Building in public with RallyUp's real numbers: revenue milestones, MRR and ARR, clients, team, plus The Draft's subscriber count and what he tested on his own LinkedIn. |
+| 5 | Off the clock | Mallorca, jiu-jitsu, a song of the week. The bit readers mention when they reply. |
+| 6 | Sign-off | One click poll (🔥 / 👍 / 😴), the reply ask, then "Stay awesome," and "Francisco". |
 
 **Design, every issue.** The email opens with the spinning-logo masthead (`public/email/masthead-anim.gif`, from `assets/email/animated/masthead.mjs`), in a section set to show in email only. The web version opens instead with the issue's own title image, in a section set to show on the website only, built from the URL `https://franciscogost.com/email/issue?title=<subject>&date=<28 October 2026>` (upload it to beehiiv with save_image, and set it as the post thumbnail too). Each section is one bordered card with its animated header on top; the GIFs live in `public/email/sec-*-anim.gif` and are regenerated with `assets/email/animated/headers.mjs` then `frames-to-gif.py`. Turn off the beehiiv title and subtitle in the email header, since the title image carries them.
 
 **The play rotates through four types** so the main piece never repeats its shape: a launch breakdown, a teardown of a public B2B brand's LinkedIn, an experiment run across several accounts, and a founder story.
 
-**Client data rules.** Banger vs flop and The play run on client numbers. Name only the clients cleared in the proof bank. Everyone else is anonymised by stage and sector, for example "a Series A fintech founder, 38,291 impressions", and screenshots have names and faces blurred. RallyUp's own numbers are his to share; a client's invoice, contract value or name next to a payment never is.
+**Client data rules.** The play and Steal this run on client numbers. Name only the clients cleared in the proof bank. Everyone else is anonymised by stage and sector, for example "a Series A fintech founder, 38,291 impressions", and screenshots have names and faces blurred. RallyUp's own numbers are his to share; a client's invoice, contract value or name next to a payment never is.
 
 **No competitor bashing.** Big Desk Energy does it. For The Draft it reads as punching at future clients and sponsors.
 

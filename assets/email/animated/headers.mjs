@@ -24,10 +24,6 @@ const ICONS = {
     <circle cx="50" cy="50" r="8" fill="${INK}"/>
     <g class="arrow"><line x1="50" y1="50" x2="88" y2="12" stroke="${INK}" stroke-width="6" stroke-linecap="round"/>
     <path d="M88 12 L74 14 L86 26 Z" fill="${ACCENT}"/></g></svg>`,
-  // Flame flickers.
-  "banger-vs-flop": `<svg viewBox="0 0 100 100" width="96" height="96"><g class="flame">
-    <path d="M50 8 C62 30 80 40 78 64 C76 84 62 94 50 94 C38 94 24 84 22 64 C21 50 30 42 36 32 C38 44 44 50 50 50 C46 36 44 22 50 8 Z" fill="${ACCENT}"/>
-    <path d="M50 52 C58 62 64 68 63 78 C62 87 56 92 50 92 C44 92 38 87 37 78 C37 70 44 64 50 52 Z" fill="${PAPER}"/></g></svg>`,
   // Scissors snip.
   "steal-this": `<svg viewBox="0 0 100 100" width="96" height="96">
     <g class="blade-a"><line x1="22" y1="70" x2="86" y2="30" stroke="${INK}" stroke-width="7" stroke-linecap="round"/><circle cx="20" cy="72" r="11" fill="none" stroke="${ACCENT}" stroke-width="6"/></g>
@@ -58,11 +54,10 @@ const ICONS = {
 
 const SECTIONS = [
   ["01", "The play", "The main piece. Steal it.", "the-play"],
-  ["02", "Banger vs flop", "The best and worst post of the week.", "banger-vs-flop"],
-  ["03", "Steal this", "Copy it, paste it, ship it.", "steal-this"],
-  ["04", "The scoreboard", "Building in public, real numbers.", "the-scoreboard"],
-  ["05", "Off the clock", "The bit that isn't about work.", "off-the-clock"],
-  ["06", "Share The Draft", "Bring a friend, unlock rewards.", "share"],
+  ["02", "Steal this", "Copy it, paste it, ship it.", "steal-this"],
+  ["03", "The scoreboard", "Building in public, real numbers.", "the-scoreboard"],
+  ["04", "Off the clock", "The bit that isn't about work.", "off-the-clock"],
+  ["05", "Share The Draft", "Bring a friend, get rewards.", "share"],
 ];
 
 const PERIOD = 1.6; // seconds per loop
@@ -75,8 +70,6 @@ const css = `
 svg *{transform-box:fill-box}
 .arrow{animation:arrow ${PERIOD}s ease-in infinite}
 @keyframes arrow{0%{transform:translate(28px,-28px);opacity:0}15%{opacity:1}55%,100%{transform:translate(0,0)}}
-.flame{transform-origin:50% 100%;animation:flame ${PERIOD}s ease-in-out infinite}
-@keyframes flame{0%,100%{transform:scale(1,1) rotate(-3deg)}25%{transform:scale(1.06,.92) rotate(2deg)}50%{transform:scale(.95,1.08) rotate(-1deg)}75%{transform:scale(1.04,.95) rotate(3deg)}}
 .blade-a{transform-origin:50% 50%;transform-box:view-box;animation:ba ${PERIOD}s ease-in-out infinite}
 .blade-b{transform-origin:52% 50%;transform-box:view-box;animation:bb ${PERIOD}s ease-in-out infinite}
 @keyframes ba{0%,100%{transform:rotate(0)}50%{transform:rotate(16deg)}}
