@@ -13,6 +13,8 @@ The links are the permanent download links, the same ones the welcome emails use
 | The startup job list | `JOBS` | `the startup job list` | `https://franciscogost.com/api/download/startup-jobs?k=372c11daed000b77cce7be603514a7f2` | Next week (script 4) | Live |
 | The executive swipe file | `SWIPE` | `the executive swipe file` | `https://franciscogost.com/api/download/executive-swipe-file?k=920aca595f7e9d770bd3016c2c50c68d` | [Francisco to set] | Live |
 | The annotated cold DM | `DM` | `the cold DM that got me the job` | `https://franciscogost.com/api/download/chief-of-staff-dm?k=1fb90e230fb6288e3882d2517b685837` | Next week (script 6) | Live. Written for job hunters, which fits script 6 |
+| The AI LinkedIn plan | `STRATEGY` | `the AI LinkedIn plan` | `https://franciscogost.com/api/download/linkedin-strategy?k=6da338d1efcc1a4cf51aae0d8c7eb17d` | Script 9 | Live |
+| The 10/10 profile guide | `PROFILE` | `the 10/10 profile guide` | `https://franciscogost.com/api/download/linkedin-profile?k=a9857fb8ef2d8a2ecb5c8817f6e7d678` | Script 10 | Live |
 
 ## Keyword variants
 
@@ -23,3 +25,5 @@ Add every variant to the trigger: upper case, title case and lower case (`STORY`
 ## Planned freebies
 
 None are built yet. When one is, add a row here and ask Claude for its download link. The link is signed, so it cannot be typed by hand.
+
+A new freebie never needs its own beehiiv automation. Instagram signups get the one "Welcome, Instagram" email and the freebie link in the DM. Website requests get the download on the thank-you page plus the "Welcome, website" email. Only the launch playbook and the annotated cold DM keep their own automations (decided 13 November 2026, beehiiv caps automations).

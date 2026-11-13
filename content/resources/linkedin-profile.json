@@ -1,0 +1,42 @@
+{
+  "slug": "linkedin-profile",
+  "template": "story",
+  "title": "The 10/10 profile guide.",
+  "description": "A scored LinkedIn profile audit for founders and B2B execs: ten checks, one point each, with the rule, a fill-in template and a before and after for every one.",
+  "kicker": "10 checks · score yourself out of 10",
+  "formHeader": "10 checks. 30 minutes to fix them.",
+  "formEyebrow": "Get it free, in your inbox",
+  "submitLabel": "Send me the guide",
+  "disclosure": "You will also get The Draft, one letter a week on how top 1% startups crush organic marketing. Leave whenever you like.",
+  "blocks": [
+    {
+      "type": "lead",
+      "text": "Everyone you message checks your profile before they reply. Most founder profiles lose that moment: a headline that says \"Co-founder\", a grey banner, and nothing that says what the company does."
+    },
+    {
+      "type": "p",
+      "text": "I'm a partner at RallyUp, where we write LinkedIn for B2B founders and executives. This is the audit we run on a profile before we post a word."
+    },
+    {
+      "type": "list",
+      "items": [
+        "A 10 point scorecard you can run on your profile in five minutes",
+        "The rule for each one: photo, banner, headline, About, Featured, Experience and your next step",
+        "Fill-in-the-brackets templates for headlines, banners and your About opening",
+        "A before and after for every check",
+        "The order to fix it in 30 minutes, and a one page checklist"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "The honest limit is in there too. The ten checks are my judgement from fixing founder profiles, not a LinkedIn ranking factor. A better profile won't get you reach. It makes sure the people who do land on it reply."
+    },
+    {
+      "type": "ask",
+      "text": "Drop your email below and I'll send it over."
+    }
+  ],
+  "resourceUrl": "/api/download/linkedin-profile?k=a9857fb8ef2d8a2ecb5c8817f6e7d678",
+  "automationId": "",
+  "deliverable": "content/resources/files/the-10-10-profile-guide.pdf"
+}

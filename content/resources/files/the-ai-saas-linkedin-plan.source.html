@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>The AI LinkedIn plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#fdf6ec;--dim:#f4e9d9;--ink:#241c16;--soft:#4a4239;--ash:#6f6559;--line:#241c1617;--accent:#b4552b;--deep:#9e441d}
+  *{box-sizing:border-box}
+  /* Vertical margin on the page box, zero horizontal. Chrome only applies
+     body padding-top to the first page, so the top inset has to come from
+     the page box or text lands on the sheet edge after every natural break.
+     Zero horizontal keeps the paper colour bleeding to the left and right. */
+  @page{size:A4;margin:15mm 0}
+  html{background:var(--paper)}
+  body{margin:0;padding:0 16mm;background:var(--paper);color:var(--soft);font:400 10.5pt/1.6 Inter,system-ui,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  h1,h2{color:var(--ink);font-family:Anton,"Arial Narrow",Impact,sans-serif;font-weight:400;margin:0;text-transform:uppercase;letter-spacing:.005em}
+  h3,h4{color:var(--ink);font-family:Inter,system-ui,sans-serif;font-weight:700;margin:0}
+  h1{font-size:40pt;line-height:.98}
+  h2{font-size:21pt;line-height:1;margin:0 0 7pt}
+  h3{font-size:12.5pt;line-height:1.25;letter-spacing:-.005em}
+  p{margin:0 0 7pt}
+  .label{color:var(--ash);font-family:"JetBrains Mono",monospace;font-size:7.5pt;letter-spacing:.2em;text-transform:uppercase}
+  .cover{border-bottom:2px solid var(--ink);padding-bottom:14pt;margin-bottom:18pt}
+  .lead{font-size:12.5pt;line-height:1.5;color:var(--ink);margin:10pt 0 0;max-width:34em}
+  .sec{margin-top:20pt;page-break-inside:avoid}
+  .honest{border:2px solid var(--ink);background:#fff;padding:12pt 14pt;margin-top:12pt}
+  .foot{margin-top:24pt;border-top:2px solid var(--ink);padding-top:10pt;font-size:8.5pt;color:var(--ash);display:flex;justify-content:space-between;gap:12pt}
+  table{border-collapse:collapse;width:100%;font-size:9pt;margin:10pt 0}
+  th,td{text-align:left;padding:5pt 8pt;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{font-family:"JetBrains Mono",monospace;font-size:7pt;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);background:var(--dim);border-bottom:2px solid var(--ink)}
+  tbody tr:last-child td{border-bottom:none}
+  td.n{font-family:"JetBrains Mono",monospace;white-space:nowrap}
+  td.up{color:var(--deep);font-weight:600}
+  table.cal{font-size:8.5pt;margin:8pt 0}
+  table.cal td{padding:3pt 7pt}
+  table.cal tr.post td{background:#fff}
+  table.cal tr.week td{background:var(--dim);font-family:"JetBrains Mono",monospace;font-size:7pt;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);border-bottom:2px solid var(--ink);padding:4pt 7pt}
+  .play{border-top:1px solid var(--line);padding-top:11pt;margin-top:13pt}
+  .play .idx{font-family:"JetBrains Mono",monospace;font-size:7.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
+  .play h3{margin:3pt 0 6pt;font-size:15pt}
+  .blk{page-break-inside:avoid}
+  .why{background:var(--dim);border-left:3px solid var(--accent);padding:8pt 12pt;margin-top:8pt;font-size:9.5pt}
+  .why b{color:var(--ink)}
+  .steal{border-left:3px solid var(--ink);padding:8pt 12pt;margin-top:8pt;font-size:9.5pt}
+  .steal b{color:var(--ink)}
+  .tpl{border:2px solid var(--ink);background:#fff;padding:10pt 12pt;margin-top:8pt;font-family:"JetBrains Mono",monospace;font-size:8.5pt;line-height:1.6;color:var(--ink)}
+  .tpl .k{display:block;font-size:7pt;letter-spacing:.14em;text-transform:uppercase;color:var(--ash);margin-bottom:5pt}
+  .tpl p{margin:0 0 5pt}
+  .tpl p:last-child{margin:0}
+  .ex{border:1px solid var(--line);background:#fff;padding:10pt 12pt;margin-top:8pt;font-size:9.5pt;color:var(--ink)}
+  .ex .k{display:block;font-family:"JetBrains Mono",monospace;font-size:7pt;letter-spacing:.14em;text-transform:uppercase;color:var(--ash);margin-bottom:5pt}
+  .ex p{margin:0 0 5pt}
+  .ex p:last-child{margin:0}
+  .bucket{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:6.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--paper);background:var(--ink);padding:2pt 5pt;margin-left:5pt;vertical-align:2pt}
+  .bucket.tof{background:var(--accent)}
+  .bucket.mof{background:var(--soft)}
+  ol,ul{margin:0 0 7pt;padding-left:16pt}
+  li{margin:0 0 4pt}
+  .meta{font-family:"JetBrains Mono",monospace;font-size:7pt;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);margin:0 0 6pt}
+</style></head><body>
+
+<div class="cover">
+  <p class="label">5 post formats &middot; 30-day calendar</p>
+  <h1>The AI LinkedIn plan</h1>
+  <p class="lead">A LinkedIn plan for AI SaaS founders: five post formats that show how your product actually works, a template and a worked example for each, the weekly posting schedule and a 30-day calendar.</p>
+</div>
+
+<div class="sec">
+  <h2>What this is</h2>
+  <p>I'm a partner at RallyUp, where we write LinkedIn for B2B founders and executives. Our clients are backed by YC, a16z and more, and we've generated 21.3M+ impressions for the founders and execs we write for.</p>
+  <p>Here's the problem with AI companies on LinkedIn. They all sound the same. &quot;Agentic.&quot; &quot;10x your team.&quot; &quot;The future of work.&quot; Your buyer has read that sentence from forty vendors this month and can't tell any of them apart.</p>
+  <p>So this plan does one thing. Every post shows how the product actually works, on a problem your buyer already has. No hype posts. No &quot;AI is changing everything&quot; posts.</p>
+  <div class="honest">
+    <p style="margin:0"><b>The honest limit.</b> This is the plan we'd start an AI SaaS founder on, not a guarantee. The schedule is a starting point: keep the formats your buyers save and DM you about, and drop the ones they don't. Every company, name and number in the worked examples is made up to show the shape of the post.</p>
+  </div>
+</div>
+
+<div class="sec">
+  <h2>The plan in one look</h2>
+  <p>Five formats, three stages. The top of the funnel gets you found by the right people. The middle makes them trust you. The bottom asks, once a month.</p>
+  <table>
+    <thead><tr><th>#</th><th>Format</th><th>Stage</th><th>Its job</th><th>How often</th></tr></thead>
+    <tbody>
+      <tr><td class="n">01</td><td><b>The teardown</b></td><td>Top</td><td>Show the product working without a demo</td><td>Weekly</td></tr>
+      <tr><td class="n">02</td><td><b>The insider stat</b></td><td>Top</td><td>Prove you see what nobody else sees</td><td>Every other week</td></tr>
+      <tr><td class="n">03</td><td><b>The AI opinion</b></td><td>Middle</td><td>Show judgement, not just capability</td><td>Every other week</td></tr>
+      <tr><td class="n">04</td><td><b>The objection crusher</b></td><td>Middle</td><td>Answer the sales call before it happens</td><td>Most weeks</td></tr>
+      <tr><td class="n">05</td><td><b>The direct offer</b></td><td>Bottom</td><td>Ask for the call</td><td>Once a month</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="sec" style="page-break-before:always;page-break-inside:auto">
+  <h2>The five formats</h2>
+
+  <div class="play">
+    <div class="blk">
+      <p class="idx">01 <span class="bucket tof">Top of funnel</span></p>
+      <h3>The teardown</h3>
+      <p><b>What it is.</b> Take something from your buyer's world and take it apart in public. A cold email, a sales call, a dashboard, a contract, a landing page. Show what's wrong, then show how you'd fix it.</p>
+      <p><b>Why it works for AI SaaS.</b> Nobody believes an AI demo anymore. A teardown is different: it's your product's thinking applied to a real problem the buyer recognises. The teardown is the demo. They watch you do the job before they ever see a login screen.</p>
+    </div>
+    <div class="tpl blk">
+      <span class="k">Template</span>
+      <p>I took apart [a real thing from your buyer's world] that [who sent or made it] [what happened to it].</p>
+      <p>[Number] things wrong with it:</p>
+      <p>1. [Problem]. [Why it costs them]. [The fix in one line].<br>2. [Problem]. [Why it costs them]. [The fix].<br>3. [Problem]. [Why it costs them]. [The fix].</p>
+      <p>Here's the rewritten version: [the fixed thing, or a screenshot of it].</p>
+      <p>[One line on the pattern behind all three mistakes.]</p>
+    </div>
+    <div class="ex blk">
+      <span class="k">Worked example &middot; Acme Notes, a made-up AI note-taker for sales teams</span>
+      <p>A rep sent me the recording of a discovery call he lost. Thirty minutes, friendly, no next step. I went through the transcript line by line.</p>
+      <p>1. He asked about budget in minute four. The buyer hadn't admitted a problem yet, so budget was a stranger asking for money.<br>2. The buyer said &quot;we tried something like this last year&quot;. He didn't ask what happened. That was the whole deal.<br>3. He ended with &quot;I'll send over some info&quot;. No date, no owner, no reason to reply.</p>
+      <p>Here's the same call with three questions changed. The pattern: he was running a script, not listening for the moment the buyer handed him the deal.</p>
+    </div>
+    <div class="why blk"><b>The mistake that kills it:</b> tearing apart a real person's work without permission. Anonymise everything, or ask first, or tear down your own old work. A teardown that humiliates someone makes you look cruel, and your buyer imagines it's them next.</div>
+  </div>
+
+  <div class="play">
+    <div class="blk">
+      <p class="idx">02 <span class="bucket tof">Top of funnel</span></p>
+      <h3>The insider stat</h3>
+      <p><b>What it is.</b> Turn what you've seen across hundreds of demos and thousands of calls into a pattern. One finding per post, with the number and what it means for the reader.</p>
+      <p><b>Why it works for AI SaaS.</b> You see more of your buyer's work than they do. An AI product touching thousands of emails, calls or tickets is sitting on a research report nobody else can write. Sharing the pattern positions you as the person who knows how the job really gets done.</p>
+    </div>
+    <div class="tpl blk">
+      <span class="k">Template</span>
+      <p>We looked at [number] [calls / emails / tickets / demos] from the last [time period].</p>
+      <p>[The surprising finding, in one sentence, with the number.]</p>
+      <p>Why it happens: [your explanation in two or three lines].</p>
+      <p>What the best [teams / reps / founders] do differently: [the behaviour].</p>
+      <p>[One thing the reader can try this week.]</p>
+    </div>
+    <div class="ex blk">
+      <span class="k">Worked example &middot; Acme Notes (made up, numbers invented for illustration)</span>
+      <p>We looked at 2,000 discovery calls our customers ran last quarter.</p>
+      <p>The calls that turned into a second meeting had one thing in common: the buyer talked about a past failed attempt before the halfway mark.</p>
+      <p>Why it happens: when a buyer tells you what didn't work, they're telling you what they'll pay to avoid. Reps who ask &quot;what have you tried?&quot; early get that story. Reps who pitch early never hear it.</p>
+      <p>Try it this week: make &quot;what have you already tried?&quot; your second question.</p>
+    </div>
+    <div class="why blk"><b>The mistake that kills it:</b> making the number up, or rounding it into something it isn't. Use only data you're allowed to share, say where it comes from and how much of it there is, and never publish anything that identifies a customer. One fake stat and every real one after it is doubted.</div>
+  </div>
+
+  <div class="play">
+    <div class="blk">
+      <p class="idx">03 <span class="bucket mof">Middle of funnel</span></p>
+      <h3>The AI opinion</h3>
+      <p><b>What it is.</b> A clear position on where AI should touch your buyer's job, where it shouldn't, and what you refuse to automate. One opinion per post, argued properly.</p>
+      <p><b>Why it works for AI SaaS.</b> Every AI vendor claims it can do everything. A founder who says &quot;we won't build that, and here's why&quot; sounds like someone with judgement. Buyers trust the vendor who draws a line, because it tells them the vendor understands the job.</p>
+    </div>
+    <div class="tpl blk">
+      <span class="k">Template</span>
+      <p>We will never automate [a specific part of your buyer's job].</p>
+      <p>Everyone's building it. Here's why we're not: [your reason, in two or three lines].</p>
+      <p>What AI should do instead: [the part of the job it's genuinely good at].</p>
+      <p>The line I'd draw: [your rule, in one sentence they can repeat].</p>
+      <p>Where would you draw it?</p>
+    </div>
+    <div class="ex blk">
+      <span class="k">Worked example &middot; Acme Notes (made up)</span>
+      <p>We will never let AI send the follow-up email after a sales call.</p>
+      <p>Everyone's building it. Here's why we won't: the follow-up is the first thing the buyer reads from you without you in the room. If it sounds like every other AI email, you just told them you weren't really listening.</p>
+      <p>What AI should do instead: pull the three things the buyer actually said, word for word, so the rep writes a better email in two minutes.</p>
+      <p>The line I'd draw: AI remembers, the rep speaks.</p>
+    </div>
+    <div class="why blk"><b>The mistake that kills it:</b> fake controversy. &quot;Cold calling is dead&quot; isn't an opinion, it's bait. A real opinion costs you something: a feature you won't build, a customer you'd turn away. If nobody could disagree with it, it isn't one.</div>
+  </div>
+
+  <div class="play">
+    <div class="blk">
+      <p class="idx">04 <span class="bucket mof">Middle of funnel</span></p>
+      <h3>The objection crusher</h3>
+      <p><b>What it is.</b> One sales objection per post, answered in public. Take the thing buyers say on calls and take it apart properly.</p>
+      <p><b>Why it works for AI SaaS.</b> AI buyers arrive with the same worries: data security, accuracy, &quot;my team won't use it&quot;, &quot;we'll build it ourselves&quot;. Answer them on LinkedIn and buyers arrive at the call already sold. Your sales team can also send the post when the objection comes up.</p>
+    </div>
+    <div class="tpl blk">
+      <span class="k">Template</span>
+      <p>&quot;[The objection, in the buyer's exact words].&quot;</p>
+      <p>I hear this on [how often] of our calls. It's a fair worry. Here's the honest answer.</p>
+      <p>[Where the worry is right.]<br>[Where it's wrong, with specifics.]<br>[What you do about the part that's right.]</p>
+      <p>If that's what's stopping you, [the one thing they can check or ask for].</p>
+    </div>
+    <div class="ex blk">
+      <span class="k">Worked example &middot; Acme Notes (made up)</span>
+      <p>&quot;Our reps won't use another tool.&quot;</p>
+      <p>I hear this on most first calls. It's a fair worry. Here's the honest answer.</p>
+      <p>You're right that reps ignore tools that add work. That's most sales software.<br>Acme Notes doesn't add a step. It joins the calls already on their calendar and the notes land in the CRM before they've hung up.<br>The part you're right about: some reps will still ignore the summaries. So we show the manager who's opening them, and you can coach the rest.</p>
+      <p>If that's what's stopping you, ask for two weeks on one team and check the CRM yourself.</p>
+    </div>
+    <div class="why blk"><b>The mistake that kills it:</b> pretending the objection is stupid. If you sneer at the worry, you sneer at the buyer who has it. Always start with where they're right. Admitting the limit is what makes the rest believable.</div>
+  </div>
+
+  <div class="play">
+    <div class="blk">
+      <p class="idx">05 <span class="bucket">Bottom of funnel</span></p>
+      <h3>The direct offer</h3>
+      <p><b>What it is.</b> Once a month, a plain post that asks for the call. Who it's for, who it's not for, what you provide, and lots of social proof.</p>
+      <p><b>Why it works for AI SaaS.</b> After three weeks of teardowns, stats, opinions and objections, the right people already trust you. Many of them are waiting for permission to reach out. The offer post gives it. Saying who it's not for makes the right buyer feel picked.</p>
+    </div>
+    <div class="tpl blk">
+      <span class="k">Template</span>
+      <p>[Number] spots open in [month] for [what you offer].</p>
+      <p>It's for you if: [buyer, stage, situation]. [A second signal they'd recognise].</p>
+      <p>It's not for you if: [the buyer you'd turn away]. [A second disqualifier].</p>
+      <p>What you get: [deliverable 1]. [Deliverable 2]. [Deliverable 3].</p>
+      <p>Proof: [a customer result with permission]. [A second result]. [A short quote].</p>
+      <p>[How to ask: comment, DM, or a link to book.]</p>
+    </div>
+    <div class="ex blk">
+      <span class="k">Worked example &middot; Acme Notes (made up)</span>
+      <p>Five teams can join our pilot in March.</p>
+      <p>It's for you if you run a sales team of 10 to 50 reps and your CRM notes are a mess.</p>
+      <p>It's not for you if your team sells by email only. We're built for calls.</p>
+      <p>What you get: two weeks of setup with us, the CRM integration done for you, and a weekly call review with your manager.</p>
+      <p>Proof: [customer result with permission]. [Second customer result]. [Customer quote].</p>
+      <p>DM me &quot;pilot&quot; and I'll send the details.</p>
+    </div>
+    <div class="why blk"><b>The mistake that kills it:</b> posting the offer every week, or never. Weekly offers teach people to scroll past you. Never asking leaves the warm buyers waiting. Once a month, at the end of the cycle, after the trust is built.</div>
+  </div>
+</div>
+
+<div class="sec" style="page-break-inside:auto">
+  <h2>The weekly posting schedule</h2>
+  <p>Three posts a week for four weeks. Twelve posts. Pick three weekdays and keep them fixed: being predictable matters more than the exact day. This plan uses Tuesday, Wednesday and Thursday.</p>
+  <table>
+    <thead><tr><th>Week</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th></tr></thead>
+    <tbody>
+      <tr><td class="n">Week 1</td><td>01 Teardown</td><td>03 AI opinion</td><td>02 Insider stat</td></tr>
+      <tr><td class="n">Week 2</td><td>01 Teardown</td><td>04 Objection crusher</td><td>02 Insider stat</td></tr>
+      <tr><td class="n">Week 3</td><td>01 Teardown</td><td>03 AI opinion</td><td>04 Objection crusher</td></tr>
+      <tr><td class="n">Week 4</td><td>01 Teardown</td><td>04 Objection crusher</td><td class="up">05 Direct offer</td></tr>
+    </tbody>
+  </table>
+  <p>The mix over the month: six top of funnel posts, five middle, one offer. Teardowns run every week because they're the post that shows the product best. The offer lands last, when the most people have seen the other eleven.</p>
+  <div class="steal"><b>Three rules for the schedule</b><ol style="margin:4pt 0 0"><li>Write the week's three posts the Friday before. Never write on the day.</li><li>Spend 20 minutes after each post replying to every comment. Comments from buyers are the start of DMs.</li><li>In month two, repeat the cycle and swap in more of whichever format got the most saves and DMs.</li></ol></div>
+</div>
+
+<div class="sec" style="page-break-inside:auto">
+  <h2>The 30-day calendar</h2>
+  <p>Day 1 is a Monday. Post days are highlighted.</p>
+  <table class="cal">
+    <thead><tr><th>Day</th><th>Post</th><th>What to do</th></tr></thead>
+    <tbody>
+      <tr class="week"><td colspan="3">Week 1 &middot; set up and start</td></tr>
+      <tr><td class="n">1 Mon</td><td></td><td>Rewrite your profile headline: who you help and what the product does, in plain words. List 20 objections from your last sales calls.</td></tr>
+      <tr class="post"><td class="n">2 Tue</td><td><b>Teardown</b></td><td>Post. Reply to every comment for 20 minutes.</td></tr>
+      <tr class="post"><td class="n">3 Wed</td><td><b>AI opinion</b></td><td>Post. Write down three things you refuse to automate for later opinions.</td></tr>
+      <tr class="post"><td class="n">4 Thu</td><td><b>Insider stat</b></td><td>Post. Ask your team which patterns they see in the data you're allowed to share.</td></tr>
+      <tr><td class="n">5 Fri</td><td></td><td>Write next week's three posts. Log the week in the scorecard.</td></tr>
+      <tr><td class="n">6, 7</td><td></td><td>Weekend off. Save teardown material when you see it: cold emails, landing pages, call snippets.</td></tr>
+      <tr class="week"><td colspan="3">Week 2 &middot; add the objections</td></tr>
+      <tr><td class="n">8 Mon</td><td></td><td>Comment properly on five posts from buyers you want to reach.</td></tr>
+      <tr class="post"><td class="n">9 Tue</td><td><b>Teardown</b></td><td>Post. Reply to every comment.</td></tr>
+      <tr class="post"><td class="n">10 Wed</td><td><b>Objection crusher</b></td><td>Post. Send it to your sales team so they can share it on calls.</td></tr>
+      <tr class="post"><td class="n">11 Thu</td><td><b>Insider stat</b></td><td>Post. Reply to every comment.</td></tr>
+      <tr><td class="n">12 Fri</td><td></td><td>Write next week's posts. Log the week. Note which post got the most saves.</td></tr>
+      <tr><td class="n">13, 14</td><td></td><td>Weekend off. Ask three customers for a result and a quote you can use in the week 4 offer.</td></tr>
+      <tr class="week"><td colspan="3">Week 3 &middot; build trust</td></tr>
+      <tr><td class="n">15 Mon</td><td></td><td>Answer every DM from the last two weeks. Comment on five buyer posts.</td></tr>
+      <tr class="post"><td class="n">16 Tue</td><td><b>Teardown</b></td><td>Post. Reply to every comment.</td></tr>
+      <tr class="post"><td class="n">17 Wed</td><td><b>AI opinion</b></td><td>Post. Reply to the people who disagree. That's where the best comments come from.</td></tr>
+      <tr class="post"><td class="n">18 Thu</td><td><b>Objection crusher</b></td><td>Post. Reply to every comment.</td></tr>
+      <tr><td class="n">19 Fri</td><td></td><td>Write next week's posts, including the offer. Get sign-off on the proof you'll use.</td></tr>
+      <tr><td class="n">20, 21</td><td></td><td>Weekend off. Decide how many spots or calls you can actually take next month.</td></tr>
+      <tr class="week"><td colspan="3">Week 4 &middot; make the offer</td></tr>
+      <tr><td class="n">22 Mon</td><td></td><td>Comment on five buyer posts. Make sure the booking link or DM reply is ready.</td></tr>
+      <tr class="post"><td class="n">23 Tue</td><td><b>Teardown</b></td><td>Post. Reply to every comment.</td></tr>
+      <tr class="post"><td class="n">24 Wed</td><td><b>Objection crusher</b></td><td>Post. Pick the objection that blocks the most deals.</td></tr>
+      <tr class="post"><td class="n">25 Thu</td><td><b>Direct offer</b></td><td>Post. Answer every comment and DM the same day.</td></tr>
+      <tr><td class="n">26 Fri</td><td></td><td>Follow up with everyone who engaged with the offer. Log the week.</td></tr>
+      <tr><td class="n">27, 28</td><td></td><td>Weekend off.</td></tr>
+      <tr class="week"><td colspan="3">Days 29 and 30 &middot; review</td></tr>
+      <tr><td class="n">29</td><td></td><td>Fill in the monthly scorecard. Rank the twelve posts by saves, profile visits from buyers, and DMs.</td></tr>
+      <tr><td class="n">30</td><td></td><td>Plan month two. Keep the schedule, and swap in more of the two formats that ranked highest.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="sec" style="page-break-inside:auto">
+  <h2>How to measure it</h2>
+  <p>Impressions are the wrong scoreboard. One motivational post we've seen hit 72,031 impressions and brought 7 followers and no signups. Reach without the right people is noise.</p>
+  <p>Track these instead, in this order:</p>
+  <table>
+    <thead><tr><th>Signal</th><th>Why it matters</th><th>Where to find it</th></tr></thead>
+    <tbody>
+      <tr><td><b>Saves</b></td><td>Someone wants to come back to it. The best sign a post was useful.</td><td>Post analytics</td></tr>
+      <tr><td><b>Profile visits from the right people</b></td><td>The post made a buyer curious about you, not just the post.</td><td>Profile viewers, by job title and company</td></tr>
+      <tr><td><b>Comments from buyers</b></td><td>Count the ones from your target titles. Ignore the rest.</td><td>The comments, read by hand</td></tr>
+      <tr><td><b>DMs</b></td><td>A conversation started. Note which post started it.</td><td>Your inbox</td></tr>
+      <tr><td><b>Calls booked</b></td><td>The only number that pays for the time.</td><td>Your calendar or CRM</td></tr>
+    </tbody>
+  </table>
+  <div class="steal"><b>The weekly scorecard</b><ol style="margin:4pt 0 0"><li>Every Friday, write down for each post: format, saves, profile visits from buyers, buyer comments, DMs.</li><li>Add a &quot;how did you hear about us?&quot; question to your booking form and count the LinkedIn answers.</li><li>After four weeks, rank the formats. Keep the top two, fix the bottom one, and run the cycle again.</li></ol></div>
+  <div class="why"><b>Give it time:</b> judge the plan after 90 days, not after one post. A single post tells you almost nothing. Three cycles tell you which formats your buyers actually want.</div>
+</div>
+
+<div class="sec">
+  <h2>Worth studying</h2>
+  <p>Three people who post in these formats well. Read a month of each before you write your first post.</p>
+  <ul>
+    <li><b>Chris Orlob</b>, co-founder of Caliber and formerly at Gong, for teardowns of sales calls and discovery.</li>
+    <li><b>Gal Aga</b>, co-founder and CEO of Aligned, for turning what you see across sales teams into posts.</li>
+    <li><b>Udi Ledergor</b>, Gong's former CMO, for marketing that takes a position.</li>
+  </ul>
+</div>
+
+<div class="sec">
+  <h2>The one page version</h2>
+  <ol>
+    <li>Every post shows how the product works on a problem your buyer already has. No hype.</li>
+    <li>Top of funnel: teardowns every week, insider stats every other week.</li>
+    <li>Middle: one opinion about where AI should and shouldn't go, and one objection answered in public.</li>
+    <li>Bottom: one direct offer a month, at the end of the cycle, with proof.</li>
+    <li>Three posts a week on fixed days. Write them the Friday before.</li>
+    <li>Judge it on saves, buyer profile visits, DMs and calls booked, never on impressions.</li>
+  </ol>
+</div>
+
+<div class="foot">
+  <span><b>Francisco Gost</b> writes The Draft, a weekly letter on how top 1% startups crush organic marketing, at franciscogost.com</span>
+  <span>Partner at RallyUp. 21.3M+ impressions generated for B2B founders and execs.</span>
+</div>
+
+</body></html>

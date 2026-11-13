@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { setSignupCookie } from "@/lib/signup-cookie";
 import { startJourney, subscribe } from "@/lib/beehiiv";
-import { getResource } from "@/lib/content";
+import { getResource, getSite } from "@/lib/content";
 import { allow, clientIp } from "@/lib/rate-limit";
 import { signResource } from "@/lib/signing";
 import { cleanPath, cleanUtm } from "@/lib/utm";
@@ -65,11 +65,9 @@ export async function POST(request: Request) {
     campaign: resource.slug,
     utm: cleanUtm(body),
     path: cleanPath(body.path),
-    // Suppress beehiiv's own welcome only when a resource automation exists to
-    // send one instead. With no automation, suppressing it means the reader
-    // hands over an email and hears nothing, so this has to stay derived
-    // rather than hardcoded.
-    sendWelcomeEmail: !resource.automationId,
+    // Every request gets exactly one email from our own automations: the
+    // resource's own if it has one, otherwise the website welcome below.
+    sendWelcomeEmail: false,
   });
 
   if (!result.ok) {
@@ -79,11 +77,10 @@ export async function POST(request: Request) {
     );
   }
 
-  if (resource.automationId) {
-    await startJourney(resource.automationId, email);
-  } else {
-    console.warn(`resource ${resource.slug} has no automationId yet`);
-  }
+  // Automation slots are capped, so only the busiest resources get their own
+  // email. The rest fall back to the website welcome, and the download itself
+  // is on the thank-you page either way.
+  await startJourney(resource.automationId || getSite().newsletter.welcomeAutomationId, email);
 
   const token = signResource(resource.slug);
   return setSignupCookie(

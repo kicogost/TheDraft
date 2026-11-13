@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>The 10/10 profile guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#fdf6ec;--dim:#f4e9d9;--ink:#241c16;--soft:#4a4239;--ash:#6f6559;--line:#241c1617;--accent:#b4552b;--deep:#9e441d}
+  *{box-sizing:border-box}
+  /* Vertical margin on the page box, zero horizontal. Chrome only applies
+     body padding-top to the first page, so the top inset has to come from
+     the page box or text lands on the sheet edge after every natural break.
+     Zero horizontal keeps the paper colour bleeding to the left and right. */
+  @page{size:A4;margin:15mm 0}
+  html{background:var(--paper)}
+  body{margin:0;padding:0 16mm;background:var(--paper);color:var(--soft);font:400 10.5pt/1.6 Inter,system-ui,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  h1,h2{color:var(--ink);font-family:Anton,"Arial Narrow",Impact,sans-serif;font-weight:400;margin:0;text-transform:uppercase;letter-spacing:.005em}
+  h3,h4{color:var(--ink);font-family:Inter,system-ui,sans-serif;font-weight:700;margin:0}
+  h1{font-size:40pt;line-height:.98}
+  h2{font-size:21pt;line-height:1;margin:0 0 7pt;page-break-after:avoid;break-after:avoid}
+  h3{font-size:12.5pt;line-height:1.25;letter-spacing:-.005em}
+  p{margin:0 0 7pt}
+  .label{color:var(--ash);font-family:"JetBrains Mono",monospace;font-size:7.5pt;letter-spacing:.2em;text-transform:uppercase}
+  .cover{border-bottom:2px solid var(--ink);padding-bottom:14pt;margin-bottom:18pt}
+  .lead{font-size:12.5pt;line-height:1.5;color:var(--ink);margin:10pt 0 0;max-width:34em}
+  .sec{margin-top:20pt;page-break-inside:avoid}
+  .rule{border:0;border-top:1px solid var(--line);margin:16pt 0}
+  .honest{border:2px solid var(--ink);background:#fff;padding:12pt 14pt;margin-top:12pt}
+  .foot{margin-top:24pt;border-top:2px solid var(--ink);padding-top:10pt;font-size:8.5pt;color:var(--ash);display:flex;justify-content:space-between;gap:12pt}
+  tr{page-break-inside:avoid}
+  table{border-collapse:collapse;width:100%;font-size:9pt;margin:10pt 0}
+  th,td{text-align:left;padding:5pt 8pt;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{font-family:"JetBrains Mono",monospace;font-size:7pt;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);background:var(--dim);border-bottom:2px solid var(--ink)}
+  tbody tr:last-child td{border-bottom:none}
+  td.n{font-family:"JetBrains Mono",monospace;white-space:nowrap}
+  td.box{width:5.5em;font-family:"JetBrains Mono",monospace;color:var(--ash);white-space:nowrap}
+  .play{border-top:1px solid var(--line);padding-top:11pt;margin-top:13pt;page-break-inside:avoid}
+  .play .idx{font-family:"JetBrains Mono",monospace;font-size:7.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
+  .play h3{margin:3pt 0 6pt;font-size:13pt}
+  .why{background:var(--dim);border-left:3px solid var(--accent);padding:8pt 12pt;margin-top:8pt;font-size:9.5pt}
+  .why b{color:var(--ink)}
+  .steal{border-left:3px solid var(--ink);padding:8pt 12pt;margin-top:7pt;font-size:9.5pt}
+  .steal b{color:var(--ink)}
+  .tpl{border:1px dashed var(--ink);background:#fff;padding:7pt 10pt;margin-top:7pt;font-family:"JetBrains Mono",monospace;font-size:8.5pt;line-height:1.55;color:var(--ink)}
+  .tpl .k{display:block;font-size:6.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--ash);margin-bottom:2pt}
+  .ba{display:flex;gap:8pt;margin-top:7pt}
+  .ba > div{flex:1 1 0;padding:7pt 10pt;font-size:9pt;line-height:1.5}
+  .ba .b{background:var(--dim);color:var(--soft)}
+  .ba .a{background:#fff;border:1px solid var(--ink);color:var(--ink)}
+  .ba .k{display:block;font-family:"JetBrains Mono",monospace;font-size:6.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--ash);margin-bottom:3pt}
+  .ba .a .k{color:var(--deep)}
+  .bucket{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:6.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--paper);background:var(--ink);padding:2pt 5pt;margin-left:5pt;vertical-align:2pt}
+  .bucket.tof{background:var(--accent)}
+  .pagebreak{page-break-before:always;height:0}
+  ol,ul{margin:0 0 7pt;padding-left:16pt}
+  li{margin:0 0 4pt}
+  .meta{font-family:"JetBrains Mono",monospace;font-size:7pt;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);margin:0 0 6pt}
+  .check{list-style:none;padding-left:0}
+  .check li{padding:6pt 0 6pt 22pt;border-bottom:1px solid var(--line);position:relative;margin:0}
+  .check li:before{content:"";position:absolute;left:0;top:8pt;width:11pt;height:11pt;border:1.5px solid var(--ink);background:#fff}
+  .check li b{color:var(--ink)}
+  .total{display:flex;justify-content:space-between;align-items:center;border:2px solid var(--ink);background:#fff;padding:10pt 14pt;margin-top:12pt;font-family:"JetBrains Mono",monospace;font-size:10pt;color:var(--ink)}
+</style></head><body>
+
+<div class="cover">
+  <p class="label">10 points &middot; score yourself in 5 minutes</p>
+  <h1>The 10/10 profile guide</h1>
+  <p class="lead">A scored audit of your LinkedIn profile for founders and B2B execs. Ten checks, one point each, with the rule, a template and a before and after for every one.</p>
+</div>
+
+<div class="sec">
+  <h2>Why bother</h2>
+  <p>Everyone you message checks your profile before they reply. The investor, the candidate, the buyer you cold DMed on Monday. They click your name, look for a few seconds, and decide if you're worth an answer.</p>
+  <p>Most founder profiles lose that moment. The headline says &quot;Co-founder&quot;. The banner is LinkedIn's grey default or a city skyline. Nothing on the page says what the company does.</p>
+  <p>I'm a partner at RallyUp, where we write LinkedIn for B2B founders and executives. We've generated 21.3M+ impressions for the founders and execs we write for, and every one of those impressions sends some people to a profile. This is the audit we run on a profile before we post a word.</p>
+  <div class="honest">
+    <p style="margin:0"><b>The honest limit.</b> These ten checks are my judgement from fixing founder profiles, not a LinkedIn ranking factor. A 10/10 profile won't get you reach on its own. It makes sure the people who do land on it know what you do, believe you, and know what to do next.</p>
+  </div>
+</div>
+
+<div class="sec" style="page-break-inside:auto">
+  <h2>How to score</h2>
+  <p>Open your profile in a private window so you see what a stranger sees. Go down the table. Give yourself 1 if you pass, 0 if you don't. No half points: if you have to argue for it, it's a 0.</p>
+  <table>
+    <thead><tr><th>#</th><th>Element</th><th>You pass if</th><th>Score</th></tr></thead>
+    <tbody>
+      <tr><td class="n">01</td><td><b>Photo</b></td><td>Bright, close, recent, clearly you</td><td class="box">__ / 1</td></tr>
+      <tr><td class="n">02</td><td><b>Banner message</b></td><td>Says who it's for and what you do, read in one glance</td><td class="box">__ / 1</td></tr>
+      <tr><td class="n">03</td><td><b>Banner proof</b></td><td>One piece of proof: a result, logos or a backer</td><td class="box">__ / 1</td></tr>
+      <tr><td class="n">04</td><td><b>Banner call to action</b></td><td>One clear next step</td><td class="box">__ / 1</td></tr>
+      <tr><td class="n">05</td><td><b>Headline: who you help</b></td><td>A stranger can say who you help and with what</td><td class="box">__ / 1</td></tr>
+      <tr><td class="n">06</td><td><b>Headline: proof</b></td><td>A number, a name or a backer, not an adjective</td><td class="box">__ / 1</td></tr>
+      <tr><td class="n">07</td><td><b>About: opening lines</b></td><td>The lines before &quot;see more&quot; say problem, fix and proof</td><td class="box">__ / 1</td></tr>
+      <tr><td class="n">08</td><td><b>Featured section</b></td><td>One to three items, the first one is what you want clicked</td><td class="box">__ / 1</td></tr>
+      <tr><td class="n">09</td><td><b>Experience</b></td><td>Your current role shows results, not a job description</td><td class="box">__ / 1</td></tr>
+      <tr><td class="n">10</td><td><b>How to work with you</b></td><td>A stranger knows exactly what to do next</td><td class="box">__ / 1</td></tr>
+    </tbody>
+  </table>
+  <p><b>0 to 4:</b> people are deciding not to reply. Do the 30 minute fix today. <b>5 to 7:</b> the basics are there, the proof isn't. <b>8 to 9:</b> fix the one or two misses this week. <b>10:</b> stop editing and go send the messages.</p>
+  <p style="font-size:9pt;color:var(--ash)">Every name, company and number in the examples below is made up.</p>
+</div>
+
+<div class="sec" style="page-break-inside:auto">
+  <h2>The 10 checks</h2>
+
+  <div class="play">
+    <p class="idx">01 &middot; Photo</p>
+    <h3>A face people recognise when they meet you</h3>
+    <p class="meta">Fix time: 4 minutes &middot; Where: profile photo</p>
+    <p>Your photo shows up next to every message, comment and post. It's the first thing people see and the thing they check against your face on the call.</p>
+    <div class="steal"><b>The rule.</b> Shoulders up, face filling most of the circle, in good light, taken in the last two years. Plain or soft background. You look like you on a good day, not like a passport.</div>
+    <div class="why"><b>Fails:</b> a dark photo, a photo cropped out of a group, sunglasses, a logo, a wedding, the grey silhouette, a picture from ten years ago.</div>
+    <div class="tpl"><span class="k">How to take it</span>Stand facing a window in daylight. Phone at eye level. Plain wall behind you. Take 20, pick the one where you look easiest to talk to.</div>
+    <div class="ba">
+      <div class="b"><span class="k">Before</span>Maya, co-founder of Tallyhouse: a dim photo from a conference, cropped from a group, her face a small part of the frame.</div>
+      <div class="a"><span class="k">After</span>Maya by a window, shoulders up, plain wall, smiling. Bright enough to recognise at thumbnail size.</div>
+    </div>
+  </div>
+
+  <div class="play">
+    <p class="idx">02 &middot; Banner message</p>
+    <h3>Who it's for, in one glance</h3>
+    <p class="meta">Fix time: 8 minutes, with the next two &middot; Where: background photo</p>
+    <p>The banner is the biggest space on your profile and most founders leave it grey. It's a free billboard above your name. Use it to say what you do and who for.</p>
+    <div class="steal"><b>The rule.</b> One line, big enough to read on a phone. If someone has to read it twice, it has too much on it. Keep text away from the bottom left, where your photo sits. LinkedIn recommends 1584 x 396 pixels.</div>
+    <div class="why"><b>Fails:</b> LinkedIn's default grey banner, a stock photo, a skyline, a quote, or a banner so packed with logos, taglines and icons that you read it twice.</div>
+    <div class="tpl"><span class="k">Template</span>[Outcome] for [who]. <br>e.g. &quot;[Get paid faster] for [construction finance teams].&quot;</div>
+    <div class="ba">
+      <div class="b"><span class="k">Before</span>A stock photo of a glass office tower with &quot;Innovate. Disrupt. Grow.&quot; across it.</div>
+      <div class="a"><span class="k">After</span>&quot;Supplier invoices matched in minutes, for construction finance teams.&quot;</div>
+    </div>
+  </div>
+
+  <div class="play">
+    <p class="idx">03 &middot; Banner proof</p>
+    <h3>One reason to believe you</h3>
+    <p class="meta">Where: background photo, under the message</p>
+    <p>A claim with nothing behind it reads like an ad. One piece of proof turns it into a fact.</p>
+    <div class="steal"><b>The rule.</b> Pick one: a client result, three to five customer logos, or borrowed trust, like the investors who backed you or the companies your team came from. One kind of proof, not all three.</div>
+    <div class="why"><b>Fails:</b> no proof at all, or a wall of fifteen logos nobody can read at thumbnail size.</div>
+    <div class="tpl"><span class="k">Pick one</span>[Result] for [type of customer] <br>Trusted by [logo] [logo] [logo] <br>Backed by [investor] and [investor]</div>
+    <div class="ba">
+      <div class="b"><span class="k">Before</span>Nothing. Just the message.</div>
+      <div class="a"><span class="k">After</span>&quot;Backed by Northgate Ventures&quot; in small type under the message, with three customer logos.</div>
+    </div>
+  </div>
+
+  <div class="play">
+    <p class="idx">04 &middot; Banner call to action</p>
+    <h3>Tell them what to do next</h3>
+    <p class="meta">Where: background photo, right hand side</p>
+    <p>Someone who likes what they see needs somewhere to go. If you don't tell them, they go back to their feed.</p>
+    <div class="steal"><b>The rule.</b> One action, written as an instruction, with a short address they can type. Join the waitlist. Book a demo. Read the newsletter. One, not three.</div>
+    <div class="why"><b>Fails:</b> no call to action, or three competing ones, or a long tracking link nobody will type.</div>
+    <div class="tpl"><span class="k">Template</span>[Verb] [the thing] at [short address] <br>e.g. &quot;Join the waitlist at [company].com&quot;</div>
+    <div class="ba">
+      <div class="b"><span class="k">Before</span>No next step anywhere on the banner.</div>
+      <div class="a"><span class="k">After</span>&quot;Book a 15 minute demo at tallyhouse.com&quot; on the right, away from the photo.</div>
+    </div>
+  </div>
+
+  <div class="play">
+    <p class="idx">05 &middot; Headline: who you help</p>
+    <h3>Not your title. What you do, and for who.</h3>
+    <p class="meta">Fix time: 8 minutes, with the next one &middot; Where: headline</p>
+    <p>Your headline follows you everywhere: under your name in comments, in search, in every DM preview. For most people it's the only line of your profile they read.</p>
+    <div class="steal"><b>The rule.</b> Someone who has never heard of your company should be able to say who you help and with what, after reading it once.</div>
+    <div class="why"><b>Fails:</b> &quot;Co-founder&quot;. &quot;Co-founder, CEO, we're hiring&quot;. &quot;Building something new&quot;. &quot;Founder @ [company]&quot; when nobody knows the company yet.</div>
+    <div class="tpl"><span class="k">Three formulas</span>A. [Role] at [Company]: we help [who] [do what]. <br>B. Helping [who] [outcome] | [Role], [Company] <br>C. [Company] = [what it is] for [who] | [Role]</div>
+    <div class="ba">
+      <div class="b"><span class="k">Before</span>Co-founder, CEO at Tallyhouse. We're hiring!</div>
+      <div class="a"><span class="k">After</span>CEO at Tallyhouse: we help construction finance teams match supplier invoices in minutes.</div>
+    </div>
+  </div>
+
+  <div class="play">
+    <p class="idx">06 &middot; Headline: proof</p>
+    <h3>A number beats an adjective</h3>
+    <p class="meta">Where: end of the headline</p>
+    <p>&quot;Passionate&quot;, &quot;visionary&quot; and &quot;serial entrepreneur&quot; are things anyone can type. A number, a name or a backer is something you have to have earned.</p>
+    <div class="steal"><b>The rule.</b> Add one piece of proof to the end of the headline. It can be the same proof as the banner or a different one.</div>
+    <div class="why"><b>Fails:</b> no proof, or proof made of adjectives.</div>
+    <div class="tpl"><span class="k">Add one</span>| [Result] for [N] [customers] <br>| Backed by [investor] <br>| Ex-[company people know], [role]</div>
+    <div class="ba">
+      <div class="b"><span class="k">Before</span>Passionate sales leader | Visionary | Builder</div>
+      <div class="a"><span class="k">After</span>VP Sales at Kestrel Data: we help retailers forecast stock. | Built the first sales team at Fernway, 0 to 40 reps</div>
+    </div>
+  </div>
+
+  <div class="play">
+    <p class="idx">07 &middot; About: opening lines</p>
+    <h3>Write for the lines before &quot;see more&quot;</h3>
+    <p class="meta">Fix time: 5 minutes &middot; Where: About section</p>
+    <p>Only the opening of your About shows before LinkedIn cuts it off. Most people never click &quot;see more&quot;, so those first lines do the work.</p>
+    <div class="steal"><b>The rule.</b> Open with the problem your buyer has, then what you do about it, then proof. Your life story goes further down, if anywhere.</div>
+    <div class="why"><b>Fails:</b> &quot;I'm a passionate leader with 15 years of experience...&quot;. Starting with your childhood. A copy of your company's homepage.</div>
+    <div class="tpl"><span class="k">Template</span>[Who] [lose time or money on this problem]. <br>At [Company], we [fix it by doing what]. <br>[Proof: result, customers or backer]. <br>[What to do next: where to find you].</div>
+    <div class="ba">
+      <div class="b"><span class="k">Before</span>I'm a results-driven founder passionate about the future of finance. With a background in...</div>
+      <div class="a"><span class="k">After</span>Construction finance teams spend days matching supplier invoices by hand. Tallyhouse does it in minutes. 60 firms use it every month. Book a demo at tallyhouse.com.</div>
+    </div>
+  </div>
+
+  <div class="play">
+    <p class="idx">08 &middot; Featured section</p>
+    <h3>Pick what they click first</h3>
+    <p class="meta">Fix time: 3 minutes &middot; Where: Featured</p>
+    <p>The Featured section sits near the top of your profile with pictures, which makes it the most clicked thing on the page after your name. Most founders leave it empty or full of old reposts.</p>
+    <div class="steal"><b>The rule.</b> One to three items. The first is the thing you most want a stranger to see: a demo, a case study, the waitlist, your best post.</div>
+    <div class="why"><b>Fails:</b> empty, six items, or a repost of a funding announcement from two years ago.</div>
+    <div class="tpl"><span class="k">Order</span>1. [The action you want: demo, waitlist, newsletter] <br>2. [Proof: a case study or customer story] <br>3. [Your best post, the one that explains what you do]</div>
+    <div class="ba">
+      <div class="b"><span class="k">Before</span>Empty.</div>
+      <div class="a"><span class="k">After</span>1. Two minute demo video. 2. A customer story. 3. Maya's post on why she started Tallyhouse.</div>
+    </div>
+  </div>
+
+  <div class="play">
+    <p class="idx">09 &middot; Experience</p>
+    <h3>Proof, not a job description</h3>
+    <p class="meta">Fix time: this week, not today &middot; Where: Experience</p>
+    <p>Buyers and investors who scroll this far are checking if you've done it before. A list of duties tells them nothing. Results do.</p>
+    <div class="steal"><b>The rule.</b> For your current role: one line on what the company does, then two or three results with a number in each. Older roles can be one line.</div>
+    <div class="why"><b>Fails:</b> &quot;Responsible for managing...&quot;. Duties copied from a job ad. Your current role with no description at all.</div>
+    <div class="tpl"><span class="k">Template</span>[Company] [does what] for [who]. <br>&bull; [Result with a number] <br>&bull; [Result with a number] <br>&bull; [Who you work with or who backs you]</div>
+    <div class="ba">
+      <div class="b"><span class="k">Before</span>CEO. Responsible for strategy, fundraising and team leadership.</div>
+      <div class="a"><span class="k">After</span>Tallyhouse matches supplier invoices for construction finance teams. Grew from 0 to 60 customers in 18 months. Raised a seed round from Northgate Ventures.</div>
+    </div>
+  </div>
+
+  <div class="play">
+    <p class="idx">10 &middot; How to work with you</p>
+    <h3>Make the next step obvious</h3>
+    <p class="meta">Fix time: 2 minutes &middot; Where: end of About, plus one other place</p>
+    <p>You did the hard part. They read your profile and they're interested. Don't make them work out how to buy, invest or apply.</p>
+    <div class="steal"><b>The rule.</b> End your About with one clear next step, and repeat it in one other place: the banner, the first Featured item or your contact info. Same action everywhere.</div>
+    <div class="why"><b>Fails:</b> no next step, or &quot;feel free to reach out&quot;, which asks the reader to do the thinking.</div>
+    <div class="tpl"><span class="k">Template</span>If you [are who you help] and [have the problem], [do this] at [address]. <br>Or DM me &quot;[keyword]&quot; and I'll send you [the thing].</div>
+    <div class="ba">
+      <div class="b"><span class="k">Before</span>Feel free to reach out!</div>
+      <div class="a"><span class="k">After</span>If you run finance at a construction firm, book a 15 minute demo at tallyhouse.com.</div>
+    </div>
+  </div>
+</div>
+
+<div class="sec" style="page-break-before:always">
+  <h2>Fix it in 30 minutes</h2>
+  <p>Do it in this order. The top of the profile is seen by everyone, the bottom by a few. Fix what most people see first.</p>
+  <table>
+    <thead><tr><th>Order</th><th>Fix</th><th>Time</th><th>Checks</th></tr></thead>
+    <tbody>
+      <tr><td class="n">1</td><td><b>Headline.</b> Pick a formula, fill the brackets, add one proof point.</td><td class="n">8 min</td><td class="n">05, 06</td></tr>
+      <tr><td class="n">2</td><td><b>Banner.</b> One line, one proof, one action. A free design tool and a blank 1584 x 396 canvas is enough.</td><td class="n">8 min</td><td class="n">02, 03, 04</td></tr>
+      <tr><td class="n">3</td><td><b>About opening.</b> Problem, fix, proof, next step. Leave the rest for later.</td><td class="n">5 min</td><td class="n">07, 10</td></tr>
+      <tr><td class="n">4</td><td><b>Photo.</b> Window, eye level, plain wall. Retake it if it's dark.</td><td class="n">4 min</td><td class="n">01</td></tr>
+      <tr><td class="n">5</td><td><b>Featured.</b> Pin the one thing you want clicked first.</td><td class="n">3 min</td><td class="n">08</td></tr>
+      <tr><td class="n">6</td><td><b>Check the next step.</b> Same action in the About and one other place.</td><td class="n">2 min</td><td class="n">10</td></tr>
+      <tr><td class="n">Later</td><td><b>Experience.</b> Rewrite your current role as results this week.</td><td class="n">20 min</td><td class="n">09</td></tr>
+    </tbody>
+  </table>
+  <div class="honest">
+    <p style="margin:0"><b>The stranger test.</b> When you're done, send your profile to one person outside your industry and ask two questions: what do I do, and who for? If they can't answer in one go, start again at the headline.</p>
+  </div>
+</div>
+
+<div class="sec" style="page-break-before:always">
+  <h2>The checklist</h2>
+  <p>Print this page or keep it open next to your profile. Tick each one only when a stranger would agree.</p>
+  <ul class="check">
+    <li><b>01 Photo.</b> Bright, close, recent, plain background, clearly me.</li>
+    <li><b>02 Banner message.</b> One line that says what I do and who for. Readable on a phone in one glance.</li>
+    <li><b>03 Banner proof.</b> One kind of proof: a result, three to five logos, or a backer.</li>
+    <li><b>04 Banner call to action.</b> One action with a short address.</li>
+    <li><b>05 Headline: who I help.</b> A stranger can say who I help and with what.</li>
+    <li><b>06 Headline: proof.</b> A number, a name or a backer. No adjectives doing the work.</li>
+    <li><b>07 About opening.</b> Problem, fix, proof, all before &quot;see more&quot;.</li>
+    <li><b>08 Featured.</b> One to three items, the first is the thing I want clicked.</li>
+    <li><b>09 Experience.</b> My current role shows what the company does and two or three results.</li>
+    <li><b>10 Next step.</b> The same clear action at the end of my About and in one other place.</li>
+  </ul>
+  <div class="total"><span>My score</span><span>__ / 10</span></div>
+  <p style="margin-top:12pt">Then go back to the messages you sent last week that nobody answered. Now follow up.</p>
+</div>
+
+<div class="foot">
+  <span><b>Francisco Gost</b> writes The Draft, a weekly letter on how top 1% startups crush organic marketing, at franciscogost.com</span>
+  <span>Partner at RallyUp. 21.3M+ impressions generated for B2B founders and execs.</span>
+</div>
+
+</body></html>
