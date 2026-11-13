@@ -1,52 +1,100 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
-<title>The chief of staff DM</title>
+<title>From DM to revenue</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root{--paper:#fdf6ec;--dim:#f4e9d9;--ink:#241c16;--soft:#4a4239;--ash:#6f6559;--line:#241c1617;--accent:#b4552b;--deep:#9e441d}
   *{box-sizing:border-box}
-  @page{size:A4;margin:18mm 16mm}
-  body{margin:0;background:var(--paper);color:var(--soft);font:400 10.5pt/1.6 Inter,system-ui,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  h1,h2,h3{color:var(--ink);font-family:"Instrument Serif",Georgia,serif;font-weight:400;margin:0}
-  h1{font-size:34pt;line-height:1.02;letter-spacing:-.015em}
-  h2{font-size:19pt;line-height:1.1;margin:0 0 6pt}
-  h3{font-size:13pt;line-height:1.15}
+  /* Vertical margin on the page box, zero horizontal, as in the channel map:
+     the top inset survives natural page breaks and the paper bleeds sideways. */
+  @page{size:A4;margin:15mm 0;background:#fdf6ec}
+  html{background:var(--paper)}
+  body{margin:0;padding:0 16mm;background:var(--paper);color:var(--soft);font:400 10.5pt/1.6 Inter,system-ui,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  h1,h2{color:var(--ink);font-family:Anton,"Arial Narrow",Impact,sans-serif;font-weight:400;margin:0;text-transform:uppercase;letter-spacing:.005em}
+  h3,h4{color:var(--ink);font-family:Inter,system-ui,sans-serif;font-weight:700;margin:0}
+  h1{font-size:40pt;line-height:.98}
+  h2{font-size:21pt;line-height:1;margin:0 0 7pt;break-after:avoid;page-break-after:avoid}
+  h3{font-size:12.5pt;line-height:1.25;letter-spacing:-.005em;break-after:avoid;page-break-after:avoid}
+  p{margin:0 0 7pt}
+  b,strong{color:var(--ink)}
   .label{color:var(--ash);font-family:"JetBrains Mono",monospace;font-size:7.5pt;letter-spacing:.2em;text-transform:uppercase}
   .cover{border-bottom:2px solid var(--ink);padding-bottom:14pt;margin-bottom:18pt}
   .lead{font-size:12.5pt;line-height:1.5;color:var(--ink);margin:10pt 0 0;max-width:34em}
+  .meta{font-family:"JetBrains Mono",monospace;font-size:7pt;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);margin:8pt 0 0}
   .sec{margin-top:20pt;page-break-inside:avoid}
-  .rule{border:0;border-top:1px solid var(--line);margin:16pt 0}
-  .msg{border:2px solid var(--ink);background:#fff;padding:14pt 16pt;margin-top:10pt;white-space:pre-wrap;font-size:10pt;line-height:1.62}
-  .msg .hl{background:var(--dim);box-shadow:0 0 0 2px var(--dim)}
-  .note{display:flex;gap:10pt;margin-top:12pt;page-break-inside:avoid}
-  .note .n{flex:0 0 auto;font-family:"Instrument Serif",Georgia,serif;font-size:12pt;color:var(--deep);min-width:1.6em}
-  .note .b strong{color:var(--ink)}
-  .reply{border-left:3px solid var(--accent);background:var(--dim);padding:10pt 14pt;margin-top:10pt;font-size:10pt}
+  .sec.flow{page-break-inside:auto}
+  .keep{page-break-inside:avoid;break-inside:avoid}
+  .honest{border:2px solid var(--ink);background:#fff;padding:12pt 14pt;margin-top:12pt}
+  .honest p:last-child{margin-bottom:0}
   .foot{margin-top:24pt;border-top:2px solid var(--ink);padding-top:10pt;font-size:8.5pt;color:var(--ash);display:flex;justify-content:space-between;gap:12pt}
-  .gap{border:2px dashed var(--accent);background:#fff;padding:10pt 14pt;margin-top:10pt;font-size:9.5pt;color:var(--deep)}
+  table{border-collapse:collapse;width:100%;font-size:9pt;margin:10pt 0}
+  th,td{text-align:left;padding:5pt 8pt;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{font-family:"JetBrains Mono",monospace;font-size:7pt;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);background:var(--dim);border-bottom:2px solid var(--ink)}
+  tbody tr:last-child td{border-bottom:none}
+  tr{page-break-inside:avoid}
+  td.k{color:var(--ink);font-weight:600}
+  .stats{display:flex;flex-wrap:wrap;gap:0;border:2px solid var(--ink);background:#fff;margin:8pt 0 9pt}
+  .stat{flex:1 1 auto;min-width:5.6em;padding:7pt 9pt;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:none}
+  .stat .v{font-family:"JetBrains Mono",monospace;font-size:11pt;color:var(--ink);font-weight:600;line-height:1.2}
+  .stat .v.up{color:var(--deep)}
+  .stat .k{font-family:"JetBrains Mono",monospace;font-size:6.5pt;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);margin-top:2pt}
+  .msg{border:2px solid var(--ink);background:#fff;padding:14pt 16pt;margin-top:8pt;white-space:pre-wrap;font-size:10pt;line-height:1.62;color:var(--ink)}
+  .msg .hl{background:var(--dim);box-shadow:0 0 0 2px var(--dim)}
+  .aside{font-size:9pt;color:var(--ash);font-style:italic;margin-top:6pt}
+  .play{border-top:1px solid var(--line);padding-top:10pt;margin-top:12pt;page-break-inside:avoid}
+  .play .idx{font-family:"JetBrains Mono",monospace;font-size:7.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--ash);margin:0}
+  .play h3{margin:3pt 0 6pt;font-size:12.5pt}
+  .quote{border-left:3px solid var(--ink);padding:6pt 12pt;margin:0 0 7pt;font-size:9.5pt;color:var(--ink);font-style:italic}
+  .why{background:var(--dim);border-left:3px solid var(--accent);padding:8pt 12pt;margin-top:4pt;font-size:9.5pt}
+  .why p:last-child{margin-bottom:0}
+  .play{page-break-inside:auto}
+  .play>p,.why,.stats,.quote,li{break-inside:avoid}
+  .idx,.meta,.quote{break-after:avoid;page-break-after:avoid}
+  .why{break-before:avoid}
+  ol{margin:0 0 7pt;padding-left:16pt}
+  li{margin:0 0 4pt}
 </style></head><body>
 
 <div class="cover">
-  <p class="label">The $100k role &middot; age 23</p>
-  <h1>The chief of staff DM</h1>
-  <p class="lead">The cold message that got a reply in thirty minutes, and the role it turned into. Reproduced exactly as it was sent, typos included, with notes on why each part is there.</p>
+  <p class="label">One DM &middot; a six figure yes</p>
+  <h1>From DM<br>to revenue</h1>
+  <p class="lead">The cold message I sent a stranger, annotated line by line, and the structure underneath it, which works the same on customers, investors and hires.</p>
+  <p class="meta">By Francisco Gost &middot; The Draft &middot; franciscogost.com</p>
 </div>
 
 <div class="sec">
-  <h2>1. Before I sent it</h2>
-  <p>Alec was building RallyUp in public and posting about it. That post is the only reason the message exists: it told me what he was working on, what he needed, and that he was paying attention to his own feed that week.</p>
-  <p>I was working full time as a partnerships manager in Spain. I was not looking for a job title. I was looking for a founder who needed the one thing I already knew how to do.</p>
-  <p>I read his last twenty posts before I wrote a word. Not to flatter him back, to learn how he talks: which words he reaches for, what he finds interesting, how long his sentences run. Then I wrote to him in his own language, reusing his own phrases, because a message that sounds like you is a message you finish reading.</p>
-  <p>The posts also told me what was missing. Outreach was the obvious gap. It was not the only one: nothing was tracking who had been spoken to or what had been said. So I did not pitch one service. I pitched the thing he knew he needed, and the thing he had not got to yet.</p>
+  <h2>Why this exists</h2>
+  <p>I sent one cold message to a founder I'd never met. He replied in thirty minutes, and that message is the reason I'm his business partner today.</p>
+  <p>People ask me what it said. That's the wrong question, though answering it honestly is about the most useful thing I can do with the message: the words won't transfer to your situation, while the structure underneath them will, whether the yes you need is a customer, an investor or a job.</p>
+  <p>So here's the message exactly as I sent it, typos left in, with every line explained.</p>
 </div>
 
-<hr class="rule">
+<div class="sec">
+  <h2>What it produced</h2>
+  <div class="stats">
+    <div class="stat"><div class="v">1</div><div class="k">Cold message</div></div>
+    <div class="stat"><div class="v">0</div><div class="k">Introductions</div></div>
+    <div class="stat"><div class="v up">30 min</div><div class="k">To his reply</div></div>
+  </div>
+  <table>
+    <tbody>
+      <tr><td class="k" style="width:28%">His entire reply</td><td><i>&ldquo;Great work. Booked for Wednesday.&rdquo;</i></td></tr>
+      <tr><td class="k">What it became</td><td>A few afternoons a week, then chief of staff, then a partnership</td></tr>
+    </tbody>
+  </table>
+  <p>One message, with no application, no introduction and nobody vouching for me.</p>
+</div>
 
 <div class="sec">
-  <h2>2. The message</h2>
-  <p class="label" style="margin-top:8pt">Sent 3:28pm</p>
-  <div class="msg">Hey Alec,
+  <h2>The message</h2>
+  <p class="label">Sent 27 October 2025, 3:28pm &middot; nothing retouched</p>
+  <div class="msg">🏴‍☠️
+☀️
+🏎️
+
+Hey Alec,
 
 Saw your post and just had to reach out, as the outreach hacker I am.
 
@@ -60,46 +108,148 @@ Now that I have your attention, I'm Francisco, 3 things about me:
 
 3. Now working as a Partnerships Manager at a high-growth SaaS in Spain, have some extra time on afternoons and weekends, and would love to help you sell more RallyUp to teams!
 
-If you want an outreach hacker who actually talks and sells like a human (not a robot), I'm your guy.
-
-Let's speak, you can set up a call here - [calendar link]
+If you want an outreach hacker who actually talks and sells like a human (not a robot), I’m your guy.
 
 Big hug from Spain,
 Francisco</div>
+  <p class="aside">The real one had a calendar link between the last two lines. I've taken it out because it's long dead.</p>
+</div>
+
+<div class="sec flow">
+  <h2>The annotation</h2>
+
+  <div class="play">
+    <p class="idx">01</p>
+    <h3>Three emojis, never explained</h3>
+    <p>A pirate flag, a sun and a racing car. I didn't explain them then and I won't now. In an inbox full of grey paragraphs they break the pattern, and they tell him a person wrote this before he's read a word.</p>
+  </div>
+
+  <div class="play">
+    <p class="idx">02</p>
+    <h3>The first line names his post and labels me in the same breath</h3>
+    <p class="quote">Saw your post and just had to reach out, as the outreach hacker I am.</p>
+    <p>He knows why I'm writing before he knows who I am. The self-label is doing a job beyond vanity, too: it's the claim the next line exists to prove.</p>
+  </div>
+
+  <div class="play">
+    <p class="idx">03</p>
+    <h3>The second paragraph is the whole message</h3>
+    <p class="quote">&quot;How did he find about me?&quot;, you're asking yourself. Well, easy. The same way I will find about your future clients to get you to +$100k per month.</p>
+    <p>It asks the question he's already asking, then answers it by doing the thing it promises. The sentence is outreach, landing in his inbox while he reads about outreach, so he never has to take my word for any of it; the evidence is already in his hands.</p>
+    <div class="why"><p><b>If you take one idea from this document, take that one.</b> Everything else is packaging.</p></div>
+  </div>
+
+  <div class="play">
+    <p class="idx">04</p>
+    <h3>There's a typo in it</h3>
+    <p>&ldquo;Find about&rdquo;, twice, in the best sentence I wrote. He replied in thirty minutes anyway, and I think of that whenever somebody tells me they're still polishing.</p>
+  </div>
+
+  <div class="play">
+    <p class="idx">05</p>
+    <h3>Then three facts, in a deliberate order</h3>
+    <p>The first is self-deprecating: a business at 18, ten grand, and <i>&ldquo;money I dropped stupidly on a watch.&rdquo;</i> It dates the ambition and makes me sound like a person instead of a CV.</p>
+    <p>The second is the only one that matters commercially, and it carries a name and two numbers: outreach for Farhoon Asim, 85k+ followers, multiple $100k months. Anyone could check it.</p>
+    <p>Most advice says to lead with your job title. I buried mine in third place, and it's there for one reason, the clause at the end of it.</p>
+  </div>
+
+  <div class="play">
+    <p class="idx">06</p>
+    <h3>The weakness is on purpose</h3>
+    <p class="quote">have some extra time on afternoons and weekends</p>
+    <p>That tells him exactly what he isn't getting. Anyone painting a perfect picture is selling, and volunteering the awkward bit is what makes the other two facts land. He knew I had a day job before he replied.</p>
+  </div>
+
+  <div class="play">
+    <p class="idx">07</p>
+    <h3>&ldquo;Big hug from Spain&rdquo;</h3>
+    <p>Nobody writes that in a cold B2B message, which is exactly why it's there. It makes the whole thing read like someone who couldn't be bothered to sound like LinkedIn.</p>
+  </div>
+</div>
+
+<div class="sec flow">
+  <h2>The four moves</h2>
+  <p>Take the story out and four moves are left. They work the same whether you want a customer, an investment, a partnership or a job.</p>
+
+  <div class="play">
+    <p class="idx">Move 1</p>
+    <h3>Open on their trigger</h3>
+    <p>Something that happened to them recently: a post, a raise, a launch, a hire, a change on their pricing page. The trigger makes the message timely instead of random, and bad timing is most of why cold outreach fails.</p>
+    <p>Spend an evening reading them first. I went through Alec's last twenty posts before I wrote a word, to learn how he talks rather than to flatter him: the words he reaches for, how long his sentences run. Then I wrote to him in his own language.</p>
+  </div>
+
+  <div class="play">
+    <p class="idx">Move 2</p>
+    <h3>Do the work inside the message</h3>
+    <p>This is the move that matters most. Whatever you're selling, put a finished piece of it in the message, unasked.</p>
+    <table>
+      <thead><tr><th style="width:24%">If you want</th><th>Put this in the message</th></tr></thead>
+      <tbody>
+        <tr><td class="k">A customer</td><td>The analysis of their problem they haven't done, or the thing you'd fix first and why</td></tr>
+        <tr><td class="k">An investor</td><td>The market read they haven't seen, or what you learned that contradicts the consensus</td></tr>
+        <tr><td class="k">A partnership</td><td>The specific overlap, with the first three accounts you'd work on together</td></tr>
+        <tr><td class="k">A job</td><td>A piece of the role, done: a teardown, a plan, a rewrite</td></tr>
+        <tr><td class="k">A hire</td><td>What you can see about their work from outside, and what you'd build with them</td></tr>
+      </tbody>
+    </table>
+    <p>Anyone can say they're good at something, and almost nobody will spend an afternoon proving it before they're asked. That gap is the whole opportunity, and it's getting wider as plausible words get easier to generate and it gets harder to tell who meant them.</p>
+  </div>
+
+  <div class="play">
+    <p class="idx">Move 3</p>
+    <h3>Three facts, no adjectives</h3>
+    <p>Pick three things that actually happened, each answering a question they'd have, and put a number, a name or a date in each. Then test every sentence: if someone else could swap their own details in and it would still stand, delete it. &ldquo;Passionate&rdquo; and &ldquo;results-driven&rdquo; both fail.</p>
+    <p>Include one fact that's inconvenient to you, because it's what makes the other two believable.</p>
+  </div>
+
+  <div class="play">
+    <p class="idx">Move 4</p>
+    <h3>One action, and make it easy</h3>
+    <p>A calendar link or a yes or no question, and only one. &ldquo;Let me know if you'd like to chat&rdquo; hands homework to the person you're asking for a favour.</p>
+  </div>
 </div>
 
 <div class="sec">
-  <h2>3. Why each part is there</h2>
-
-  <div class="note"><div class="n">01</div><div class="b"><strong>The opening names the trigger, not me.</strong> "Saw your post" tells him this was not sent to four hundred people. The self-label that follows does the introduction in four words so the next line can do the work.</div></div>
-
-  <div class="note"><div class="n">02</div><div class="b"><strong>The highlighted line is the entire pitch.</strong> It says the quiet part out loud: I found you the same way I will find your customers. It is not a claim about outreach, it is outreach, arriving in his inbox while he reads the claim. That is the only part of this message that cannot be copied by someone who cannot do the work.</div></div>
-
-  <div class="note"><div class="n">03</div><div class="b"><strong>The introduction comes fourth, not first.</strong> "Now that I have your attention" is only allowed because the line before it earned the attention. Leading with your name and your CV spends the attention you have not got yet.</div></div>
-
-  <div class="note"><div class="n">04</div><div class="b"><strong>Three facts, each carrying a number and none of them a job title.</strong> A business at eighteen with the amount attached. A named client with a follower count and a revenue figure. Current status with the honest admission of limited hours. The self-deprecating line about the watch is there so the first two do not read as boasting.</div></div>
-
-  <div class="note"><div class="n">05</div><div class="b"><strong>The positioning line attacks the category's worst habit.</strong> Everyone doing outreach sounds like a robot. Saying so, in a message that plainly does not, is a second demonstration.</div></div>
-
-  <div class="note"><div class="n">06</div><div class="b"><strong>A calendar link, not a question.</strong> No "let me know if this is of interest". The whole message assumes the call, so the last line just removes the friction.</div></div>
-
-  <div class="note"><div class="n">07</div><div class="b"><strong>It is not polished.</strong> There is a grammatical slip in the best line in the message. It went anyway, and it worked, because specificity beats polish every single time.</div></div>
+  <h2>When they reply</h2>
+  <p>A reply gets your foot in the door, and I've watched plenty of people get that far and then wait to be told what to do next. That's where it dies.</p>
+  <p>In my first month I shipped things before anyone asked for them. Nobody scoped that work or approved it; it just started existing. That's the difference between someone a company pays and someone it would struggle to operate without, and sales works the same way. A prospect who replies hasn't bought anything yet, but the one you send something useful to twice, before they've signed, often becomes a customer.</p>
 </div>
 
-<hr class="rule">
+<div class="sec">
+  <h2>You can't send fifty of these</h2>
+  <p>Each one takes an evening of reading them, finding the trigger and doing a real piece of the work. Three a week is a serious outbound practice in this format, and three good ones will beat two hundred templated ones by a margin that isn't close.</p>
+  <p>I've seen it from the other side. When we posted one role, hundreds of people applied and we only interviewed four. The rest weren't worse at the job; they'd all done the same quick thing, which is the surest way to make sure nobody can tell you apart.</p>
+</div>
 
 <div class="sec">
-  <h2>4. What came back</h2>
-  <p class="label" style="margin-top:8pt">Replied 3:58pm, thirty minutes later</p>
-  <div class="reply">Great work. Booked for Wednesday.</div>
-  <p>That was the whole reply. I started fractionally, on afternoons and weekends around a full time job, which is exactly what the third fact in the message had offered.</p>
-  <p>The reply is not the interesting part though. What turned a few afternoons into a full time role was the first month: I shipped things before he asked for them, and built what was missing instead of waiting to be told it was missing. That is the difference between a freelancer somebody is paying and a person they would struggle to run the company without.</p>
-  <p><strong>Grind beats talent. Every time.</strong></p>
+  <h2>What this can't do for you</h2>
+  <div class="honest">
+    <p><b>It's one message,</b> sent to one founder who happened to be looking. I can't give you a hit rate, because I wasn't running a test; I was trying to change my life. Anyone quoting you a conversion rate on cold DMs is guessing.</p>
+    <p><b>It doesn't scale, by design.</b> If you need a hundred conversations next week, use something else. This is for when one specific yes would change something.</p>
+    <p><b>Doing the work unasked costs real hours,</b> and some of them go to people who never reply. That's the price, and it's why almost nobody pays it and why the thing still works.</p>
+    <p><b>It won't rescue a bad fit.</b> That message put me in front of someone whose problem I could genuinely help with, and no structure fixes being wrong for the job.</p>
+  </div>
+</div>
+
+<div class="sec">
+  <h2>The one page version</h2>
+  <ol>
+    <li>Pick one person, not a list.</li>
+    <li>Read everything they've published recently. Give it an evening.</li>
+    <li>Find the trigger: something that happened to them this month.</li>
+    <li>Do a piece of the work they need, unasked.</li>
+    <li>Open on their trigger rather than your name.</li>
+    <li>Put the work in the second paragraph so the claim proves itself.</li>
+    <li>Use three facts, each with a number, a name or a date, and make one of them inconvenient.</li>
+    <li>Ask for one action: a link, not a request to reply.</li>
+    <li>Send it before it's polished.</li>
+    <li>If they reply, ship something else before they ask.</li>
+  </ol>
 </div>
 
 <div class="foot">
-  <span>Francisco Gost &middot; The Draft</span>
-  <span>One cold message, thirty minutes, one role.</span>
+  <span><b>Francisco Gost</b> writes The Draft, a weekly letter on how top 1% startups crush organic marketing, at franciscogost.com</span>
+  <span>Partner at RallyUp. 21.3M+ impressions generated for B2B founders and execs.</span>
 </div>
 
 </body></html>

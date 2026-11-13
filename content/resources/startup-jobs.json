@@ -11,24 +11,24 @@
   "blocks": [
     {
       "type": "lead",
-      "text": "I got my job at a startup without applying anywhere. But you still need to know which companies are hiring."
+      "text": "I got my startup job without applying anywhere. You still need to know which companies are hiring, though."
     },
     {
       "type": "p",
-      "text": "These are the ten places I'd look: boards built only for startups, the YC and VC portfolio boards, and the monthly Hacker News thread hundreds of companies post in."
+      "text": "These are the ten places I'd look: boards built only for startups, the YC and VC portfolio boards, and the Hacker News thread hundreds of companies post in every month."
     },
     {
       "type": "list",
       "items": [
         "Ten job sites, each with its link and what it's best for",
         "The VC boards that list every role across their portfolios",
-        "The monthly thread most people don't know exists",
+        "The monthly thread most people have never heard of",
         "How to use the list to skip the queue"
       ]
     },
     {
       "type": "p",
-      "text": "The honest limit: a job board gets you into the queue. The list ends with how to get out of it."
+      "text": "A job board puts you in the same queue as everyone else, so the list ends with how to get out of it."
     },
     {
       "type": "ask",

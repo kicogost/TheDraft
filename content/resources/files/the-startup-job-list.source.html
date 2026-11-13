@@ -9,8 +9,10 @@
   /* Vertical margin on the page box, zero horizontal. Chrome only applies
      body padding-top to the first page, so the top inset has to come from
      the page box or text lands on the sheet edge after every natural break.
-     Zero horizontal keeps the paper colour bleeding to the left and right. */
-  @page{size:A4;margin:15mm 0}
+     Zero horizontal keeps the paper colour bleeding to the left and right,
+     and the @page background paints the top and bottom margins in paper too,
+     which Chrome otherwise leaves white. */
+  @page{size:A4;margin:15mm 0;background:#fdf6ec}
   html{background:var(--paper)}
   body{margin:0;padding:0 16mm;background:var(--paper);color:var(--soft);font:400 10.5pt/1.6 Inter,system-ui,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   h1,h2{color:var(--ink);font-family:Anton,"Arial Narrow",Impact,sans-serif;font-weight:400;margin:0;text-transform:uppercase;letter-spacing:.005em}
@@ -47,11 +49,17 @@
   .bucket{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:6.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--paper);background:var(--ink);padding:2pt 5pt;margin-left:5pt;vertical-align:2pt}
   .bucket.tof{background:var(--accent)}
   .bucket.mof{background:var(--soft)}
+  /* A channel may run across a page break, but never splits inside a box
+     and never leaves its number, name or labels alone at the bottom. */
+  .play{page-break-inside:auto}
+  .play>p,.steal,.why,.stats,li{break-inside:avoid}
+  h2,h3,.idx,.meta{break-after:avoid}
+  .why{break-before:avoid}
   .pagebreak{page-break-before:always;height:0}
   ol{margin:0 0 7pt;padding-left:16pt}
   li{margin:0 0 4pt}
   .meta{font-family:"JetBrains Mono",monospace;font-size:7pt;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);margin:0 0 6pt}
-  a.go{display:block;margin-top:6pt;font-family:"JetBrains Mono",monospace;font-size:8pt;color:var(--deep);font-weight:600;text-decoration:underline;word-break:break-all}
+  a.go{break-before:avoid;break-inside:avoid;display:block;margin-top:6pt;font-family:"JetBrains Mono",monospace;font-size:8pt;color:var(--deep);font-weight:600;text-decoration:underline;word-break:break-all}
 </style></head><body>
 
 <div class="cover">
@@ -62,9 +70,9 @@
 
 <div class="sec">
   <h2>What this is</h2>
-  <p>I got my job at a startup without applying anywhere. I sent the founder one cold message. But you still need to know which companies are hiring, and these are the places I'd look. Every link was checked on 2 November 2026.</p>
+  <p>I got my startup job without applying anywhere: I sent the founder one cold message. You still need to know which companies are hiring, though, and these are the places I'd look. I checked every link on 2 November 2026.</p>
   <div class="honest">
-    <p style="margin:0"><b>The honest promise.</b> A job board gets you into the queue. To skip it, find the role here, then message the person who runs the team directly, with a small piece of the work already done.</p>
+    <p style="margin:0"><b>The honest promise.</b> A job board puts you in the same queue as everyone else. To skip it, find the role here, then message the person who runs the team directly with a small piece of the work already done.</p>
   </div>
 </div>
 
@@ -90,7 +98,7 @@
     <p class="idx">03</p>
     <h3>Welcome to the Jungle (formerly Otta)</h3>
     <p class="meta">Curated tech roles</p>
-    <p>Welcome to the Jungle bought Otta in 2024 and rebranded it. It narrows things down to roles that match you, so you&#x27;re not scrolling through hundreds.</p>
+    <p>Welcome to the Jungle bought Otta in 2024 and rebranded it. It narrows the list to roles that match you, which saves you scrolling through hundreds.</p>
     
     <a class="go" href="https://app.welcometothejungle.com">Open &rarr; https://app.welcometothejungle.com</a>
   </div>
@@ -98,7 +106,7 @@
     <p class="idx">04</p>
     <h3>Underdog.io</h3>
     <p class="meta">Startups apply to you</p>
-    <p>One application and you&#x27;re done. Companies reach out to you, with direct intros to founders and hiring managers.</p>
+    <p>You apply once and the companies come to you, with direct intros to founders and hiring managers.</p>
     
     <a class="go" href="https://underdog.io">Open &rarr; https://underdog.io</a>
   </div>
@@ -106,7 +114,7 @@
     <p class="idx">05</p>
     <h3>Built In</h3>
     <p class="meta">Company culture</p>
-    <p>Shows what it&#x27;s like to work somewhere before you apply: culture, benefits and photos. It lists some large companies too, so filter by size.</p>
+    <p>Shows you what it&#x27;s like to work somewhere before you apply, with culture, benefits and photos. Some large companies are on there too, so filter by size.</p>
     
     <a class="go" href="https://builtin.com/jobs">Open &rarr; https://builtin.com/jobs</a>
   </div>
@@ -122,7 +130,7 @@
     <p class="idx">07</p>
     <h3>Hacker News: Who is hiring?</h3>
     <p class="meta">Monthly thread</p>
-    <p>On the first weekday of every month, hundreds of companies post jobs in one thread. Each month&#x27;s thread has a new link, so start from this page and open the latest.</p>
+    <p>On the first weekday of every month, hundreds of companies post jobs in one thread. The link changes every month, so start from this page and open the latest one.</p>
     
     <a class="go" href="https://news.ycombinator.com/submitted?id=whoishiring">Open &rarr; https://news.ycombinator.com/submitted?id=whoishiring</a>
   </div>
@@ -133,7 +141,7 @@
     <p>Big VC firms list every open role across the companies they&#x27;ve invested in. Three of the largest:</p>
     
     <a class="go" href="https://jobs.generalcatalyst.com/jobs">General Catalyst &rarr; https://jobs.generalcatalyst.com/jobs</a>
-      <a class="go" href="https://jobs.a16z.com/jobs">a16z &rarr; https://jobs.a16z.com/jobs</a><br>
+    <a class="go" href="https://jobs.a16z.com/jobs">a16z &rarr; https://jobs.a16z.com/jobs</a>
     <a class="go" href="https://jobs.sequoiacap.com/jobs">Sequoia &rarr; https://jobs.sequoiacap.com/jobs</a>
   </div>
   <div class="play">
@@ -148,7 +156,7 @@
     <p class="idx">10</p>
     <h3>Lenny&#x27;s Jobs</h3>
     <p class="meta">Vetted roles</p>
-    <p>From Lenny&#x27;s Newsletter. Lenny says every company is vetted and ghost jobs and staffing-agency posts are filtered out.</p>
+    <p>The job board from Lenny&#x27;s Newsletter. Lenny says every company on it is vetted, with ghost jobs and staffing-agency posts filtered out.</p>
     
     <a class="go" href="https://www.lennysjobs.com">Open &rarr; https://www.lennysjobs.com</a>
   </div>
@@ -159,7 +167,7 @@
   <ol>
     <li>Pick three companies you'd love to work at from these boards.</li>
     <li>Find who runs the team and read their last 20 posts.</li>
-    <li>Message them directly, open with something they wrote, and send a small piece of the job done before they ask.</li>
+    <li>Message them directly. Open with something they wrote, and send a small piece of the job, done, before they ask for it.</li>
   </ol>
 </div>
 

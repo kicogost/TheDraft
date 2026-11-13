@@ -4,18 +4,18 @@
   "title": "The 10/10 profile guide.",
   "description": "A scored LinkedIn profile audit for founders and B2B execs: ten checks, one point each, with the rule, a fill-in template and a before and after for every one.",
   "kicker": "10 checks · score yourself out of 10",
-  "formHeader": "10 checks. 30 minutes to fix them.",
+  "formHeader": "Ten checks you can fix in 30 minutes.",
   "formEyebrow": "Get it free, in your inbox",
   "submitLabel": "Send me the guide",
   "disclosure": "You will also get The Draft, one letter a week on how top 1% startups crush organic marketing. Leave whenever you like.",
   "blocks": [
     {
       "type": "lead",
-      "text": "Everyone you message checks your profile before they reply. Most founder profiles lose that moment: a headline that says \"Co-founder\", a grey banner, and nothing that says what the company does."
+      "text": "Everyone you message checks your profile before they reply, and most founder profiles lose that moment with a headline that just says \"Co-founder\" and nothing on the page about what the company does."
     },
     {
       "type": "p",
-      "text": "I'm a partner at RallyUp, where we write LinkedIn for B2B founders and executives. This is the audit we run on a profile before we post a word."
+      "text": "I'm a partner at RallyUp, where we write LinkedIn for B2B founders and executives, and this is the audit we run on a profile before we post a word."
     },
     {
       "type": "list",
@@ -29,7 +29,7 @@
     },
     {
       "type": "p",
-      "text": "The honest limit is in there too. The ten checks are my judgement from fixing founder profiles, not a LinkedIn ranking factor. A better profile won't get you reach. It makes sure the people who do land on it reply."
+      "text": "The ten checks are my judgement from fixing founder profiles, and none of them will change your reach. What a better profile changes is how many of the people who land on it actually reply."
     },
     {
       "type": "ask",

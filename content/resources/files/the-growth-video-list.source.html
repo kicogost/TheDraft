@@ -9,8 +9,10 @@
   /* Vertical margin on the page box, zero horizontal. Chrome only applies
      body padding-top to the first page, so the top inset has to come from
      the page box or text lands on the sheet edge after every natural break.
-     Zero horizontal keeps the paper colour bleeding to the left and right. */
-  @page{size:A4;margin:15mm 0}
+     Zero horizontal keeps the paper colour bleeding to the left and right,
+     and the @page background paints the top and bottom margins in paper too,
+     which Chrome otherwise leaves white. */
+  @page{size:A4;margin:15mm 0;background:#fdf6ec}
   html{background:var(--paper)}
   body{margin:0;padding:0 16mm;background:var(--paper);color:var(--soft);font:400 10.5pt/1.6 Inter,system-ui,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   h1,h2{color:var(--ink);font-family:Anton,"Arial Narrow",Impact,sans-serif;font-weight:400;margin:0;text-transform:uppercase;letter-spacing:.005em}
@@ -47,24 +49,30 @@
   .bucket{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:6.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--paper);background:var(--ink);padding:2pt 5pt;margin-left:5pt;vertical-align:2pt}
   .bucket.tof{background:var(--accent)}
   .bucket.mof{background:var(--soft)}
+  /* A channel may run across a page break, but never splits inside a box
+     and never leaves its number, name or labels alone at the bottom. */
+  .play{page-break-inside:auto}
+  .play>p,.steal,.why,.stats,li{break-inside:avoid}
+  h2,h3,.idx,.meta{break-after:avoid}
+  .why{break-before:avoid}
   .pagebreak{page-break-before:always;height:0}
   ol{margin:0 0 7pt;padding-left:16pt}
   li{margin:0 0 4pt}
   .meta{font-family:"JetBrains Mono",monospace;font-size:7pt;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);margin:0 0 6pt}
-  a.go{display:block;margin-top:6pt;font-family:"JetBrains Mono",monospace;font-size:8pt;color:var(--deep);font-weight:600;text-decoration:underline;word-break:break-all}
+  a.go{break-before:avoid;break-inside:avoid;display:block;margin-top:6pt;font-family:"JetBrains Mono",monospace;font-size:8pt;color:var(--deep);font-weight:600;text-decoration:underline;word-break:break-all}
 </style></head><body>
 
 <div class="cover">
   <p class="label">5 videos &middot; 3 bonus &middot; about 9 hours</p>
   <h1>The growth video list</h1>
-  <p class="lead">Marketing and distribution is the most valuable skill you can build in 2026. These eight videos teach it better than most paid courses, and they're free.</p>
+  <p class="lead">Marketing and distribution is the most valuable skill you can build in 2026, and these eight free videos teach it better than most paid courses do.</p>
 </div>
 
 <div class="sec">
   <h2>What this is</h2>
-  <p>I'm a partner at RallyUp, where we write LinkedIn for B2B founders and executives. These are the videos I send founders who ask how to get better at marketing. Every link and running time was checked on 2 November 2026.</p>
+  <p>I'm a partner at RallyUp, where we write LinkedIn for B2B founders and executives. When a founder asks me how to get better at marketing, these are the videos I send. I checked every link and running time on 2 November 2026.</p>
   <div class="honest">
-    <p style="margin:0"><b>The honest promise.</b> Watching won't make you good at marketing. Doing will. Watch one, then try one thing from it this week before you start the next.</p>
+    <p style="margin:0"><b>The honest promise.</b> You get good at marketing by doing it, and eight videos won't change that on their own. Watch one, try one thing from it this week, and only then start the next.</p>
   </div>
 </div>
 
@@ -75,15 +83,15 @@
     <h3>Alex Hormozi: 13 Years of Marketing Advice in 85 Mins</h3>
     <p class="meta">Alex Hormozi · 1h 25m</p>
     <p>Everything from writing hooks and ads to what he calls the only four ways to get customers: warm outreach, cold outreach, content and paid ads.</p>
-    <div class="why"><b>Watch it for:</b> The four ways. Most founders are doing one badly instead of two properly.</div>
+    <div class="why"><b>Watch it for:</b> The four ways, because most founders are doing one of them badly when they could be doing two properly.</div>
     <a class="go" href="https://www.youtube.com/watch?v=reisEL_D7xc">Watch &rarr; https://www.youtube.com/watch?v=reisEL_D7xc</a>
   </div>
   <div class="play">
     <p class="idx">02</p>
     <h3>Alex Schultz: How to Get Users and Grow</h3>
     <p class="meta">Stanford Online, CS183F Startup School · 49m</p>
-    <p>Facebook&#x27;s VP of Growth on why retention comes before acquisition, and how to tell whether people actually stick around before you spend money getting more of them.</p>
-    <div class="why"><b>Watch it for:</b> The retention curve. If it never flattens, stop spending on growth.</div>
+    <p>Facebook&#x27;s VP of Growth on why retention comes before acquisition, and how to tell whether people stick around before you spend money getting more of them.</p>
+    <div class="why"><b>Watch it for:</b> The retention curve. If yours never flattens, stop spending on growth.</div>
     <a class="go" href="https://www.youtube.com/watch?v=URiIsrdplbo">Watch &rarr; https://www.youtube.com/watch?v=URiIsrdplbo</a>
   </div>
   <div class="play">
@@ -99,14 +107,14 @@
     <h3>Rory Sutherland on The Diary of a CEO</h3>
     <p class="meta">The Diary Of A CEO, E165 · 1h 38m</p>
     <p>The vice chairman of Ogilvy UK on why people actually buy, and why the logical answer is so often the wrong one.</p>
-    <div class="why"><b>Watch it for:</b> Psychology over logic. The episode changes how you write any offer.</div>
+    <div class="why"><b>Watch it for:</b> Why the psychological answer beats the logical one. You&#x27;ll write every offer differently afterwards.</div>
     <a class="go" href="https://www.youtube.com/watch?v=Hz3RWxJck68">Watch &rarr; https://www.youtube.com/watch?v=Hz3RWxJck68</a>
   </div>
   <div class="play">
     <p class="idx">05</p>
     <h3>April Dunford on Lenny&#x27;s Podcast</h3>
     <p class="meta">Lenny&#x27;s Podcast · 1h 6m</p>
-    <p>She has worked hands-on with over 200 companies on positioning, and walks through her five-step process for making people instantly get what you do.</p>
+    <p>She has worked hands-on with over 200 companies on positioning, and here she walks through her five-step process for making people get what you do the first time they hear it.</p>
     <div class="why"><b>Watch it for:</b> The five steps, from 22:32. Do them before you write another landing page.</div>
     <a class="go" href="https://www.youtube.com/watch?v=hdjlCLb9Hl8">Watch &rarr; https://www.youtube.com/watch?v=hdjlCLb9Hl8</a>
   </div>
@@ -134,7 +142,7 @@
     <p class="idx">Bonus</p>
     <h3>Jeanne DeWitt Grosser: What world-class GTM looks like in 2026</h3>
     <p class="meta">Lenny&#x27;s Podcast · 1h 26m</p>
-    <p>Modern go-to-market from the person who built Stripe&#x27;s early sales team: segmentation, GTM engineers and what changed.</p>
+    <p>Modern go-to-market from the person who built Stripe&#x27;s early sales team, covering segmentation, GTM engineers and what has changed.</p>
     
     <a class="go" href="https://www.youtube.com/watch?v=RmnWHz8HD74">Watch &rarr; https://www.youtube.com/watch?v=RmnWHz8HD74</a>
   </div>

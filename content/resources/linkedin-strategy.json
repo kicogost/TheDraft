@@ -4,18 +4,18 @@
   "title": "The AI LinkedIn plan.",
   "description": "A LinkedIn plan for AI SaaS founders: five post formats that show how your product actually works, a template and a worked example for each, the weekly posting schedule and a 30-day calendar.",
   "kicker": "5 post formats · 30-day calendar",
-  "formHeader": "5 formats. 12 posts. One month.",
+  "formHeader": "Your next month of LinkedIn, planned.",
   "formEyebrow": "Get it free, in your inbox",
   "submitLabel": "Send me the plan",
   "disclosure": "You will also get The Draft, one letter a week on how top 1% startups crush organic marketing. Leave whenever you like.",
   "blocks": [
     {
       "type": "lead",
-      "text": "Every AI company on LinkedIn sounds the same. Agentic, 10x, the future of work. Your buyer can't tell any of them apart, so the plan is simple: show how the product actually works."
+      "text": "AI companies on LinkedIn all say agentic, 10x and the future of work, so your buyer can't tell any of you apart. This plan gets around that by showing the product doing its job."
     },
     {
       "type": "p",
-      "text": "I'm a partner at RallyUp, where we write LinkedIn for B2B founders and executives. This is the plan we'd start an AI SaaS founder on."
+      "text": "I'm a partner at RallyUp, where we write LinkedIn for B2B founders and executives, and this is the plan we'd start an AI SaaS founder on."
     },
     {
       "type": "list",
@@ -29,7 +29,7 @@
     },
     {
       "type": "p",
-      "text": "Every format comes with a fill-in template, a worked example for a made-up AI SaaS and the mistake that kills it. The honest limit: it's a starting point, not a guarantee. Judge it on saves, DMs and calls booked, never on impressions."
+      "text": "Every format comes with a fill-in template, a worked example for a made-up AI SaaS and the mistake that kills it. Treat it as a first month you'll adjust, and judge it on saves, DMs and calls booked rather than impressions."
     },
     {
       "type": "ask",

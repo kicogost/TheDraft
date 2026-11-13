@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>The viral LinkedIn launch playbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#fdf6ec;--dim:#f4e9d9;--ink:#241c16;--soft:#4a4239;--ash:#6f6559;--line:#241c1617;--accent:#b4552b;--deep:#9e441d}
+  *{box-sizing:border-box}
+  /* Vertical margin on the page box, zero horizontal, as in the channel map:
+     the top inset survives natural page breaks and the paper bleeds sideways. */
+  @page{size:A4;margin:15mm 0;background:#fdf6ec}
+  html{background:var(--paper)}
+  body{margin:0;padding:0 16mm;background:var(--paper);color:var(--soft);font:400 10.5pt/1.6 Inter,system-ui,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  h1,h2{color:var(--ink);font-family:Anton,"Arial Narrow",Impact,sans-serif;font-weight:400;margin:0;text-transform:uppercase;letter-spacing:.005em}
+  h3,h4{color:var(--ink);font-family:Inter,system-ui,sans-serif;font-weight:700;margin:0}
+  h1{font-size:40pt;line-height:.98}
+  h2{font-size:21pt;line-height:1;margin:0 0 7pt;break-after:avoid;page-break-after:avoid}
+  h3{font-size:12.5pt;line-height:1.25;letter-spacing:-.005em;break-after:avoid;page-break-after:avoid}
+  p{margin:0 0 7pt}
+  b{color:var(--ink)}
+  .label{color:var(--ash);font-family:"JetBrains Mono",monospace;font-size:7.5pt;letter-spacing:.2em;text-transform:uppercase}
+  .cover{border-bottom:2px solid var(--ink);padding-bottom:14pt;margin-bottom:18pt}
+  .lead{font-size:12.5pt;line-height:1.5;color:var(--ink);margin:10pt 0 0;max-width:34em}
+  .meta{font-family:"JetBrains Mono",monospace;font-size:7pt;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);margin:8pt 0 0}
+  .sec{margin-top:20pt;page-break-inside:avoid}
+  .sec.flow{page-break-inside:auto}
+  .idx{font-family:"JetBrains Mono",monospace;font-size:7.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--ash);margin:0 0 2pt;break-after:avoid;page-break-after:avoid}
+  .keep{page-break-inside:avoid;break-inside:avoid}
+  .honest{border:2px solid var(--ink);background:#fff;padding:12pt 14pt;margin-top:12pt}
+  .honest p:last-child{margin-bottom:0}
+  .foot{margin-top:24pt;border-top:2px solid var(--ink);padding-top:10pt;font-size:8.5pt;color:var(--ash);display:flex;justify-content:space-between;gap:12pt}
+  table{border-collapse:collapse;width:100%;font-size:9pt;margin:10pt 0}
+  th,td{text-align:left;padding:5pt 8pt;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{font-family:"JetBrains Mono",monospace;font-size:7pt;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);background:var(--dim);border-bottom:2px solid var(--ink)}
+  tbody tr:last-child td{border-bottom:none}
+  tr{page-break-inside:avoid}
+  td.k{color:var(--ink);font-weight:600;white-space:nowrap}
+  table.blank td{height:17pt}
+  table.blank tbody tr:last-child td{border-bottom:1px solid var(--line)}
+  .stats{display:flex;flex-wrap:wrap;gap:0;border:2px solid var(--ink);background:#fff;margin:8pt 0 9pt}
+  .stat{flex:1 1 auto;min-width:5.6em;padding:7pt 9pt;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:none}
+  .stat .v{font-family:"JetBrains Mono",monospace;font-size:11pt;color:var(--ink);font-weight:600;line-height:1.2}
+  .stat .v.up{color:var(--deep)}
+  .stat .k{font-family:"JetBrains Mono",monospace;font-size:6.5pt;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);margin-top:2pt}
+  .launch{border-top:1px solid var(--line);padding-top:11pt;margin-top:13pt;page-break-inside:avoid}
+  .launch h3{margin:3pt 0 4pt;font-size:13pt}
+  .why{background:var(--dim);border-left:3px solid var(--accent);padding:8pt 12pt;margin-top:8pt;font-size:9.5pt}
+  .why p:last-child{margin-bottom:0}
+  .ask{background:var(--dim);border-left:3px solid var(--accent);padding:10pt 14pt;margin-top:12pt;page-break-inside:avoid}
+  .ask .big{font-family:Anton,"Arial Narrow",Impact,sans-serif;text-transform:uppercase;color:var(--ink);font-size:24pt;line-height:1;margin:5pt 0 7pt}
+  .ask p:last-child{margin-bottom:0}
+  .points{display:grid;grid-template-columns:1fr 1fr;gap:9pt 16pt;margin:8pt 0 10pt}
+  .points p{margin:0;border-top:1px solid var(--line);padding-top:6pt;font-size:9.5pt}
+  ol{margin:0 0 7pt;padding-left:16pt}
+  li{margin:0 0 4pt}
+</style></head><body>
+
+<div class="cover">
+  <p class="label">Two launches &middot; every number</p>
+  <h1>The viral LinkedIn<br>launch playbook</h1>
+  <p class="lead">Two B2B companies launched on LinkedIn this year. Here are the numbers, and the five days of work before either post went up.</p>
+  <p class="meta">By Francisco Gost &middot; The Draft &middot; franciscogost.com</p>
+  <div class="stats" style="margin-top:14pt">
+    <div class="stat"><div class="v">181,619</div><div class="k">Impressions, June launch</div></div>
+    <div class="stat"><div class="v">137 hrs</div><div class="k">Video watch time</div></div>
+    <div class="stat"><div class="v up">554</div><div class="k">Link clicks, August launch</div></div>
+    <div class="stat"><div class="v">&lt; 24 hrs</div><div class="k">To a full waitlist</div></div>
+  </div>
+</div>
+
+<div class="sec">
+  <h2>Why this exists</h2>
+  <p>I'm a partner at RallyUp, where we write LinkedIn for B2B founders and execs at companies backed by YC, a16z and more. We've published more than 750 posts for them so far in 2026.</p>
+  <p>Launches are where people go wrong most predictably, and always in the same way: they treat the post as the launch. The post is maybe a fifth of the work, and it's the fifth that happens last.</p>
+  <p>What follows is the sequence we run, with the numbers from two real launches attached. One founder had launched companies three times before and had a funding announcement to make. The other had never launched anything on LinkedIn in his life.</p>
+  <p>Where something in here has no number next to it, I say so.</p>
+</div>
+
+<div class="sec flow">
+  <h2>The two launches</h2>
+  <div class="launch">
+    <p class="idx">June 2026 &middot; video</p>
+    <h3>A pharma marketplace, launching a new product with its funding round</h3>
+    <div class="stats">
+      <div class="stat"><div class="v">181,619</div><div class="k">Impressions</div></div>
+      <div class="stat"><div class="v">64,122</div><div class="k">Video views</div></div>
+      <div class="stat"><div class="v">61,963</div><div class="k">Unique viewers</div></div>
+      <div class="stat"><div class="v">137 hrs</div><div class="k">Watch time</div></div>
+    </div>
+    <div class="stats" style="margin-top:-9pt;border-top:0">
+      <div class="stat"><div class="v">84 / 20 / 9</div><div class="k">Reactions, comments, shares</div></div>
+      <div class="stat"><div class="v">28</div><div class="k">New followers</div></div>
+      <div class="stat"><div class="v">15</div><div class="k">Link clicks</div></div>
+    </div>
+  </div>
+  <div class="launch">
+    <p class="idx">August 2026 &middot; text and image</p>
+    <h3>An AI mentoring marketplace, on its first launch</h3>
+    <div class="stats">
+      <div class="stat"><div class="v">38,291</div><div class="k">Impressions</div></div>
+      <div class="stat"><div class="v up">554</div><div class="k">Link clicks</div></div>
+      <div class="stat"><div class="v up">343</div><div class="k">Comments</div></div>
+      <div class="stat"><div class="v">461</div><div class="k">Reactions</div></div>
+    </div>
+    <div class="stats" style="margin-top:-9pt;border-top:0">
+      <div class="stat"><div class="v">36</div><div class="k">New followers</div></div>
+      <div class="stat"><div class="v">352</div><div class="k">Profile views</div></div>
+      <div class="stat"><div class="v">27</div><div class="k">Saves</div></div>
+    </div>
+    <p>The waitlist filled in under 24 hours, and the campaign brought in more than a thousand signups that scored as qualified against the company's own ICP.</p>
+  </div>
+  <div class="why keep">
+    <p>Look at the shape of those two tables before anything else. The June launch bought an enormous amount of attention and almost no direct action: fifteen people clicked. The August one got a fifth of the attention and turned it into 554 clicks and 343 comments.</p>
+    <p>Neither is the better launch. Each was built for a different job, and choosing the job is the first decision you make, and the one most people skip.</p>
+  </div>
+</div>
+
+<div class="sec">
+  <p class="idx">01</p>
+  <h2>Decide what the launch is for</h2>
+  <p>A single post does one of these well.</p>
+  <table>
+    <thead><tr><th style="width:22%">Goal</th><th>What it looks like</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Awareness</td><td>You want the category to know you exist. Video, a broad story, low friction and almost no asks. The June launch had this shape, and 137 hours of watch time against fifteen clicks is what that trade looks like.</td></tr>
+      <tr><td class="k">Pipeline</td><td>You want qualified people on a list by Friday, so you write text with a specific offer and two clear actions. That's the August launch.</td></tr>
+      <tr><td class="k">Credibility</td><td>The quiet one: people who already know you start taking you more seriously. It runs on proof and on the partners you can name, and it gets the fewest impressions of the three and the best audience.</td></tr>
+    </tbody>
+  </table>
+  <p>Pick one before you write and grade the post on that one afterwards. Judge a pipeline launch on impressions and it'll always look like a failure; the same goes the other way round.</p>
+</div>
+
+<div class="sec">
+  <p class="idx">02</p>
+  <h2>Build the amplifier list before you write the post</h2>
+  <p>Nobody copies this step, which is why it still works.</p>
+  <p>You want roughly 50 close contacts, plus 100 or more people you've met over the years, plus customers and investors. Leave out most of the people you know. Pick the ones who'd be genuinely pleased for you, because the ask only lands when the answer is obviously yes.</p>
+  <p>A spreadsheet with four columns does it: name, channel, timezone, sent. It takes an afternoon, and you'll reuse it for every launch after this one.</p>
+  <table class="blank">
+    <thead><tr><th>Name</th><th>Channel</th><th>Timezone</th><th>Sent</th></tr></thead>
+    <tbody><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr></tbody>
+  </table>
+</div>
+
+<div class="sec flow">
+  <div class="keep">
+    <p class="idx">03</p>
+    <h2>Run the five day sequence</h2>
+    <p>Launch day is day five, and everything that decides the outcome happens on days one to four.</p>
+    <table>
+      <thead><tr><th style="width:24%">Day</th><th style="width:34%">Who</th><th>Channel</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Thursday</td><td>Close contacts, around 50</td><td>LinkedIn DM or WhatsApp, each one followed by a calendar invite for launch hour</td></tr>
+        <tr><td class="k">Sunday</td><td>Investors and network, timezone one</td><td>Email</td></tr>
+        <tr><td class="k">Monday</td><td>Investors and network, timezone two</td><td>Email</td></tr>
+        <tr><td class="k">Monday</td><td>A nudge to the first fifty</td><td>Same thread as Thursday</td></tr>
+        <tr><td class="k">Tuesday, launch hour</td><td>Everyone</td><td>The link drops to all of them at once</td></tr>
+      </tbody>
+    </table>
+    <p><b>Send the calendar invite.</b> It sounds like overkill, yet it does more for the outcome than anything else on this list, because it turns a vague intention into a notification on the morning that matters.</p>
+  </div>
+
+  <div class="ask">
+    <p class="label">The ask is the same three words every time</p>
+    <p class="big">Like, comment, save.</p>
+    <p>People skip save, and it's the strongest of the three, so ask for it by name or you won't get it. Add a line asking them to forward the post to anyone who'd find it useful; a forward is worth more than all three put together.</p>
+  </div>
+
+  <div class="keep" style="margin-top:16pt">
+    <h3>What the messages say</h3>
+    <p style="margin-top:4pt">The wording matters less than getting these four things in.</p>
+    <div class="points">
+      <p><b>Tell them before the world knows.</b> That's why the ask works at all: you've given them something first, advance notice and the feeling of being on the inside.</p>
+      <p><b>Say exactly what you want, and when.</b> &ldquo;Support the launch&rdquo; is too vague to act on. Ask for a like, a one-line comment and a save, in the first hour.</p>
+      <p><b>Say how long it takes.</b> Two minutes. People will agree to two minutes.</p>
+      <p><b>Give them a way out.</b> A line like &ldquo;no pressure at all if Tuesday's a mess for you&rdquo; costs nothing, and it's why people answer honestly instead of ghosting you.</p>
+    </div>
+    <p>With investors, open with a real update before you ask for anything: where the product is, what early customers did, what you're launching with. The ask goes at the bottom, after the substance.</p>
+  </div>
+</div>
+
+<div class="sec flow">
+  <div class="keep">
+    <p class="idx">04</p>
+    <h2>Build two funnels into the post</h2>
+    <p>This is the mechanic that made the August launch work, and it's the easiest thing in this document to copy.</p>
+    <p>The post never said &ldquo;sign up at the link.&rdquo; It asked people to comment below <b>and</b> to fill in the form on the site, two actions on purpose.</p>
+    <div class="stats">
+      <div class="stat"><div class="v up">554</div><div class="k">People clicked the link</div></div>
+      <div class="stat"><div class="v up">343</div><div class="k">People commented</div></div>
+    </div>
+  </div>
+  <p>Those are two separate funnels, and most of the qualified signups never came through the link at all.</p>
+  <p>A comment is free and public and takes four seconds, so people do it. Every comment pushes the post a little further, in front of more people, some of whom comment too. The link is private and higher friction, and only the people already convinced bother with it. With only the link in the post, the founder gets his 554 clicks and nothing underneath them.</p>
+  <p>The qualifying happens on the form rather than in the comments. It asked for role, age and company, scored against the people the product was built for, which is how a thousand signups became a number anyone could trust instead of a vanity count.</p>
+</div>
+
+<div class="sec">
+  <p class="idx">05</p>
+  <h2>Use video when the story carries it</h2>
+  <p>The June launch video did 64,122 views and 137 hours of watch time, and produced fifteen link clicks.</p>
+  <p>Video buys attention far more than action, because nobody watching is sitting in a clicking posture. Use it when the launch asks people to believe something: a category, a vision, a founder's reason for bothering. When it asks them to do something, like join a waitlist before Friday, use text.</p>
+  <p>Cross-post to X in the same hour. It's the same asset in a second room, and it costs you nothing extra.</p>
+</div>
+
+<div class="sec">
+  <p class="idx">06</p>
+  <h2>The forty eight hours after</h2>
+  <p>A launch post leaves you with a list of people who raised their hand in public, and almost nobody works that list.</p>
+  <p>Pull everyone who commented, reacted or saved. Filter to the ones who match your ICP on role, company and seniority, then message each of them personally and mention the specific thing they did. You're after a call, a demo or a sale here, so don't settle for a newsletter signup.</p>
+  <p>This is the step where a launch turns into revenue rather than a nice day on a chart. The list keeps for about a week, and it's the warmest one you'll ever hold.</p>
+  <p>Then post again on day eight. The August founder followed up with his own story of leaving a job with five kids and no plan B, and more than a week after launch it did 27,624 impressions and another 284 link clicks. The window stays open well past launch day.</p>
+</div>
+
+<div class="sec">
+  <p class="idx">07</p>
+  <h2>What to measure</h2>
+  <p>Three weeks after his launch, the same founder posted something motivational. It did <b>72,031 impressions</b>, nearly double the launch post, and produced seven new followers and no signups. The launch post did 38,291 and filled a waitlist in a day.</p>
+  <p>Impressions are the cheapest thing to count, which is why everyone counts them, and that post shows how little they tell you. Count these instead.</p>
+  <table>
+    <thead><tr><th style="width:34%">Measure</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Saves per 1,000 impressions</td><td>The closest thing to free intent data LinkedIn gives you. A like is politeness; a save means someone wants to come back to it.</td></tr>
+      <tr><td class="k">Profile views from the post</td><td>Somebody went looking for you, which is a buying motion.</td></tr>
+      <tr><td class="k">Qualified signups, scored</td><td>Score them against your ICP, because raw signups will flatter you.</td></tr>
+      <tr><td class="k">Conversations opened in 48 hours</td><td>The only one of the four that turns into money.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="sec">
+  <h2>What this can't do for you</h2>
+  <div class="honest">
+    <p>These are the limits, and the rest isn't believable without them.</p>
+    <p><b>It won't work without the list.</b> Both founders had a network and were willing to spend four days asking people personally, one at a time. Skip days one to four and post anyway, and you'll get roughly the reach your account already had.</p>
+    <p><b>Two launches don't make a law.</b> One pharma marketplace with a funding announcement and one AI education product with a waitlist, both B2B, both founder-led, both on LinkedIn. If you sell to consumers, treat everything here as a hypothesis to test.</p>
+    <p><b>These numbers measure reach and engagement, and stop short of attribution.</b> I can show you 554 clicks and 343 comments. I can't draw a clean line from an impression to a signed contract, because LinkedIn doesn't give that to anybody, and the people who claim it are usually counting something else and hoping you won't ask.</p>
+    <p><b>It doesn't work twice in a row on the same list.</b> The amplifier ask spends goodwill you've built up over years, so save it for launches.</p>
+  </div>
+</div>
+
+<div class="sec">
+  <h2>The one page version</h2>
+  <ol>
+    <li>Decide whether this launch is for awareness, pipeline or credibility, and grade it on that alone.</li>
+    <li>Build the amplifier list before you write a word: fifty close, a hundred wider.</li>
+    <li>Message them personally four days out, with a calendar invite for launch hour.</li>
+    <li>Ask for like, comment, save. Save is the one that moves it.</li>
+    <li>Put two actions in the post: a comment gate and a link.</li>
+    <li>Qualify on the form, not in the comments.</li>
+    <li>Use video for belief and text for action, and cross-post to X either way.</li>
+    <li>Work the engagement list inside 48 hours.</li>
+    <li>Post again on day eight.</li>
+    <li>Count saves, profile views and conversations.</li>
+  </ol>
+</div>
+
+<div class="foot">
+  <span><b>Francisco Gost</b> writes The Draft, a weekly letter on how top 1% startups crush organic marketing, at franciscogost.com</span>
+  <span>Partner at RallyUp. 21.3M+ impressions generated for B2B founders and execs.</span>
+</div>
+
+</body></html>

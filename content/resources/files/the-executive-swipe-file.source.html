@@ -10,19 +10,22 @@
      body padding-top to the first page, so the top inset has to come from
      the page box or text lands on the sheet edge after every natural break.
      Zero horizontal keeps the paper colour bleeding to the left and right. */
-  @page{size:A4;margin:15mm 0}
+  @page{size:A4;margin:15mm 0;background:#fdf6ec}
   html{background:var(--paper)}
   body{margin:0;padding:0 16mm;background:var(--paper);color:var(--soft);font:400 10.5pt/1.6 Inter,system-ui,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   h1,h2{color:var(--ink);font-family:Anton,"Arial Narrow",Impact,sans-serif;font-weight:400;margin:0;text-transform:uppercase;letter-spacing:.005em}
   h3,h4{color:var(--ink);font-family:Inter,system-ui,sans-serif;font-weight:700;margin:0}
   h1{font-size:40pt;line-height:.98}
-  h2{font-size:21pt;line-height:1;margin:0 0 7pt}
+  h2{font-size:21pt;line-height:1;margin:0 0 7pt;page-break-after:avoid;break-after:avoid}
   h3{font-size:12.5pt;line-height:1.25;letter-spacing:-.005em}
   p{margin:0 0 7pt}
   .label{color:var(--ash);font-family:"JetBrains Mono",monospace;font-size:7.5pt;letter-spacing:.2em;text-transform:uppercase}
   .cover{border-bottom:2px solid var(--ink);padding-bottom:14pt;margin-bottom:18pt}
   .lead{font-size:12.5pt;line-height:1.5;color:var(--ink);margin:10pt 0 0;max-width:34em}
   .sec{margin-top:20pt;page-break-inside:avoid}
+  /* Long sections flow across pages; only each play stays whole. */
+  .sec.flow{page-break-inside:auto;break-inside:auto}
+  .opener{page-break-inside:avoid;break-inside:avoid}
   .rule{border:0;border-top:1px solid var(--line);margin:16pt 0}
   .honest{border:2px solid var(--ink);background:#fff;padding:12pt 14pt;margin-top:12pt}
   .foot{margin-top:24pt;border-top:2px solid var(--ink);padding-top:10pt;font-size:8.5pt;color:var(--ash);display:flex;justify-content:space-between;gap:12pt}
@@ -32,7 +35,7 @@
   tbody tr:last-child td{border-bottom:none}
   td.n{font-family:"JetBrains Mono",monospace;white-space:nowrap}
   td.up{color:var(--deep);font-weight:600}
-  .play{border-top:1px solid var(--line);padding-top:11pt;margin-top:13pt;page-break-inside:avoid}
+  .play{border-top:1px solid var(--line);padding-top:11pt;margin-top:13pt;page-break-inside:avoid;break-inside:avoid}
   .play .idx{font-family:"JetBrains Mono",monospace;font-size:7.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
   .play h3{margin:3pt 0 6pt;font-size:13pt}
   .stats{display:flex;flex-wrap:wrap;gap:0;border:2px solid var(--ink);background:#fff;margin:8pt 0 9pt}
@@ -48,33 +51,35 @@
   .bucket.tof{background:var(--accent)}
   .bucket.mof{background:var(--soft)}
   .pagebreak{page-break-before:always;height:0}
+  ol{margin:0 0 7pt;padding-left:16pt}
+  li{margin:0 0 4pt}
 </style></head><body>
 
 <div class="cover">
   <p class="label">25 posts &middot; 24 accounts &middot; 9.6M impressions</p>
   <h1>The executive swipe file</h1>
-  <p class="lead">Twenty-five of the best performing posts we published for B2B founders and executives this year, with the real numbers attached and the pattern underneath each one. Including the two that bought enormous reach and returned nothing.</p>
+  <p class="lead">Twenty-five of the best performing posts we published for B2B founders and executives this year, each with its real numbers and the pattern underneath. Two of them bought enormous reach and returned nothing, and they're in here too.</p>
 </div>
 
 <div class="sec">
   <h2>What this is</h2>
-  <p>I'm a partner at RallyUp, where we write LinkedIn for B2B founders and executives. In 2026 we've driven <b>9.6 million impressions across 24 accounts at 16 companies</b>, from more than 750 posts.</p>
-  <p>This is the part of that work worth stealing. Every post below is real, every number comes from the account's own analytics, and the accounts are anonymised because the posts belong to the people who published them, not to me.</p>
-  <p>What I've kept is the shape: the angle, why it worked, and the thing you can lift without copying anyone's words.</p>
+  <p>I'm a partner at RallyUp, where we write LinkedIn for B2B founders and executives. In 2026 the accounts we run did <b>9.6 million impressions across 24 accounts at 16 companies</b>, from more than 750 posts.</p>
+  <p>This document is the part of that work worth stealing. Every post below is real and every number comes from the account's own analytics. I've anonymised the accounts, because the posts belong to the people who published them.</p>
+  <p>What I've kept is the shape of each post, why it worked, and the part you can lift without borrowing anyone's words.</p>
   <div class="honest">
-    <p style="margin:0"><b>The honest promise.</b> These patterns move numbers on accounts that already have something to say. None of them manufacture a point of view, and none of them will rescue a post about nothing. If a guide tells you a format is the reason something worked, it's selling you the easy half.</p>
+    <p style="margin:0"><b>The honest promise.</b> These patterns move numbers on accounts that already have something to say. They won't hand you a point of view or rescue a post about nothing. Any guide that credits a format for a post's success is selling you the easy half.</p>
   </div>
 </div>
 
 <div class="sec">
   <h2>Read it in three buckets</h2>
-  <p>Every post we ship gets filed before it's written. Top of funnel, middle, bottom. We run roughly 70 / 20 / 10, and the only rule that matters is that each bucket gets graded on a different number.</p>
+  <p>We file every post before it's written: top of funnel, middle or bottom. The mix runs roughly 70 / 20 / 10, and each bucket gets graded on a different number. That's the only rule here that matters.</p>
   <table>
     <thead><tr><th>Bucket</th><th>Built for</th><th>Graded on</th></tr></thead>
     <tbody>
-      <tr><td><b>Top</b></td><td>Reach. Personal story, a take on something happening this week, humour</td><td class="n">Impressions</td></tr>
-      <tr><td><b>Middle</b></td><td>Trust. The breakdown, the analysis, the thing you learned at volume</td><td class="n">Saves, profile views</td></tr>
-      <tr><td><b>Bottom</b></td><td>Action. The role, the launch, the raise, the offer</td><td class="n">Comments, applications, calls</td></tr>
+      <tr><td><b>Top</b></td><td>Reach: a personal story, a take on this week's news, humour</td><td class="n">Impressions</td></tr>
+      <tr><td><b>Middle</b></td><td>Trust: the breakdown, the analysis, what you learned doing it at volume</td><td class="n">Saves, profile views</td></tr>
+      <tr><td><b>Bottom</b></td><td>Action: the role, the launch, the raise, the offer</td><td class="n">Comments, applications, calls</td></tr>
     </tbody>
   </table>
   <p>Grade all three on impressions and you'll kill the two that are working.</p>
@@ -84,7 +89,7 @@
 
 <div class="sec">
   <h2>The finding that should reframe the rest</h2>
-  <p>Two posts, published one day apart, on the same account.</p>
+  <p>Two posts went out on the same account, one day apart.</p>
   <table>
     <thead><tr><th>&nbsp;</th><th>A hiring post</th><th>A viral personal post</th></tr></thead>
     <tbody>
@@ -97,15 +102,14 @@
       <tr><td>Engagement rate</td><td class="n up">1.33%</td><td class="n">0.089%</td></tr>
     </tbody>
   </table>
-  <p>The second post reached <b>11.6 times</b> as many people and lost on every single measure that matters. Same account, same week, same writer.</p>
-  <p>If you only take one thing out of this document, take that. Reach is the cheapest thing on the page to count, which is why everyone counts it.</p>
+  <p>The second post reached <b>11.6 times</b> as many people and still lost on every measure that matters, on the same account, in the same week, from the same writer.</p>
+  <p>If you take one thing from this document, take that. Reach is the cheapest number on the page to count, which is exactly why everyone counts it.</p>
 </div>
 
-<div class="pagebreak"></div>
-
-<div class="sec">
+<div class="sec flow">
+  <div class="opener">
   <h2>1. Intro posts</h2>
-  <p>The highest converting post most executives will ever publish, and the one almost nobody plans properly because it feels like a warm-up.</p>
+  <p>Most executives treat the intro as a warm-up, so almost nobody plans it, and it's usually the highest converting post they'll ever publish.</p>
 
   <div class="play">
     <p class="idx">01 &middot; Partner at an early-stage venture fund, 11 years at the firm, first post ever<span class="bucket tof">TOF</span></p>
@@ -118,9 +122,10 @@
       <div class="stat"><div class="v">118</div><div class="k">Comments</div></div>
       <div class="stat"><div class="v">45</div><div class="k">Saves</div></div>
     </div>
-    <p><b>The angle.</b> Not a bio. A dated timeline of one career at one firm, the admission that posting felt unnatural, and five specific things he'd write about next.</p>
-    <div class="why"><b>Why it performed.</b> 37.9 profile views per thousand impressions, which is roughly ten times what his later posts do. A new account gets an outsized first push from the algorithm, and an introduction is the one post where talking about yourself is the entire point rather than a tax the reader pays.</div>
-    <div class="steal"><b>Steal this.</b> End the intro with the list of what you'll write about. It turns a follow into a subscription, and it commits you in public to a beat, which is the part that actually keeps people posting in month three.</div>
+    <p><b>The angle.</b> A dated timeline of one career at one firm in place of a bio, plus the admission that posting felt unnatural and five specific things he'd write about next.</p>
+    <div class="why"><b>Why it performed.</b> 37.9 profile views per thousand impressions, roughly ten times what his later posts do. New accounts get an outsized first push from the algorithm, and an introduction is the one post where talking about yourself is the whole point instead of a tax the reader pays.</div>
+    <div class="steal"><b>Steal this.</b> End the intro with the list of what you'll write about. A follow becomes a subscription, and you've committed in public to a beat, which is what actually keeps people posting in month three.</div>
+  </div>
   </div>
 
   <div class="play">
@@ -132,18 +137,19 @@
       <div class="stat"><div class="v">159</div><div class="k">Followers</div></div>
       <div class="stat"><div class="v">159</div><div class="k">Saves</div></div>
     </div>
-    <p><b>The angle.</b> He asks all 128 portfolio companies for a quarterly update, so he published the one he writes about himself. Deal funnel, time allocation, which founders he was genuinely useful to, and what he missed.</p>
-    <div class="why"><b>Why it performed.</b> 39.6% more reach than the intro and about half the profile views, which tells you the two posts did different jobs. But look at saves: 159, a rate of 2.27 per thousand. That's the highest in this entire file. People save a thing they intend to copy.</div>
-    <div class="steal"><b>Steal this.</b> Publish the internal artifact. Not a description of your process, the actual document, with the uncomfortable section left in. His longest section is "what I missed."</div>
+    <p><b>The angle.</b> He asks all 128 portfolio companies for a quarterly update, so he published the one he writes about himself: deal funnel, time allocation, which founders he was genuinely useful to, and what he missed.</p>
+    <div class="why"><b>Why it performed.</b> 39.6% more reach than the intro and about half the profile views, so the two posts did different jobs. Look at the saves, though: 159, or 2.27 per thousand, the highest rate in this file. People save what they intend to copy.</div>
+    <div class="steal"><b>Steal this.</b> Publish the internal artifact itself, uncomfortable section included, instead of a description of your process. His longest section is "what I missed."</div>
   </div>
 </div>
 
-<div class="sec">
+<div class="sec flow">
+  <div class="opener">
   <h2>2. Launch posts</h2>
-  <p>Our highest engagement rates across every account we run, because a launch gives people something to react to that isn't an opinion.</p>
+  <p>Launches get our highest engagement rates on every account we run, because they give people something to react to besides an opinion.</p>
 
   <div class="play">
-    <p class="idx">03 &middot; Pharma marketplace, product launch alongside a $4.5M raise, video</p>
+    <p class="idx">03 &middot; Healthtech startup, product launch alongside a funding round, video</p>
     <h3>The one that bought 137 hours of attention and 15 clicks</h3>
     <div class="stats">
       <div class="stat"><div class="v">181,619</div><div class="k">Impressions</div></div>
@@ -152,9 +158,10 @@
       <div class="stat"><div class="v">28</div><div class="k">Followers</div></div>
       <div class="stat"><div class="v">15</div><div class="k">Link clicks</div></div>
     </div>
-    <p><b>The angle.</b> A new model nobody had seen, explained as a video, with the raise and the investor names carried inside the same post rather than split into two.</p>
-    <div class="why"><b>Why it performed.</b> 61,963 separate people watched some of it. And fifteen of them clicked. That isn't a failure, it's what video is: a viewer is not sitting in a clicking posture. Engagement rate came in at 0.06%, the lowest in this file, on the biggest post in this file.</div>
-    <div class="steal"><b>Steal this.</b> Use video when the launch is about belief, a category or a vision or why you bothered. Use text when the launch is about a thing somebody has to do this week. Then grade it on the right number.</div>
+    <p><b>The angle.</b> A model nobody had seen before, explained on video, with the raise and the investor names carried in the same post instead of split across two.</p>
+    <div class="why"><b>Why it performed.</b> 61,963 separate people watched some of it and fifteen clicked. Video does that, because someone watching isn't in a clicking frame of mind. Engagement came in at 0.06%, the lowest rate in this file, on its biggest post.</div>
+    <div class="steal"><b>Steal this.</b> Use video when the launch asks for belief (a category, a vision, why you bothered at all). Use text when it asks someone to do something this week, and grade each one on the right number.</div>
+  </div>
   </div>
 
   <div class="play">
@@ -166,9 +173,9 @@
       <div class="stat"><div class="v">343</div><div class="k">Comments</div></div>
       <div class="stat"><div class="v">36</div><div class="k">Followers</div></div>
     </div>
-    <p><b>The angle.</b> The post asked for two actions on purpose. Comment below, and fill in the form on the site.</p>
-    <div class="why"><b>Why it performed.</b> A fifth of the reach of the video above and 37 times the clicks. The comment is free, public and takes four seconds, so people do it, and every comment pushes the post to more people who then comment. Most of the qualified signups never touched the link.</div>
-    <div class="steal"><b>Steal this.</b> Put a comment gate and a link in the same post. The field has largely abandoned the comment gate on taste. The data doesn't agree with the taste.</div>
+    <p><b>The angle.</b> The post asked for two actions on purpose: comment below, and fill in the form on the site.</p>
+    <div class="why"><b>Why it performed.</b> It got a fifth of the video's reach and 37 times the clicks. A comment is free, public and takes four seconds, so people leave one, and each comment pushes the post to more people who then comment too. Most of the qualified signups never touched the link.</div>
+    <div class="steal"><b>Steal this.</b> Put a comment gate and a link in the same post. Most of the field dropped comment gates on taste, and the data disagrees with the taste.</div>
   </div>
 
   <div class="play">
@@ -180,17 +187,16 @@
       <div class="stat"><div class="v">20</div><div class="k">Saves</div></div>
       <div class="stat"><div class="v">12</div><div class="k">Followers</div></div>
     </div>
-    <p><b>The angle.</b> A partner company had just raised a $24M Series A. Rather than a logo-swap announcement, he explained what the two products do together, in one line a reader could repeat: if they're the chip, we're the computer.</p>
-    <div class="why"><b>Why it performed.</b> 20 saves on 17,759 is a strong rate for an announcement, which normally saves at near zero. The analogy is the reason. People save a sentence they can use in their own meeting.</div>
-    <div class="steal"><b>Steal this.</b> Announce partnerships on the other company's news cycle, and give the relationship a one-line metaphor. "We integrate with X" is a press release. "If they're the chip, we're the computer" is a thing somebody repeats for you.</div>
+    <p><b>The angle.</b> A partner company had just raised a $24M Series A. He skipped the logo-swap announcement and explained what the two products do together in a line a reader could repeat: if they're the chip, we're the computer.</p>
+    <div class="why"><b>Why it performed.</b> 20 saves on 17,759 impressions is a strong rate for an announcement, since those usually save at close to zero. The analogy did that; people save a sentence they can reuse in their own meetings.</div>
+    <div class="steal"><b>Steal this.</b> Announce partnerships on the other company's news cycle and give the relationship a one-line metaphor. "We integrate with X" reads like a press release, whereas "If they're the chip, we're the computer" is something people repeat for you.</div>
   </div>
 </div>
 
-<div class="pagebreak"></div>
-
-<div class="sec">
+<div class="sec flow">
+  <div class="opener">
   <h2>3. Hiring posts</h2>
-  <p>We've hired our entire team through these. They reach the fewest people of any post type in this file and they outperform almost everything on the measures that aren't reach.</p>
+  <p>We've hired our entire team through these. They reach fewer people than any other post type in this file and beat almost everything on the measures that aren't reach.</p>
 
   <div class="play">
     <p class="idx">06 &middot; Our own founder, hiring a founding GTM engineer</p>
@@ -203,9 +209,10 @@
       <div class="stat"><div class="v">24</div><div class="k">Followers</div></div>
       <div class="stat"><div class="v">14</div><div class="k">Sends</div></div>
     </div>
-    <p><b>The angle.</b> Opened on frustration rather than a job title. Four bullets on who'd be right, an honest line that the role isn't for everyone, and an application mechanic with a filter inside it: comment with something you've built, and he'd only reply to comments with a personal video attached.</p>
-    <div class="why"><b>Why it performed.</b> 37 saves and 14 sends. A send is somebody forwarding the role to a specific person, which is the single most valuable action on LinkedIn and the one nobody optimises for. Nothing gets forwarded like a good job.</div>
-    <div class="steal"><b>Steal this.</b> Put the filter in the ask, not in the screening call. Asking for a video in the comment cost him nothing and removed 90% of the applicants before anybody's time got spent. He said so publicly afterwards, which became the next post.</div>
+    <p><b>The angle.</b> It opened on frustration instead of a job title. Then came four bullets on who'd be right, an honest line that the role isn't for everyone, and an application mechanic with a filter built in: comment with something you've built, and he'd only reply to comments with a personal video attached.</p>
+    <div class="why"><b>Why it performed.</b> 37 saves and 14 sends. A send means someone forwarded the role to a specific person, the most valuable action on LinkedIn and the one nobody optimises for, and nothing gets forwarded like a good job.</div>
+    <div class="steal"><b>Steal this.</b> Put the filter in the ask so the screening call doesn't have to do it. Asking for a video cost him nothing and cut 90% of applicants before anyone spent time on them. He said so publicly afterwards, and that became the next post.</div>
+  </div>
   </div>
 
   <div class="play">
@@ -217,9 +224,9 @@
       <div class="stat"><div class="v">32</div><div class="k">Comments</div></div>
       <div class="stat"><div class="v">9</div><div class="k">Saves</div></div>
     </div>
-    <p><b>The angle.</b> What the applications actually looked like. Some spelled his name wrong on an application to do outreach. Fewer than one in ten sent the video the post asked for. He turned it into encouragement for job seekers rather than a complaint.</p>
-    <div class="why"><b>Why it performed.</b> More reach than the hiring post itself. A hiring post is an event, and an event has a second day. Most people publish the role and then go quiet until it's filled.</div>
-    <div class="steal"><b>Steal this.</b> Every launch, raise and role has a follow-up post in it, made entirely of what happened. You already have the material and it costs you nothing to collect.</div>
+    <p><b>The angle.</b> What the applications actually looked like. Some people applying for an outreach job spelled his name wrong, and fewer than one in ten sent the video the post asked for. He turned it into encouragement for job seekers instead of a complaint.</p>
+    <div class="why"><b>Why it performed.</b> It got more reach than the hiring post itself. A hiring post is an event, and events have a second day, yet most people publish the role and go quiet until it's filled.</div>
+    <div class="steal"><b>Steal this.</b> Every launch, raise and role has a follow-up post in it, built from what happened next. You already have the material and collecting it costs nothing.</div>
   </div>
 
   <div class="play">
@@ -231,17 +238,16 @@
       <div class="stat"><div class="v">10</div><div class="k">Comments</div></div>
       <div class="stat"><div class="v">4.1%</div><div class="k">Engagement</div></div>
     </div>
-    <p><b>The angle.</b> Not "delighted to welcome." Why the role exists, what breaks without it, then her actual record with named companies, then a line about what he decided in the first sixty seconds of the interview.</p>
-    <div class="why"><b>Why it performed.</b> 4.1% engagement, among the highest rates in this file, on one of the smallest audiences. Small, specific and warm beats big and generic on the measure that reflects whether people cared.</div>
-    <div class="steal"><b>Steal this.</b> Write the hire announcement as an argument about where the company is going. The person is the evidence. "We're expanding fast across two regulated markets, and here's who makes sure implementation never breaks" tells a buyer more than a quarterly update does.</div>
+    <p><b>The angle.</b> He skipped "delighted to welcome" and opened with why the role exists and what breaks without it. Then came her actual record, with named companies, and a line about what he'd decided in the first sixty seconds of the interview.</p>
+    <div class="why"><b>Why it performed.</b> 4.1% engagement, among the highest rates in this file, on one of the smallest audiences. On the measure that shows whether people cared, a specific, warm post to a small audience beats a big generic one.</div>
+    <div class="steal"><b>Steal this.</b> Write the hire announcement as an argument about where the company is going, with the person as the evidence. "We're expanding fast across two regulated markets, and here's who makes sure implementation never breaks" tells a buyer more than a quarterly update does.</div>
   </div>
 </div>
 
-<div class="pagebreak"></div>
-
-<div class="sec">
+<div class="sec flow">
+  <div class="opener">
   <h2>4. The middle of the funnel</h2>
-  <p>Where trust gets built. Graded on saves and profile views, never on reach.</p>
+  <p>This is where trust gets built, so these posts get graded on saves and profile views and never on reach.</p>
 
   <div class="play">
     <p class="idx">09 &middot; Venture partner, answering a critic in public</p>
@@ -252,9 +258,10 @@
       <div class="stat"><div class="v">37</div><div class="k">Followers</div></div>
       <div class="stat"><div class="v">30</div><div class="k">Saves</div></div>
     </div>
-    <p><b>The angle.</b> A founder had challenged him in the comments of an earlier post: what use is an investor who has never founded anything? He opened by conceding the premise, then answered with nine months of counts from one portfolio company. 59 intro meetings, 13 candidates approached, 2 hires, 1 follow-on cheque.</p>
-    <div class="why"><b>Why it performed.</b> 11.3 profile views per thousand, roughly triple his baseline. A public disagreement handled generously makes people want to look at who you are.</div>
-    <div class="steal"><b>Steal this.</b> When somebody challenges you in a comment, don't reply in the comment. Reply in a post, name the challenge accurately, and answer it with counts rather than conviction.</div>
+    <p><b>The angle.</b> A founder had challenged him in the comments of an earlier post: what use is an investor who has never founded anything? He conceded the premise up top, then answered with nine months of counts from one portfolio company: 59 intro meetings, 13 candidates approached, 2 hires, 1 follow-on cheque.</p>
+    <div class="why"><b>Why it performed.</b> 11.3 profile views per thousand, about triple his baseline. Handle a public disagreement generously and people want to see who you are.</div>
+    <div class="steal"><b>Steal this.</b> When somebody challenges you in a comment, answer in a post instead. Name the challenge accurately and reply with counts rather than conviction.</div>
+  </div>
   </div>
 
   <div class="play">
@@ -266,9 +273,9 @@
       <div class="stat"><div class="v">52</div><div class="k">Followers</div></div>
       <div class="stat"><div class="v">9</div><div class="k">Shares</div></div>
     </div>
-    <p><b>The angle.</b> He credited another investor's framework by name, said it was the clearest explanation of the model he'd seen, and then explained why he thinks it's wrong for early stage. Four screening questions he uses instead.</p>
-    <div class="why"><b>Why it performed.</b> 9 shares is high for a text post. Crediting the person you're disagreeing with is what makes a disagreement shareable rather than a fight people avoid forwarding.</div>
-    <div class="steal"><b>Steal this.</b> Name who you're disagreeing with and steelman them first. The post gets better and the person you named often shows up in the comments, which doubles the reach.</div>
+    <p><b>The angle.</b> He credited another investor's framework by name and called it the clearest explanation of the model he'd seen. Then he explained why he thinks it's wrong for early stage and gave the four screening questions he uses instead.</p>
+    <div class="why"><b>Why it performed.</b> 9 shares is high for a text post. Crediting the person you're disagreeing with makes the post easy to forward; a fight is something people avoid passing on.</div>
+    <div class="steal"><b>Steal this.</b> Name who you're disagreeing with and steelman them first. The post gets better, and the person you named often turns up in the comments, which doubles the reach.</div>
   </div>
 
   <div class="play">
@@ -279,9 +286,9 @@
       <div class="stat"><div class="v">9</div><div class="k">Saves</div></div>
       <div class="stat"><div class="v">17</div><div class="k">Profile views</div></div>
     </div>
-    <p><b>The angle.</b> He compared two of his own posts, one with 12 times the reach of the other, and showed that the smaller one won on followers, comments and saves. Then gave the 70 / 20 / 10 split.</p>
-    <div class="why"><b>Why it performed.</b> Low reach, 2 saves per thousand. This is a middle of funnel post doing exactly its job: a small number of the right people filing it away.</div>
-    <div class="steal"><b>Steal this.</b> Publish the post that underperformed, with its numbers, next to the one that worked. Nobody does this, which is the entire reason it lands.</div>
+    <p><b>The angle.</b> He compared two of his own posts, one with 12 times the reach of the other, showed that the smaller one won on followers, comments and saves, and then gave the 70 / 20 / 10 split.</p>
+    <div class="why"><b>Why it performed.</b> Low reach and 2 saves per thousand: a middle of funnel post doing its job, with a small number of the right people filing it away.</div>
+    <div class="steal"><b>Steal this.</b> Publish the post that underperformed, numbers included, next to the one that worked. Almost nobody does, and that's why it lands.</div>
   </div>
 
   <div class="play">
@@ -291,9 +298,9 @@
       <div class="stat"><div class="v">471</div><div class="k">Impressions</div></div>
       <div class="stat"><div class="v">3.6%</div><div class="k">Engagement</div></div>
     </div>
-    <p><b>The angle.</b> Five levels of agent autonomy, with level one described as "it worked once, it cost $20 in tokens, and nobody knows if it'll ever run again." Then the line that does the work: the market demos at level one and sells at level four.</p>
-    <div class="why"><b>Why it performed.</b> It barely reached anyone and still ran at 3.6% engagement. Worth including precisely because the reach is bad. A framework post is a bet that the right 400 people see it.</div>
-    <div class="steal"><b>Steal this.</b> Give the levels unflattering names and put your own category somewhere in the middle. A maturity model where you're already at the top reads as marketing.</div>
+    <p><b>The angle.</b> Five levels of agent autonomy, with level one described as "it worked once, it cost $20 in tokens, and nobody knows if it'll ever run again." Then the line that carries the post: the market demos at level one and sells at level four.</p>
+    <div class="why"><b>Why it performed.</b> It barely reached anyone and still ran at 3.6% engagement. I included it because the reach is bad: a framework post is a bet that the right 400 people see it.</div>
+    <div class="steal"><b>Steal this.</b> Give the levels unflattering names and put your own category somewhere in the middle. A maturity model with you already at the top reads as marketing.</div>
   </div>
 
   <div class="play">
@@ -304,17 +311,16 @@
       <div class="stat"><div class="v">113</div><div class="k">Reactions</div></div>
       <div class="stat"><div class="v">45</div><div class="k">Profile views</div></div>
     </div>
-    <p><b>The angle.</b> A very large company had published a letter. His company signed it. Rather than announcing the signature, he explained what open weights actually mean for a buyer: your data, your systems, your edge stay yours.</p>
-    <div class="why"><b>Why it performed.</b> 113 reactions on 5,715 is a 2% reaction rate. Newsjacking usually fails because the post adds nothing to the news. This one translated the news into the reader's own risk.</div>
-    <div class="steal"><b>Steal this.</b> When you join a public position, skip the announcement and publish the translation. What does this mean for the person reading, in their language, about their money.</div>
+    <p><b>The angle.</b> A very large company published a letter and his company signed it. He skipped announcing the signature and explained what open weights mean for a buyer: your data, your systems, your edge stay yours.</p>
+    <div class="why"><b>Why it performed.</b> 113 reactions on 5,715 impressions is a 2% reaction rate. Newsjacking usually fails because the post adds nothing to the news, and this one translated the news into the reader's own risk.</div>
+    <div class="steal"><b>Steal this.</b> When you join a public position, publish the translation and drop the announcement. Say what it means for the person reading, in their language, about their money.</div>
   </div>
 </div>
 
-<div class="pagebreak"></div>
-
-<div class="sec">
+<div class="sec flow">
+  <div class="opener">
   <h2>5. Personal story, the top of the funnel</h2>
-  <p>70% of what we publish. Graded on impressions and nothing else, which is the only reason it's allowed to be this personal.</p>
+  <p>About 70% of what we publish sits here. It's graded on impressions and nothing else, which is the only reason it gets to be this personal.</p>
 
   <div class="play">
     <p class="idx">14 &middot; Our own founder, the day he was let go</p>
@@ -325,9 +331,10 @@
       <div class="stat"><div class="v">7</div><div class="k">Saves</div></div>
       <div class="stat"><div class="v">76</div><div class="k">Reactions</div></div>
     </div>
-    <p><b>The angle.</b> He lost the Slack, the inbox and every partnership he'd built. The one asset that travelled with him was the audience on his personal account. Then the argument: of everything you build inside a company, almost nothing is portable.</p>
-    <div class="why"><b>Why it performed.</b> 9.8 profile views per thousand. A story about loss that resolves into a transferable argument, rather than into a lesson about resilience.</div>
-    <div class="steal"><b>Steal this.</b> The worst professional day you've had is usually your best post, but only if it ends in an argument somebody else can use. Without that it's just a story about you.</div>
+    <p><b>The angle.</b> He lost the Slack, the inbox and every partnership he'd built, and the one asset that came with him was the audience on his personal account. That set up the argument: almost nothing you build inside a company is portable.</p>
+    <div class="why"><b>Why it performed.</b> 9.8 profile views per thousand. The story about loss resolves into an argument other people can use, where most end on a lesson about resilience.</div>
+    <div class="steal"><b>Steal this.</b> Your worst professional day is often your best post, as long as it ends in an argument somebody else can use. Without that, it's a story about you.</div>
+  </div>
   </div>
 
   <div class="play">
@@ -339,9 +346,9 @@
       <div class="stat"><div class="v">10</div><div class="k">Followers</div></div>
       <div class="stat"><div class="v">13</div><div class="k">Comments</div></div>
     </div>
-    <p><b>The angle.</b> The investor loved the business and passed anyway, because an excellent company wasn't a fund returner. Then the honest part: he's 27, newly married, new baby, and he's not certain he wants the moonshot. He says outright that he still gets a little green reading funding headlines.</p>
-    <div class="why"><b>Why it performed.</b> 7.8 profile views per thousand on a text post with no image. The admission of envy is doing the work. Most founder posts about choosing sustainability over scale read as a decision already made peacefully.</div>
-    <div class="steal"><b>Steal this.</b> Leave the unresolved part in. "I'm not pretending this is set in stone" is the line that stops it being a humblebrag.</div>
+    <p><b>The angle.</b> The investor loved the business and passed anyway, because an excellent company wasn't a fund returner. Then the honest part: he was 27, newly married with a new baby, and not sure he wanted the moonshot. He admits he still gets a little green reading funding headlines.</p>
+    <div class="why"><b>Why it performed.</b> 7.8 profile views per thousand on a text post with no image, and the admission of envy is what earned them. Most founder posts about choosing sustainability over scale read like a decision made in peace long ago.</div>
+    <div class="steal"><b>Steal this.</b> Leave the unresolved part in. "I'm not pretending this is set in stone" is the line that keeps it from reading as a humblebrag.</div>
   </div>
 
   <div class="play">
@@ -353,9 +360,9 @@
       <div class="stat"><div class="v">80</div><div class="k">Reactions</div></div>
       <div class="stat"><div class="v">7</div><div class="k">Saves</div></div>
     </div>
-    <p><b>The angle.</b> A marketplace with a cold-start problem, solved by three named drivers who recruited their colleagues one cab at a time until 3,000 were on the platform before launch. Then the connection to what he's building now.</p>
-    <div class="why"><b>Why it performed.</b> 2.3 saves per thousand on a story post, which is unusual. The specific mechanic is what gets saved. Three named people and a number is a tactic; "we hustled" is an anecdote.</div>
-    <div class="steal"><b>Steal this.</b> The origin story needs one operational detail a reader could actually copy. Without it you've written an autobiography.</div>
+    <p><b>The angle.</b> A marketplace with a cold-start problem, solved by three named drivers who recruited their colleagues one cab at a time until 3,000 were on the platform before launch. He then tied it to what he's building now.</p>
+    <div class="why"><b>Why it performed.</b> 2.3 saves per thousand, unusual for a story post. Readers save the mechanic: three named people and a number make a tactic, while "we hustled" stays an anecdote.</div>
+    <div class="steal"><b>Steal this.</b> Give the origin story one operational detail a reader could copy, or you've written an autobiography.</div>
   </div>
 
   <div class="play">
@@ -366,9 +373,9 @@
       <div class="stat"><div class="v">41</div><div class="k">Reactions</div></div>
       <div class="stat"><div class="v">30%</div><div class="k">Reply rate claimed</div></div>
     </div>
-    <p><b>The angle.</b> He recorded one-minute cold videos for each prospect while walking his newborn, spit-up on his shirt in seven of them, and closed 15 deals. The argument is that the mess is what proved a person made it.</p>
-    <div class="why"><b>Why it performed.</b> Modest reach and a very high engagement rate. It also carries its own disclaimer: he says plainly he isn't telling you to put a baby in your sales pitch.</div>
-    <div class="steal"><b>Steal this.</b> When your tactic sounds like it could be read badly, say so inside the post. The disclaimer buys you the right to tell the story.</div>
+    <p><b>The angle.</b> He recorded one-minute cold videos for each prospect while walking his newborn, with spit-up on his shirt in seven of them, and closed 15 deals. His argument is that the mess proved a person made it.</p>
+    <div class="why"><b>Why it performed.</b> Modest reach and a very high engagement rate. The post also carries its own disclaimer, saying plainly that he isn't telling you to put a baby in your sales pitch.</div>
+    <div class="steal"><b>Steal this.</b> If your tactic could be read badly, say so inside the post. The disclaimer earns you the right to tell the story.</div>
   </div>
 
   <div class="play">
@@ -379,9 +386,9 @@
       <div class="stat"><div class="v">29</div><div class="k">Profile views</div></div>
       <div class="stat"><div class="v">80</div><div class="k">Reactions</div></div>
     </div>
-    <p><b>The angle.</b> Three founders from one industry, months of finding nothing worth building in it, and the sentence one of them finally said out loud. Then the reframe: not knowing the space is what let them see what was broken.</p>
-    <div class="why"><b>Why it performed.</b> 2.2% engagement. The fear is named precisely rather than gestured at, and the conclusion is addressed to a specific person: the founder sitting in that room right now, arguing themselves out of it.</div>
-    <div class="steal"><b>Steal this.</b> End the story by naming who it's for. "If you're the person currently doing X" converts a story into advice without a lecture.</div>
+    <p><b>The angle.</b> Three founders from one industry spent months finding nothing worth building in it, until one of them finally said the sentence out loud. The reframe: not knowing the space is what let them see what was broken.</p>
+    <div class="why"><b>Why it performed.</b> 2.2% engagement. He names the fear precisely and addresses the ending to one specific person, the founder sitting in that room right now, arguing themselves out of it.</div>
+    <div class="steal"><b>Steal this.</b> End the story by naming who it's for. "If you're the person currently doing X" turns a story into advice without a lecture.</div>
   </div>
 
   <div class="play">
@@ -392,8 +399,8 @@
       <div class="stat"><div class="v">11</div><div class="k">Comments</div></div>
       <div class="stat"><div class="v">5</div><div class="k">Saves</div></div>
     </div>
-    <p><b>The angle.</b> He calls the 72-hour work week a disgrace, and then immediately concedes that he personally works seven days a week and loves it. The position is about measuring output rather than hours, not about working less.</p>
-    <div class="why"><b>Why it performed.</b> The concession is why the comments are real. A post that only attacks the other side gets agreement; one that admits you're closer to them than you'd like gets argument.</div>
+    <p><b>The angle.</b> He calls the 72-hour work week a disgrace, then concedes straight away that he works seven days a week himself and loves it. His position is about measuring output instead of hours, and working less never comes into it.</p>
+    <div class="why"><b>Why it performed.</b> The concession is why the comments are real. Attack only the other side and you get agreement, but admit you're closer to them than you'd like and you get an argument.</div>
     <div class="steal"><b>Steal this.</b> Find the part of the position you're attacking that you're guilty of, and put it in paragraph three.</div>
   </div>
 
@@ -405,9 +412,9 @@
       <div class="stat"><div class="v">224</div><div class="k">Profile views</div></div>
       <div class="stat"><div class="v">39</div><div class="k">Reactions</div></div>
     </div>
-    <p><b>The angle.</b> A company he worked at hit a $60 billion valuation. His equity would have made him a millionaire if it had vested. It didn't, because he left to move abroad. No regret, just the arithmetic and what he chose instead.</p>
-    <div class="why"><b>Why it performed.</b> 17 profile views per thousand, one of the highest rates in this file. A headline everyone saw, attached to one person's actual consequence.</div>
-    <div class="steal"><b>Steal this.</b> When a number from your past is in the news this week, you have a post. The news does the reach and your consequence does the rest.</div>
+    <p><b>The angle.</b> A company he'd worked at hit a $60 billion valuation. His equity would have made him a millionaire, except it never vested, because he left to move abroad. There's no regret in the post, only the arithmetic and what he chose instead.</p>
+    <div class="why"><b>Why it performed.</b> 17 profile views per thousand, one of the highest rates in this file, from a headline everyone saw attached to one person's actual consequence.</div>
+    <div class="steal"><b>Steal this.</b> When a number from your past is in the news this week, you have a post. The news brings the reach and your consequence does the rest.</div>
   </div>
 
   <div class="play">
@@ -418,30 +425,30 @@
       <div class="stat"><div class="v">39</div><div class="k">Profile views</div></div>
       <div class="stat"><div class="v">60</div><div class="k">Reactions</div></div>
     </div>
-    <p><b>The angle.</b> "25 years ago, I let my university scan my brain for $200. They promised to send me the results. I'm still waiting." Then four companies in four unrelated industries, and why staying in one lane is the thing that limits you.</p>
-    <div class="why"><b>Why it performed.</b> 20 profile views per thousand on a small post. The opening buys the first three seconds with something genuinely odd, and the odd thing is true.</div>
-    <div class="steal"><b>Steal this.</b> The hook doesn't have to be the argument. It has to be true, strange and short. Most people write a hook that summarises the post, which is the one thing a hook shouldn't do.</div>
+    <p><b>The angle.</b> "25 years ago, I let my university scan my brain for $200. They promised to send me the results. I'm still waiting." Then four companies in four unrelated industries, and why staying in one lane limits you.</p>
+    <div class="why"><b>Why it performed.</b> 20 profile views per thousand on a small post. The opening buys the first three seconds with something genuinely odd that also happens to be true.</div>
+    <div class="steal"><b>Steal this.</b> The hook doesn't need to be the argument; it needs to be true, strange and short. Most people write a hook that summarises the post, which is the one job a hook should never take on.</div>
   </div>
 </div>
 
-<div class="pagebreak"></div>
-
-<div class="sec">
+<div class="sec flow">
+  <div class="opener">
   <h2>6. The expensive lessons</h2>
-  <p>Two posts that reached enormous numbers of people and returned almost nothing. These are in here because they're the most useful pages in the file.</p>
+  <p>The first two posts here reached enormous numbers of people and returned almost nothing, which makes them the most useful pages in the file. The two after them show what small posts can do instead.</p>
 
   <div class="play">
     <p class="idx">22 &middot; Marketplace CEO, a motivational one-liner over an image</p>
-    <h3>72,076 impressions. Seven followers.</h3>
+    <h3>72,076 impressions and seven followers</h3>
     <div class="stats">
       <div class="stat"><div class="v">72,076</div><div class="k">Impressions</div></div>
       <div class="stat"><div class="v">7</div><div class="k">Followers</div></div>
       <div class="stat"><div class="v">22</div><div class="k">Saves</div></div>
       <div class="stat"><div class="v">331</div><div class="k">Reactions</div></div>
     </div>
-    <p><b>The angle.</b> "The most successful people have a worse hit rate than you think." A sentence, an image, a sign-off.</p>
-    <div class="why"><b>Why it's here.</b> Three weeks earlier, the same account published a launch post that did 38,291 impressions and filled a waitlist in a day. This one did nearly double the reach and produced seven followers. Reach is not the scoreboard, it's the cheapest thing on the page to count.</div>
-    <div class="steal"><b>Steal this.</b> Nothing. That's the point. If a post can't be graded on something other than impressions, you already know what it's going to return.</div>
+    <p><b>The angle.</b> "The most successful people have a worse hit rate than you think." One sentence, one image and a sign-off.</p>
+    <div class="why"><b>Why it's here.</b> Three weeks earlier the same account published a launch post that did 38,291 impressions and filled a waitlist in a day. This one nearly doubled the reach and produced seven followers, because reach is only the cheapest number on the page to count.</div>
+    <div class="steal"><b>Steal this.</b> Nothing, and that's the point. If you can't grade a post on anything except impressions, you already know what it'll return.</div>
+  </div>
   </div>
 
   <div class="play">
@@ -453,9 +460,9 @@
       <div class="stat"><div class="v">13</div><div class="k">Followers</div></div>
       <div class="stat"><div class="v">11</div><div class="k">Saves</div></div>
     </div>
-    <p><b>The angle.</b> His father-in-law asked over dinner whether AI was about to replace his whole company. A fair question, answered properly, about why taste survives commoditised words.</p>
-    <div class="why"><b>Why it's here.</b> It's a good post. It is also the exact post the hiring post beat on followers, saves, comments, sends and profile views with 11.6 times less reach. Published one day apart. Judge them on the same number and you learn the wrong lesson from both.</div>
-    <div class="steal"><b>Steal this.</b> Keep publishing these. Just file them as top of funnel before you write them, and never let a quarter's strategy get decided by the one that went big.</div>
+    <p><b>The angle.</b> His father-in-law asked over dinner whether AI was about to replace his whole company. He took the question seriously and answered it properly, arguing that taste survives once words become a commodity.</p>
+    <div class="why"><b>Why it's here.</b> It's a good post, and it's the exact post the hiring post beat on followers, saves, comments, sends and profile views with 11.6 times less reach, one day apart. Judge them on the same number and you learn the wrong lesson from both.</div>
+    <div class="steal"><b>Steal this.</b> Keep publishing these. File them as top of funnel before you write them, and never let the one that went big decide a quarter's strategy.</div>
   </div>
 
   <div class="play">
@@ -467,8 +474,8 @@
       <div class="stat"><div class="v">17</div><div class="k">Comments</div></div>
     </div>
     <p><b>The angle.</b> Two lines, formatted as a LinkedIn celebration announcement, about eating dinner in a hut for a religious holiday.</p>
-    <div class="why"><b>Why it's here.</b> Nine followers from four seconds of work. The 42,589-impression founder essay in this file produced ten. Effort and return are not linearly related on this platform, and pretending otherwise is how people burn out in month two.</div>
-    <div class="steal"><b>Steal this.</b> Keep three or four of these in the bank for the weeks when the real post isn't ready. Cadence matters more than every post being substantial.</div>
+    <div class="why"><b>Why it's here.</b> Nine followers from four seconds of work, while the 42,589-impression founder essay in this file produced ten. On this platform effort and return don't move together, and pretending they do is how people burn out in month two.</div>
+    <div class="steal"><b>Steal this.</b> Keep three or four of these in the bank for weeks when the real post isn't ready. Cadence matters more than every post being substantial.</div>
   </div>
 
   <div class="play">
@@ -479,9 +486,9 @@
       <div class="stat"><div class="v">28</div><div class="k">Comments</div></div>
       <div class="stat"><div class="v">7</div><div class="k">Saves</div></div>
     </div>
-    <p><b>The angle.</b> The full arc: a cold inbound message from an investor, a wire eight days later, seven months building something nobody wanted at $1,000 of revenue, the pivot, and then the numbers. Only after all of that, the offer and a guarantee.</p>
-    <div class="why"><b>Why it's here.</b> 4,286 impressions, the lowest reach of any post on that account that month, and it's the one that asks for money. That's the trade. You get 10% of your posting slots for this and you spend them on the strength of the other 90%.</div>
-    <div class="steal"><b>Steal this.</b> Earn the ask with the failure. Seven months at $1,000 of revenue is what makes the guarantee credible.</div>
+    <p><b>The angle.</b> The full arc: a cold inbound message from an investor, a wire eight days later, seven months building something nobody wanted on almost no revenue, the pivot, and then the numbers. The offer and a guarantee come only after all of that.</p>
+    <div class="why"><b>Why it's here.</b> 4,286 impressions, the lowest reach of any post on that account that month, on the one post that asks for money. You get 10% of your posting slots for this, and you pay for them with the other 90%.</div>
+    <div class="steal"><b>Steal this.</b> Earn the ask with the failure. Seven months of almost no revenue is what makes the guarantee believable.</div>
   </div>
 </div>
 
@@ -491,10 +498,10 @@
   <h2>What this can't do for you</h2>
   <p>The honest part, because the rest isn't believable without it.</p>
   <div class="honest">
-    <p><b>These are 25 posts from 24 accounts, not a law.</b> B2B, founder and executive led, almost all on LinkedIn, mostly in tech, healthcare and finance. If you sell to consumers, treat everything here as a hypothesis.</p>
-    <p><b>The patterns don't manufacture a point of view.</b> Every post in this file came from someone with something specific to say, usually something they'd earned the right to say. The format is the cheap half.</p>
-    <p><b>These are reach and engagement numbers, not attribution.</b> I can show you 230 profile views and 37 saves. I can't draw a clean line from a save to a signed contract, because LinkedIn doesn't give that to anyone, and people who claim it are usually counting something else.</p>
-    <p><b>Account size changes everything.</b> A 471-impression post on a small account and a 178,179-impression post on a large one are not comparable, and I haven't normalised for it. Read the rates, not the totals.</p>
+    <p><b>25 posts from 24 accounts make a sample, nothing more.</b> They're B2B, founder and executive led, almost all on LinkedIn, mostly in tech, healthcare and finance. If you sell to consumers, treat everything here as a hypothesis.</p>
+    <p><b>The patterns won't hand you a point of view.</b> Every post in this file came from someone with something specific to say, usually something they'd earned the right to say. Format is the cheap half.</p>
+    <p><b>These are reach and engagement numbers, with no attribution.</b> I can show you 230 profile views and 37 saves, but I can't draw a clean line from a save to a signed contract. LinkedIn doesn't give that data to anyone, and people who claim it are usually counting something else.</p>
+    <p style="margin:0"><b>Account size changes everything.</b> A 471-impression post on a small account can't be compared with a 178,179-impression post on a large one, and I haven't normalised for size. Read the rates and ignore the totals.</p>
   </div>
 </div>
 
@@ -502,14 +509,14 @@
   <h2>The one page version</h2>
   <ol>
     <li>File every post as top, middle or bottom of funnel before you write it. Roughly 70 / 20 / 10.</li>
-    <li>Grade each bucket on a different number. Impressions, then saves and profile views, then comments and applications.</li>
-    <li>Write the intro post properly. It's the highest converting post you'll publish, and it only happens once.</li>
+    <li>Grade each bucket on a different number: impressions, then saves and profile views, then comments and applications.</li>
+    <li>Write the intro post properly. It's the highest converting post you'll publish, and you only get one.</li>
     <li>End the intro with what you'll write about next.</li>
-    <li>Video for belief, text for action. Expect 137 hours of attention and almost no clicks from the first one.</li>
-    <li>Put two actions in a launch: a comment and a link. They're separate funnels.</li>
+    <li>Video for belief, text for action. A video launch can buy 137 hours of attention and almost no clicks.</li>
+    <li>Put two actions in a launch, a comment and a link, because they're separate funnels.</li>
     <li>Publish the internal artifact, with the uncomfortable section left in.</li>
-    <li>Answer your critics in a post, not in the comments, and answer with counts.</li>
-    <li>Put the filter inside the hiring ask. Ask for something that takes effort.</li>
+    <li>Answer critics in a post, with counts, and leave the comment thread alone.</li>
+    <li>Put the filter inside the hiring ask by asking for something that takes effort.</li>
     <li>Every launch, raise and role has a follow-up post made of what happened.</li>
     <li>Keep four-second posts in the bank for the weeks the real one isn't ready.</li>
     <li>Never let the post that went viral decide next quarter.</li>
@@ -517,8 +524,8 @@
 </div>
 
 <div class="foot">
-  <span><b>Francisco Gost</b> writes The Draft, a weekly letter on B2B social and content strategy, at franciscogost.com</span>
-  <span>Partner at RallyUp. 9.6M impressions across 24 accounts in 2026.</span>
+  <span><b>Francisco Gost</b> writes The Draft, a weekly letter on how top 1% startups crush organic marketing, at franciscogost.com</span>
+  <span>Partner at RallyUp. 21.3M+ impressions generated for B2B founders and execs.</span>
 </div>
 
 </body></html>

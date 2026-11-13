@@ -4,29 +4,29 @@
   "title": "From DM to revenue.",
   "description": "The cold DM that turned a stranger into a six figure yes, annotated line by line.",
   "kicker": "One DM · a six figure yes",
-  "formHeader": "One DM to a stranger. A six figure yes, thirty minutes later.",
+  "formHeader": "One DM to a stranger, and a six figure yes that started with a reply thirty minutes later.",
   "formEyebrow": "Get it free, in your inbox",
   "submitLabel": "Send me the DM",
   "blocks": [
     {
       "type": "lead",
-      "text": "I sent one cold message to a founder I had never met. He replied in thirty minutes, and that message is the reason I am his business partner today."
+      "text": "I sent one cold message to a founder I'd never met. He replied in thirty minutes, and that message is the reason I'm his business partner today."
     },
     {
       "type": "p",
-      "text": "Everyone asks what the message said. That is the wrong question."
+      "text": "Everyone asks what the message said, which is the wrong question."
     },
     {
       "type": "p",
-      "text": "It was not clever writing. It worked because it did the thing it was selling, to the person who would be buying it."
+      "text": "The writing wasn't especially clever. It worked because it did the thing it was selling, to the person who'd be buying it."
     },
     {
       "type": "p",
-      "text": "Alec had posted about growing his company. I read his last twenty posts before I wrote a word, not to flatter him back but to learn how he talks, then wrote to him in his own language. I opened by telling him I had found him the same way I would find his future customers, and I said so in the second line. The pitch was not a claim about outreach. It was outreach, arriving in his inbox while he read it."
+      "text": "Alec had posted about growing his company. I read his last twenty posts before I wrote a word, to learn how he talks rather than to flatter him, and then I wrote to him in his own language. In the second line I told him I'd found him the same way I'd find his future customers, so the pitch arrived as outreach, in his inbox, while he was reading it."
     },
     {
       "type": "p",
-      "text": "Everything after that was three facts in a deliberate order. A business I had run at eighteen. Outreach I had already done for someone with 85,000 followers, with the numbers attached. And my current job, along with the honest limit: afternoons and weekends only. That last one is a weakness, and it is what made the other two believable. Then a link to my calendar."
+      "text": "After that came three facts in a deliberate order: a business I'd run at eighteen, outreach I'd already done for someone with 85,000 followers (numbers attached), and my current job with its honest limit, afternoons and weekends only. That last one is a weakness, and it's what made the other two believable."
     },
     {
       "type": "p",
@@ -35,17 +35,17 @@
     {
       "type": "list",
       "items": [
-        "It answers the only question that matters, before it is asked. A founder reading a cold pitch wants to know whether you can actually do the thing. Landing in his inbox is the answer.",
-        "It cannot be faked. Anyone can say they are good at outreach. Almost nobody will do the work of finding you, reading you, and writing something you have not already seen twice that week."
+        "It answers the only question that matters before anyone asks it. A founder reading a cold pitch wants to know whether you can actually do the thing, and landing in his inbox is the answer.",
+        "Nobody can fake it. Anyone can say they're good at outreach; almost nobody will find you, read you and write something you haven't already seen twice that week."
       ]
     },
     {
       "type": "p",
-      "text": "The same structure is what turns a cold DM into a customer, a partnership, or an investor call. The ask changes. The move does not. You do a piece of the work before anyone agrees to pay you for it, and you put that work inside the message."
+      "text": "The same structure turns a cold DM into a customer, a partnership or an investor call. Only the ask changes. You do a piece of the work before anyone agrees to pay you for it, and you put that work inside the message."
     },
     {
       "type": "ask",
-      "text": "Put your email in and I will send you the message itself, annotated: what I knew about him before I wrote a word, why every line is there, what he wrote back, and the structure you can run against anyone you need a yes from."
+      "text": "Put your email in and I'll send you the message itself, annotated: what I knew about him before I wrote a word, why every line is there, what he wrote back, and the structure you can run on anyone you need a yes from."
     }
   ],
   "resourceUrl": "/api/download/chief-of-staff-dm?k=1fb90e230fb6288e3882d2517b685837",

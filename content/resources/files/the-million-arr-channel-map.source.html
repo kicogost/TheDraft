@@ -9,8 +9,10 @@
   /* Vertical margin on the page box, zero horizontal. Chrome only applies
      body padding-top to the first page, so the top inset has to come from
      the page box or text lands on the sheet edge after every natural break.
-     Zero horizontal keeps the paper colour bleeding to the left and right. */
-  @page{size:A4;margin:15mm 0}
+     Zero horizontal keeps the paper colour bleeding to the left and right,
+     and the @page background paints the top and bottom margins in paper too,
+     which Chrome otherwise leaves white. */
+  @page{size:A4;margin:15mm 0;background:#fdf6ec}
   html{background:var(--paper)}
   body{margin:0;padding:0 16mm;background:var(--paper);color:var(--soft);font:400 10.5pt/1.6 Inter,system-ui,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   h1,h2{color:var(--ink);font-family:Anton,"Arial Narrow",Impact,sans-serif;font-weight:400;margin:0;text-transform:uppercase;letter-spacing:.005em}
@@ -47,6 +49,12 @@
   .bucket{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:6.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--paper);background:var(--ink);padding:2pt 5pt;margin-left:5pt;vertical-align:2pt}
   .bucket.tof{background:var(--accent)}
   .bucket.mof{background:var(--soft)}
+  /* A channel may run across a page break, but never splits inside a box
+     and never leaves its number, name or labels alone at the bottom. */
+  .play{page-break-inside:auto}
+  .play>p,.steal,.why,.stats,li{break-inside:avoid}
+  h2,h3,.idx,.meta{break-after:avoid}
+  .why{break-before:avoid}
   .pagebreak{page-break-before:always;height:0}
   ol{margin:0 0 7pt;padding-left:16pt}
   li{margin:0 0 4pt}
@@ -56,24 +64,24 @@
 <div class="cover">
   <p class="label">15 channels &middot; how to start each</p>
   <h1>The $1M ARR channel map</h1>
-  <p class="lead">Every channel B2B startups use to get from zero to $1M ARR, with what each one costs, how fast it moves, and the three things to do this week to start it.</p>
+  <p class="lead">Every channel B2B startups use to get from zero to $1M ARR, with what each one costs, how fast it moves, and the three things to do this week to get it going.</p>
 </div>
 
 <div class="sec">
   <h2>What this is</h2>
-  <p>I'm a partner at RallyUp. We pivoted to an agency on 1 May 2026 with almost nothing, and we have grown every month since.</p>
-  <p>This is the map I wish we'd had on day one. Fifteen channels, each with what it is, how fast it moves, what it costs, three first steps and the mistake that kills it.</p>
+  <p>I'm a partner at RallyUp. We pivoted to an agency on 1 May 2026 with almost nothing, and we've grown every month since.</p>
+  <p>I wish we'd had this map on day one. It covers fifteen channels, and for each you get what it is, how fast it moves, what it costs, three first steps and the mistake that usually kills it.</p>
   <div class="honest">
-    <p style="margin:0"><b>The honest promise.</b> Nobody gets to $1M ARR on fifteen channels. You get there on two or three, done properly for a long time. Use this to pick them. The speed and cost labels are my rules of thumb from running these for founders, not benchmarks.</p>
+    <p style="margin:0"><b>The honest promise.</b> Founders who reach $1M ARR almost always get there on two or three channels, worked properly for a long time, so the real job is picking yours. The speed and cost labels are my rules of thumb from running these for founders. Nobody measured them as benchmarks.</p>
   </div>
 </div>
 
 <div class="sec">
   <h2>How to pick your two</h2>
   <ol>
-    <li><b>Need customers this month?</b> Start with warm intros, founder dinners or newsletter ads. They're fast and cheap to test.</li>
+    <li><b>Need customers this month?</b> Start with warm intros, founder dinners or newsletter ads, because they're fast and cheap to test.</li>
     <li><b>Building for next year?</b> Add one compounding channel: founder-led content, building in public, programmatic SEO or GEO.</li>
-    <li><b>Run each for 90 days</b> before you judge it, and judge it on customers, not attention.</li>
+    <li><b>Give each one 90 days</b> before you judge it, and count customers when you do. Attention doesn't pay anyone.</li>
   </ol>
 </div>
 
@@ -84,71 +92,71 @@
     <h3>Programmatic SEO</h3>
     <p class="meta">Speed: Slow, then compounding &middot; Cost: Time, plus a little dev work</p>
     <p>Hundreds of search pages built from one template and a dataset, each answering a narrow query: &quot;[tool] alternatives&quot;, &quot;[tool] + [tool] integration&quot;, &quot;[job] salary in [city]&quot;.</p>
-    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>List 50 queries your buyers type that follow one pattern. Check them in a keyword tool for real search volume.</li><li>Build one page by hand and make it genuinely useful. If you wouldn&#x27;t read it, Google won&#x27;t rank it.</li><li>Template it, publish 20, and wait 6 to 8 weeks before you publish 200.</li></ol></div>
-    <div class="why"><b>Watch out:</b> Thin pages get de-indexed. Every page needs data or an answer a reader can&#x27;t get elsewhere.</div>
+    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>List 50 queries your buyers type that follow one pattern, then check each in a keyword tool for real search volume.</li><li>Build one page by hand and make it genuinely useful. If you wouldn&#x27;t read it, Google won&#x27;t rank it.</li><li>Template it and publish 20, then wait 6 to 8 weeks before you publish 200.</li></ol></div>
+    <div class="why"><b>Watch out:</b> Google de-indexes thin pages, so every page needs data or an answer a reader can&#x27;t get anywhere else.</div>
   </div>
   <div class="play">
     <p class="idx">02</p>
     <h3>Channel partners</h3>
     <p class="meta">Speed: Medium &middot; Cost: Revenue share, usually 10 to 30%</p>
     <p>Companies that already sell to your buyer resell or refer you: agencies, consultancies, resellers, implementation partners.</p>
-    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Write down who your customers already pay before they find you. Those are your partners.</li><li>Offer three of them a revenue share and do the first deal with them yourself.</li><li>Give partners a one-page pitch and a demo account, then hold one call a month.</li></ol></div>
-    <div class="why"><b>Watch out:</b> Partners sell what is easy. If your product needs explaining, they won&#x27;t push it until you&#x27;ve proven it sells.</div>
+    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Write down who your customers already pay before they find you. Those are your partners.</li><li>Offer three of them a revenue share and close the first deal alongside them.</li><li>Give partners a one-page pitch and a demo account, then hold one call a month.</li></ol></div>
+    <div class="why"><b>Watch out:</b> Partners sell whatever is easiest. If your product needs explaining, they won&#x27;t push it until you&#x27;ve shown them it sells.</div>
   </div>
   <div class="play">
     <p class="idx">03</p>
     <h3>App marketplaces</h3>
     <p class="meta">Speed: Medium &middot; Cost: Integration build time</p>
     <p>Listing inside the platforms your buyers already use: Slack, HubSpot, Salesforce, Shopify, Zapier, Chrome.</p>
-    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Pick the one platform most of your customers already live in.</li><li>Ship the smallest integration that&#x27;s useful on day one, and write the listing around the job it does.</li><li>Ask your first 10 users to leave a review. Marketplace ranking leans heavily on them.</li></ol></div>
-    <div class="why"><b>Watch out:</b> You&#x27;re building on someone else&#x27;s platform. They can change the rules, the ranking or the API.</div>
+    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Pick the one platform most of your customers already live in.</li><li>Ship the smallest integration that&#x27;s useful on day one, and write the listing around the job it does.</li><li>Ask your first 10 users for a review, since marketplace ranking leans heavily on them.</li></ol></div>
+    <div class="why"><b>Watch out:</b> You&#x27;re building on someone else&#x27;s platform, and they can change the rules, the ranking or the API whenever they like.</div>
   </div>
   <div class="play">
     <p class="idx">04</p>
     <h3>Newsletter ads</h3>
     <p class="meta">Speed: Fast &middot; Cost: From a few hundred dollars a slot</p>
     <p>Buying a sponsored slot in a newsletter your buyers already read.</p>
-    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Ask five customers which newsletters they actually open. Buy from that list, not from a directory.</li><li>Start with one small newsletter, one placement, one offer. A free resource beats &quot;book a demo&quot;.</li><li>Track with a dedicated link and judge it on signups, not clicks.</li></ol></div>
-    <div class="why"><b>Watch out:</b> One send tells you little. Buy two or three in the same newsletter before you decide.</div>
+    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Ask five customers which newsletters they actually open, and buy from that list rather than a directory.</li><li>Start small: one newsletter, one placement, one offer. A free resource beats &quot;book a demo&quot;.</li><li>Track it with a dedicated link and judge it on signups. Clicks tell you very little.</li></ol></div>
+    <div class="why"><b>Watch out:</b> One send tells you almost nothing. Buy two or three in the same newsletter before you decide.</div>
   </div>
   <div class="play">
     <p class="idx">05</p>
     <h3>Generative engine optimization (GEO)</h3>
     <p class="meta">Speed: Slow &middot; Cost: Time</p>
     <p>Getting cited when people ask ChatGPT, Claude, Perplexity or Gemini for a recommendation in your category.</p>
-    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Ask the assistants the five questions your buyers ask. Note who gets recommended and which pages they cite.</li><li>Get onto those sources: comparison pages, Reddit threads, reviews, &quot;best tools for&quot; lists.</li><li>Publish pages that answer one question clearly, with facts an assistant can quote.</li></ol></div>
-    <div class="why"><b>Watch out:</b> Hard to measure. Add &quot;how did you hear about us&quot; to signup and count the AI answers.</div>
+    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Ask the assistants the five questions your buyers ask. Note who gets recommended and which pages they cite.</li><li>Get yourself onto those sources: comparison pages, Reddit threads, reviews, &quot;best tools for&quot; lists.</li><li>Publish pages that answer one question clearly, with facts an assistant can quote.</li></ol></div>
+    <div class="why"><b>Watch out:</b> It&#x27;s hard to measure, so add &quot;how did you hear about us&quot; to signup and count the AI answers.</div>
   </div>
   <div class="play">
     <p class="idx">06</p>
     <h3>Founder dinners</h3>
     <p class="meta">Speed: Fast &middot; Cost: Dinner for 10, plus your time</p>
-    <p>A small dinner, 8 to 12 people, all your ideal customers, on a topic they care about. You host, you don&#x27;t pitch.</p>
-    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Pick a topic your buyers argue about. That&#x27;s the invitation.</li><li>Invite 30 to get 10. Ask one respected guest first, and name them in the other invites.</li><li>Follow up the next day with a note, a summary of the conversation, and nothing else.</li></ol></div>
-    <div class="why"><b>Watch out:</b> The pitch kills it. The dinner earns the meeting. The meeting is where you sell.</div>
+    <p>A small dinner for 8 to 12 of your ideal customers, on a topic they care about. You host and you don&#x27;t pitch.</p>
+    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Pick a topic your buyers argue about and make that the invitation.</li><li>Invite 30 to get 10. Ask one respected guest first, then name them in the other invites.</li><li>The next day, send a thank-you note and a summary of the conversation, and nothing else.</li></ol></div>
+    <div class="why"><b>Watch out:</b> Pitch at the table and you lose the room. The dinner earns you a meeting, and the meeting is where you sell.</div>
   </div>
   <div class="play">
     <p class="idx">07</p>
     <h3>Affiliates</h3>
     <p class="meta">Speed: Medium &middot; Cost: Commission on revenue</p>
     <p>Paying people a commission for every customer they send you: creators, consultants, existing customers.</p>
-    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Start with customers who already recommend you. Ask them first.</li><li>Offer a commission big enough to notice, and pay it on time, every time.</li><li>Give affiliates swipe copy, a demo video and their own tracked link.</li></ol></div>
-    <div class="why"><b>Watch out:</b> Most affiliates send nothing. A handful send almost everything. Recruit for the few.</div>
+    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Ask the customers who already recommend you before anyone else.</li><li>Offer a commission big enough to notice, and pay it on time, every time.</li><li>Give affiliates swipe copy, a demo video and their own tracked link.</li></ol></div>
+    <div class="why"><b>Watch out:</b> Most affiliates send nothing and a handful send almost everything, so recruit for the handful.</div>
   </div>
   <div class="play">
     <p class="idx">08</p>
     <h3>Reddit marketing</h3>
     <p class="meta">Speed: Medium &middot; Cost: Time</p>
-    <p>Being useful in the subreddits your buyers use, as a person, until people ask what you&#x27;re building.</p>
-    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Find the five subreddits where your buyers ask for help. Read the rules of each.</li><li>Answer questions properly for two weeks before you mention your product once.</li><li>When you post, post the lesson, not the link, and disclose that you built it.</li></ol></div>
-    <div class="why"><b>Watch out:</b> Reddit spots marketing fast, and a ban is public. Be a member first.</div>
+    <p>Being useful in the subreddits your buyers use, as a person, until people start asking what you&#x27;re building.</p>
+    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Find the five subreddits where your buyers ask for help, and read each one&#x27;s rules.</li><li>Answer questions properly for two weeks before you mention your product once.</li><li>When you do post, lead with the lesson rather than a link, and say that you built the thing.</li></ol></div>
+    <div class="why"><b>Watch out:</b> Reddit spots marketing fast, and a ban happens in public. Be a member first.</div>
   </div>
   <div class="play">
     <p class="idx">09</p>
     <h3>Referral programs</h3>
     <p class="meta">Speed: Medium &middot; Cost: The reward</p>
     <p>Rewarding customers for bringing other customers.</p>
-    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Only start once customers already refer you without being asked. A program amplifies love, it doesn&#x27;t create it.</li><li>Reward both sides, and make the reward something they&#x27;d actually want.</li><li>Ask at the happiest moment: right after a win, not on day one.</li></ol></div>
+    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Wait until customers already refer you without being asked. A program amplifies referrals that are happening anyway; it can&#x27;t start them.</li><li>Reward both sides, with something they&#x27;d actually want.</li><li>Ask at the happiest moment, right after a win. Day one is too early.</li></ol></div>
     <div class="why"><b>Watch out:</b> If nobody refers you today, fix the product before you build a program.</div>
   </div>
   <div class="play">
@@ -156,31 +164,31 @@
     <h3>Building in public</h3>
     <p class="meta">Speed: Slow, then compounding &middot; Cost: Time, and some nerve</p>
     <p>Sharing your real numbers, decisions and mistakes as you go, so people follow the company before they need it.</p>
-    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Pick the numbers you&#x27;ll share every week and keep the format fixed.</li><li>Share decisions and mistakes, not just wins. The misses are what people trust.</li><li>Put one clear next step at the end: the newsletter, the waitlist, the product.</li></ol></div>
-    <div class="why"><b>Watch out:</b> Decide what stays private (client names, contract values) before the first post, not after.</div>
+    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Pick the numbers you&#x27;ll share every week and keep the format fixed.</li><li>Share the decisions and the mistakes along with the wins, because the misses are what people trust.</li><li>End every post with one clear next step: the newsletter, the waitlist or the product.</li></ol></div>
+    <div class="why"><b>Watch out:</b> Decide what stays private (client names, contract values) before the first post. Afterwards is too late.</div>
   </div>
   <div class="play">
     <p class="idx">11</p>
     <h3>Influencer marketing</h3>
     <p class="meta">Speed: Fast &middot; Cost: Per post, varies widely</p>
     <p>Paying creators your buyers already follow to post about you.</p>
-    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Pick creators by who follows them, not how many. Ask for an audience breakdown.</li><li>Brief them on the problem and let them write it in their own voice.</li><li>Pay for a test post before a package, and track with their own link.</li></ol></div>
-    <div class="why"><b>Watch out:</b> Views are easy to buy. Customers aren&#x27;t. One launch can do millions of views and almost no users.</div>
+    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Pick creators by who follows them rather than how many do, and ask for an audience breakdown.</li><li>Brief them on the problem and let them write it in their own voice.</li><li>Pay for one test post before you buy a package, and track it with their own link.</li></ol></div>
+    <div class="why"><b>Watch out:</b> Views are easy to buy and customers aren&#x27;t. One launch can pull millions of views and almost no users.</div>
   </div>
   <div class="play">
     <p class="idx">12</p>
     <h3>A big launch day</h3>
     <p class="meta">Speed: Fast &middot; Cost: Time and favours</p>
-    <p>Concentrating everything into one day: the founder&#x27;s post, the team, customers, investors and partners all sharing at once.</p>
-    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Line up 50 people four days before who&#x27;ll comment in the first hour.</li><li>Give the post two asks: comment below, and the link. They&#x27;re separate funnels.</li><li>Plan the second post now. The second launch is often the one that converts.</li></ol></div>
-    <div class="why"><b>Watch out:</b> A launch is a window, not a day. Plan the week after as carefully as the morning of.</div>
+    <p>Concentrating everything into one day, with the founder&#x27;s post, the team, customers, investors and partners all sharing at once.</p>
+    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Four days before, line up 50 people who&#x27;ll comment in the first hour.</li><li>Give the post two asks, a comment and the link, because they&#x27;re separate funnels.</li><li>Plan the second post now. It&#x27;s often the one that converts.</li></ol></div>
+    <div class="why"><b>Watch out:</b> Most of the result arrives in the days after, so plan that week as carefully as the morning of.</div>
   </div>
   <div class="play">
     <p class="idx">13</p>
     <h3>Founder-led content on LinkedIn</h3>
     <p class="meta">Speed: Slow, then compounding &middot; Cost: Time, or a ghostwriter</p>
     <p>The founder posts several times a week about the problem, the customers and the company, so buyers know them before they need them.</p>
-    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Write down 10 things you&#x27;ve seen that your buyers haven&#x27;t. That&#x27;s your first 10 posts.</li><li>Post three times a week for 90 days before you judge it.</li><li>Grade posts on saves, profile views and DMs, not reach.</li></ol></div>
+    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Write down 10 things you&#x27;ve seen that your buyers haven&#x27;t. Those are your first 10 posts.</li><li>Post three times a week for 90 days before you judge it.</li><li>Grade each post on saves, profile views and DMs. Reach will mislead you.</li></ol></div>
     <div class="why"><b>Watch out:</b> Reach is the wrong scoreboard. A post with huge reach can bring seven followers and no signups.</div>
   </div>
   <div class="play">
@@ -188,27 +196,27 @@
     <h3>Paid ads</h3>
     <p class="meta">Speed: Fast &middot; Cost: Ad spend, plus testing budget</p>
     <p>Buying reach on Google, LinkedIn, Meta or Reddit and paying per click or per thousand views.</p>
-    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Start with search ads on the terms people type when they already want what you sell.</li><li>Send ads to a page with one offer and one form.</li><li>Set a test budget you can lose, and kill anything that hasn&#x27;t produced a customer by the end of it.</li></ol></div>
-    <div class="why"><b>Watch out:</b> Ads multiply what already converts. If your page doesn&#x27;t convert organically, ads make it expensive.</div>
+    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>Start with search ads on the terms people type when they already want what you sell.</li><li>Send the ads to a page with one offer and one form.</li><li>Set a test budget you can afford to lose, and kill anything that hasn&#x27;t produced a customer by the time it&#x27;s spent.</li></ol></div>
+    <div class="why"><b>Watch out:</b> Ads multiply whatever already converts. A page that doesn&#x27;t convert organically just gets more expensive.</div>
   </div>
   <div class="play">
     <p class="idx">15</p>
     <h3>Warm intros through your network</h3>
     <p class="meta">Speed: Fast &middot; Cost: Favours</p>
     <p>Asking people who know you to introduce you to people who could buy.</p>
-    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>List 50 people who&#x27;d take your call. Next to each, write two people they know that you&#x27;d want to meet.</li><li>Write the intro for them: three lines they can forward unchanged.</li><li>Report back after every intro, whatever happened. It&#x27;s how you get the next one.</li></ol></div>
-    <div class="why"><b>Watch out:</b> It runs out. Use it for your first customers while you build a channel that doesn&#x27;t.</div>
+    <div class="steal"><b>Start this week</b><ol style="margin:4pt 0 0"><li>List 50 people who&#x27;d take your call, and next to each, write two people they know that you&#x27;d like to meet.</li><li>Write the intro for them: three lines they can forward unchanged.</li><li>Report back after every intro, whatever happened. That&#x27;s how you get the next one.</li></ol></div>
+    <div class="why"><b>Watch out:</b> Your network runs out. Use it for your first customers while you build a channel that won&#x27;t.</div>
   </div>
 </div>
 
 <div class="sec">
   <h2>The one page version</h2>
   <ol>
-    <li>Pick one fast channel and one compounding channel. Ignore the other thirteen for 90 days.</li>
-    <li>Find out where your buyers already are before you pick: ask five of them.</li>
-    <li>Judge every channel on customers, never on views.</li>
-    <li>Start where you have an unfair advantage: a network, an audience, a platform your buyers live in.</li>
-    <li>Anything built on someone else's platform can be taken away. Own the email list.</li>
+    <li>Pick one fast channel and one compounding channel, and ignore the other thirteen for 90 days.</li>
+    <li>Before you pick, ask five buyers where they already spend their time.</li>
+    <li>Judge every channel on customers. Views don&#x27;t count.</li>
+    <li>Start where you have an unfair advantage, like a network, an audience or a platform your buyers live in.</li>
+    <li>Anything built on someone else&#x27;s platform can be taken away, so own the email list.</li>
   </ol>
 </div>
 

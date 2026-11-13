@@ -2,7 +2,7 @@
   "slug": "million-arr-channels",
   "template": "story",
   "title": "The $1M ARR channel map.",
-  "description": "Every channel B2B startups use to get from zero to $1M ARR, with how fast each one moves, what it costs, and three things to do this week to start it.",
+  "description": "Every channel B2B startups use to get from zero to $1M ARR, with how fast each one moves, what it costs, and three things to do this week to get it going.",
   "kicker": "15 channels · how to start each",
   "formHeader": "15 channels. Three first steps for each.",
   "formEyebrow": "Get it free, in your inbox",
@@ -11,25 +11,25 @@
   "blocks": [
     {
       "type": "lead",
-      "text": "Nobody gets to $1M ARR on fifteen channels. You get there on two or three, done properly for a long time. The hard part is picking them."
+      "text": "Founders who reach $1M ARR almost always get there on two or three channels, worked properly for a long time. Picking which ones is the hard part."
     },
     {
       "type": "p",
-      "text": "I'm a partner at RallyUp. We pivoted to an agency on 1 May 2026 with almost nothing, and we have grown every month since. This is the map I wish we'd had on day one."
+      "text": "I'm a partner at RallyUp. We pivoted to an agency on 1 May 2026 with almost nothing, and we've grown every month since. I wish we'd had this map on day one."
     },
     {
       "type": "list",
       "items": [
         "All 15 channels, from programmatic SEO to warm intros",
         "How fast each one moves and what it really costs",
-        "Three things to do this week to start each one",
-        "The mistake that kills each channel",
+        "Three things to do this week to get each one going",
+        "The mistake that usually kills each channel",
         "How to pick your two, and how long to give them"
       ]
     },
     {
       "type": "p",
-      "text": "The honest limit is in there too. The speed and cost labels are rules of thumb from running these for founders, not benchmarks. Use the map to choose, then judge every channel on customers, never on views."
+      "text": "One caveat: the speed and cost labels are my rules of thumb from running these for founders, and nobody measured them as benchmarks. Use the map to choose, then judge every channel on the customers it brings in."
     },
     {
       "type": "ask",

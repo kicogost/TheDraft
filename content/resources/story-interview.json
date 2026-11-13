@@ -2,7 +2,7 @@
   "slug": "story-interview",
   "template": "story",
   "title": "The story interview.",
-  "description": "The interview we run with every founder and executive we write for, as one Claude prompt. Fifteen minutes of questions, then your story bank and five scored LinkedIn drafts.",
+  "description": "The interview we run with every founder and executive we write for, as one Claude prompt. It asks questions for fifteen minutes, then gives you a story bank and five scored LinkedIn drafts.",
   "kicker": "15 minutes · 5 drafts",
   "formHeader": "15 minutes. 5 drafts. Built on 750+ posts.",
   "formEyebrow": "Get it free, in your inbox",
@@ -11,11 +11,11 @@
   "blocks": [
     {
       "type": "lead",
-      "text": "Every account we run starts with an interview, not a brief. Fifteen minutes of questions that pull out the things that actually happened to someone, because those are the only posts nobody else can write."
+      "text": "Every account we run starts with an interview, before anyone writes a brief. Fifteen minutes of questions pull out the things that actually happened to someone, and those make the only posts nobody else can write."
     },
     {
       "type": "p",
-      "text": "I'm a partner at RallyUp, where we write LinkedIn for B2B founders and executives. We've published more than 750 posts this year, and the accounts we run have generated 21.3M+ impressions. All of it came out of that first conversation."
+      "text": "I'm a partner at RallyUp, where we write LinkedIn for B2B founders and executives. We've published more than 750 posts this year, the accounts we run have generated 21.3M+ impressions, and all of it started in that first conversation."
     },
     {
       "type": "p",
@@ -33,11 +33,11 @@
     },
     {
       "type": "p",
-      "text": "Run it once and you have a week of posts. Keep the story bank and you have next month's too."
+      "text": "Run it once and you have a week of posts. Keep the story bank and next month is mostly written too."
     },
     {
       "type": "p",
-      "text": "The honest limit is in there as well. It's only as good as your answers, and it can't invent a point of view you don't have. Give it the number, the name and what was said, and it gives you posts that sound like you."
+      "text": "It does have a limit: it's only as good as your answers, and it can't invent a point of view you don't have. Give it the number, the name and what was said, and the posts it writes will sound like you."
     },
     {
       "type": "ask",

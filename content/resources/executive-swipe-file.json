@@ -2,7 +2,7 @@
   "slug": "executive-swipe-file",
   "template": "story",
   "title": "The executive swipe file.",
-  "description": "25 of the best performing posts we published for B2B founders and executives this year, with the real numbers attached and the pattern underneath each one.",
+  "description": "25 of the best performing posts we published for B2B founders and executives this year, each with its real numbers and the pattern underneath.",
   "kicker": "25 posts · 24 accounts",
   "formHeader": "25 posts. 24 accounts. 9.6M impressions.",
   "formEyebrow": "Get it free, in your inbox",
@@ -11,19 +11,19 @@
   "blocks": [
     {
       "type": "lead",
-      "text": "Two posts went out on the same account one day apart. The first was a hiring post and did 15,376 impressions. The second went viral and did 178,179. The hiring post won on followers, saves, comments, sends and profile views."
+      "text": "Two posts went out on the same account one day apart. The first, a hiring post, did 15,376 impressions; the second went viral and did 178,179. Yet the hiring post won on followers, saves, comments, sends and profile views."
     },
     {
       "type": "p",
-      "text": "That pair is why this document exists. Reach is the cheapest thing on a post to count, so it's the thing everyone counts, and it's the reason a lot of executives are grading their content on the one number that tells them least."
+      "text": "That pair is why this document exists. Reach is the cheapest number on a post to count, so everyone counts it, and plenty of executives end up grading their content on the number that tells them least."
     },
     {
       "type": "p",
-      "text": "I'm a partner at RallyUp, where we write LinkedIn for B2B founders and executives. This year we've driven 9.6 million impressions across 24 accounts at 16 companies, from more than 750 posts. This is the part of that work worth stealing."
+      "text": "I'm a partner at RallyUp, where we write LinkedIn for B2B founders and executives. This year the accounts we run did 9.6 million impressions across 24 accounts at 16 companies, from more than 750 posts. This document is the part of that work worth stealing."
     },
     {
       "type": "p",
-      "text": "Every post in it is real and every number comes from the account's own analytics. The accounts are anonymised, because the posts belong to the people who published them. What I kept is the shape: the angle, why it worked, and the thing you can lift without copying anyone's words."
+      "text": "Every post in it is real and every number comes from the account's own analytics. I've anonymised the accounts, because the posts belong to the people who published them, and kept the shape of each one: why it worked, and what you can lift without borrowing anyone's words."
     },
     {
       "type": "list",
@@ -38,11 +38,11 @@
     },
     {
       "type": "p",
-      "text": "There's a three bucket model running underneath all of it. Top of funnel, middle, bottom, roughly 70 / 20 / 10, and each one graded on a different number. Grade all three on impressions and you'll kill the two that are working."
+      "text": "Underneath all of it runs a three bucket model: top of funnel, middle and bottom, roughly 70 / 20 / 10, each graded on a different number. Grade all three on impressions and you'll kill the two that are working."
     },
     {
       "type": "p",
-      "text": "The honest limit is in the document too. These are 25 posts from 24 accounts, not a law, and none of these patterns manufacture a point of view. They move numbers on accounts that already have something to say."
+      "text": "The limits are in there too. It's 25 posts from 24 accounts, and none of these patterns will hand you a point of view; they move numbers on accounts that already have something to say."
     },
     {
       "type": "ask",
