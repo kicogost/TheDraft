@@ -45,3 +45,6 @@ next-env.d.ts
 # Holds exports containing other people's names, messages and contact details.
 # Everything in here stays local.
 /private/
+
+# LinkedIn analytics exports stay local
+lib/AggregateAnalytics_*/

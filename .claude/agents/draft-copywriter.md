@@ -40,6 +40,7 @@ Newsletter issues, automation emails and whole sequences, lead magnet copy, reso
 - Never state Francisco's age in the present tense in evergreen assets. Use "at 23 I sent one cold message", not "I am 23".
 - Never paste sentences from jayyanginspires.com or any other source. Rewrite from the pattern.
 - Anonymise reader messages: strip the employer, caption quotes "Confidential Reader", blur screenshots.
+- **The Draft never names a client or prints a RallyUp revenue figure** (Alec's rule, 13 November 2026). No client company or person names, not even ones with permission elsewhere, and no links to client posts: describe them by role, stage and sector. No MRR, ARR, deal size or "+$X" for RallyUp. RallyUp's team (Alec, Matt, Francisco) can be named. Full rule in `docs/copy-system.md` section 5.
 - The subject line must be paid off by the body. A hook the copy contradicts is bait.
 
 ## The pass before you hand anything back

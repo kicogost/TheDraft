@@ -47,14 +47,14 @@ Then add two short lists:
 
 For every "+X this week" in The scoreboard, compute it from the source and show the working:
 - LinkedIn followers: `ordinal_get_analytics` type=followers for Francisco's profile over the window; report the first reading, the last reading and the difference.
-- RallyUp MRR change: add up the Closed Won lines ("Active MRR ($X/mo)" or "new Closed Won: Company ($X/mo)") and subtract churn in #claude-updates for the window; list each deal. Client names stay internal.
+- RallyUp news: new clients won and lost in the window from #claude-updates, as counts and sectors only ("1 new client, consumer health"). Revenue figures are never printed in The Draft, so report any MRR or deal amounts you see under "internal, do not publish".
 - Draft readers: leave to the drafting session, which reads beehiiv directly.
 If a number in a draft disagrees with these, flag it in Open questions.
 
 ## Rules
 
 - **Numbers are exact or absent.** Never round up, never estimate, never write "around". If two sources disagree, report both and flag it.
-- **Client data stays private by default.** You may read client accounts to find the week's best posts, but in the sheet mark every client that is not on the cleared list in the proof bank as "anonymise", with the stage and sector to use instead of the name. A client's invoice amount, contract value or name next to a payment is internal: report it to Francisco, and label it "do not publish".
-- **RallyUp's own totals are publishable** (MRR, ARR, record months, team size) because Francisco shares them by choice, but still label each with its source so he can check it.
+- **No client names in The Draft (Alec's rule, 13 November 2026).** You may read client accounts to find the week's best posts, but mark every client, including the ones on the proof bank's permission list, as "anonymise", with the role, stage and sector to use instead (for example "an investor we write for", "a Series B sales tech CEO"). Do not suggest linking to a client's post. A client's invoice amount, contract value or name next to a payment is internal: report it to Francisco, and label it "do not publish".
+- **No RallyUp revenue figures in The Draft.** MRR, ARR, deal sizes and cash are internal: if you report them at all, label them "do not publish". Team size, client count and accounts run are fine.
 - **Read only.** Never post in Slack, send or draft email, change Ordinal posts or touch beehiiv. You gather; you do not act.
 - **No em dashes** anywhere in the sheet, and sentence case headings, so the copy can be lifted straight into a draft.

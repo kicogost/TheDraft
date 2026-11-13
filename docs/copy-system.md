@@ -51,6 +51,8 @@ Rules:
 
 Use real numbers. Never invent one. These are verified.
 
+**For The Draft, the newsletter guardrail in section 5 wins:** no client names and no RallyUp revenue figures, even where this bank lists them. The client names and revenue facts below are for LinkedIn and other channels only.
+
 | Fact | Detail |
 | --- | --- |
 | The cold DM | One message to Alec, a founder he had never met. Replied in 30 minutes, booked a call for the Wednesday. |
@@ -107,7 +109,7 @@ The order:
 | 1 | Cold open | Two to four lines, personal and a little funny. Where he is writing from, what happened this week. |
 | 2 | The play | The main piece. One tactic, story or launch from the accounts we run: the story, then the numbers, then the play the reader can steal. |
 | 3 | Steal this | One hook, template or line the reader can copy and use today. |
-| 4 | The scoreboard | Building in public with RallyUp's real numbers: revenue milestones, MRR and ARR, clients, team, plus The Draft's subscriber count and what he tested on his own LinkedIn. |
+| 4 | The scoreboard | Building in public without revenue figures: The Draft's subscriber count, Francisco's LinkedIn and Instagram followers, what he tested on his own LinkedIn, and RallyUp news told without numbers or client names (a new client, a hire, accounts run). No MRR, ARR or deal sizes (section 5). |
 | 5 | Off the clock | Mallorca, jiu-jitsu, a song of the week. The bit readers mention when they reply. |
 | 6 | Sign-off | One click poll (🔥 / 👍 / 😴), the reply ask, then "Stay awesome," and "Francisco". |
 
@@ -115,17 +117,23 @@ The order:
 
 **The play rotates through four types** so the main piece never repeats its shape: a launch breakdown, a teardown of a public B2B brand's LinkedIn, an experiment run across several accounts, and a founder story.
 
-**Client data rules.** The play and Steal this run on client numbers. Name only the clients cleared in the proof bank. Everyone else is anonymised by stage and sector, for example "a Series A fintech founder, 38,291 impressions", and screenshots have names and faces blurred. RallyUp's own numbers are his to share; a client's invoice, contract value or name next to a payment never is.
+**Client data rules.** The play and Steal this run on client numbers, and every client is anonymised by role, stage and sector, for example "a Series A fintech founder, 38,291 impressions". No client is named in The Draft, not even the ones in the proof bank's permission list, and no client post is linked (see the newsletter guardrail in section 5). Screenshots have names, faces and logos blurred. A client's invoice, contract value or name next to a payment never appears.
 
 **No competitor bashing.** Big Desk Energy does it. For The Draft it reads as punching at future clients and sponsors.
 
-**Numbers are checked, not typed.** Every "+X this week" in The scoreboard comes from the source: LinkedIn followers from the Ordinal follower series (first and last reading of the window), Draft readers from beehiiv, RallyUp MRR change from the Closed Won and churn lines in #claude-updates. The Scout reports each one with its source; a number the Scout did not find does not go in.
+**Numbers are checked, not typed.** Every "+X this week" in The scoreboard comes from the source: LinkedIn followers from the Ordinal follower series (first and last reading of the window), Draft readers from beehiiv. RallyUp revenue numbers are never printed (section 5). The Scout reports each one with its source; a number the Scout did not find does not go in.
 
 **Weekly inputs** are gathered by the Draft Scout agent (`.claude/agents/draft-scout.md`), which reads Slack, Gmail, Ordinal and beehiiv and hands back a fact sheet per section. Draft from that sheet, never from memory.
 
 ## 5. House rules, absolute
 
 These come from CLAUDE.md and `pnpm lint` fails on the first two.
+
+**Newsletter guardrail, set by Alec on 13 November 2026. Overrides everything else in this file for The Draft (issues, welcome and automation emails, the newsletter's share posts):**
+
+- **No client names.** Never name a RallyUp client, neither the company nor the person: no founders, execs or investors we write for. Describe them by role, stage and sector instead: "a Series B sales tech CEO", "an investor we write for", "a consumer health startup". This applies even to clients in the proof bank's "permission granted" list. No links to client posts either, since a link reveals the name. RallyUp's own team (Alec, Matt, Francisco) can be named.
+- **No RallyUp revenue figures.** No exact MRR, ARR, deal size, contract value or cash number, and no "+$X this week". Say what happened without the figure: "a new client this week", "our best month yet", "a 12 month contract paid upfront". If a sentence only works with the number, cut the sentence.
+- **What stays allowed:** impressions, saves, followers, views and other content numbers (unnamed), the number of accounts and execs we run, "clients backed by YC, a16z, and more", and The Draft's and Francisco's own numbers.
 
 - **No em dashes.** Anywhere: copy, code comments, commit messages, docs. Use a comma, a full stop or a colon.
 - **Banned words:** unlock, empower, elevate, solutions, leverage.
@@ -142,4 +150,5 @@ These come from CLAUDE.md and `pnpm lint` fails on the first two.
 4. Does the subject line get paid off in the body?
 5. Run the "so what" test line by line.
 6. `pnpm lint` for em dashes and banned words.
-7. Check present-tense facts that will age: his age, headcount, revenue, job title.
+7. Check present-tense facts that will age: his age, headcount, job title.
+8. The Alec check, for anything going out as The Draft: search the draft for every client company and person name and for "$", "MRR" and "ARR". Any client name or RallyUp revenue figure comes out (section 5).
